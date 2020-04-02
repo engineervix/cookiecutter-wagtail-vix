@@ -1,0 +1,127 @@
+{% raw %}
+{% extends "base.html" %}
+
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block extrameta %}
+    <meta name="keywords" content="Your, Key, Words, Come, Right, Here">
+    <meta name="description" content="{{ title }}">{% endraw %}
+    <meta name="author" content="{{ cookiecutter.author_name }}">
+
+    <meta property="og:title" content="Search {{cookiecutter.project_name}}" />
+    <meta property="og:type" content="website" />{% raw %}
+    <meta property="og:description" content="{{ title }}">{% endraw %}
+    <meta property="og:site_name" content="{{cookiecutter.project_name}}">{% raw %}
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="holder.js/300x200?random=yes&auto=yes" />
+    <meta property="og:locale" content="en_ZM" />
+    <meta property="og:locale:alternate" content="en_ZA" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+{% endblock %}
+
+{% block body_class %}template-blogpagesearch{% endblock %}
+
+{% block promo_block %}
+<!-- Header -->
+<header class="bg-dark py-5 mb-5">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-12">
+                <h1 class="display-4 text-white mt-5 mb-2">Search {% if search_results %} Results{% endif %}</h1>
+                <p class="lead mb-5 text-white-50">Needle in a haystack is super easy - just bring a powerful magnet.</p>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+
+    <h2>Search Results</h2>
+    <ul class="list-unstyled">
+      {% if search_results %}
+        {% for result in search_results %}
+          <li class="media">
+            {# https://www.svgrepo.com/svg/3907/search #}
+            <img src="{% static 'img/search.svg' %}" width="64" class="mr-3" alt="search result">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1"> <a href="{% pageurl result %}">{{ result }}</a> </h5>
+              {% if result.specific.content %}
+                <p> {{ result.specific.content|striptags|truncatechars:150 }} </p>
+              {% elif result.specific.summary %}
+                <p> {{ result.specific.summary|striptags|truncatechars:150 }} </p>
+              {% endif %}
+              {% if result.last_published_at %}
+                <p class="text-secondary text-monospace mt-0 mb-4"> Last updated: {{ result.last_published_at }} </p>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      {% elif search_query %}
+        <li class="media">
+          {# https://www.svgrepo.com/svg/80831/warning #}
+          <img src="{% static 'img/warning.svg' %}" width="64" class="mr-3" alt="no results found">
+          <div class="media-body">
+            <p class="lead"> No results found </p>
+          </div>
+        </li>
+      {% else %}
+        <li class="media">
+          {# https://www.svgrepo.com/svg/80831/warning #}
+          <img src="{% static 'img/warning.svg' %}" width="64" class="mr-3" alt="no search term">
+          <div class="media-body">
+            <p class="lead">Please enter a search term </p>
+          </div>
+        </li>
+      {% endif %}
+    </ul>
+
+    {# Only show pagination if there is more than one page to click through #}
+    {% if search_results.paginator.num_pages > 1 %}
+      <div class="row">
+        <div class="col-lg-12">
+          <nav aria-label="Search Results Navigation">
+          <ul class="pagination pagination-lg justify-content-center">
+            {% if search_results.has_previous %}
+              <li class="page-item">
+                <a href="?page={{ search_results.previous_page_number }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&amp;{{ key }}={{ value }}{% endifnotequal %}{% endfor %}" aria-label="Previous" title="Previous" class="page-link">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+            {% endif %}
+
+            {% for page_num in search_results.paginator.page_range %}
+              <li class="page-item {% if page_num == search_results.number %} active{% endif %}">
+                <a href="?page={{ page_num }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&amp;{{ key }}={{ value }}{% endifnotequal %}{% endfor %}" class="page-link">
+                  {{ page_num }}
+                </a>
+              </li>
+            {% endfor %}
+
+            {% if search_results.has_next %}
+              <li class="page-item">
+                <a href="?page={{ search_results.next_page_number }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&amp;{{ key }}={{ value }}{% endifnotequal %}{% endfor %}" aria-label="Next" title="Next" class="page-link">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            {% endif %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    {% endif %}
+
+</div>
+<!-- /.container -->
+
+{% endblock %}
+{% endraw %}

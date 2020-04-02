@@ -1,0 +1,9 @@
+{% raw %}{% extends "wagtailadmin/login.html" %}
+
+{% block branding_login %}Sign in to{% endraw %} {{cookiecutter.project_name}}{% raw %}{% endblock %}
+
+{% block submit_buttons %}
+    {{ block.super }}
+    <a href="/"><button type="button" class="button" tabindex="4">Go to Homepage</button></a>
+{% endblock %}
+{% endraw %}

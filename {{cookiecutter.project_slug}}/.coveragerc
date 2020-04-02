@@ -1,0 +1,12 @@
+[report]
+skip_covered = True
+omit =
+    config/settings/*
+    config/wsgi.py
+    config/urls.py
+    .research/*
+    docs/*
+    {{cookiecutter.project_slug}}/*/migrations/*
+    manage.py
+
+show_missing = True

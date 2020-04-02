@@ -1,0 +1,56 @@
+{% raw %}
+{% extends "base.html" %}
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags people_tags %}
+
+{% block extrameta %}{% endraw %}
+    <meta name="keywords" content="Your, Key, Words, Here">
+    <meta name="description" content="{{ cookiecutter.description }}">
+    <meta name="author" content="{{ cookiecutter.author_name }}">
+
+    <meta property="og:title" content="About Page Title Comes Here" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ cookiecutter.description }}">
+    <meta property="og:site_name" content="{{cookiecutter.project_name}}">
+    {% raw %}<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="holder.js/300x200?random=yes&auto=yes" />
+    <meta property="og:locale" content="en_ZM" />
+    <meta property="og:locale:alternate" content="en_ZA" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+{% endblock %}
+
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block body_class %}template-aboutpage{% endblock %}
+
+{% block promo_block %}
+<!-- Header -->
+<header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-12">{% endraw %}
+                <h1 class="display-4 text-white mt-5 mb-2">Meet the {{cookiecutter.project_name}} Team</h1>
+                <p class="lead mb-5 text-white-50">Meet the team working tirelessly behind the scenes to bring you high quality content for you to benefit from. These guys are willing to work with you anytime. Wanna go fishing? Join us!</p>
+            </div>
+        </div>
+    </div>
+</header>{% raw %}
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+    <div class="row mb-4">
+        {% directors %}
+    </div>
+    <div class="row mb-4">
+        {% staff %}
+    </div>
+</div>
+<!-- /.container -->
+{% endblock content %}
+{% endraw %}

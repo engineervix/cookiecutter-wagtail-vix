@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ cookiecutter.project_name }}">
+    <meta name="author" content="{{ cookiecutter.author_name }}">
+    <title>{{ cookiecutter.project_name }} | Maintenance Mode</title>
+
+    <style type="text/css">
+        body {
+            text-align: center;
+            padding: 20px;
+            background: #191919;
+
+            font: 20px Helvetica, sans-serif;
+            color: #e5e5e5;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding-top: 150px;
+            }
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        article {
+            display: block;
+            text-align: left;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #c000ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            /*color: #e5e5e5;*/
+            /*text-decoration: none;*/
+            border-bottom: 1px solid;
+            background: #ffc0ff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <article>
+        <h1>We&rsquo;ll be back soon!</h1>
+        <div>
+            <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:{{ cookiecutter.email }}">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
+            <p>&mdash; The {{ cookiecutter.project_name }} Team</p>
+        </div>
+    </article>
+</body>
+
+</html>

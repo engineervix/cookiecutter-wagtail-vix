@@ -1,0 +1,8 @@
+{% raw %}{% extends "wagtailadmin/base.html" %}
+{% load static %}
+
+{% block branding_logo %}
+    {# courtesy of https://github.com/pigment/fake-logos #}
+    <img src="{% static 'img/fake-logo.svg' %}" alt="Dashboard" width="120" />
+{% endblock %}
+{% endraw %}

@@ -1,0 +1,51 @@
+{
+    "name": "{{cookiecutter.project_slug}}",
+    "version": "0.0.1",
+    "description": "{{cookiecutter.description}}",
+    "main": "index.js",
+    "author": "{{ cookiecutter.author_name }}",
+    "license": "UNLICENSED",
+    "scripts": {
+        "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"grunt sync\"",
+        "test": "export ENV_PATH=.envs/.test.env && pytest -vv --cov=. --cov-report term-missing:skip-covered -s",
+        "coverage_html": "export ENV_PATH=.envs/.test.env && pytest -vv --cov=. --cov-report html",
+        "isort": "isort -rc --atomic ."
+    },
+    "private": true,
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.11.2",
+        "animate.css": "^3.7.2",
+        "bootstrap": "^4.3.1",
+        "bootstrap-notify": "^3.1.3",
+        "bootstrap-sweetalert": "^1.0.1",
+        "bootswatch": "^4.3.1",
+        "chartist": "^0.11.4",
+        "imagesloaded": "^4.1.4",
+        "jquery": "^3.4.1",
+        "jquery-countdown": "^2.2.0",
+        "js.sortable": "^0.8.0",
+        "lightslider": "^1.1.6",
+        "masonry-layout": "^4.2.2",
+        "moment": "^2.24.0",
+        "photoswipe": "^4.1.3",
+        "select2": "^4.0.10",
+        "shufflejs": "^5.2.3",
+        "tingle.js": "^0.15.1",
+        "typed.js": "^2.0.11"
+    },
+    "devDependencies": {
+        "grunt": "^1.0.4",
+        "grunt-browser-sync": "^2.2.0",
+        "grunt-contrib-clean": "^2.0.0",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-cssmin": "^3.0.0",
+        "grunt-contrib-htmlmin": "^3.1.0",
+        "grunt-contrib-uglify": "^4.0.1",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-json-minification": "^0.2.1",
+        "grunt-newer": "^1.3.0",
+        "holderjs": "^2.9.6",
+        "popper.js": "^1.15.0",
+        "time-grunt": "^2.0.0"
+    }
+}

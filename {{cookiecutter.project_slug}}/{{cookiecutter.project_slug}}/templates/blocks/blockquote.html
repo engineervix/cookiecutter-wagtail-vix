@@ -1,0 +1,6 @@
+{% raw %}{% load wagtailimages_tags %}
+
+<blockquote class="blockquote">
+  <p class="mb-0">{{ self.text }}</p>
+  <footer class="blockquote-footer"><cite title="{{ self.attribute_name}}">{{ self.attribute_name}}</cite></footer>
+</blockquote>{% endraw %}
