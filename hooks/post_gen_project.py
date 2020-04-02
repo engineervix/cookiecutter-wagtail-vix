@@ -30,12 +30,13 @@ def generate_random_string(length=50):
     The default length of 12 with the a-z, A-Z, 0-9 character set returns
     a 71-bit value. log_2((26+26+10)^12) =~ 71 bits
     """
-    punctuation = string.punctuation.replace('"', '').replace("'", '')
-    punctuation = punctuation.replace('\\', '')
+    punctuation = string.punctuation.replace('"', "").replace("'", "")
+    punctuation = punctuation.replace("\\", "")
     if using_sysrandom:
-        return ''.join(random.choice(
-            string.digits + string.ascii_letters + punctuation
-        ) for i in range(length))
+        return "".join(
+            random.choice(string.digits + string.ascii_letters + punctuation)
+            for i in range(length)
+        )
 
     print(
         "cookiecutter-wagtail-vix couldn't find a secure pseudo-random number generator on your system."
@@ -54,45 +55,27 @@ def set_secret_key(config_file_location):
     SECRET_KEY = generate_random_string()
 
     # Replace "CHANGEME!!!" with SECRET_KEY
-    file_ = file_.replace('CHANGEME!!!', SECRET_KEY, 1)
+    file_ = file_.replace("CHANGEME!!!", SECRET_KEY, 1)
 
     # Write the results to file
-    with open(config_file_location, 'w') as f:
+    with open(config_file_location, "w") as f:
         f.write(file_)
 
 
 def make_secret_key(project_directory):
     """Generates and saves random secret key"""
 
-    example_dev_env_file = os.path.join(
-        project_directory,
-        '#envs/env_dev.example'
-    )
+    example_dev_env_file = os.path.join(project_directory, "#envs/env_dev.example")
 
-    dev_env_file = os.path.join(
-        project_directory,
-        '#envs/.dev.env'
-    )
+    dev_env_file = os.path.join(project_directory, "#envs/.dev.env")
 
-    example_prod_env_file = os.path.join(
-        project_directory,
-        '#envs/env_prod.example'
-    )
+    example_prod_env_file = os.path.join(project_directory, "#envs/env_prod.example")
 
-    prod_env_file = os.path.join(
-        project_directory,
-        '#envs/.prod.env'
-    )
+    prod_env_file = os.path.join(project_directory, "#envs/.prod.env")
 
-    example_test_env_file = os.path.join(
-        project_directory,
-        '#envs/env_test.example'
-    )
+    example_test_env_file = os.path.join(project_directory, "#envs/env_test.example")
 
-    test_env_file = os.path.join(
-        project_directory,
-        '#envs/.test.env'
-    )
+    test_env_file = os.path.join(project_directory, "#envs/.test.env")
 
     shutil.move(example_dev_env_file, dev_env_file)
     shutil.move(example_prod_env_file, prod_env_file)
@@ -114,26 +97,20 @@ def setup_db(config_file_location, environment):
 
     # Replace "CONFIGUREDB!!!" with Correct DB Configuration
     if environment == "dev":
-        file_ = file_.replace('CONFIGUREDB!!!', DEV_DB_URL, 1)
+        file_ = file_.replace("CONFIGUREDB!!!", DEV_DB_URL, 1)
     else:
-        file_ = file_.replace('CONFIGUREDB!!!', TEST_DB_URL, 1)
+        file_ = file_.replace("CONFIGUREDB!!!", TEST_DB_URL, 1)
 
     # Write the results to file
-    with open(config_file_location, 'w') as f:
+    with open(config_file_location, "w") as f:
         f.write(file_)
 
 
 def make_db_config(project_directory):
     """DB configuration"""
 
-    dev_env_file = os.path.join(
-        project_directory,
-        '#envs/.dev.env'
-    )
-    test_env_file = os.path.join(
-        project_directory,
-        '#envs/.test.env'
-    )
+    dev_env_file = os.path.join(project_directory, "#envs/.dev.env")
+    test_env_file = os.path.join(project_directory, "#envs/.test.env")
 
     # env.example file
     setup_db(dev_env_file, "dev")
@@ -147,22 +124,25 @@ def main():
     make_db_config(PROJECT_DIRECTORY)
 
     # rename these directories so that they are not included in version control
-    envs = os.path.join(PROJECT_DIRECTORY, '#envs/')
-    vscode = os.path.join(PROJECT_DIRECTORY, '#vscode/')
-    resources = os.path.join(PROJECT_DIRECTORY, '#resources/')
-    research = os.path.join(PROJECT_DIRECTORY, '#research/')
-    logs = os.path.join(PROJECT_DIRECTORY, '#logs/')
-    backups = os.path.join(PROJECT_DIRECTORY, '#backups/')
+    envs = os.path.join(PROJECT_DIRECTORY, "#envs/")
+    vscode = os.path.join(PROJECT_DIRECTORY, "#vscode/")
+    resources = os.path.join(PROJECT_DIRECTORY, "#resources/")
+    research = os.path.join(PROJECT_DIRECTORY, "#research/")
+    logs = os.path.join(PROJECT_DIRECTORY, "#logs/")
+    backups = os.path.join(PROJECT_DIRECTORY, "#backups/")
 
     # the renamed versions are in the .gitignore file
-    shutil.move(envs, os.path.join(PROJECT_DIRECTORY, '.envs/'))
-    shutil.move(vscode, os.path.join(PROJECT_DIRECTORY, '.vscode/'))
-    shutil.move(resources, os.path.join(PROJECT_DIRECTORY, '.resources/'))
-    shutil.move(research, os.path.join(PROJECT_DIRECTORY, '.research/'))
-    shutil.move(logs, os.path.join(PROJECT_DIRECTORY, '.logs/'))
-    shutil.move(backups, os.path.join(PROJECT_DIRECTORY, '.backups/'))
+    shutil.move(envs, os.path.join(PROJECT_DIRECTORY, ".envs/"))
+    shutil.move(vscode, os.path.join(PROJECT_DIRECTORY, ".vscode/"))
+    shutil.move(resources, os.path.join(PROJECT_DIRECTORY, ".resources/"))
+    shutil.move(research, os.path.join(PROJECT_DIRECTORY, ".research/"))
+    shutil.move(logs, os.path.join(PROJECT_DIRECTORY, ".logs/"))
+    shutil.move(backups, os.path.join(PROJECT_DIRECTORY, ".backups/"))
 
-    print("Please ensure that you use {{ cookiecutter.wagtail_username }} as your username when you run `./manage.py createsuperuser`")
+    print(
+        "Please ensure that you use {{ cookiecutter.wagtail_username }} as your username when you run `./manage.py createsuperuser`"
+    )
+
 
 if __name__ == "__main__":
     main()

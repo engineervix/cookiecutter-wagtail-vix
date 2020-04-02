@@ -1,18 +1,55 @@
 # -*- coding: utf-8 -*-
 
-import re
 import sys
 
-MODULE_REGEX = r'^[_a-zA-Z][_a-zA-Z0-9]+$'
+project_slug = "{{ cookiecutter.project_slug }}"
+if hasattr(project_slug, "isidentifier"):
+    assert (
+        project_slug.isidentifier()
+    ), "'{}' project slug is not a valid Python identifier.".format(project_slug)
 
-project_slug = '{{ cookiecutter.project_slug }}'
-
-if not re.match(MODULE_REGEX, project_slug):
-    print('ERROR: %s is not a valid Python project slug!' % project_slug)
-
-    # exits with status 1 to indicate failure
-    sys.exit(1)
+assert (
+    project_slug == project_slug.lower()
+), "'{}' project slug should be all lowercase".format(project_slug)
 
 assert (
     "\\" not in "{{ cookiecutter.author_name }}"
 ), "Don't include backslashes in author name."
+
+if (
+    "{{ cookiecutter.use_bootswatch }}".lower() == "y"
+    and "{{ cookiecutter.bootswatch_theme }}" == "none"
+):
+    print("You should either select a bootswatch theme or not use bootswatch at all")
+    sys.exit(1)
+
+bootswatch_themes = [
+    "cerulean",
+    "cosmo",
+    "cyborg",
+    "darkly",
+    "flatly",
+    "journal",
+    "litera",
+    "lumen",
+    "lux",
+    "materia",
+    "minty",
+    "pulse",
+    "sandstone",
+    "simplex",
+    "sketchy",
+    "slate",
+    "solar",
+    "spacelab",
+    "superhero",
+    "united",
+    "yeti",
+]
+
+if (
+    "{{ cookiecutter.use_bootswatch }}".lower() == "n"
+    and "{{ cookiecutter.bootswatch_theme }}" in bootswatch_themes
+):
+    print("Since you don't wanna use bootswatch, you cannot select a bootswatch theme")
+    sys.exit(1)
