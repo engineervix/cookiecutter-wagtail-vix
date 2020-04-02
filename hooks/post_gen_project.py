@@ -66,32 +66,32 @@ def make_secret_key(project_directory):
 
     example_dev_env_file = os.path.join(
         project_directory,
-        '._envs/env_dev.example'
+        '#envs/env_dev.example'
     )
 
     dev_env_file = os.path.join(
         project_directory,
-        '._envs/.dev.env'
+        '#envs/.dev.env'
     )
 
     example_prod_env_file = os.path.join(
         project_directory,
-        '._envs/env_prod.example'
+        '#envs/env_prod.example'
     )
 
     prod_env_file = os.path.join(
         project_directory,
-        '._envs/.prod.env'
+        '#envs/.prod.env'
     )
 
     example_test_env_file = os.path.join(
         project_directory,
-        '._envs/env_test.example'
+        '#envs/env_test.example'
     )
 
     test_env_file = os.path.join(
         project_directory,
-        '._envs/.test.env'
+        '#envs/.test.env'
     )
 
     shutil.move(example_dev_env_file, dev_env_file)
@@ -128,11 +128,11 @@ def make_db_config(project_directory):
 
     dev_env_file = os.path.join(
         project_directory,
-        '._envs/.dev.env'
+        '#envs/.dev.env'
     )
     test_env_file = os.path.join(
         project_directory,
-        '._envs/.test.env'
+        '#envs/.test.env'
     )
 
     # env.example file
