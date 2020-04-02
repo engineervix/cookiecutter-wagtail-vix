@@ -1,17 +1,17 @@
 # cookiecutter-wagtail-vix
 
 - [cookiecutter-wagtail-vix](#cookiecutter-wagtail-vix)
-  - [What is this ❓](#what-is-this-%e2%9d%93)
+  - [What is this ❓](#what-is-this-)
   - [:tada: Features](#tada-features)
   - [:wrench: Prerequisites](#wrench-prerequisites)
     - [:anchor: Core](#anchor-core)
-    - [🕶 Optional](#%f0%9f%95%b6-optional)
+    - [🕶 Optional](#-optional)
   - [:computer: Setup](#computer-setup)
-    - [⌨️ to get started](#%e2%8c%a8%ef%b8%8f-to-get-started)
-    - [⚙️ other steps](#%e2%9a%99%ef%b8%8f-other-steps)
+    - [⌨️ to get started](#-to-get-started)
+    - [⚙️ other steps](#-other-steps)
   - [:+1: Credits](#1-credits)
-  - [✍️ To do](#%e2%9c%8d%ef%b8%8f-to-do)
-  - [📋 Reference](#%f0%9f%93%8b-reference)
+  - [✍️ To do](#-to-do)
+  - [📋 Reference](#-reference)
 
 ## What is this ❓
 
@@ -93,6 +93,8 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 - Images courtesy of [Unsplash](https://unsplash.com/) and [Pixabay](https://pixabay.com/)
 - Placeholder logo courtesy of <https://github.com/pigment/fake-logos>
 - <https://loremipsum.io/> for placeholder text
+- HTML template based on <https://startbootstrap.com/templates/business-frontpage/>
+- _Team_ Section on **About** Page based on <https://startbootstrap.com/snippets/about-team/>
 - ... I'll keep updating this ...
 
 ## ✍️ To do
