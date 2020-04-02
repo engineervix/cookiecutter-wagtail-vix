@@ -53,7 +53,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 ### ⌨️ to get started
 
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
-2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_username** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
+2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_username** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
 3. `cd` into the project folder created above and run `pipenv sync --dev` followed by `pipenv sync`.
 4. `pipenv shell`
 5. `export ENV_PATH=.envs/.dev.env`
