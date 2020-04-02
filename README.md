@@ -1,5 +1,20 @@
 # cookiecutter-wagtail-vix
 
+- [cookiecutter-wagtail-vix](#cookiecutter-wagtail-vix)
+  - [What is this ❓](#what-is-this-%e2%9d%93)
+  - [:tada: Features](#tada-features)
+  - [:wrench: Prerequisites](#wrench-prerequisites)
+    - [:anchor: Core](#anchor-core)
+    - [🕶 Optional](#%f0%9f%95%b6-optional)
+  - [:computer: Setup](#computer-setup)
+    - [⌨️ to get started](#%e2%8c%a8%ef%b8%8f-to-get-started)
+    - [⚙️ other steps](#%e2%9a%99%ef%b8%8f-other-steps)
+  - [:+1: Credits](#1-credits)
+  - [✍️ To do](#%e2%9c%8d%ef%b8%8f-to-do)
+  - [📋 Reference](#%f0%9f%93%8b-reference)
+
+## What is this ❓
+
 This is my take on creating a reusable (and heavily opinionated) [Wagtail 2.8](https://docs.wagtail.io/en/v2.8/releases/2.8.html) / [Django 2.2](https://docs.djangoproject.com/en/2.2/releases/) project skeleton using [cookiecutter](https://github.com/audreyr/cookiecutter).
 
 This cookiecutter template is mostly a reflection of my personal preferences. It does, however, try to employ best practices, for example, the [12-factor-app](https://12factor.net/) and [Daniel Greenfeld’s **Cookiecutter Django** framework](https://github.com/pydanny/cookiecutter-django). I also got a lot of ideas from some excellent wagtail-based projects, primarily [bvspca](https://github.com/nfletton/bvspca) and [bakerydemo](https://github.com/wagtail/bakerydemo).
