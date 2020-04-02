@@ -17,6 +17,7 @@ exclude = '''
     | build
     | (.*)/migrations
     | dist
+    | \{\{cookiecutter\.project_slug\}\}
   )/
 )
 '''
