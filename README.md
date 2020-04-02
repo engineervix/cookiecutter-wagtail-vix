@@ -27,7 +27,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
   - a homepage and "About" section, which includes addition of key personnel (with position, bio, social profiles, etc.)
   - a minimal functional blog with simplified categories and tags,
   - a contact page with contact form and location map. Includes SMS support powered by [Nexmo](https://developer.nexmo.com/messaging/sms/overview)
-- Tests written using [pytest](https://docs.pytest.org/en/latest/) in conjunction with [pytest-django](https://pytest-django.readthedocs.io/en/latest/) (plus other pytest plugins), [factory_boy](https://factoryboy.readthedocs.io/en/latest/) and [wagtail-factories](https://github.com/mvantellingen/wagtail-factories)
+- Tests written using [pytest](https://docs.pytest.org/en/latest/) in conjunction with [pytest-django](https://pytest-django.readthedocs.io/en/latest/) (plus other pytest plugins), [factory_boy](https://factoryboy.readthedocs.io/en/latest/) and [wagtail-factories](https://github.com/mvantellingen/wagtail-factories). Test coverage currently stands at 92%.
 - Latest [Bootstrap 4](https://getbootstrap.com/) with additional themes courtesy of [Bootswatch](https://bootswatch.com/).
 - [Font Awesome 5 (free)](https://fontawesome.com/icons?m=free) icons.
 - [shufflejs](https://vestride.github.io/Shuffle/) — Categorize, sort, and filter a responsive grid of items
