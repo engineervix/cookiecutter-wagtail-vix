@@ -34,7 +34,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 
 ### :anchor: Core
 
-- A [\*nix](https://en.wikipedia.org/wiki/Unix-like) OS. My preference is the latest LTS version of Ubuntu ([18.04](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes) at the time of writing this)
+- A [\*nix](https://en.wikipedia.org/wiki/Unix-like) environment. My preference is the latest LTS version of Ubuntu ([18.04](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes) at the time of writing this)
 - [Node.js](https://nodejs.org/) with the following packages installed **globally**:
   - [concurrently](https://github.com/kimmobrunfeldt/concurrently): `npm install -g concurrently`
   - [Browsersync](https://browsersync.io/): `npm install -g browser-sync`
@@ -50,6 +50,8 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 
 ## :computer: Setup
 
+### ⌨️ to get started
+
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
 2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_username** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
 3. `cd` into the project folder created above and run `pipenv sync --dev` followed by `pipenv sync`.
@@ -64,6 +66,11 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 12. Run tests: `npm run test`
 13. Start the development server: `npm run dev`. Your site should be accessible at `http://127.0.0.1:3000` or `http://localhost:3000`.
 
+### ⚙️ other steps
+
+- setup version control (git) for your generated project
+- setup [pre-commit](https://pre-commit.com/): `pre-commit install` and then optionally run against all files: `pre-commit run --all-files`
+
 ## :+1: Credits
 
 - `.gitignore` generated using <https://www.gitignore.io/>
@@ -76,6 +83,8 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 ## ✍️ To do
 
 - [ ] Make the `Makefile` functional
+- [ ] Automate Steps 1 to 10 by adding these in the `post_gen_project` hook or incorporating them in the `Makefile`
+- [ ] The cookiecutter prompt asks if you wanna use bootswatch themes. If you say "n", it shouldn't prompt you with another question on which bootswatch theme to use! See [this](https://github.com/polyswarm/participant-template/issues/2) and [that](https://github.com/cookiecutter/cookiecutter/issues/913).
 - [ ] Write tests and setup CI for this cookiecutter package
 - [ ] Improve test coverage for the generated wagtail project
 - [ ] Setup browser-based testing and production-level testing
@@ -88,3 +97,15 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 - [ ] Improve on code style
 - [ ] Generate RSS Feeds from Blog
 - [ ] Gotta add those [badges](https://shields.io/) :wink:
+
+## 📋 Reference
+
+The data was dumped as follows:
+
+```bash
+./manage.py dumpdata --natural-foreign --indent 2 \
+    -e contenttypes -e auth \
+    -e wagtailcore.groupcollectionpermission \
+    -e wagtailcore.grouppagepermission -e wagtailimages.rendition \
+    -e sessions > data.json
+```
