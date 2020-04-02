@@ -1,0 +1,8 @@
+{
+  "python.pythonPath": "/path/to/virtualenvironment/bin/python",
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.pylintPath": "/path/to/virtualenvironment/bin/pylint",
+  "python.linting.pylintEnabled": true,
+  "cSpell.enabled": false,
+  "restructuredtext.confPath": ""
+}

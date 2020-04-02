@@ -1,0 +1,34 @@
+# General Settings
+
+# Command to create a new secret key:
+# $ python -c 'import random; import string; print("".join([random.SystemRandom().choice(string.digits + string.ascii_letters + string.punctuation) for i in range(100)]))'
+DJANGO_SECRET_KEY=CHANGEME!!!
+DATABASE_URL=postgis://db_user:db_password@host:port/db_name
+# DATABASE_URL=postgres://db_user:db_password@host:port/db_name
+DEBUG=False
+ALLOWED_HOSTS={{cookiecutter.domain_name}}
+BASE_URL=https://www.{{cookiecutter.domain_name}}
+
+# Google Recaptcha
+RECAPTCHA_PUBLIC_KEY=ADDRECAPTCHAPUBKEY!!!
+RECAPTCHA_PRIVATE_KEY=ADDRECAPTCHAPRIVKEY!!!
+
+# ipinfo.io IP Address Data API
+IPINFO_ACCESS_TOKEN=ADDIPINFOTOKEN!!!
+
+# Sendgrid
+SENDGRID_API_KEY=CONFIGUREMAIL!!!
+
+ELASTICSEARCH_URL=CONFIGUREELASTICSEARCH!!!
+
+MAPBOX_ACCESS_TOKEN=CONFIGUREMAPBOX!!!
+
+# Nexmo SMS API
+NEXMO_API_KEY=
+NEXMO_API_SECRET=
+NEXMO_DEFAULT_FROM=
+
+# Cloudflare
+CLOUDFLARE_EMAIL_ADDRESS=
+CLOUDFLARE_API_TOKEN=
+CLOUDFLARE_DOMAIN_ZONE_ID=

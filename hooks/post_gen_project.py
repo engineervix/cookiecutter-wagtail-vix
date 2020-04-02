@@ -147,12 +147,12 @@ def main():
     make_db_config(PROJECT_DIRECTORY)
 
     # rename these directories so that they are not included in version control
-    envs = os.path.join(PROJECT_DIRECTORY, '._envs/')
-    vscode = os.path.join(PROJECT_DIRECTORY, '._vscode/')
-    resources = os.path.join(PROJECT_DIRECTORY, '._resources/')
-    research = os.path.join(PROJECT_DIRECTORY, '._research/')
-    logs = os.path.join(PROJECT_DIRECTORY, '._logs/')
-    backups = os.path.join(PROJECT_DIRECTORY, '._backups/')
+    envs = os.path.join(PROJECT_DIRECTORY, '#envs/')
+    vscode = os.path.join(PROJECT_DIRECTORY, '#vscode/')
+    resources = os.path.join(PROJECT_DIRECTORY, '#resources/')
+    research = os.path.join(PROJECT_DIRECTORY, '#research/')
+    logs = os.path.join(PROJECT_DIRECTORY, '#logs/')
+    backups = os.path.join(PROJECT_DIRECTORY, '#backups/')
 
     # the renamed versions are in the .gitignore file
     shutil.move(envs, os.path.join(PROJECT_DIRECTORY, '.envs/'))
