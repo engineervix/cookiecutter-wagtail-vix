@@ -726,7 +726,7 @@
   "fields": {
     "hostname": "127.0.0.1",
     "port": 8000,
-    "site_name": "wagsite",
+    "site_name": "{{ cookiecutter.project_slug }}",
     "root_page": 4,
     "is_default_site": true
   }
