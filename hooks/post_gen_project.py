@@ -162,7 +162,7 @@ def main():
     shutil.move(logs, os.path.join(PROJECT_DIRECTORY, '.logs/'))
     shutil.move(backups, os.path.join(PROJECT_DIRECTORY, '.backups/'))
 
-    print("Please ensure that you use {{ cookiecutter.project_slug }} as your username when you run `./manage.py createsuperuser`")
+    print("Please ensure that you use {{ cookiecutter.wagtail_username }} as your username when you run `./manage.py createsuperuser`")
 
 if __name__ == "__main__":
     main()
