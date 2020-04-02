@@ -1,0 +1,6 @@
+[report]
+skip_covered = False
+omit =
+    {{cookiecutter.project_slug}}/*
+
+show_missing = True
