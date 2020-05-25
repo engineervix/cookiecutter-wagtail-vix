@@ -1,23 +1,23 @@
-cookiecutter==1.7.0
-sh==1.12.14
+cookiecutter==1.7.2
+sh==1.13.1
 binaryornot==0.4.4
-pre-commit==2.3.0
+pre-commit==2.4.0
 
 # Code quality
 # ----------------------------------------------------------------------------
 black==19.10b0
-flake8==3.7.9
+flake8==3.8.2
 flake8-isort==3.0.0
 
 # Testing
 # ----------------------------------------------------------------------------
-pytest==5.3.5
+pytest==5.4.2
 pytest-cookies==0.5.1
-pytest-cov==2.8.1
+pytest-cov==2.9.0
 pytest-factoryboy==2.0.3
 pytest-instafail==0.4.1.post0
 pytest-logger==0.5.1
-pytest-mock==3.0.0
+pytest-mock==3.1.0
 pytest-sugar==0.9.3
-pytest-xdist==1.31.0
+pytest-xdist==1.32.0
 pyyaml==5.3.1
