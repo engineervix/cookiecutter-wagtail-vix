@@ -13,7 +13,7 @@
     },
     "private": true,
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.11.2",
+        "@fortawesome/fontawesome-free": "^5.13.0",
         "animate.css": "^3.7.2",
         "bootstrap": "^4.3.1",
         "bootstrap-notify": "^3.1.3",
