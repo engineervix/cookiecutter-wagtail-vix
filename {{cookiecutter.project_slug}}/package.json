@@ -28,7 +28,7 @@
         "masonry-layout": "^4.2.2",
         "moment": "^2.26.0",
         "photoswipe": "^4.1.3",
-        "select2": "^4.0.10",
+        "select2": "^4.0.13",
         "shufflejs": "^5.2.3",
         "tingle.js": "^0.15.3",
         "typed.js": "^2.0.11"
