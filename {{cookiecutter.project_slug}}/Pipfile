@@ -27,7 +27,7 @@ isort = {extras = ["pipfile"],version = "*"}
 
 [packages]
 django = ">=2.2,<3.0"
-wagtail = "==2.8"
+wagtail = "==2.9"
 django-environ = "*"
 ipinfo = "*"
 django-recaptcha = "*"
