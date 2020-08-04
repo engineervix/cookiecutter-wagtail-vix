@@ -59,6 +59,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 - [yarn](https://yarnpkg.com/): See [installation instructions](https://classic.yarnpkg.com/en/docs/install#debian-stable)
 - [Python3](https://www.python.org/) (3.6 and above) with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv) and [pipev](https://github.com/pypa/pipenv).
 - ~~The wagtail search interface relies on [elasticsearch](https://www.elastic.co/downloads/elasticsearch). If you prefer not to run an Elasticsearch server in development or production, there are many hosted services available, including [Bonsai](https://bonsai.io/signup), who offer a free account suitable for testing and development~~. Switched to the [PostgreSQL Backend](https://docs.wagtail.io/en/latest/topics/search/backends.html#postgresql-backend). Therefore, please ensure that Postgres (and PostGIS) are setup on your machine. 
+- [MailHog](https://github.com/mailhog/MailHog) &ndash; an email testing tool. Add the `MailHog` binary in the project root.
 
 ### 🕶 Optional
 
