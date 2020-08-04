@@ -3,7 +3,8 @@
 # Command to create a new secret key:
 # $ python -c 'import random; import string; print("".join([random.SystemRandom().choice(string.digits + string.ascii_letters + string.punctuation) for i in range(100)]))'
 DJANGO_SECRET_KEY=CHANGEME!!!
-DATABASE_URL=CONFIGUREDB!!!
+DATABASE_URL=postgis://test_postgis_user:testDB-password@localhost/test_postgis_database
+# DATABASE_URL=postgres://db_user:db_password@host:port/db_name
 DEBUG=False
 ALLOWED_HOSTS=
 BASE_URL=www.example.com
