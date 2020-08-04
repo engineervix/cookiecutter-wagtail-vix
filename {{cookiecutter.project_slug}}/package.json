@@ -6,9 +6,10 @@
     "author": "{{ cookiecutter.author_name }}",
     "license": "UNLICENSED",
     "scripts": {
-        "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"grunt sync\"",
-        "test": "export ENV_PATH=.envs/.test.env && pytest -vv --cov=. --cov-report term-missing:skip-covered -s",
-        "coverage_html": "export ENV_PATH=.envs/.test.env && pytest -vv --cov=. --cov-report html",
+        "setup_test_db": "psql -c \"DROP DATABASE IF EXISTS test_postgis_database\" && psql -c \"DROP USER IF EXISTS test_postgis_user\" && psql -c \"CREATE USER test_postgis_user PASSWORD 'testDB-password'\" && psql -c \"CREATE DATABASE test_postgis_database OWNER test_postgis_user\" && psql -c \"GRANT ALL PRIVILEGES ON DATABASE test_postgis_database to test_postgis_user\" && psql -c \"ALTER ROLE test_postgis_user SUPERUSER\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis_topology\"",
+        "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"grunt sync\" \"./MailHog\"",
+        "test": "export ENV_PATH=.envs/.test.env && npm run setup_test_db && pytest -vv --cov=. --cov-report term-missing:skip-covered -s",
+        "coverage_html": "export ENV_PATH=.envs/.test.env && concurrently --raw --kill-others \"pytest -vv --cov=. --cov-report html\" \"./MailHog\"",
         "isort": "isort -rc --atomic ."
     },
     "private": true,
