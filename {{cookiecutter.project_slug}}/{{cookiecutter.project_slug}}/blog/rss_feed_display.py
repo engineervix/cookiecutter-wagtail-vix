@@ -34,7 +34,9 @@ __status__ = "Production"
 
 logger = logging.getLogger(__name__)
 fmt = "%a, %d %b %Y %H:%M:%S %z"
-ua = UserAgent()  # TODO: this may take a while, need to put it on a task queue
+ua = UserAgent(
+    fallback="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2866.71 Safari/537.36"
+)  # TODO: this may take a while, need to put it on a task queue
 
 HTTP_STATUS = 200
 
@@ -79,9 +81,10 @@ def get_rss_feed_entries():
     if link.status == HTTP_STATUS and len(link.entries) != 0:
         for i in range(0, 3):
             value = str(link["entries"][i])
-            image_url = re.search(
-                "(?P<url>http?://[^\s]+(png|jpeg|jpg|gif))", value, re.IGNORECASE
-            ).group("url")
+            # image_url = re.search(
+            #     "(?P<url>http?://[^\s]+(png|jpeg|jpg|gif))", value, re.IGNORECASE
+            # ).group("url")
+            image_url = link["entries"][i].url
             date_only = datetime.strptime(link["entries"][i].published, fmt).date()
             # date_only = link['entries'][i].published    # for testing
             posts.append(
