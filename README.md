@@ -58,7 +58,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
   - [Grunt](https://gruntjs.com/): `npm install -g grunt-cli` (Although I've started migrating to [Gulp](https://gulpjs.com/) ... :smile:)
 - [yarn](https://yarnpkg.com/): See [installation instructions](https://classic.yarnpkg.com/en/docs/install#debian-stable)
 - [Python3](https://www.python.org/) (3.6 and above) with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv) and [pipev](https://github.com/pypa/pipenv).
-- The wagtail search interface relies on [elasticsearch](https://www.elastic.co/downloads/elasticsearch). If you prefer not to run an Elasticsearch server in development or production, there are many hosted services available, including [Bonsai](https://bonsai.io/signup), who offer a free account suitable for testing and development.
+- ~~The wagtail search interface relies on [elasticsearch](https://www.elastic.co/downloads/elasticsearch). If you prefer not to run an Elasticsearch server in development or production, there are many hosted services available, including [Bonsai](https://bonsai.io/signup), who offer a free account suitable for testing and development~~. Switched to the [PostgreSQL Backend](https://docs.wagtail.io/en/latest/topics/search/backends.html#postgresql-backend). Therefore, please ensure that Postgres (and PostGIS) are setup on your machine. 
 
 ### 🕶 Optional
 
@@ -72,16 +72,15 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
 2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_username** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
 3. `cd` into the project folder created above and run `pipenv sync --dev` followed by `pipenv sync`.
-4. ~~`pipenv shell`~~
+4. Now would be a good time to setup your postgres/postgis database and ensure that you update `DATABASE_URL` and the other environment variables in your `.env` files. The essential ones for starters are `RECAPTCHA_PUBLIC_KEY`, `RECAPTCHA_PRIVATE_KEY` and `MAPBOX_ACCESS_TOKEN`.
 5. `export ENV_PATH=.envs/.dev.env`
 6. `./manage.py migrate`
 7. `./manage.py createsuperuser`. When prompted for a username, please use the **wagtail_username** you specified in step 2. This is important to ensure that you don't have issues when populating the database with initial data, which is tied to the username provided in step 2.
 8. `./manage.py load_initial_data`
 9. `yarn`
 10. `grunt all`
-11. Ensure that you update other environment variables in your `.env` files. The essential ones for starters are `RECAPTCHA_PUBLIC_KEY`, `RECAPTCHA_PRIVATE_KEY`, `ELASTICSEARCH_URL` and `MAPBOX_ACCESS_TOKEN`.
-12. Run tests: `npm run test`
-13. Start the development server: `npm run dev`. Your site should be accessible at `http://127.0.0.1:3000` or `http://localhost:3000`.
+11. Prior to running tests, check the `package.json` to ensure that you have the correct postgres/postgis settings. Once you're all set, go ahead and run tests: `npm run test`
+12. Start the development server: `npm run dev`. Your site should be accessible at `http://127.0.0.1:3000` or `http://localhost:3000`.
 
 ### ⚙️ other steps
 
