@@ -1,11 +1,23 @@
 include:
   template: Dependency-Scanning.gitlab-ci.yml
 
-image: ubuntu:18.04
+{% if cookiecutter.python_version == "3.7" %}
+image: python:3.7-buster
+{% elif cookiecutter.python_version == "3.8" %}
+image: python:3.8-buster
+{% else %}
+image: python:3.6-buster  
+{% endif %}
+
+services:
+  - postgis/postgis:10-2.5
 
 variables:
   ENV_PATH: .envs/.test.env
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/pip-cache"
+  POSTGRES_DB: test_postgis_db
+  POSTGRES_USER: test_postgis_user
+  POSTGRES_PASSWORD: custom_pass
 
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
@@ -17,85 +29,53 @@ cache:
 # This is a basic example for a gem or script which doesn't use
 # services such as redis or postgres
 before_script:
-  - apt-get update -q && apt-get install curl git -y
+  - apt update -y && apt upgrade -y
   - export DEBIAN_FRONTEND=noninteractive
   - ln -fs /usr/share/zoneinfo/{{ cookiecutter.timezone }} /etc/localtime
-  - apt install -y python3-pip
-  - apt install -y python2.7-dev python python-pip
-  - apt install -y libffi-dev
-  - apt install -y libjpeg-dev zlib1g-dev libtiff-dev libfreetype6-dev libraqm-dev libraqm0 pngquant libopenjp2-7-dev libopenjp2-7 tk-dev libwebp-dev liblcms2-dev
   - dpkg-reconfigure --frontend noninteractive tzdata
-  - pip3 install virtualenvwrapper
+  - pip install virtualenvwrapper
   - export WORKON_HOME=~/Env
   - mkdir -p $WORKON_HOME
   - echo "" >> ~/.bashrc
   - echo "# virtualenv" >> ~/.bashrc
   - echo "export WORKON_HOME=~/Env" >> ~/.bashrc
-  - echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bashrc
   - echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
   - echo "" >> ~/.bashrc
   - source ~/.bashrc
+  - apt install -y postgresql postgresql-contrib postgis libpq-dev
+  - export PGPASSWORD=$POSTGRES_PASSWORD
+  - export PGUSER=$POSTGRES_USER
+  - python -V # Print out python version for debugging
+  - which python
+  - pip install --user pipenv
+  - export PATH="$HOME/.local/bin:$PATH"
+  - export LC_ALL=C.UTF-8
+  - export LANG=C.UTF-8
+  - pipenv sync --dev
   - curl -sL https://deb.nodesource.com/setup_12.x | bash -
   - apt install nodejs -yqq
   - npm install -g grunt-cli
   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
   - apt update -q && apt install yarn -yqq
-  - apt install -y make build-essential libssl-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
-  - curl https://pyenv.run | bash
-  - export PATH="$HOME/.pyenv/bin:$PATH"
-  - pyenv versions
-  {% if cookiecutter.python_version == "3.7" %}
-  - pyenv install -v 3.7.6
-  - pyenv global 3.7.6
-  {% elif cookiecutter.python_version == "3.8" %}
-  - pyenv install -v 3.8.1
-  - pyenv global 3.8.1
-  {% else %}
-  - pyenv install -v 3.6.10
-  - pyenv global 3.6.10
-  {% endif %}
-  - eval "$(pyenv init -)"
-  - eval "$(pyenv virtualenv-init -)"
-  - python3 -V # Print out python version for debugging
-  - which python
-  - pip3 install --user pipenv
-  - export PATH="$HOME/.local/bin:$PATH"
-  - export LC_ALL=C.UTF-8
-  - export LANG=C.UTF-8
-  - pipenv sync
-  - pipenv sync --dev
-  - yarn install
+  - yarn install && grunt all
   - mkdir .envs/
   - touch .envs/.test.env
   - echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
   - echo "DEBUG=False" >> .envs/.test.env
   - echo "ALLOWED_HOSTS=" >> .envs/.test.env
   - echo "BASE_URL=www.example.com" >> .envs/.test.env
-  - echo "RECAPTCHA_PUBLIC_KEY=" >> .envs/.test.env
-  - echo "RECAPTCHA_PRIVATE_KEY=" >> .envs/.test.env
   - echo "NEXMO_API_KEY=" >> .envs/.test.env
   - echo "NEXMO_API_SECRET=" >> .envs/.test.env
   - echo "NEXMO_DEFAULT_FROM=" >> .envs/.test.env
-
-# To get Django tests to work you may need to create a settings file using
-# the following DATABASES:
-#
-# DATABASES = {
-#     'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'ci',
-#        'USER': 'postgres',
-#        'PASSWORD': 'postgres',
-#        'HOST': 'postgres',
-#        'PORT': '5432',
-#    },
-# }
-#
-# and then adding `--settings app.settings.ci` (or similar) to the test command
+  - pipenv run python manage.py collectstatic
 
 test:
   variables:
-    DATABASE_URL: "sqlite:///~/test_db.sqlite3"
+    DATABASE_URL: "postgis://test_postgis_user:custom_pass@postgis-postgis/test_postgis_db"
+    RECAPTCHA_PUBLIC_KEY: "$RECAPTCHA_PUBLIC_KEY"
+    RECAPTCHA_PRIVATE_KEY: "$RECAPTCHA_PRIVATE_KEY"
+    MAPBOX_ACCESS_TOKEN: "$MAPBOX_ACCESS_TOKEN"
+
   script:
     - pipenv run pytest -v --cov=.
