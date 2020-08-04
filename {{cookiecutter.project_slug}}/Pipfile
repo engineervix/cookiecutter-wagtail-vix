@@ -71,6 +71,7 @@ fake-useragent = "*"
 titlecase = "*"
 elasticsearch = ">=7.0.0,<8.0.0"
 pytest = "==5.3.5"
+psycopg2 = "*"
 
 [requires]
 python_version = "{{ cookiecutter.python_version }}"
