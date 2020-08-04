@@ -52,12 +52,8 @@ DEFAULT_FROM_EMAIL = "Do Not Reply <do_not_reply@{{cookiecutter.domain_name}}>"
 
 WAGTAILSEARCH_BACKENDS = {
     "default": {
-        "BACKEND": "wagtail.search.backends.elasticsearch7",
-        "URLS": [env("ELASTICSEARCH_URL")],
-        "INDEX": "wagtail",
-        "TIMEOUT": 5,
-        "OPTIONS": {},
-        "INDEX_SETTINGS": {},
-        "AUTO_UPDATE": False,
-    }
+        "BACKEND": "wagtail.contrib.postgres_search.backend",
+        "SEARCH_CONFIG": "english",
+        "ATOMIC_REBUILD": True,
+    },
 }
