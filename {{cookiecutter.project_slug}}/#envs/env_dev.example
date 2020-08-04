@@ -4,6 +4,8 @@
 # $ python -c 'import random; import string; print("".join([random.SystemRandom().choice(string.digits + string.ascii_letters + string.punctuation) for i in range(100)]))'
 DJANGO_SECRET_KEY=CHANGEME!!!
 DATABASE_URL=CONFIGUREDB!!!
+# DATABASE_URL=postgres://db_user:db_password@host:port/db_name
+# DATABASE_URL=postgis://db_user:db_password@host:port/db_name
 DEBUG=True
 ALLOWED_HOSTS=
 BASE_URL=http://127.0.0.1:8000
@@ -14,8 +16,6 @@ RECAPTCHA_PRIVATE_KEY=ADDRECAPTCHAPRIVKEY!!!
 
 # ipinfo.io IP Address Data API
 IPINFO_ACCESS_TOKEN=ADDIPINFOTOKEN!!!
-
-ELASTICSEARCH_URL=CONFIGUREELASTICSEARCH!!!
 
 MAPBOX_ACCESS_TOKEN=CONFIGUREMAPBOX!!!
 
