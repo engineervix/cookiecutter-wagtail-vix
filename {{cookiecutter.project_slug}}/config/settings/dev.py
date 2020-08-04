@@ -44,7 +44,13 @@ LOGGING = {
     "root": {"level": "INFO", "handlers": ["console"]},
 }
 
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# https://docs.djangoproject.com/en/dev/ref/settings/#email-host
+EMAIL_HOST = "localhost"
+# https://docs.djangoproject.com/en/dev/ref/settings/#email-port
+EMAIL_PORT = 1025
 
 LIST_OF_EMAIL_RECIPIENTS += ["someone@{{cookiecutter.domain_name}}"]
 
