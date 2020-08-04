@@ -72,7 +72,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
 2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_username** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
 3. `cd` into the project folder created above and run `pipenv sync --dev` followed by `pipenv sync`.
-4. `pipenv shell`
+4. ~~`pipenv shell`~~
 5. `export ENV_PATH=.envs/.dev.env`
 6. `./manage.py migrate`
 7. `./manage.py createsuperuser`. When prompted for a username, please use the **wagtail_username** you specified in step 2. This is important to ensure that you don't have issues when populating the database with initial data, which is tied to the username provided in step 2.
