@@ -196,7 +196,10 @@ module.exports = function(grunt) {
                 },
                 options: {
                     watchTask: true,
-                    proxy: "http://127.0.0.1:8000"
+                    proxy: "http://127.0.0.1:8000",
+                    socket: {
+                      domain: 'http://127.0.0.1:3000'
+                  }
                 }
             }
         },
