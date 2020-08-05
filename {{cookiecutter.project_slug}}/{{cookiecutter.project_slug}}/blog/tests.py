@@ -92,7 +92,7 @@ def test_blog(client):
     # actual if no pagination
     # assert response.content.count(b'class="card-img-top" src="') == 5
     # because of pagination, we should have 3 on the first page
-    assert response.content.count(b'class="card-img-top" src="') == 3
+    assert response.content.count(b'class="card-img-top"') == 3
 
     # due to pagination, we get the first three
     for article in ArticlePage.objects.live()[:3]:

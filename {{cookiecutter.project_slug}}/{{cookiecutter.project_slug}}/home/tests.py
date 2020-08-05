@@ -35,7 +35,7 @@ def test_aboutpage(client):
         assert person.first_name.encode() in response.content
     draft_people = People.objects.all().filter(status="draft")
     for person in draft_people:
-        assert person.first_name.encode() not in response.content
+        assert person.twitter.encode() not in response.content
 
 
 @pytest.mark.django_db

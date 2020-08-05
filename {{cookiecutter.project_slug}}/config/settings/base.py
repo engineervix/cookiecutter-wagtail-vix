@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     "wagtail.contrib.table_block",  # not there by default
     "wagtail.contrib.styleguide",  # not there by default
     # 'wagtail.contrib.sitemaps',     # not there by default
+    "wagtail.contrib.postgres_search",
     "modelcluster",
     "taggit",
     "django.contrib.admin",
@@ -93,11 +94,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",  # not there by default
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.locale.LocaleMiddleware",  # not there by default
+    "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "wagtail.core.middleware.SiteMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
