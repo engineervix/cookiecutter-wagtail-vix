@@ -209,6 +209,9 @@
 
 <script type="text/javascript" src="https://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
 
+<!-- SweetAlert -->
+<script src="{% static 'vendors/bootstrap-sweetalert/sweetalert.min.js' %}"></script>
+
 {{ form.media.js }}  {# used by django-intl-tel-input #}
 
 {% if form.errors %}
@@ -270,9 +273,6 @@
 <!--  {% endif %} -->
 
 {% compress js %}
-
-<!-- SweetAlert -->
-<script src="{% static 'vendors/bootstrap-sweetalert/sweetalert.min.js' %}"></script>
 
 <script type="text/javascript">
 	function map_init_basic (map, options) {
