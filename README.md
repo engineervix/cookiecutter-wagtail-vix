@@ -52,7 +52,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 
 ### :anchor: Core
 
-- A [\*nix](https://en.wikipedia.org/wiki/Unix-like) environment. My preference is the latest LTS version of Ubuntu ([18.04](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes) at the time of writing this)
+- A [\*nix](https://en.wikipedia.org/wiki/Unix-like) environment. My preference is Ubuntu (LTS version such as [18.04](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes))
 - [Node.js](https://nodejs.org/) with the following packages installed **globally**:
   - [concurrently](https://github.com/kimmobrunfeldt/concurrently): `npm install -g concurrently`
   - [Browsersync](https://browsersync.io/): `npm install -g browser-sync`
