@@ -8,9 +8,9 @@
     "scripts": {
         "toc": "doctoc .",
         "setup_test_db": "psql -c \"DROP DATABASE IF EXISTS test_postgis_database\" && psql -c \"DROP USER IF EXISTS test_postgis_user\" && psql -c \"CREATE USER test_postgis_user PASSWORD 'testDB-password'\" && psql -c \"CREATE DATABASE test_postgis_database OWNER test_postgis_user\" && psql -c \"GRANT ALL PRIVILEGES ON DATABASE test_postgis_database to test_postgis_user\" && psql -c \"ALTER ROLE test_postgis_user SUPERUSER\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis_topology\"",
-        "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"grunt sync\" \"./MailHog\"",
+        "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"grunt sync\"",
         "test": "export ENV_PATH=.envs/.test.env && npm run setup_test_db && pytest -vv --cov=. --cov-report term-missing:skip-covered -s",
-        "coverage_html": "export ENV_PATH=.envs/.test.env && concurrently --raw --kill-others \"pytest -vv --cov=. --cov-report html\" \"./MailHog\"",
+        "coverage_html": "export ENV_PATH=.envs/.test.env && concurrently --raw --kill-others \"pytest -vv --cov=. --cov-report html\" \"maildev -o\"",
         "isort": "isort -rc --atomic .",
         "stylelint-check": "stylelint-config-prettier-check",
         "css-fix": "grunt stylelint --fix"
@@ -53,6 +53,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-conventional-changelog": "^6.1.0",
     "grunt-json-minification": "^0.2.1",
+    "grunt-maildev": "^2.1.0",
     "grunt-newer": "^1.3.0",
     "grunt-sass": "^3.1.0",
     "grunt-stylelint": "^0.15.0",

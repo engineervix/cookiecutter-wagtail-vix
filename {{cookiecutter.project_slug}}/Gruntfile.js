@@ -254,6 +254,13 @@ module.exports = function(grunt) {
                   '{{cookiecutter.project_slug}}/static/**/*.{css,less,scss}',
                   '!{{cookiecutter.project_slug}}/static/vendors/**/*.{css,less,scss}'
               ]
+          },
+
+          maildev: {
+            run: {
+              keepAlive: true,
+              open: true
+            }
           }
 
     });
@@ -296,6 +303,7 @@ module.exports = function(grunt) {
     grunt.registerTask("compress", ["css-x", "js-x"]);
     grunt.registerTask('changelog', ['conventionalChangelog']);
     grunt.registerTask('sass', ['sass']);
+    grunt.registerTask('maildev', ['maildev:run']);
 
     // default task
     grunt.registerTask("default", [
@@ -307,5 +315,5 @@ module.exports = function(grunt) {
         "watch"
     ]);
 
-    grunt.registerTask("sync", ["browserSync", "watch"]);
+    grunt.registerTask("sync", ["maildev", "browserSync", "watch"]);
 };

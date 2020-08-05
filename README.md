@@ -60,12 +60,12 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
   - [commitizen](https://github.com/commitizen/cz-cli/): `npm install commitizen -g`
   - [prettier](https://github.com/prettier/prettier/): `npm install prettier -g`
   - [Sass](https://sass-lang.com): `npm install -g sass`
+  - [MailDev](https://github.com/maildev/maildev): `npm install -g maildev`
   - [DocToc](https://github.com/thlorenz/doctoc): `npm install -g doctoc`
   - (optional, but recommended to have it installed on your machine) [lite-server](https://github.com/johnpapa/lite-server): `npm install -g lite-server`
 - [yarn](https://yarnpkg.com/): See [installation instructions](https://classic.yarnpkg.com/en/docs/install#debian-stable)
 - [Python3](https://www.python.org/) (3.6 and above) with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv) and [pipev](https://github.com/pypa/pipenv).
 - ~~The wagtail search interface relies on [elasticsearch](https://www.elastic.co/downloads/elasticsearch). If you prefer not to run an Elasticsearch server in development or production, there are many hosted services available, including [Bonsai](https://bonsai.io/signup), who offer a free account suitable for testing and development~~. Switched to the [PostgreSQL Backend](https://docs.wagtail.io/en/latest/topics/search/backends.html#postgresql-backend). Therefore, please ensure that Postgres (and PostGIS) are setup on your machine.
-- [MailHog](https://github.com/mailhog/MailHog) &ndash; an email testing tool. Add the `MailHog` binary in the project root.
 
 ### 🕶 Optional
 
