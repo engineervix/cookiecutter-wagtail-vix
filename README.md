@@ -18,7 +18,7 @@
 
 ## What is this ❓
 
-This is my take on creating a reusable (and heavily opinionated) [Wagtail 2.8](https://docs.wagtail.io/en/v2.8/releases/2.8.html) / [Django 2.2](https://docs.djangoproject.com/en/2.2/releases/) project skeleton using [cookiecutter](https://github.com/audreyr/cookiecutter).
+This is my take on creating a reusable (and heavily opinionated) [Wagtail 2.9](https://docs.wagtail.io/en/v2.9.3/releases/2.9.3.html) / [Django 2.2](https://docs.djangoproject.com/en/2.2/releases/) project skeleton using [cookiecutter](https://github.com/audreyr/cookiecutter).
 
 This cookiecutter template is mostly a reflection of my personal preferences. It does, however, try to employ best practices, for example, the [12-factor-app](https://12factor.net/) and [Daniel Greenfeld’s **Cookiecutter Django** framework](https://github.com/pydanny/cookiecutter-django). I also got a lot of ideas from some excellent wagtail-based projects, primarily [bvspca](https://github.com/nfletton/bvspca) and [bakerydemo](https://github.com/wagtail/bakerydemo).
 
