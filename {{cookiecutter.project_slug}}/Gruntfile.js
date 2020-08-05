@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+    const sass = require('node-sass');
+    require('load-grunt-tasks')(grunt);
     require("time-grunt")(grunt);
     // 1. Configuration
 
@@ -221,7 +223,35 @@ module.exports = function(grunt) {
           release: {
             src: 'CHANGELOG.md'
           }
-        }
+        },
+
+        sass: {
+          options: {
+              implementation: sass,
+              sourceMap: false
+          },
+          dist: {
+              files: {
+                  'main.css': 'main.scss'
+              }
+          }
+        },
+
+        stylelint: {
+          options: {
+            configFile: '.stylelintrc',
+            formatter: 'verbose',
+            ignoreDisables: false,
+            failOnError: true,
+            outputFile: '',
+            reportNeedlessDisables: false,
+            syntax: ''
+          },
+          src: [
+                  '{{cookiecutter.project_slug}}/static/**/*.{css,less,scss}',
+                  '!src/badstyles/*.css'
+              ]
+          }
 
     });
 
@@ -237,6 +267,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-browser-sync");
     grunt.loadNpmTasks("grunt-newer");
     grunt.loadNpmTasks('grunt-conventional-changelog');
+    grunt.loadNpmTasks('grunt-stylelint');
 
     // 3. Register Tasks
 
@@ -261,6 +292,7 @@ module.exports = function(grunt) {
     grunt.registerTask("all", ["cp", "css-x", "js-x"]);
     grunt.registerTask("compress", ["css-x", "js-x"]);
     grunt.registerTask('changelog', ['conventionalChangelog']);
+    grunt.registerTask('sass', ['sass']);
 
     // default task
     grunt.registerTask("default", [
