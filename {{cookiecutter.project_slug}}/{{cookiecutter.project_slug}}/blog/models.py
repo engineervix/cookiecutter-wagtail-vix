@@ -130,7 +130,7 @@ class ArticlePage(Page):
         # file can't be found.
         try:
             return self.cover_picture.get_rendition("fill-50x50").img_tag()
-        except:
+        except:  # noqa: E:722
             # TODO: - Return a default image instead of empty string
             #       - refine the try...except: Avoid "wildcard" Exception handling
             return ""

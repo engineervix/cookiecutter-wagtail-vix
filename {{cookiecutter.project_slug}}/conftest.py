@@ -177,9 +177,9 @@ def fake_content():
     fake_attribution = " ".join(three_random_words)
 
     data = [
-        {"type": "paragraph_block", "value": fake_paragraph, },
-        {"type": "block_quote", "value": fake_quote, },
-        {"type": "embed_block", "value": fake_embed_url(), },
+        {"type": "paragraph_block", "value": fake_paragraph},
+        {"type": "block_quote", "value": fake_quote},
+        {"type": "embed_block", "value": fake_embed_url()},
         {
             "type": "heading_block",
             "value": {

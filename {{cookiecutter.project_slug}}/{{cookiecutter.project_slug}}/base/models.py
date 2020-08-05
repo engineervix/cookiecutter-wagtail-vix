@@ -119,7 +119,7 @@ class People(index.Indexed, ClusterableModel, StatusModel, TimeStampedModel):
         # file can't be found.
         try:
             return self.image.get_rendition("fill-50x50").img_tag()
-        except:
+        except:  # noqa: E:722
             return ""
 
     def __str__(self):

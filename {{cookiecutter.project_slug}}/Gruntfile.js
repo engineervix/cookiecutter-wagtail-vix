@@ -242,7 +242,7 @@ module.exports = function(grunt) {
 
         stylelint: {
           options: {
-            configFile: '.stylelintrc',
+            configFile: '.stylelintrc.json',
             formatter: 'verbose',
             ignoreDisables: false,
             failOnError: true,
@@ -252,7 +252,7 @@ module.exports = function(grunt) {
           },
           src: [
                   '{{cookiecutter.project_slug}}/static/**/*.{css,less,scss}',
-                  '!src/badstyles/*.css'
+                  '!{{cookiecutter.project_slug}}/static/vendors/**/*.{css,less,scss}'
               ]
           }
 

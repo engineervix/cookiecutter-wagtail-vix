@@ -104,6 +104,8 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 
   4. `pre-commit run --all-files`
 
+> :exclamation: If you are using pyenv, see <https://github.com/pre-commit/pre-commit/issues/810>. In particular, I found [this explanation](https://github.com/pre-commit/pre-commit/issues/810#issuecomment-424732161) from @thomasfowler and [this comment](https://github.com/pre-commit/pre-commit/issues/810#issuecomment-602770714) from @asottile to be very helpful.
+
 #### git workflow
 
 0. :warning: First, ensure that, before you make any changes, you have pulled the latest changes from remote.

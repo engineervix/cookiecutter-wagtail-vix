@@ -23,21 +23,19 @@ from wagtail.search import index
 # from djexmo import send_message
 
 
-"""
-@register_snippet
-class ContactNumber(models.Model):
-    phone_number = PhoneNumberField()
+# @register_snippet
+# class ContactNumber(models.Model):
+#     phone_number = PhoneNumberField()
 
-    panels = [
-        FieldPanel('phone_number'),
-    ]
+#     panels = [
+#         FieldPanel('phone_number'),
+#     ]
 
-    def __str__(self):
-        return str(self.phone_number)
+#     def __str__(self):
+#         return str(self.phone_number)
 
-    class Meta:
-        verbose_name_plural = 'Contact Numbers'
-"""
+#     class Meta:
+#         verbose_name_plural = 'Contact Numbers'
 
 
 class PhoneNumber(models.Model):

@@ -12,7 +12,8 @@
         "test": "export ENV_PATH=.envs/.test.env && npm run setup_test_db && pytest -vv --cov=. --cov-report term-missing:skip-covered -s",
         "coverage_html": "export ENV_PATH=.envs/.test.env && concurrently --raw --kill-others \"pytest -vv --cov=. --cov-report html\" \"./MailHog\"",
         "isort": "isort -rc --atomic .",
-        "stylelint-check": "stylelint-config-prettier-check"
+        "stylelint-check": "stylelint-config-prettier-check",
+        "css-fix": "grunt stylelint --fix"
     },
     "private": true,
     "dependencies": {

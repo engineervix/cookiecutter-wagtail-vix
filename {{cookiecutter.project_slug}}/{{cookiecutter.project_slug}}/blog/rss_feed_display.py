@@ -80,7 +80,7 @@ def get_rss_feed_entries():
 
     if link.status == HTTP_STATUS and len(link.entries) != 0:
         for i in range(0, 3):
-            value = str(link["entries"][i])
+            # value = str(link["entries"][i])
             # image_url = re.search(
             #     "(?P<url>http?://[^\s]+(png|jpeg|jpg|gif))", value, re.IGNORECASE
             # ).group("url")

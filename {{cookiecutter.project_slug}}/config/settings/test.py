@@ -10,13 +10,13 @@ from .base import *  # noqa
 # ------------------------------------------------------------------------------
 # Turn debug off so tests run faster
 DEBUG = False
-TEMPLATES[0]["OPTIONS"]["debug"] = False
+TEMPLATES[0]["OPTIONS"]["debug"] = False  # noqa: F405
 
 # SECRET CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # Note: This key only used for development and testing.
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+SECRET_KEY = env("DJANGO_SECRET_KEY")  # noqa: F405
 
 # Mail settings
 # ------------------------------------------------------------------------------
@@ -59,4 +59,4 @@ PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
 # See https://stackoverflow.com/questions/44160666/
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
-LIST_OF_EMAIL_RECIPIENTS += ["someone@{{cookiecutter.domain_name}}"]
+LIST_OF_EMAIL_RECIPIENTS += ["someone@{{cookiecutter.domain_name}}"]  # noqa: F405

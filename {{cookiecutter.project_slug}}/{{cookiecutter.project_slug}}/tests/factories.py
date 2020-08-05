@@ -86,13 +86,11 @@ class PeopleFactory(factory.django.DjangoModelFactory):
         model = People
 
 
-'''
-class ArticleTagFactory(factory.django.DjangoModelFactory):
-    """Article Tags"""
+# class ArticleTagFactory(factory.django.DjangoModelFactory):
+#     """Article Tags"""
 
-    class Meta:
-        model = ArticleTag
-'''
+#     class Meta:
+#         model = ArticleTag
 
 
 class ArticleFactory(wagtail_factories.PageFactory):
@@ -119,60 +117,58 @@ class SimpleDocFactory(wagtail_factories.DocumentFactory):
     # file = factory.django.FileField(filename=f'{factory.Faker("slug")}.pdf')
 
 
-"""
-class HeadingBlockFactory(wagtail_factories.StructBlockFactory):
-    heading_text = factory.Faker(
-        "text", max_nb_chars=200
-    ).generate(extra_kwargs={})
-    size = random.choice(['h2', 'h3', 'h4'])
+# class HeadingBlockFactory(wagtail_factories.StructBlockFactory):
+#     heading_text = factory.Faker(
+#         "text", max_nb_chars=200
+#     ).generate(extra_kwargs={})
+#     size = random.choice(['h2', 'h3', 'h4'])
 
-    class Meta:
-        model = HeadingBlock
-
-
-class ImageBlockFactory(wagtail_factories.StructBlockFactory):
-    image = factory.SubFactory(wagtail_factories.ImageChooserBlockFactory)
-    caption = random.choice([factory.Faker("text"), ""])
-    attribution = random.choice([factory.Faker("text", max_nb_chars=200).generate(extra_kwargs={}), ""])
-
-    class Meta:
-        model = ImageBlock
+#     class Meta:
+#         model = HeadingBlock
 
 
-class BlockQuoteFactory(wagtail_factories.StructBlockFactory):
-    text = factory.Faker("text")
-    attribute_name = attribution = random.choice([factory.Faker("text", max_nb_chars=200).generate(extra_kwargs={}), ""])
+# class ImageBlockFactory(wagtail_factories.StructBlockFactory):
+#     image = factory.SubFactory(wagtail_factories.ImageChooserBlockFactory)
+#     caption = random.choice([factory.Faker("text"), ""])
+#     attribution = random.choice([factory.Faker("text", max_nb_chars=200).generate(extra_kwargs={}), ""])
 
-    class Meta:
-        model = BlockQuote
-
-
-class ChoiceBlockFactory(wagtail_factories.blocks.BlockFactory):
-
-    class Meta:
-        model = blocks.ChoiceBlock
+#     class Meta:
+#         model = ImageBlock
 
 
-class TextBlockFactory(wagtail_factories.blocks.BlockFactory):
+# class BlockQuoteFactory(wagtail_factories.StructBlockFactory):
+#     text = factory.Faker("text")
+#     attribute_name = attribution = random.choice([factory.Faker("text", max_nb_chars=200).generate(extra_kwargs={}), ""])
 
-    class Meta:
-        model = blocks.TextBlock
-
-
-class EmbedBlockFactory(wagtail_factories.blocks.BlockFactory):
-
-    class Meta:
-        model = EmbedBlock
+#     class Meta:
+#         model = BlockQuote
 
 
-class RichTextBlockFactory(wagtail_factories.blocks.BlockFactory):
+# class ChoiceBlockFactory(wagtail_factories.blocks.BlockFactory):
 
-    class Meta:
-        model = blocks.RichTextBlock
+#     class Meta:
+#         model = blocks.ChoiceBlock
 
 
-class TableBlockFactory(wagtail_factories.blocks.BlockFactory):
+# class TextBlockFactory(wagtail_factories.blocks.BlockFactory):
 
-    class Meta:
-        model = TableBlock
-"""
+#     class Meta:
+#         model = blocks.TextBlock
+
+
+# class EmbedBlockFactory(wagtail_factories.blocks.BlockFactory):
+
+#     class Meta:
+#         model = EmbedBlock
+
+
+# class RichTextBlockFactory(wagtail_factories.blocks.BlockFactory):
+
+#     class Meta:
+#         model = blocks.RichTextBlock
+
+
+# class TableBlockFactory(wagtail_factories.blocks.BlockFactory):
+
+#     class Meta:
+#         model = TableBlock

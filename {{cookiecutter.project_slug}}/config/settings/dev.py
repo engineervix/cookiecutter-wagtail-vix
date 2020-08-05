@@ -1,7 +1,7 @@
 from .base import *
 
 # Django Debug Toolbar
-INSTALLED_APPS.append(
+INSTALLED_APPS.append(  # noqa: F405
     "debug_toolbar"
 )  # https://github.com/jazzband/django-debug-toolbar
 
@@ -12,7 +12,7 @@ INSTALLED_APPS.append(
 # You should include the Debug Toolbar middleware as early as possible in the list.
 # However, it must come after any other middleware that encodes the response's content,
 # such as GZipMiddleware.
-MIDDLEWARE.insert(1, "debug_toolbar.middleware.DebugToolbarMiddleware")
+MIDDLEWARE.insert(1, "debug_toolbar.middleware.DebugToolbarMiddleware")  # noqa: F405
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -52,7 +52,7 @@ EMAIL_HOST = "localhost"
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-port
 EMAIL_PORT = 1025
 
-LIST_OF_EMAIL_RECIPIENTS += ["someone@{{cookiecutter.domain_name}}"]
+LIST_OF_EMAIL_RECIPIENTS += ["someone@{{cookiecutter.domain_name}}"]  # noqa: F405
 
 DEFAULT_FROM_EMAIL = "Do Not Reply <do_not_reply@{{cookiecutter.domain_name}}>"
 
