@@ -24,6 +24,7 @@ faker = "*"
 wagtail-factories = {file = "https://github.com/mvantellingen/wagtail-factories/archive/master.zip"}
 pre-commit = "*"
 isort = {extras = ["pipfile"],version = "*"}
+virtualenv = "<20"
 
 [packages]
 django = ">=2.2,<3.0"
