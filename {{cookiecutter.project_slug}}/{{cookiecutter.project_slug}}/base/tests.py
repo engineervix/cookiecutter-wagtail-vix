@@ -63,7 +63,7 @@ def test_document_serve(client):
     response2 = client.get(url2)
     assert response1.status_code == 200
     assert response2.status_code == 200
-    assert response1.get("Content-Disposition") != "attachment"
-    assert response2.get("Content-Disposition") != "attachment"
+    assert "attachment" not in response1.get("Content-Disposition")
+    assert "attachment" not in response2.get("Content-Disposition")
     assert response1.get("Content-Type") == "application/pdf"
     assert response2.get("Content-Type") == "application/pdf"
