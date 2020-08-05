@@ -13,7 +13,7 @@
         "coverage_html": "export ENV_PATH=.envs/.test.env && concurrently --raw --kill-others \"pytest -vv --cov=. --cov-report html\" \"maildev -o\"",
         "isort": "isort -rc --atomic .",
         "stylelint-check": "stylelint-config-prettier-check",
-        "css-fix": "grunt stylelint --fix"
+        "css-fix": "npx stylelint {{cookiecutter.project_slug}}/static/css/ --fix"
     },
     "private": true,
     "dependencies": {
