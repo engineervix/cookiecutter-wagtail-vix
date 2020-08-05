@@ -2,19 +2,43 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.4.0
+    rev: v3.1.0
     hooks:
       - id: check-added-large-files
         args: ["--maxkb=5000"]
       - id: end-of-file-fixer
       - id: check-case-conflict
       - id: detect-private-key
+      - id: check-docstring-first
   - repo: https://github.com/psf/black
     rev: 19.10b0
     hooks:
       - id: black
         exclude: (.*)/migrations
   - repo: https://gitlab.com/PyCQA/flake8
-    rev: 3.7.9
+    rev: 3.8.3
     hooks:
       - id: flake8
+  - repo: https://github.com/prettier/prettier
+    rev: 2.0.5
+    hooks:
+      - id: prettier
+        exclude: >
+          (?x)^(
+              (.*)/vendors|
+              (.*)/ico|
+              ^.+\.html$|
+              package-lock.json|
+              ^.+\.min\.(js|css)$
+          )$
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v2.0.0
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
+    rev: 0.0.2
+    hooks:
+      - id: stylelint
+        additional_dependencies:
+          ["stylelint@13.6.1", "stylelint-config-sass-guidelines@7.0.0"]
