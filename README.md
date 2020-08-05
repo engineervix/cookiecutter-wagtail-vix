@@ -9,10 +9,11 @@
     - [:anchor: Core](#anchor-core)
     - [🕶 Optional](#-optional)
   - [:computer: Setup](#computer-setup)
-    - [⌨️ to get started](#-to-get-started)
-    - [⚙️ other steps](#-other-steps)
+    - [⌨️ to get started](#️-to-get-started)
+    - [⚙️ other steps](#️-other-steps)
+      - [git workflow](#git-workflow)
   - [:+1: Credits](#1-credits)
-  - [✍️ To do](#-to-do)
+  - [✍️ To do](#️-to-do)
   - [📋 Reference](#-reference)
 
 ## What is this ❓
@@ -63,7 +64,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
   - (optional, but recommended to have it installed on your machine) [lite-server](https://github.com/johnpapa/lite-server): `npm install -g lite-server`
 - [yarn](https://yarnpkg.com/): See [installation instructions](https://classic.yarnpkg.com/en/docs/install#debian-stable)
 - [Python3](https://www.python.org/) (3.6 and above) with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv) and [pipev](https://github.com/pypa/pipenv).
-- ~~The wagtail search interface relies on [elasticsearch](https://www.elastic.co/downloads/elasticsearch). If you prefer not to run an Elasticsearch server in development or production, there are many hosted services available, including [Bonsai](https://bonsai.io/signup), who offer a free account suitable for testing and development~~. Switched to the [PostgreSQL Backend](https://docs.wagtail.io/en/latest/topics/search/backends.html#postgresql-backend). Therefore, please ensure that Postgres (and PostGIS) are setup on your machine. 
+- ~~The wagtail search interface relies on [elasticsearch](https://www.elastic.co/downloads/elasticsearch). If you prefer not to run an Elasticsearch server in development or production, there are many hosted services available, including [Bonsai](https://bonsai.io/signup), who offer a free account suitable for testing and development~~. Switched to the [PostgreSQL Backend](https://docs.wagtail.io/en/latest/topics/search/backends.html#postgresql-backend). Therefore, please ensure that Postgres (and PostGIS) are setup on your machine.
 - [MailHog](https://github.com/mailhog/MailHog) &ndash; an email testing tool. Add the `MailHog` binary in the project root.
 
 ### 🕶 Optional
@@ -91,7 +92,26 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 ### ⚙️ other steps
 
 - setup version control (git) for your generated project
-- setup [pre-commit](https://pre-commit.com/): `pre-commit install` and then optionally run against all files: `pre-commit run --all-files`
+- setup [pre-commit](https://pre-commit.com/):
+  1. `pre-commit install`
+  2. `pre-commit install --hook-type commit-msg`
+  3. Update `.git/hooks/prepare-commit-msg` with the following code:
+
+  ```
+  #!/usr/bin/env bash
+  exec < /dev/tty && node_modules/.bin/git-cz --hook || true
+  ```
+
+  4. `pre-commit run --all-files`
+
+#### git workflow
+
+0. :warning: First, ensure that, before you make any changes, you have pulled the latest changes from remote.
+1. Add the file(s) you wanna commit: `git add whatever`
+2. `git commit` -- this will run [Commitizen](http://commitizen.github.io/cz-cli/); you'll be prompted to fill in any required fields and your commit messages will be formatted according to [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog) &ndash; a Commitizen adapter which prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard.
+3. If there are no issues, push your changes accordingly, otherwise, repeat steps 1 and 2 above until all issues are resolved.
+
+> :exclamation: If you make any changes to the structure of your README.md or other markdown files, do `npm run toc` before committing, so that the TOC is updated
 
 ## :+1: Credits
 
