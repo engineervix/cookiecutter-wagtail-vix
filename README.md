@@ -86,7 +86,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 8. `./manage.py load_initial_data`
 9. `yarn`
 10. `grunt all`
-11. `./manage.py colectstatic`
+11. `./manage.py collectstatic`
 12. Prior to running tests, check the `package.json` to ensure that you have the correct postgres/postgis settings. Once you're all set, go ahead and run tests: `npm run test`
 13. Start the development server: `npm run dev`. Your site should be accessible at `http://127.0.0.1:3000` or `http://localhost:3000`.
 
