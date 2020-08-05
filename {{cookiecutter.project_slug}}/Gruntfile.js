@@ -197,7 +197,32 @@ module.exports = function(grunt) {
                     proxy: "http://127.0.0.1:8000"
                 }
             }
+        },
+
+        conventionalChangelog: {
+          options: {
+            changelogOpts: {
+              // conventional-changelog options go here
+              preset: 'angular'
+            },
+            context: {
+              // context goes here
+            },
+            gitRawCommitsOpts: {
+              // git-raw-commits options go here
+            },
+            parserOpts: {
+              // conventional-commits-parser options go here
+            },
+            writerOpts: {
+              // conventional-changelog-writer options go here
+            }
+          },
+          release: {
+            src: 'CHANGELOG.md'
+          }
         }
+
     });
 
     // 2. Load Plugins
@@ -211,6 +236,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-browser-sync");
     grunt.loadNpmTasks("grunt-newer");
+    grunt.loadNpmTasks('grunt-conventional-changelog');
 
     // 3. Register Tasks
 
@@ -234,6 +260,7 @@ module.exports = function(grunt) {
     // grunt.registerTask('all', ['cp', 'css-x', 'js-x', 'html-x', 'json-x']);
     grunt.registerTask("all", ["cp", "css-x", "js-x"]);
     grunt.registerTask("compress", ["css-x", "js-x"]);
+    grunt.registerTask('changelog', ['conventionalChangelog']);
 
     // default task
     grunt.registerTask("default", [
