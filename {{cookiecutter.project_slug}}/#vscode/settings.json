@@ -2,7 +2,9 @@
   "python.pythonPath": "/path/to/virtualenvironment/bin/python",
   "python.linting.pycodestyleEnabled": true,
   "python.linting.pylintPath": "/path/to/virtualenvironment/bin/pylint",
-  "python.linting.pylintEnabled": true,
+  "python.linting.pylintEnabled": false,
   "cSpell.enabled": false,
-  "restructuredtext.confPath": ""
+  "restructuredtext.confPath": "",
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true
 }
