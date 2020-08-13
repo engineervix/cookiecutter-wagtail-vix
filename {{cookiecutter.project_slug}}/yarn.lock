@@ -2008,19 +2008,19 @@ cz-conventional-changelog@3.2.0, cz-conventional-changelog@^3.2.0:
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
-cz-emoji@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/cz-emoji/-/cz-emoji-1.2.1.tgz#94400b07d5399295328fe71e29a1026c3a160771"
-  integrity sha512-3OZvxnYJRraxUslFO2RN0ECO7YeWvgOTcZJcQoIZhmMzZMUgFs5TJXOI+iSFU/lNPhROivtJkf9dcXXMgy9HQA==
+cz-emoji@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/cz-emoji/-/cz-emoji-1.2.2.tgz#afb0f78de4e7262bc4ab07b324923bcdc0573ea6"
+  integrity sha512-7awYP9UrPY5NNZruLOzKHtGoDLQbUMbmXq6bjnQW1m92mdI+pSaKGp83vJ57oEWvPqMxBDQcHTjaDIhJ2fE8MQ==
   dependencies:
     cli-truncate "^1.0.0"
     fuse.js "^3.4.5"
     home-dir "^1.0.0"
     inquirer-autocomplete-prompt "^0.12.0"
-    inquirer-maxlength-input-prompt "^1.0.0"
+    inquirer-maxlength-input-prompt "^1.0.1"
     pad "^2.3.0"
     prettier "^1.18.2"
-    read-pkg-up "^2.0.0"
+    read-pkg-up "^7.0.1"
     wrap-ansi "^3.0.0"
 
 dargs@^4.0.1:
@@ -3701,7 +3701,7 @@ inquirer-autocomplete-prompt@^0.12.0:
     inquirer "3.2.0"
     run-async "^2.3.0"
 
-inquirer-maxlength-input-prompt@^1.0.0:
+inquirer-maxlength-input-prompt@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/inquirer-maxlength-input-prompt/-/inquirer-maxlength-input-prompt-1.0.1.tgz#55426741894dccb8a7551bde106558d053996b4d"
   integrity sha512-Kw8FDurr1/3xDUdi+lW6Xj0QrymoeTWygnCPctIlDutOgxh/gIVi6I3w3++x47b7ET0zCFleYvVKWFKtfkmY+A==
@@ -4762,16 +4762,6 @@ load-json-file@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
-
-load-json-file@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
-  integrity sha1-eUfkIUmvgNaWy/eXvKq8/h/inKg=
-  dependencies:
-    graceful-fs "^4.1.2"
-    parse-json "^2.2.0"
-    pify "^2.0.0"
-    strip-bom "^3.0.0"
 
 load-json-file@^4.0.0:
   version "4.0.0"
@@ -5857,13 +5847,6 @@ path-type@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-path-type@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/path-type/-/path-type-2.0.0.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
-  integrity sha1-8BLMuEFbcJb8LaoQVMPXI4lZTHM=
-  dependencies:
-    pify "^2.0.0"
-
 path-type@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-3.0.0.tgz#cef31dc8e0a1a3bb0d105c0cd97cf3bf47f4e36f"
@@ -6212,14 +6195,6 @@ read-pkg-up@^1.0.1:
     find-up "^1.0.0"
     read-pkg "^1.0.0"
 
-read-pkg-up@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-2.0.0.tgz#6b72a8048984e0c41e79510fd5e9fa99b3b549be"
-  integrity sha1-a3KoBImE4MQeeVEP1en6mbO1Sb4=
-  dependencies:
-    find-up "^2.0.0"
-    read-pkg "^2.0.0"
-
 read-pkg-up@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-3.0.0.tgz#3ed496685dba0f8fe118d0691dc51f4a1ff96f07"
@@ -6245,15 +6220,6 @@ read-pkg@^1.0.0, read-pkg@^1.1.0:
     load-json-file "^1.0.0"
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
-
-read-pkg@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-2.0.0.tgz#8ef1c0623c6a6db0dc6713c4bfac46332b2368f8"
-  integrity sha1-jvHAYjxqbbDcZxPEv6xGMysjaPg=
-  dependencies:
-    load-json-file "^2.0.0"
-    normalize-package-data "^2.3.2"
-    path-type "^2.0.0"
 
 read-pkg@^3.0.0:
   version "3.0.0"
