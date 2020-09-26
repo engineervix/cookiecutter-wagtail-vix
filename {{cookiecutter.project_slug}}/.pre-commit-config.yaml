@@ -41,4 +41,4 @@ repos:
     hooks:
       - id: stylelint
         additional_dependencies:
-          ["stylelint@13.6.1", "stylelint-config-sass-guidelines@7.0.0"]
+          ["stylelint@13.7.2", "stylelint-config-sass-guidelines@7.0.0"]
