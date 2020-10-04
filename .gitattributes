@@ -1,0 +1,14 @@
+# Autodetect text files
+* text=auto
+
+# Ensure those won't be messed up with
+*.svg binary
+*.jpg binary
+*.png binary
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.ppt binary
+*.doc binary
+*.xls binary
