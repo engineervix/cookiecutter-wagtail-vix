@@ -64,7 +64,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
   - [DocToc](https://github.com/thlorenz/doctoc): `npm install -g doctoc`
   - (optional, but recommended to have it installed on your machine) [lite-server](https://github.com/johnpapa/lite-server): `npm install -g lite-server`
 - [yarn](https://yarnpkg.com/): See [installation instructions](https://classic.yarnpkg.com/en/docs/install#debian-stable)
-- [Python3](https://www.python.org/) (3.6 and above) with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv) and [pipev](https://github.com/pypa/pipenv).
+- [Python3](https://www.python.org/) (3.6 and above) with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv) and ~~[pipev](https://github.com/pypa/pipenv)~~ [pip-tools](https://github.com/jazzband/pip-tools).
 - ~~The wagtail search interface relies on [elasticsearch](https://www.elastic.co/downloads/elasticsearch). If you prefer not to run an Elasticsearch server in development or production, there are many hosted services available, including [Bonsai](https://bonsai.io/signup), who offer a free account suitable for testing and development~~. Switched to the [PostgreSQL Backend](https://docs.wagtail.io/en/latest/topics/search/backends.html#postgresql-backend). Therefore, please ensure that Postgres (and PostGIS) are setup on your machine.
 
 ### 🕶 Optional
@@ -78,7 +78,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
 2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_username** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
-3. `cd` into the project folder created above and run `pipenv sync --dev` followed by `pipenv sync`.
+3. create a virtual environment for your project. `cd` into the project folder created above and install python dependencies: `pip install -r requirements`.
 4. Now would be a good time to setup your postgres/postgis database and ensure that you update `DATABASE_URL` and the other environment variables in your `.env` files. The essential ones for starters are `RECAPTCHA_PUBLIC_KEY`, `RECAPTCHA_PRIVATE_KEY` and `MAPBOX_ACCESS_TOKEN`.
 5. `export ENV_PATH=.envs/.dev.env`
 6. `./manage.py migrate`

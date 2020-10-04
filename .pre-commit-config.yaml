@@ -14,8 +14,16 @@ repos:
     rev: 19.10b0
     hooks:
       - id: black
-        exclude: (.*)/migrations
+        exclude: |
+            (?x)(
+                ^{{cookiecutter.project_slug}}/
+                |(.*)/migrations
+            )
   - repo: https://gitlab.com/PyCQA/flake8
     rev: 3.8.3
     hooks:
       - id: flake8
+        exclude: |
+            (?x)(
+                ^{{cookiecutter.project_slug}}/
+            )
