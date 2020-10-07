@@ -47,10 +47,12 @@ yattag
 
 # Dev
 black
+bpython
 doc8
 flake8
 isort[requirements_deprecated_finder]
 pip-tools
+powerline-status
 pre-commit
 
 # Test

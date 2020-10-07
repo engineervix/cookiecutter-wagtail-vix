@@ -12,6 +12,8 @@ bcrypt==3.2.0             # via -r requirements.in
 beautifulsoup4==4.8.2     # via -r requirements.in, readtime, wagtail
 black==20.8b1             # via -r requirements.in
 bleach==3.2.1             # via -r requirements.in
+blessings==1.7            # via curtsies
+bpython==0.19             # via -r requirements.in
 brotli==1.0.9             # via -r requirements.in
 cachetools==4.1.1         # via ipinfo
 certifi==2020.6.20        # via requests
@@ -23,6 +25,7 @@ coverage==5.3             # via pytest-cov
 cryptography==3.1.1       # via pyjwt
 csscompressor==0.9.5      # via -r requirements.in
 cssselect==1.1.0          # via pyquery
+curtsies==0.3.4           # via bpython
 dataclasses==0.7          # via black
 deprecated==1.2.10        # via nexmo
 distlib==0.3.1            # via virtualenv
@@ -66,6 +69,7 @@ feedparser==6.0.1         # via -r requirements.in
 filelock==3.0.12          # via virtualenv
 flake8==3.8.3             # via -r requirements.in
 future==0.18.2            # via pytest-logger
+greenlet==0.4.17          # via bpython
 html5lib==1.1             # via -r requirements.in, wagtail
 identify==1.5.5           # via pre-commit
 idna==2.10                # via requests
@@ -95,13 +99,14 @@ pip-tools==5.3.1          # via -r requirements.in
 pipreqs==0.4.10           # via isort
 pluggy==0.13.1            # via pytest
 ply==3.11                 # via slimit
+powerline-status==2.7     # via -r requirements.in
 pre-commit==2.7.1         # via -r requirements.in
 psycopg2==2.8.6           # via -r requirements.in
 py==1.9.0                 # via pytest, pytest-forked
 pycodestyle==2.6.0        # via flake8
 pycparser==2.20           # via cffi
 pyflakes==2.2.0           # via flake8
-pygments==2.7.1           # via doc8
+pygments==2.7.1           # via bpython, doc8
 pyjwt[crypto]==1.7.1      # via nexmo
 pyparsing==2.4.7          # via packaging
 pyquery==1.4.1            # via readtime
@@ -122,12 +127,12 @@ pyyaml==5.3.1             # via -r requirements.in, pre-commit
 rcssmin==1.0.6            # via django-compressor
 readtime==1.1.1           # via -r requirements.in
 regex==2020.9.27          # via black, titlecase
-requests==2.24.0          # via ipinfo, nexmo, wagtail, yarg
+requests==2.24.0          # via bpython, ipinfo, nexmo, wagtail, yarg
 restructuredtext-lint==1.3.1  # via doc8
 rjsmin==1.1.0             # via django-compressor
 sgmllib3k==1.0.0          # via feedparser
 simplejson==3.17.2        # via -r requirements.in
-six==1.15.0               # via argon2-cffi, bcrypt, bleach, cryptography, django-compressor, doc8, html5lib, ipinfo, l18n, packaging, pip-tools, python-dateutil, virtualenv
+six==1.15.0               # via argon2-cffi, bcrypt, bleach, blessings, bpython, cryptography, django-compressor, doc8, html5lib, ipinfo, l18n, packaging, pip-tools, python-dateutil, virtualenv
 slimit==0.8.1             # via -r requirements.in
 soupsieve==2.0.1          # via beautifulsoup4
 sqlparse==0.3.1           # via django, django-debug-toolbar
@@ -147,6 +152,7 @@ virtualenv==20.0.31       # via pre-commit
 https://github.com/wagtail/wagtail-factories/archive/master.zip  # via -r requirements.in
 wagtail==2.10.2           # via -r requirements.in, wagtail-factories, wagtailfontawesome
 wagtailfontawesome==1.2.1  # via -r requirements.in
+wcwidth==0.2.5            # via curtsies
 webencodings==0.5.1       # via bleach, html5lib
 werkzeug==1.0.1           # via -r requirements.in
 willow==1.4               # via wagtail
