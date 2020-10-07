@@ -1,6 +1,7 @@
 [report]
 skip_covered = False
 omit =
+    venv/*
     {{cookiecutter.project_slug}}/*
 
 show_missing = True
