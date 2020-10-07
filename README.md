@@ -139,10 +139,10 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 - [ ] Make the `Makefile` functional
 - [ ] Automate Steps 1 to 10 by adding these in the `post_gen_project` hook or incorporating them in the `Makefile`
 - [ ] The cookiecutter prompt asks if you wanna use bootswatch themes. If you say "n", it shouldn't prompt you with another question on which bootswatch theme to use! See [this](https://github.com/polyswarm/participant-template/issues/2) and [that](https://github.com/cookiecutter/cookiecutter/issues/913).
-- [ ] Write tests and setup CI for this cookiecutter package
+- [X] Write tests and setup CI for this cookiecutter package
 - [ ] Improve test coverage for the generated wagtail project
 - [ ] Setup browser-based testing and production-level testing
-- [ ] Improve the Gitlab CI pipeline
+- [ ] Improve the Gitlab CI pipeline for the generated wagtail project
 - [ ] Possibly add support for other popular CI options (CircleCI, Travis)
 - [ ] Add docker support
 - [ ] Add support for different Databases right from the beginning.
