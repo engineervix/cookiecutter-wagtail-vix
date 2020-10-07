@@ -134,7 +134,7 @@ def test_invalid_slug(cookies, context, slug):
 
 @pytest.mark.parametrize("invalid_context", UNSUPPORTED_COMBINATIONS)
 def test_error_if_incompatible(cookies, context, invalid_context):
-    """It should not generate project an incompatible combination is selected."""
+    """It should not generate project if an incompatible combination is selected."""
     context.update(invalid_context)
     result = cookies.bake(extra_context=context)
 
