@@ -46,13 +46,14 @@ xlwt
 yattag
 
 # Dev
-black
 bpython
+black
+commitizen
 doc8
 flake8
+powerline-status
 isort[requirements_deprecated_finder]
 pip-tools
-powerline-status
 pre-commit
 
 # Test
