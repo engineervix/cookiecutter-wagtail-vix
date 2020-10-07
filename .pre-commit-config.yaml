@@ -27,3 +27,8 @@ repos:
             (?x)(
                 ^{{cookiecutter.project_slug}}/
             )
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: master
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
