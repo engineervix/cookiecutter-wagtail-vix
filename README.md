@@ -121,6 +121,8 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 2. `git commit` -- this will run [Commitizen](http://commitizen.github.io/cz-cli/); you'll be prompted to fill in any required fields and your commit messages will be formatted according to [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog) &ndash; a Commitizen adapter which prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard.
 3. If there are no issues, push your changes accordingly, otherwise, repeat steps 1 and 2 above until all issues are resolved.
 
+> :exclamation: If you encounter `stylelint` errors, you  might wanna run `npm run css-fix` to try and fix such errors. This is likely to happen on first commit!
+
 > :exclamation: If you make any changes to the structure of your README.md or other markdown files, do `npm run toc` before committing, so that the TOC is updated
 
 ## :+1: Credits
