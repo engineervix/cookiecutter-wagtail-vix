@@ -6,7 +6,7 @@ image: python:3.7-buster
 {% elif cookiecutter.python_version == "3.8" %}
 image: python:3.8-buster
 {% else %}
-image: python:3.6-buster  
+image: python:3.6-buster
 {% endif %}
 
 services:
@@ -26,29 +26,19 @@ cache:
     - "$CI_PROJECT_DIR/pip-cache"
   key: "$CI_PROJECT_ID"
 
-# This is a basic example for a gem or script which doesn't use
-# services such as redis or postgres
 before_script:
   - apt update -y && apt upgrade -y
   - export DEBIAN_FRONTEND=noninteractive
   - ln -fs /usr/share/zoneinfo/{{ cookiecutter.timezone }} /etc/localtime
   - dpkg-reconfigure --frontend noninteractive tzdata
-  - pip install virtualenvwrapper
-  - export WORKON_HOME=~/Env
-  - mkdir -p $WORKON_HOME
-  - echo "" >> ~/.bashrc
-  - echo "# virtualenv" >> ~/.bashrc
-  - echo "export WORKON_HOME=~/Env" >> ~/.bashrc
-  - echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
-  - echo "" >> ~/.bashrc
-  - source ~/.bashrc
   - apt install -y postgresql postgresql-contrib postgis libpq-dev
   - export PGPASSWORD=$POSTGRES_PASSWORD
   - export PGUSER=$POSTGRES_USER
-  - python -V # Print out python version for debugging
-  - which python
-  - pip install --user pipenv
-  - export PATH="$HOME/.local/bin:$PATH"
+  - python -VV # Print out python version for debugging
+  - which python # for debugging
+  - pip3 install virtualenv
+  - virtualenv ../venv
+  - source ../venv/bin/activate
   - export LC_ALL=C.UTF-8
   - export LANG=C.UTF-8
   - pipenv sync --dev
@@ -68,7 +58,7 @@ before_script:
   - echo "NEXMO_API_KEY=" >> .envs/.test.env
   - echo "NEXMO_API_SECRET=" >> .envs/.test.env
   - echo "NEXMO_DEFAULT_FROM=" >> .envs/.test.env
-  - pipenv run python manage.py collectstatic
+  - python manage.py collectstatic
 
 test:
   variables:
@@ -78,4 +68,4 @@ test:
     MAPBOX_ACCESS_TOKEN: "$MAPBOX_ACCESS_TOKEN"
 
   script:
-    - pipenv run pytest -v --cov=.
+    - pytest -v --cov=. --cov-report term-missing:skip-covered -s
