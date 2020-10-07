@@ -304,10 +304,10 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.1.1.tgz#d97ebc35d20eed6d8458361cbca5c7cb85d45184"
   integrity sha512-SXY8bCQ1qacJ8AUTUxjabY8G6OjSmMPLN9MBCzGaKOjpPNX6z8zbXTbk9oU3GHZLtcxweWLCi2n49IRS4iQlwg==
 
-"@fortawesome/fontawesome-free@^5.15.0":
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.0.tgz#631b04d6301fee06d4bd7a9824fe7157735cbdb6"
-  integrity sha512-wXetjQBNMTP59MAYNR1tdahMDOLx3FYj3PKdso7PLFLDpTvmAIqhSSEqnSTmWKahRjD+Sh5I5635+5qaoib5lw==
+"@fortawesome/fontawesome-free@^5.15.1":
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
+  integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
