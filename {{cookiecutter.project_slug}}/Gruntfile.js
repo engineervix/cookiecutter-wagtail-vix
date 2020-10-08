@@ -47,7 +47,7 @@ module.exports = function(grunt) {
             chartist: {
                 expand: true,
                 cwd: "node_modules/chartist/dist/",
-                src: ["**/*", "!**scss/**"],
+                src: ["**/*", "!**scss/**", "!*.map"],
                 dest: "{{cookiecutter.project_slug}}/static/vendors/chartist/"
             },
             holderjs: {
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
             jquery: {
                 expand: true,
                 cwd: "node_modules/jquery/dist/",
-                src: ["**/*"],
+                src: ["**/*", "!*.map"],
                 dest: "{{cookiecutter.project_slug}}/static/vendors/jquery/"
             },
             jquery_countdown: {
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
             moment: {
                 expand: true,
                 cwd: "node_modules/moment/min/",
-                src: ["**/*"],
+                src: ["**/*", "!*.map"],
                 dest: "{{cookiecutter.project_slug}}/static/vendors/moment/"
             },
             photoswipe: {
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
             typed_js: {
                 expand: true,
                 cwd: "node_modules/typed.js/lib/",
-                src: ["**/*"],
+                src: ["**/*", "!*.map"],
                 dest: "{{cookiecutter.project_slug}}/static/vendors/typed.js/"
             }
         },
