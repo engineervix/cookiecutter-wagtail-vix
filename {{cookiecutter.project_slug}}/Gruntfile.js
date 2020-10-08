@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             bootstrap: {
                 expand: true,
                 cwd: "node_modules/bootstrap/dist/",
-                src: ["**/*"],
+                src: ["css/bootstrap.css", "css/bootstrap.min.css", "js/bootstrap.bundle.js", "js/bootstrap.bundle.min.js"],
                 dest: "{{cookiecutter.project_slug}}/static/vendors/bootstrap/"
             },
             bootstrap_notify: {
