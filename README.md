@@ -153,6 +153,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
 - [ ] Improve on code style
 - [ ] Generate RSS Feeds from Blog
 - [ ] Gotta add those [badges](https://shields.io/) :wink:
+- [ ] Add custom `sitemap.xml` and `robots.txt`
 
 ## 📋 Reference
 
