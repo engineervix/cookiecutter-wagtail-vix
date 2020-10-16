@@ -93,7 +93,7 @@ openpyxl==3.0.5           # via -r {{cookiecutter.project_slug}}/requirements.in
 packaging==20.4           # via bleach, commitizen, pytest, pytest-sugar
 pathspec==0.8.0           # via black
 pbr==5.5.0                # via stevedore
-phonenumbers==8.12.10     # via -r {{cookiecutter.project_slug}}/requirements.in
+phonenumbers==8.12.11     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10  # via faker-e164
 pillow==7.2.0             # via wagtail
 pip-api==0.0.14           # via isort
