@@ -13,7 +13,7 @@ beautifulsoup4==4.8.2     # via -r {{cookiecutter.project_slug}}/requirements.in
 black==20.8b1             # via -r {{cookiecutter.project_slug}}/requirements.in
 bleach==3.2.1             # via -r {{cookiecutter.project_slug}}/requirements.in
 blessings==1.7            # via curtsies
-bpython==0.19             # via -r {{cookiecutter.project_slug}}/requirements.in
+bpython==0.20             # via -r {{cookiecutter.project_slug}}/requirements.in
 brotli==1.0.9             # via -r {{cookiecutter.project_slug}}/requirements.in
 cachetools==4.1.1         # via ipinfo
 certifi==2020.6.20        # via requests
@@ -157,7 +157,7 @@ virtualenv==20.0.31       # via pre-commit
 https://github.com/wagtail/wagtail-factories/archive/master.zip  # via -r {{cookiecutter.project_slug}}/requirements.in
 wagtail==2.10.2           # via -r {{cookiecutter.project_slug}}/requirements.in, wagtail-factories, wagtailfontawesome
 wagtailfontawesome==1.2.1  # via -r {{cookiecutter.project_slug}}/requirements.in
-wcwidth==0.2.5            # via curtsies, prompt-toolkit
+wcwidth==0.2.5            # via bpython, curtsies, prompt-toolkit
 webencodings==0.5.1       # via bleach, html5lib
 werkzeug==1.0.1           # via -r {{cookiecutter.project_slug}}/requirements.in
 willow==1.4               # via wagtail
