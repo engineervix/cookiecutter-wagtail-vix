@@ -20,6 +20,31 @@ MIDDLEWARE.insert(1, "debug_toolbar.middleware.DebugToolbarMiddleware")  # noqa:
 # ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = ["127.0.0.1", "::1"]
 
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [str(APPS_DIR.path("templates"))],
+        # 'APP_DIRS': True,  # default setting
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "django.template.context_processors.i18n",  # non-default
+                "django.template.context_processors.media",  # non-default
+                "django.template.context_processors.static",  # non-default
+                "django.template.context_processors.tz",  # non-default
+                # "maintenance_mode.context_processors.maintenance_mode"
+            ],
+            "loaders": [  # <-- this wasn't there in default config
+                "django.template.loaders.filesystem.Loader",
+                "django.template.loaders.app_directories.Loader",
+            ],
+        },
+    }
+]
+
 # LOGGING
 # -----------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#logging

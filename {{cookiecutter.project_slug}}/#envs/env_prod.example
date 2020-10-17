@@ -3,9 +3,18 @@
 # Command to create a new secret key:
 # $ python -c 'import random; import string; print("".join([random.SystemRandom().choice(string.digits + string.ascii_letters + string.punctuation) for i in range(100)]))'
 DJANGO_SECRET_KEY=CHANGEME!!!
+
 DATABASE_URL=postgis://db_user:db_password@host:port/db_name
 # DATABASE_URL=postgres://db_user:db_password@host:port/db_name
+CONN_MAX_AGE=60
+
 DEBUG=False
+
+# EMAIL_RECIPIENTS=Full Name <email-with-name@{{cookiecutter.domain_name}}>,anotheremailwithoutname@{{cookiecutter.domain_name}}
+EMAIL_RECIPIENTS=Change This <email@{{cookiecutter.domain_name}}>
+# DEFAULT_FROM_EMAIL=Full Name <email-with-name@{{cookiecutter.domain_name}}>
+DEFAULT_FROM_EMAIL={{cookiecutter.project_name}} <{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@{{cookiecutter.domain_name}}>
+
 ALLOWED_HOSTS={{cookiecutter.domain_name}}
 BASE_URL=https://www.{{cookiecutter.domain_name}}
 
@@ -14,7 +23,7 @@ RECAPTCHA_PUBLIC_KEY=ADDRECAPTCHAPUBKEY!!!
 RECAPTCHA_PRIVATE_KEY=ADDRECAPTCHAPRIVKEY!!!
 
 # ipinfo.io IP Address Data API
-IPINFO_ACCESS_TOKEN=ADDIPINFOTOKEN!!!
+IPINFO_ACCESS_TOKEN=ADDIPINFOTOKEN_OR_REMOVE_THIS!!!
 
 # Sendgrid
 SENDGRID_API_KEY=CONFIGUREMAIL!!!
@@ -30,3 +39,13 @@ NEXMO_DEFAULT_FROM=
 CLOUDFLARE_EMAIL_ADDRESS=
 CLOUDFLARE_API_TOKEN=
 CLOUDFLARE_DOMAIN_ZONE_ID=
+
+# Sentry
+SENTRY_DSN=CONFIGURESENTRY!!!
+DJANGO_SENTRY_LOG_LEVEL=20
+SENTRY_ENVIRONMENT=production
+SENTRY_TRACES_SAMPLE_RATE=0.5
+
+# Redis
+REDIS_URL=CONFIGUREREDIS!!!
+REDIS_KEY_PREFIX=CHANGEME!!!
