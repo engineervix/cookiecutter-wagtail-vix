@@ -4,7 +4,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/engineervix/cookiecutter-wagtail-vix/badge.svg?branch=master)](https://coveralls.io/github/engineervix/cookiecutter-wagtail-vix?branch=master)
 [![python3](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-brightgreen.svg)](https://python3statement.org/#sections50-why)
 [![Requirements Status](https://requires.io/github/engineervix/cookiecutter-wagtail-vix/requirements.svg?branch=master)](https://requires.io/github/engineervix/cookiecutter-wagtail-vix/requirements/?branch=master)
-[![dependabot](https://badgen.net/dependabot/engineervix/cookiecutter-wagtail-vix/?icon=dependabot)](https://dependabot.com/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![License: MIT](https://img.shields.io/github/license/engineervix/cookiecutter-wagtail-vix)](https://github.com/engineervix/cookiecutter-wagtail-vix/LICENSE)
