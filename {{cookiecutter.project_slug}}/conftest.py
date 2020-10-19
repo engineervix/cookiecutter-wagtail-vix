@@ -115,7 +115,8 @@ def fake_embed_url():
     )
     fake_flickr = "https://www.flickr.com/photos/phils-pixels/23032529294/"
     fake_github_gist = "https://gist.github.com/denji/8359866"
-    fake_instagram = "https://www.instagram.com/p/CGU7hyJHf5B/"
+    # TODO: Instagram has issues. See https://github.com/wagtail/wagtail/issues/1985
+    # fake_instagram = "https://www.instagram.com/p/CGU7hyJHf5B/"
     fake_issuu = "https://issuu.com/hellocapetown/docs/hct_jan_2020_issuu"
     fake_meetup = "https://www.meetup.com/RVALUG/events/hhgrkpybcdbtb/"
     fake_photobucket = "https://media.photobucket.com/user/MitziJ_photos/media/Snow2008026.jpg.html?filters[term]=snow&filters[primary]=images"
@@ -140,7 +141,7 @@ def fake_embed_url():
         fake_five_hundred_px,
         fake_flickr,
         fake_github_gist,
-        fake_instagram,
+        # fake_instagram,
         fake_issuu,
         fake_meetup,
         fake_photobucket,
