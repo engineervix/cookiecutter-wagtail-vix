@@ -7,6 +7,7 @@
 apipkg==1.5               # via execnet
 appdirs==1.4.4            # via black, virtualenv
 argon2-cffi==20.1.0       # via -r {{cookiecutter.project_slug}}/requirements.in
+asgiref==3.2.10           # via django
 attrs==20.2.0             # via pytest
 bcrypt==3.2.0             # via -r {{cookiecutter.project_slug}}/requirements.in
 beautifulsoup4==4.8.2     # via -r {{cookiecutter.project_slug}}/requirements.in, readtime, wagtail
@@ -50,12 +51,12 @@ django-multiselectfield==0.1.12  # via -r {{cookiecutter.project_slug}}/requirem
 django-nexmo==2.0.0a1     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-phonenumber-field==5.0.0  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-recaptcha==2.0.6   # via -r {{cookiecutter.project_slug}}/requirements.in
-django-social-share==2.0.0  # via -r {{cookiecutter.project_slug}}/requirements.in
+django-social-share==2.1.0  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-taggit==1.3.0      # via wagtail
 django-treebeard==4.3.1   # via wagtail
 django-user-agents==0.4.0  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-widget-tweaks==1.4.8  # via -r {{cookiecutter.project_slug}}/requirements.in
-django==2.2.16            # via -r {{cookiecutter.project_slug}}/requirements.in, django-appconf, django-colorful, django-debug-toolbar, django-el-pagination, django-filter, django-intl-tel-input, django-leaflet, django-maintenancemode-2, django-model-utils, django-multiselectfield, django-phonenumber-field, django-recaptcha, django-taggit, django-treebeard, django-user-agents, djangorestframework, wagtail, wagtailfontawesome
+django==3.1.2             # via -r {{cookiecutter.project_slug}}/requirements.in, django-appconf, django-colorful, django-debug-toolbar, django-el-pagination, django-filter, django-intl-tel-input, django-leaflet, django-maintenancemode-2, django-model-utils, django-multiselectfield, django-phonenumber-field, django-recaptcha, django-taggit, django-treebeard, django-user-agents, djangorestframework, wagtail, wagtailfontawesome
 djangorestframework==3.12.1  # via wagtail
 doc8==0.8.1               # via -r {{cookiecutter.project_slug}}/requirements.in
 docopt==0.6.2             # via pipreqs
@@ -114,7 +115,7 @@ pyjwt[crypto]==1.7.1      # via nexmo
 pyparsing==2.4.7          # via packaging
 pyquery==1.4.1            # via readtime
 pytest-cov==2.10.1        # via -r {{cookiecutter.project_slug}}/requirements.in
-pytest-django==3.10.0     # via -r {{cookiecutter.project_slug}}/requirements.in
+pytest-django==4.0.0      # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-dotenv==0.5.2      # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-factoryboy==2.0.3  # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-forked==1.3.0      # via pytest-xdist

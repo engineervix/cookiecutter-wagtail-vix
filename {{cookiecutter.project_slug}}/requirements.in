@@ -1,5 +1,5 @@
 # Core
-django>=2.2,<3.0
+django>=2.2,<4.0
 wagtail>=2.10,<3.0
 argon2-cffi
 bcrypt
