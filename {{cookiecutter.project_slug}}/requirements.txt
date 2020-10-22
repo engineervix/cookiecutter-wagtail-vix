@@ -114,7 +114,7 @@ pyjwt[crypto]==1.7.1      # via nexmo
 pyparsing==2.4.7          # via packaging
 pyquery==1.4.1            # via readtime
 pytest-cov==2.10.1        # via -r {{cookiecutter.project_slug}}/requirements.in
-pytest-django==3.10.0     # via -r {{cookiecutter.project_slug}}/requirements.in
+pytest-django==4.0.0      # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-dotenv==0.5.2      # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-factoryboy==2.0.3  # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-forked==1.3.0      # via pytest-xdist
