@@ -56,7 +56,7 @@ django-taggit==1.3.0      # via wagtail
 django-treebeard==4.3.1   # via wagtail
 django-user-agents==0.4.0  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-widget-tweaks==1.4.8  # via -r {{cookiecutter.project_slug}}/requirements.in
-django==3.1.2             # via -r {{cookiecutter.project_slug}}/requirements.in, django-appconf, django-colorful, django-debug-toolbar, django-el-pagination, django-filter, django-intl-tel-input, django-leaflet, django-maintenancemode-2, django-model-utils, django-multiselectfield, django-phonenumber-field, django-recaptcha, django-taggit, django-treebeard, django-user-agents, djangorestframework, wagtail, wagtailfontawesome
+django==3.1.3             # via -r {{cookiecutter.project_slug}}/requirements.in, django-appconf, django-colorful, django-debug-toolbar, django-el-pagination, django-filter, django-intl-tel-input, django-leaflet, django-maintenancemode-2, django-model-utils, django-multiselectfield, django-phonenumber-field, django-recaptcha, django-taggit, django-treebeard, django-user-agents, djangorestframework, wagtail, wagtailfontawesome
 djangorestframework==3.12.1  # via wagtail
 doc8==0.8.1               # via -r {{cookiecutter.project_slug}}/requirements.in
 docopt==0.6.2             # via pipreqs
