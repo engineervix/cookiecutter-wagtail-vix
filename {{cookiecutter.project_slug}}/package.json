@@ -58,7 +58,7 @@
     "grunt-stylelint": "^0.15.0",
     "holderjs": "^2.9.7",
     "load-grunt-tasks": "^5.1.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
     "popper.js": "^1.16.1",
     "stylelint": "^13.7.2",
