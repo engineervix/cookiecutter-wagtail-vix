@@ -160,7 +160,7 @@ urllib3==1.25.10          # via requests
 user-agents==2.2.0        # via -r {{cookiecutter.project_slug}}/requirements.in, django-user-agents
 virtualenv==20.0.31       # via pre-commit
 https://github.com/wagtail/wagtail-factories/archive/master.zip  # via -r {{cookiecutter.project_slug}}/requirements.in
-wagtail==2.11.1           # via -r {{cookiecutter.project_slug}}/requirements.in, wagtail-factories, wagtailfontawesome
+wagtail==2.11.2           # via -r {{cookiecutter.project_slug}}/requirements.in, wagtail-factories, wagtailfontawesome
 wagtailfontawesome==1.2.1  # via -r {{cookiecutter.project_slug}}/requirements.in
 wcwidth==0.2.5            # via bpython, curtsies, prompt-toolkit
 webencodings==0.5.1       # via bleach, html5lib
