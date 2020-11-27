@@ -102,7 +102,7 @@ phonenumbers==8.12.13     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10  # via faker-e164
 pillow==7.2.0             # via wagtail
 pip-api==0.0.14           # via isort
-pip-tools==5.3.1          # via -r {{cookiecutter.project_slug}}/requirements.in
+pip-tools==5.4.0          # via -r {{cookiecutter.project_slug}}/requirements.in
 pipreqs==0.4.10           # via isort
 pluggy==0.13.1            # via pytest
 ply==3.11                 # via slimit
