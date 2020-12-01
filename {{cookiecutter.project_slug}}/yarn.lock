@@ -3352,12 +3352,12 @@ grunt-sass@^3.1.0:
   resolved "https://registry.yarnpkg.com/grunt-sass/-/grunt-sass-3.1.0.tgz#a5936cc2a80ec08092d9f31c101dc307d1e4f71c"
   integrity sha512-90s27H7FoCDcA8C8+R0GwC+ntYD3lG6S/jqcavWm3bn9RiJTmSfOvfbFa1PXx4NbBWuiGQMLfQTj/JvvqT5w6A==
 
-grunt-stylelint@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/grunt-stylelint/-/grunt-stylelint-0.15.0.tgz#717901c96e1f6649cac4a1bbb9c55c896dc002fa"
-  integrity sha512-1G5kbT3Y6OtAqgIv/XErtI6ai1t1UdtQWXxUV5Gd900PQoEzu/WrBYhGNAXdb/9nAsNWNjFHQjtdXQtZcDmobA==
+grunt-stylelint@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/grunt-stylelint/-/grunt-stylelint-0.16.0.tgz#a747461259f61e0f60e139572edda46fdd1edca5"
+  integrity sha512-ullm0h9iCdgPEDq1TNwKL5HteXA4zke6wbYoRtsO32ATCU3zfUXmDN9unhu+joEcdgJKOPcd2+7UhRNXO1rr+w==
   dependencies:
-    chalk "^3.0.0"
+    chalk "^4.1.0"
 
 grunt@^1.3.0:
   version "1.3.0"
