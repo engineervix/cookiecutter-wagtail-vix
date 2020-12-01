@@ -48,7 +48,7 @@ django-filter==2.4.0      # via wagtail
 django-intl-tel-input==0.3.1  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-leaflet==0.27.1    # via -r {{cookiecutter.project_slug}}/requirements.in
 django-maintenancemode-2==1.2  # via -r {{cookiecutter.project_slug}}/requirements.in
-django-model-utils==4.0.0  # via -r {{cookiecutter.project_slug}}/requirements.in
+django-model-utils==4.1.0  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-modelcluster==5.1  # via wagtail
 django-multiselectfield==0.1.12  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-nexmo==2.0.0a1     # via -r {{cookiecutter.project_slug}}/requirements.in
