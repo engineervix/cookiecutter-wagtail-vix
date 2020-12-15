@@ -39,7 +39,7 @@ django-appconf==1.0.4     # via django-compressor
 django-autoslug==1.9.8    # via -r {{cookiecutter.project_slug}}/requirements.in
 django-colorful==1.3      # via -r {{cookiecutter.project_slug}}/requirements.in
 django-compressor==2.4    # via -r {{cookiecutter.project_slug}}/requirements.in
-django-countries==6.1.3   # via -r {{cookiecutter.project_slug}}/requirements.in
+django-countries==7.0     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-debug-toolbar==3.2  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-el-pagination==3.3.0  # via -r {{cookiecutter.project_slug}}/requirements.in
 django-environ==0.4.5     # via -r {{cookiecutter.project_slug}}/requirements.in
@@ -110,7 +110,7 @@ powerline-status==2.7     # via -r {{cookiecutter.project_slug}}/requirements.in
 pre-commit==2.7.1         # via -r {{cookiecutter.project_slug}}/requirements.in
 prompt-toolkit==3.0.7     # via questionary
 psycopg2==2.8.6           # via -r {{cookiecutter.project_slug}}/requirements.in
-py==1.9.0                 # via pytest, pytest-forked
+py==1.10.0                # via pytest, pytest-forked
 pycodestyle==2.6.0        # via flake8
 pycparser==2.20           # via cffi
 pyflakes==2.2.0           # via flake8
@@ -127,7 +127,7 @@ pytest-logger==0.5.1      # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-mock==3.3.1        # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-sugar==0.9.4       # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-xdist==2.1.0       # via -r {{cookiecutter.project_slug}}/requirements.in
-pytest==6.1.0             # via pytest-cov, pytest-django, pytest-dotenv, pytest-factoryboy, pytest-forked, pytest-logger, pytest-mock, pytest-sugar, pytest-xdist
+pytest==6.2.0             # via pytest-cov, pytest-django, pytest-dotenv, pytest-factoryboy, pytest-forked, pytest-logger, pytest-mock, pytest-sugar, pytest-xdist
 python-dateutil==2.8.1    # via faker
 python-dotenv==0.14.0     # via pytest-dotenv
 pytz==2020.1              # via django, django-modelcluster, l18n, nexmo
@@ -167,7 +167,7 @@ webencodings==0.5.1       # via bleach, html5lib
 werkzeug==1.0.1           # via -r {{cookiecutter.project_slug}}/requirements.in
 willow==1.4               # via wagtail
 wrapt==1.12.1             # via deprecated
-xlrd==1.2.0               # via -r {{cookiecutter.project_slug}}/requirements.in, tablib
+xlrd==2.0.1               # via -r {{cookiecutter.project_slug}}/requirements.in, tablib
 xlsxwriter==1.3.6         # via wagtail
 xlwt==1.3.0               # via -r {{cookiecutter.project_slug}}/requirements.in, tablib
 yarg==0.1.9               # via pipreqs
