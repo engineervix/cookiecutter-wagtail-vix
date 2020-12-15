@@ -110,7 +110,7 @@ powerline-status==2.7     # via -r {{cookiecutter.project_slug}}/requirements.in
 pre-commit==2.7.1         # via -r {{cookiecutter.project_slug}}/requirements.in
 prompt-toolkit==3.0.7     # via questionary
 psycopg2==2.8.6           # via -r {{cookiecutter.project_slug}}/requirements.in
-py==1.9.0                 # via pytest, pytest-forked
+py==1.10.0                 # via pytest, pytest-forked
 pycodestyle==2.6.0        # via flake8
 pycparser==2.20           # via cffi
 pyflakes==2.2.0           # via flake8
