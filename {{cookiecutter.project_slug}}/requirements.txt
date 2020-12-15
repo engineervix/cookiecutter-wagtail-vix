@@ -28,7 +28,7 @@ click==7.1.2              # via black, pip-tools
 colorama==0.4.4           # via commitizen
 commitizen==2.6.0         # via -r {{cookiecutter.project_slug}}/requirements.in
 coverage==5.3             # via pytest-cov
-cryptography==3.2.1       # via pyjwt
+cryptography==3.3.1       # via pyjwt
 csscompressor==0.9.5      # via -r {{cookiecutter.project_slug}}/requirements.in
 cssselect==1.1.0          # via pyquery
 curtsies==0.3.4           # via bpython
