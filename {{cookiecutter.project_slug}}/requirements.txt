@@ -94,7 +94,7 @@ multidict==5.0.0          # via aiohttp, yarl
 mypy-extensions==0.4.3    # via black
 nexmo==2.5.2              # via django-nexmo
 nodeenv==1.5.0            # via pre-commit
-openpyxl==3.0.5           # via -r {{cookiecutter.project_slug}}/requirements.in, tablib
+openpyxl==3.0.6           # via -r {{cookiecutter.project_slug}}/requirements.in, tablib
 packaging==20.4           # via bleach, commitizen, pytest, pytest-sugar
 pathspec==0.8.0           # via black
 pbr==5.5.0                # via stevedore
