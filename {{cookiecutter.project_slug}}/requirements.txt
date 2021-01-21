@@ -131,7 +131,7 @@ pytest==6.2.0             # via pytest-cov, pytest-django, pytest-dotenv, pytest
 python-dateutil==2.8.1    # via faker
 python-dotenv==0.14.0     # via pytest-dotenv
 pytz==2020.1              # via django, django-modelcluster, l18n, nexmo
-pyyaml==5.3.1             # via -r {{cookiecutter.project_slug}}/requirements.in, commitizen, pre-commit
+pyyaml==5.4             # via -r {{cookiecutter.project_slug}}/requirements.in, commitizen, pre-commit
 questionary==1.6.0        # via commitizen
 rcssmin==1.0.6            # via django-compressor
 readtime==1.1.1           # via -r {{cookiecutter.project_slug}}/requirements.in
