@@ -87,7 +87,7 @@ jdcal==1.4.1              # via openpyxl
 jinja2==2.11.2            # via commitizen
 l18n==2020.6.1            # via wagtail
 lxml==4.6.2               # via pyquery
-markdown2==2.3.10         # via readtime
+markdown2==2.4.0         # via readtime
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
 multidict==5.0.0          # via aiohttp, yarl
