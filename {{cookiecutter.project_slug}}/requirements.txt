@@ -100,7 +100,7 @@ pathspec==0.8.0           # via black
 pbr==5.5.0                # via stevedore
 phonenumbers==8.12.15     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10  # via faker-e164
-pillow==8.1.0             # via wagtail
+pillow==8.1.1             # via wagtail
 pip-api==0.0.14           # via isort
 pip-tools==5.5.0          # via -r {{cookiecutter.project_slug}}/requirements.in
 pipreqs==0.4.10           # via isort
