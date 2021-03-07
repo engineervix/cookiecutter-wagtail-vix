@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-aiohttp==3.7.2
+aiohttp==3.7.4
     # via ipinfo
 anyascii==0.1.7
     # via wagtail
@@ -218,7 +218,7 @@ l18n==2020.6.1
     # via wagtail
 lxml==4.6.2
     # via pyquery
-markdown2==2.3.10
+markdown2==2.4.0
     # via readtime
 markupsafe==1.1.1
     # via jinja2
@@ -248,7 +248,7 @@ pathspec==0.8.0
     # via black
 pbr==5.5.0
     # via stevedore
-phonenumbers==8.12.15
+phonenumbers==8.12.19
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10
     # via faker-e164
