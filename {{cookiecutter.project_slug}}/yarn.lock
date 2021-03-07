@@ -304,10 +304,10 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.1.1.tgz#d97ebc35d20eed6d8458361cbca5c7cb85d45184"
   integrity sha512-SXY8bCQ1qacJ8AUTUxjabY8G6OjSmMPLN9MBCzGaKOjpPNX6z8zbXTbk9oU3GHZLtcxweWLCi2n49IRS4iQlwg==
 
-"@fortawesome/fontawesome-free@^5.15.1":
-  version "5.15.1"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
-  integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
+"@fortawesome/fontawesome-free@^5.15.2":
+  version "5.15.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.2.tgz#218cd7276ab4f9ab57cc3d2efa2697e6a579f25d"
+  integrity sha512-7l/AX41m609L/EXI9EKH3Vs3v0iA8tKlIOGtw+kgcoanI7p+e4I4GYLqW3UXWiTnjSFymKSmTTPKYrivzbxxqA==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -1155,20 +1155,20 @@ bootstrap-sweetalert@^1.0.1:
   dependencies:
     bootstrap "~3"
 
-bootstrap@^4.5.3:
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.5.3.tgz#c6a72b355aaf323920be800246a6e4ef30997fe6"
-  integrity sha512-o9ppKQioXGqhw8Z7mah6KdTYpNQY//tipnkxppWhPbiSWdD+1raYsnhwEZjkTHYbGee4cVQ0Rx65EhOY/HNLcQ==
+bootstrap@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
+  integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
 
 bootstrap@~3:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
   integrity sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==
 
-bootswatch@^4.5.3:
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-4.5.3.tgz#bd9bd4fa212bd5872c932be58ed54e376ee7ccc5"
-  integrity sha512-gaB3gBSAegmYbk97aVELKcSKVdPjWsSY4yCITkUt/SqbqjtMU/HtIUszb4O9vzdbrfuVXThc/qCXzjoJaAPgiQ==
+bootswatch@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-4.6.0.tgz#295237ed0e118decb3e3543f2ac14e9bb8ae48ea"
+  integrity sha512-Yr6YqFBC8jwTzoJoLViYlvO97IhPWGqZEm+6FXHfD/G6gbUok6sZkdXxdh4Zb6iCGEwr9p7zGCn38yKQD/bh2Q==
 
 bourbon@^7.0.0:
   version "7.0.0"
@@ -1530,10 +1530,17 @@ clean-css@^3.3.5:
     commander "2.8.x"
     source-map "0.4.x"
 
-clean-css@^4.2.1, clean-css@~4.2.1:
+clean-css@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
   integrity sha512-4ZxI6dy4lrY6FHzfiy1aEOXgu4LIsW2MhwG0VBKdcoGoH/XLFgaHSdLTGr4O8Be6A8r3MOphEiI8Gc1n0ecf3g==
+  dependencies:
+    source-map "~0.6.0"
+
+clean-css@^5.0.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-5.1.1.tgz#e0d168b5f5497a85f58606f009c81fdf89d84e65"
+  integrity sha512-GQ6HdEyJN0543mRTA/TkZ7RPoMXGWKq1shs9H86F2kLuixR0RI+xd4JfhJxWUW08FGKQXTKAKpVjKQXu5zkFNA==
   dependencies:
     source-map "~0.6.0"
 
@@ -1668,13 +1675,33 @@ commander@^2.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commitizen@^4.0.3, commitizen@^4.2.2:
+commitizen@^4.0.3:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-4.2.2.tgz#1a93dd07208521ea1ebbf832593542dac714cc79"
   integrity sha512-uz+E6lGsDBDI2mYA4QfOxFeqdWUYwR1ky11YmLgg2BnEEP3YbeejpT4lxzGjkYqumnXr062qTOGavR9NtX/iwQ==
   dependencies:
     cachedir "2.2.0"
     cz-conventional-changelog "3.3.0"
+    dedent "0.7.0"
+    detect-indent "6.0.0"
+    find-node-modules "2.0.0"
+    find-root "1.1.0"
+    fs-extra "8.1.0"
+    glob "7.1.4"
+    inquirer "6.5.2"
+    is-utf8 "^0.2.1"
+    lodash "^4.17.20"
+    minimist "1.2.5"
+    strip-bom "4.0.0"
+    strip-json-comments "3.0.1"
+
+commitizen@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-4.2.3.tgz#088d0ef72500240d331b11e02e288223667c1475"
+  integrity sha512-pYlYEng7XMV2TW4xtjDKBGqeJ0Teq2zyRSx2S3Ml1XAplHSlJZK8vm1KdGclpMEZuGafbS5TeHXIVnHk8RWIzQ==
+  dependencies:
+    cachedir "2.2.0"
+    cz-conventional-changelog "3.2.0"
     dedent "0.7.0"
     detect-indent "6.0.0"
     find-node-modules "2.0.0"
@@ -1996,6 +2023,20 @@ currently-unhandled@^0.4.1:
   integrity sha1-mI3zP+qxke95mmE2nddsF635V+o=
   dependencies:
     array-find-index "^1.0.1"
+
+cz-conventional-changelog@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/cz-conventional-changelog/-/cz-conventional-changelog-3.2.0.tgz#6aef1f892d64113343d7e455529089ac9f20e477"
+  integrity sha512-yAYxeGpVi27hqIilG1nh4A9Bnx4J3Ov+eXy4koL3drrR+IO9GaWPsKjik20ht608Asqi8TQPf0mczhEeyAtMzg==
+  dependencies:
+    chalk "^2.4.1"
+    commitizen "^4.0.3"
+    conventional-commit-types "^3.0.0"
+    lodash.map "^4.5.1"
+    longest "^2.0.1"
+    word-wrap "^1.0.3"
+  optionalDependencies:
+    "@commitlint/load" ">6.1.1"
 
 cz-conventional-changelog@3.3.0, cz-conventional-changelog@^3.3.0:
   version "3.3.0"
@@ -2694,6 +2735,13 @@ figures@^2.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
+figures@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
+  integrity sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==
+  dependencies:
+    escape-string-regexp "^1.0.5"
+
 file-entry-cache@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-6.0.0.tgz#7921a89c391c6d93efec2169ac6bf300c527ea0a"
@@ -3244,14 +3292,14 @@ grunt-contrib-copy@^1.0.0:
     chalk "^1.1.1"
     file-sync-cmp "^0.1.0"
 
-grunt-contrib-cssmin@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/grunt-contrib-cssmin/-/grunt-contrib-cssmin-3.0.0.tgz#1767c0a062f4b7353c5adcadc52dcff7197d4d89"
-  integrity sha512-eXpooYmVGKMs/xV7DzTLgJFPVOfMuawPD3x0JwhlH0mumq2NtH3xsxaHxp1Y3NKxp0j0tRhFS6kSBRsz6TuTGg==
+grunt-contrib-cssmin@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/grunt-contrib-cssmin/-/grunt-contrib-cssmin-4.0.0.tgz#ffe7460d0fa53dbc5c7879e80088404cfed93d3b"
+  integrity sha512-jXU+Zlk8Q8XztOGNGpjYlD/BDQ0n95IHKrQKtFR7Gd8hZrzgqiG1Ra7cGYc8h2DD9vkSFGNlweb9Q00rBxOK2w==
   dependencies:
-    chalk "^2.4.1"
-    clean-css "~4.2.1"
-    maxmin "^2.1.0"
+    chalk "^4.1.0"
+    clean-css "^5.0.1"
+    maxmin "^3.0.0"
 
 grunt-contrib-htmlmin@^3.1.0:
   version "3.1.0"
@@ -3394,6 +3442,14 @@ gzip-size@^3.0.0:
   integrity sha1-VGGI6b3DN/Zzdy+BZgRks4nc5SA=
   dependencies:
     duplexer "^0.1.1"
+
+gzip-size@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-5.1.1.tgz#cb9bee692f87c0612b232840a873904e4c135274"
+  integrity sha512-FNHi6mmoHvs1mxZAds4PpdCS6QG8B4C1krxJsMutgxl5t3+GlRTzzI3NEkifXx2pVsOvJdOGSmIgDhQ55FwdPA==
+  dependencies:
+    duplexer "^0.1.1"
+    pify "^4.0.1"
 
 handlebars@^4.0.2:
   version "4.7.6"
@@ -4538,10 +4594,15 @@ jquery-countdown@^2.2.0:
   resolved "https://registry.yarnpkg.com/jquery-countdown/-/jquery-countdown-2.2.0.tgz#ba78ed5d7cf107b3b1cac9c6ba07997d4aa2dcef"
   integrity sha1-unjtXXzxB7OxysnGugeZfUqi3O8=
 
-"jquery@>= 1.7.0", jquery@^3.5.1:
+"jquery@>= 1.7.0":
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
+
+jquery@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
+  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
 
 js-base64@^2.1.8:
   version "2.6.4"
@@ -5012,6 +5073,16 @@ maxmin@^2.1.0:
     figures "^1.0.1"
     gzip-size "^3.0.0"
     pretty-bytes "^3.0.0"
+
+maxmin@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/maxmin/-/maxmin-3.0.0.tgz#3ee9acc8a2b9f2b5416e94f5705319df8a9c71e6"
+  integrity sha512-wcahMInmGtg/7c6a75fr21Ch/Ks1Tb+Jtoan5Ft4bAI0ZvJqyOw8kkM7e7p8hDSzY805vmxwHT50KcjGwKyJ0g==
+  dependencies:
+    chalk "^4.1.0"
+    figures "^3.2.0"
+    gzip-size "^5.1.1"
+    pretty-bytes "^5.3.0"
 
 mdast-util-from-markdown@^0.8.0:
   version "0.8.1"
@@ -5928,6 +5999,11 @@ pify@^3.0.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
 
+pify@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
+  integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
+
 pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
@@ -6108,6 +6184,11 @@ pretty-bytes@^5.1.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.3.0.tgz#f2849e27db79fb4d6cfe24764fc4134f165989f2"
   integrity sha512-hjGrh+P926p4R4WbaB6OckyRtO0F0/lQBiT+0gnxjV+5kjPBrfVBFCsCLbMqVQeydvIoouYTCmmEURiH3R1Bdg==
+
+pretty-bytes@^5.3.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
+  integrity sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==
 
 pretty-format@^25.5.0:
   version "25.5.0"
@@ -7293,10 +7374,10 @@ stylelint-config-recommended@^3.0.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-3.0.0.tgz#e0e547434016c5539fe2650afd58049a2fd1d657"
   integrity sha512-F6yTRuc06xr1h5Qw/ykb2LuFynJ2IxkKfCMf+1xqPffkxh0S09Zc902XCffcsw/XMFq/OzQ1w54fLIDtmRNHnQ==
 
-stylelint-config-sass-guidelines@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-sass-guidelines/-/stylelint-config-sass-guidelines-7.1.0.tgz#7838fe04eee649a2444b568a32c904a26b5d6c1e"
-  integrity sha512-WvC9nRdlYknftPcUaJCajrPYKg6d2CKffrr7BPPkN/i/Mt8Qsm1hNQ9lqC1sKoCIKdH051SCEZi10qwFLgDbbg==
+stylelint-config-sass-guidelines@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-sass-guidelines/-/stylelint-config-sass-guidelines-8.0.0.tgz#e92279aa052a04e822dd096d7c46c8e37d4b3406"
+  integrity sha512-v21iDWtzpfhuKJlYKpoE1vjp+GT8Cr6ZBWwMx/jf+eCEblZgAIDVVjgAELoDLhVj17DcEFwlIKJBMfrdAmXg0Q==
   dependencies:
     stylelint-order "^4.0.0"
     stylelint-scss "^3.18.0"
