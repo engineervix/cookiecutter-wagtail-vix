@@ -426,7 +426,7 @@ virtualenv==20.0.31
     # via pre-commit
 https://github.com/wagtail/wagtail-factories/archive/master.zip
     # via -r {{cookiecutter.project_slug}}/requirements.in
-wagtail==2.11.3
+wagtail==2.12.3
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   wagtail-factories

@@ -1,6 +1,6 @@
 # Core
 django>=3.1,<4.0
-wagtail>=2.11,<3.0
+wagtail>=2.12,<3.0
 argon2-cffi
 bcrypt
 beautifulsoup4
