@@ -414,8 +414,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
@@ -426,7 +424,7 @@ virtualenv==20.0.31
     # via pre-commit
 https://github.com/wagtail/wagtail-factories/archive/master.zip
     # via -r {{cookiecutter.project_slug}}/requirements.in
-wagtail==2.11.3
+wagtail==2.12.3
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   wagtail-factories
