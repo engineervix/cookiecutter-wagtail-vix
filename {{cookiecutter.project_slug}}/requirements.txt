@@ -256,7 +256,7 @@ pillow==8.1.1
     # via wagtail
 pip-api==0.0.14
     # via isort
-pip-tools==5.5.0
+pip-tools==6.0.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pipreqs==0.4.10
     # via isort
@@ -414,8 +414,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
