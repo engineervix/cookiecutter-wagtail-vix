@@ -248,6 +248,8 @@ pathspec==0.8.0
     # via black
 pbr==5.5.0
     # via stevedore
+pep517==0.10.0
+    # via pip-tools
 phonenumbers==8.12.19
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10
@@ -256,7 +258,7 @@ pillow==8.1.1
     # via wagtail
 pip-api==0.0.14
     # via isort
-pip-tools==5.5.0
+pip-tools==6.0.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pipreqs==0.4.10
     # via isort
@@ -400,6 +402,7 @@ titlecase==2.0.0
 toml==0.10.1
     # via
     #   black
+    #   pep517
     #   pre-commit
     #   pytest
 tomlkit==0.5.11
@@ -414,8 +417,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
