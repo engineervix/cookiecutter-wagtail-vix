@@ -216,7 +216,7 @@ jinja2==2.11.3
     # via commitizen
 l18n==2020.6.1
     # via wagtail
-lxml==4.6.2
+lxml==4.6.3
     # via pyquery
 markdown2==2.4.0
     # via readtime
