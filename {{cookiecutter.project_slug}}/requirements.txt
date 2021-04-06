@@ -101,7 +101,7 @@ django-el-pagination==3.3.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-environ==0.4.5
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django-extensions==3.1.1
+django-extensions==3.1.2
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-filter==2.4.0
     # via wagtail
@@ -140,6 +140,7 @@ django==3.1.7
     #   django-colorful
     #   django-debug-toolbar
     #   django-el-pagination
+    #   django-extensions
     #   django-filter
     #   django-intl-tel-input
     #   django-leaflet
@@ -414,8 +415,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
