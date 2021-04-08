@@ -248,7 +248,7 @@ pathspec==0.8.0
     # via black
 pbr==5.5.0
     # via stevedore
-phonenumbers==8.12.19
+phonenumbers==8.12.21
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10
     # via faker-e164
@@ -414,8 +414,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
