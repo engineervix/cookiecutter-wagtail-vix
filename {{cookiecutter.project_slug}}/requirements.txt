@@ -119,7 +119,7 @@ django-multiselectfield==0.1.12
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-nexmo==2.0.0a1
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django-phonenumber-field==5.0.0
+django-phonenumber-field==5.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-recaptcha==2.0.6
     # via -r {{cookiecutter.project_slug}}/requirements.in
@@ -414,8 +414,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
