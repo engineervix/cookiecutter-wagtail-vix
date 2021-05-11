@@ -210,8 +210,6 @@ ipinfo==4.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 isort[requirements_deprecated_finder]==5.7.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-jdcal==1.4.1
-    # via openpyxl
 jinja2==2.11.3
     # via commitizen
 l18n==2020.6.1
@@ -234,7 +232,7 @@ nexmo==2.5.2
     # via django-nexmo
 nodeenv==1.5.0
     # via pre-commit
-openpyxl==3.0.6
+openpyxl==3.0.7
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   tablib
@@ -414,8 +412,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
