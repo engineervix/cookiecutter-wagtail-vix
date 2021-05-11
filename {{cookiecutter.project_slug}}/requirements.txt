@@ -101,7 +101,7 @@ django-el-pagination==3.3.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-environ==0.4.5
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django-extensions==3.1.1
+django-extensions==3.1.3
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-filter==2.4.0
     # via wagtail
@@ -140,6 +140,7 @@ django==3.1.10
     #   django-colorful
     #   django-debug-toolbar
     #   django-el-pagination
+    #   django-extensions
     #   django-filter
     #   django-intl-tel-input
     #   django-leaflet
