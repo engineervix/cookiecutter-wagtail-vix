@@ -91,7 +91,7 @@ django-autoslug==1.9.8
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-colorful==1.3
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django-compressor==2.4
+django-compressor==2.4.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-countries==7.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
@@ -414,8 +414,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
