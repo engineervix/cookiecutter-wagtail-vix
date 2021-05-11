@@ -5454,10 +5454,10 @@ time-zone@^0.1.0:
   resolved "https://registry.yarnpkg.com/time-zone/-/time-zone-0.1.0.tgz#4a7728b6ac28db0e008f514043fd555bd5573b46"
   integrity sha1-Sncotqwo2w4Aj1FAQ/1VW9VXO0Y=
 
-tingle.js@^0.15.3:
-  version "0.15.3"
-  resolved "https://registry.yarnpkg.com/tingle.js/-/tingle.js-0.15.3.tgz#ce66ec9c4a9f8e7349c12c29fb61d6a96794395f"
-  integrity sha512-67dMGXgjoPLmMGwoX88m+YQl48Je2PhK+9nL4dMxAc/zMFxWw2sURPus13+0qC9XZYhoaf+3exNgI40iJHnzIw==
+tingle.js@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/tingle.js/-/tingle.js-0.16.0.tgz#1ac35f91315271c47cb6bb7299d0b327ac7539ea"
+  integrity sha512-xV4F2j7+QMxDfzuX59KhxiWKeAgI/QSC8o7k9rQu8hZD8TZefMTViq7l07DIcVDb30IlAPlyFRs6SnD1Fup6hA==
 
 tiny-emitter@^2.1.0:
   version "2.1.0"
