@@ -107,7 +107,7 @@ django-filter==2.4.0
     # via wagtail
 django-intl-tel-input==0.3.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django-leaflet==0.27.1
+django-leaflet==0.28.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-maintenancemode-2==1.2
     # via -r {{cookiecutter.project_slug}}/requirements.in
@@ -414,8 +414,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
