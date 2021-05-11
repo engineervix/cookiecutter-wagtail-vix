@@ -252,7 +252,7 @@ phonenumbers==8.12.22
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10
     # via faker-e164
-pillow==8.1.2
+pillow==8.2.0
     # via wagtail
 pip-api==0.0.14
     # via isort
