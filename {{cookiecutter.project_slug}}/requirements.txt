@@ -294,7 +294,7 @@ pyquery==1.4.1
     # via readtime
 pytest-cov==2.10.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
-pytest-django==4.1.0
+pytest-django==4.2.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-dotenv==0.5.2
     # via -r {{cookiecutter.project_slug}}/requirements.in
@@ -414,8 +414,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
