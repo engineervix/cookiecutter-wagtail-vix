@@ -35,7 +35,7 @@
         "select2": "^4.0.13",
         "shufflejs": "^5.2.3",
         "tingle.js": "^0.15.3",
-        "typed.js": "^2.0.11"
+        "typed.js": "^2.0.12"
     },
     "devDependencies": {
     "bourbon": "^7.0.0",
