@@ -208,10 +208,8 @@ iniconfig==1.1.1
     # via pytest
 ipinfo==4.2.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-isort[requirements_deprecated_finder]==5.7.0
+isort[requirements_deprecated_finder]==5.8.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-jdcal==1.4.1
-    # via openpyxl
 jinja2==2.11.3
     # via commitizen
 l18n==2020.6.1
@@ -248,6 +246,8 @@ pathspec==0.8.0
     # via black
 pbr==5.5.0
     # via stevedore
+pep517==0.10.0
+    # via pip-tools
 phonenumbers==8.12.22
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10
@@ -400,6 +400,7 @@ titlecase==2.0.0
 toml==0.10.1
     # via
     #   black
+    #   pep517
     #   pre-commit
     #   pytest
 tomlkit==0.5.11
@@ -414,8 +415,6 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-unidecode==1.1.1
-    # via wagtail
 urllib3==1.25.10
     # via requests
 user-agents==2.2.0
