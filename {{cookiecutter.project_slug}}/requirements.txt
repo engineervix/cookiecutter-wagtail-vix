@@ -183,7 +183,7 @@ faker==4.1.6
     # via
     #   factory-boy
     #   faker-e164
-feedparser==6.0.2
+feedparser==6.0.5
     # via -r {{cookiecutter.project_slug}}/requirements.in
 filelock==3.0.12
     # via virtualenv
