@@ -390,6 +390,8 @@ stevedore==3.2.2
     # via doc8
 tablib[xls,xlsx]==2.0.0
     # via wagtail
+telepath==0.2
+    # via wagtail
 termcolor==1.1.0
     # via
     #   commitizen
@@ -426,7 +428,7 @@ virtualenv==20.0.31
     # via pre-commit
 https://github.com/wagtail/wagtail-factories/archive/master.zip
     # via -r {{cookiecutter.project_slug}}/requirements.in
-wagtail==2.12.4
+wagtail==2.13.1
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   wagtail-factories
