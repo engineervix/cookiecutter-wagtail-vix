@@ -416,7 +416,7 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-urllib3==1.25.10
+urllib3==1.26.5
     # via requests
 user-agents==2.2.0
     # via
