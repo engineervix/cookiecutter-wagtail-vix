@@ -249,7 +249,7 @@ pbr==5.5.0
     # via stevedore
 pep517==0.10.0
     # via pip-tools
-phonenumbers==8.12.22
+phonenumbers==8.12.25
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.10
     # via faker-e164
