@@ -346,9 +346,7 @@ rcssmin==1.0.6
 readtime==1.1.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 regex==2020.9.27
-    # via
-    #   black
-    #   titlecase
+    # via black
 requests==2.24.0
     # via
     #   bpython
@@ -396,7 +394,7 @@ termcolor==1.1.0
     #   pytest-sugar
 text-unidecode==1.3
     # via faker
-titlecase==2.0.0
+titlecase==2.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 toml==0.10.1
     # via
