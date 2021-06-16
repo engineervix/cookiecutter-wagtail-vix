@@ -439,7 +439,7 @@ webencodings==0.5.1
     # via
     #   bleach
     #   html5lib
-werkzeug==1.0.1
+werkzeug==2.0.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 willow==1.4
     # via wagtail
