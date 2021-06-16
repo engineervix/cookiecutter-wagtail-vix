@@ -16,7 +16,7 @@ appdirs==1.4.4
     #   virtualenv
 argon2-cffi==20.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-asgiref==3.3.1
+asgiref==3.3.4
     # via django
 async-timeout==3.0.1
     # via aiohttp
@@ -133,7 +133,7 @@ django-user-agents==0.4.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-widget-tweaks==1.4.8
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django==3.1.12
+django==3.2.4
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   django-appconf
@@ -346,9 +346,7 @@ rcssmin==1.0.6
 readtime==1.1.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 regex==2020.9.27
-    # via
-    #   black
-    #   titlecase
+    # via black
 requests==2.24.0
     # via
     #   bpython
@@ -389,6 +387,8 @@ sqlparse==0.3.1
 stevedore==3.2.2
     # via doc8
 tablib[xls,xlsx]==2.0.0
+    # via wagtail
+telepath==0.2
     # via wagtail
 termcolor==1.1.0
     # via
