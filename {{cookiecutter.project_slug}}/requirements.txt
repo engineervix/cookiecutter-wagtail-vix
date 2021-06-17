@@ -271,7 +271,7 @@ pre-commit==2.7.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 prompt-toolkit==3.0.7
     # via questionary
-psycopg2==2.8.6
+psycopg2==2.9
     # via -r {{cookiecutter.project_slug}}/requirements.in
 py==1.10.0
     # via
@@ -346,9 +346,7 @@ rcssmin==1.0.6
 readtime==1.1.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 regex==2020.9.27
-    # via
-    #   black
-    #   titlecase
+    # via black
 requests==2.24.0
     # via
     #   bpython
@@ -390,6 +388,8 @@ stevedore==3.2.2
     # via doc8
 tablib[xls,xlsx]==2.0.0
     # via wagtail
+telepath==0.2
+    # via wagtail
 termcolor==1.1.0
     # via
     #   commitizen
@@ -416,7 +416,7 @@ ua-parser==0.10.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   user-agents
-urllib3==1.26.5
+urllib3==1.25.11
     # via requests
 user-agents==2.2.0
     # via
