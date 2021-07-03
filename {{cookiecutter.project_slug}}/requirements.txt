@@ -257,7 +257,7 @@ pillow==8.2.0
     # via wagtail
 pip-api==0.0.14
     # via isort
-pip-tools==6.1.0
+pip-tools==6.2.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pipreqs==0.4.10
     # via isort
@@ -441,6 +441,8 @@ webencodings==0.5.1
     #   html5lib
 werkzeug==2.0.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
+wheel==0.36.2
+    # via pip-tools
 willow==1.4
     # via wagtail
 wrapt==1.12.1
@@ -464,3 +466,4 @@ yattag==1.14.0
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
+# setuptools
