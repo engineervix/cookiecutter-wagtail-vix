@@ -85,6 +85,28 @@ deprecated==1.2.10
     # via nexmo
 distlib==0.3.1
     # via virtualenv
+django==3.1.12
+    # via
+    #   -r {{cookiecutter.project_slug}}/requirements.in
+    #   django-appconf
+    #   django-colorful
+    #   django-debug-toolbar
+    #   django-el-pagination
+    #   django-extensions
+    #   django-filter
+    #   django-intl-tel-input
+    #   django-leaflet
+    #   django-maintenancemode-2
+    #   django-model-utils
+    #   django-multiselectfield
+    #   django-phonenumber-field
+    #   django-recaptcha
+    #   django-taggit
+    #   django-treebeard
+    #   django-user-agents
+    #   djangorestframework
+    #   wagtail
+    #   wagtailfontawesome
 django-appconf==1.0.4
     # via django-compressor
 django-autoslug==1.9.8
@@ -133,28 +155,6 @@ django-user-agents==0.4.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-widget-tweaks==1.4.8
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django==3.1.12
-    # via
-    #   -r {{cookiecutter.project_slug}}/requirements.in
-    #   django-appconf
-    #   django-colorful
-    #   django-debug-toolbar
-    #   django-el-pagination
-    #   django-extensions
-    #   django-filter
-    #   django-intl-tel-input
-    #   django-leaflet
-    #   django-maintenancemode-2
-    #   django-model-utils
-    #   django-multiselectfield
-    #   django-phonenumber-field
-    #   django-recaptcha
-    #   django-taggit
-    #   django-treebeard
-    #   django-user-agents
-    #   djangorestframework
-    #   wagtail
-    #   wagtailfontawesome
 djangorestframework==3.12.2
     # via wagtail
 doc8==0.8.1
@@ -177,12 +177,12 @@ factory-boy==3.1.0
     #   wagtail-factories
 fake-useragent==0.1.11
     # via -r {{cookiecutter.project_slug}}/requirements.in
-faker-e164==0.1.0
-    # via -r {{cookiecutter.project_slug}}/requirements.in
 faker==4.1.6
     # via
     #   factory-boy
     #   faker-e164
+faker-e164==0.1.0
+    # via -r {{cookiecutter.project_slug}}/requirements.in
 feedparser==6.0.6
     # via -r {{cookiecutter.project_slug}}/requirements.in
 filelock==3.0.12
@@ -293,6 +293,17 @@ pyparsing==2.4.7
     # via packaging
 pyquery==1.4.1
     # via readtime
+pytest==6.2.0
+    # via
+    #   pytest-cov
+    #   pytest-django
+    #   pytest-dotenv
+    #   pytest-factoryboy
+    #   pytest-forked
+    #   pytest-logger
+    #   pytest-mock
+    #   pytest-sugar
+    #   pytest-xdist
 pytest-cov==2.10.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-django==4.4.0
@@ -311,17 +322,6 @@ pytest-sugar==0.9.4
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-xdist==2.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-pytest==6.2.0
-    # via
-    #   pytest-cov
-    #   pytest-django
-    #   pytest-dotenv
-    #   pytest-factoryboy
-    #   pytest-forked
-    #   pytest-logger
-    #   pytest-mock
-    #   pytest-sugar
-    #   pytest-xdist
 python-dateutil==2.8.1
     # via faker
 python-dotenv==0.14.0
@@ -424,13 +424,13 @@ user-agents==2.2.0
     #   django-user-agents
 virtualenv==20.0.31
     # via pre-commit
-https://github.com/wagtail/wagtail-factories/archive/master.zip
-    # via -r {{cookiecutter.project_slug}}/requirements.in
-wagtail==2.13.1
+wagtail==2.13.2
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   wagtail-factories
     #   wagtailfontawesome
+https://github.com/wagtail/wagtail-factories/archive/master.zip
+    # via -r {{cookiecutter.project_slug}}/requirements.in
 wagtailfontawesome==1.2.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 wcwidth==0.2.5
