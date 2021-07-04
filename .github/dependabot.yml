@@ -1,32 +1,32 @@
 version: 2
 updates:
-- package-ecosystem: pip
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "03:00"
-    timezone: Africa/Lusaka
-  labels:
-    - "dependencies"
-    - "python"
-  open-pull-requests-limit: 99
-- package-ecosystem: pip
-  directory: "/{{cookiecutter.project_slug}}"
-  schedule:
-    interval: daily
-    time: "03:00"
-    timezone: Africa/Lusaka
-  labels:
-    - "dependencies"
-    - "python"
-  open-pull-requests-limit: 99
-- package-ecosystem: npm
-  directory: "/{{cookiecutter.project_slug}}"
-  schedule:
-    interval: daily
-    time: "03:00"
-    timezone: Africa/Lusaka
-  labels:
-    - "dependencies"
-    - "npm"
-  open-pull-requests-limit: 99
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "03:00"
+      timezone: Africa/Lusaka
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 99
+  - package-ecosystem: pip
+    directory: "/{{cookiecutter.project_slug}}"
+    schedule:
+      interval: daily
+      time: "03:00"
+      timezone: Africa/Lusaka
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 99
+  - package-ecosystem: npm
+    directory: "/{{cookiecutter.project_slug}}"
+    schedule:
+      interval: daily
+      time: "03:00"
+      timezone: Africa/Lusaka
+    labels:
+      - "dependencies"
+      - "javascript"
+    open-pull-requests-limit: 99
