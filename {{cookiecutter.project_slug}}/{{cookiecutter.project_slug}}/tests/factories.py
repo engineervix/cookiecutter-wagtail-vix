@@ -97,9 +97,7 @@ class ArticleFactory(wagtail_factories.PageFactory):
     """Factory for Making Article objects"""
 
     title = factory.Faker("paragraph")
-    date_published = factory.Faker(
-        "date_between", start_date="-3y", end_date="today"
-    ).generate(extra_kwargs={})
+    date_published = factory.Faker("date_between", start_date="-3y", end_date="today")
     # author = factory.Faker("name")
     # tags  # depends on ArticleTagFactory
     # article_type = fuzzy.FuzzyChoice(['Shout', 'Post', 'Info', 'URL', 'Misc'])
