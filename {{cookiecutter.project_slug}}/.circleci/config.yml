@@ -93,7 +93,7 @@ jobs:
             pip install pip-tools
             pip-compile requirements.in
             pip-sync
-            npm install -g gulp-cli
+            sudo npm install -g gulp-cli
             yarn install && gulp cp
       # Step 3: run linters
       - run:
@@ -145,7 +145,7 @@ jobs:
             pip install pip-tools
             pip-compile requirements.in
             pip-sync
-            npm install -g gulp-cli
+            sudo npm install -g gulp-cli
             yarn install && gulp cp
       # Step 5: generates and store a cache{% raw %}
       - save_cache:
