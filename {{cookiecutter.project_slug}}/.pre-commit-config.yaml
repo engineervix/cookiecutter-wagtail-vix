@@ -69,5 +69,6 @@ repos:
         exclude: >
           (?x)^(
               (.*)/static/vendors|
+              (.*)/static/css/main\.css|
               ^.+\.min\.(css)$
           )$

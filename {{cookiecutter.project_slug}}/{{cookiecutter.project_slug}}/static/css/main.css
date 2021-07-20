@@ -1,0 +1,273 @@
+/*
+ * Based on Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 56px;
+}
+
+/* Settings for https://vestride.github.io/Shuffle/ */
+
+/* default styles so shuffle doesn't have to set them (it will if they're missing) */
+
+.js-shuffle {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Make vertical gutters the same as the horizontal ones */
+
+/* stylelint-disable selector-class-pattern*/
+.grid__brick {
+  margin-bottom: 30px;
+}
+/* stylelint-enable selector-class-pattern*/
+
+/* ul.blog-category-list {
+
+} */
+
+.blog-category-list li {
+  cursor: pointer;
+}
+
+.blog-category-list li:hover,
+.blog-category-list li:selected {
+  color: #007bff;
+  transition: color 0.2s ease-in-out;
+}
+
+/* CUSTOM LEAFLET STYLING
+ * --------------------------------------------------
+ */
+
+/* all maps*/
+
+/*.leaflet-container {
+    width:  500px;
+    height: 300px;
+}*/
+
+/* stylelint-disable selector-max-id */
+#contact-us-map {
+  height: 400px;
+  width: 100%;
+  /*background: #f5f5f5;*/
+}
+/* stylelint-enable selector-max-id */
+
+/* HACKS TO MAKE intl-tel-input play nice with BS4
+ * credits: https://codepen.io/jackocnr/pen/EyPXed
+ * --------------------------------------------------
+ */
+
+.intl-tel-input {
+  display: table-cell;
+  width: 100%;
+}
+
+.intl-tel-input .selected-flag {
+  z-index: 4;
+}
+
+.intl-tel-input .country-list {
+  z-index: 5;
+}
+
+.form-group .intl-tel-input .form-control {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+}
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-eq-height > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-eq-height.row::after,
+.row-eq-height.row::before {
+  display: flex;
+}
+
+/* CONTACT INFO BOX
+ * credits: https://v.gd/ahurux
+ * --------------------------------------------------
+ */
+
+.wrap {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 7px 7px 30px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.wrap:hover {
+  background: linear-gradient(135deg, #6394ff 0%, #0a193b 100%);
+  color: #fff;
+}
+
+.wrap:hover a {
+  color: #fff;
+}
+
+.wrap:hover a:hover {
+  color: #d9e7ff;
+}
+
+.ico-wrap {
+  margin: auto;
+}
+
+.mbr-iconfont {
+  color: #313131;
+  font-size: 4.5rem !important;
+  margin: 1rem;
+  padding-right: 1rem;
+}
+
+.vcenter {
+  margin: auto;
+}
+
+.mbr-section-title {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.display-5 {
+  font-size: 1.4rem;
+}
+
+.display-6 {
+  font-size: 1re;
+}
+
+.mbr-text {
+  line-height: 25px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.mbr-bold {
+  font-weight: 700;
+}
+
+/* ABOUT US -- Team Members
+ * --------------------------------------------------
+ */
+
+.card .artcl-bio {
+  padding: 5px;
+  position: absolute;
+  right: 2.5px;
+  top: 2.5px;
+}
+
+.card-body .fa-facebook-f {
+  color: #3b5998;
+}
+
+.card-body .fa-twitter {
+  color: #55acee;
+}
+
+.card-body .fa-linkedin-in {
+  color: #0077b5;
+}
+
+/* Responsive Wagtail Embeds
+ * https://docs.wagtail.io/en/v2.7/topics/writing_templates.html#responsive-embeds
+ * -------------------------------------------------
+ */
+
+.rich-text img {
+  height: auto;
+  max-width: 100%;
+}
+
+.responsive-object {
+  position: relative;
+}
+
+.responsive-object iframe,
+.responsive-object object,
+.responsive-object embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Better Blockquote
+ * based on https://codepen.io/brucebentley/pen/JVmjWw
+ * -------------------------------------------------
+ */
+
+.blockquote {
+  border: 1px solid rgba(222, 226, 230, 0.54);
+  border-left: 0.5rem solid rgba(0, 123, 255, 0.54);
+  color: #6c757d;
+  font-family: "Open Sans", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 1.875rem auto;
+  max-width: 100%;
+  padding: 4.6875rem 1.875rem 1.875rem 4.6875rem;
+  position: relative;
+  width: 100%;
+}
+
+.blockquote::before {
+  color: rgba(0, 123, 255, 0.54);
+  content: "\201C";
+  font-family: "Noto Serif", "Georgia", "Times New Roman", "Times", serif;
+  font-size: 6.875rem;
+  font-size: 5.5rem;
+  height: 3.75rem;
+  left: 0.9375rem;
+  line-height: 1;
+  max-width: 3.75rem;
+  position: absolute;
+  text-align: inherit;
+  top: 0.9375rem;
+  width: 100%;
+}
+
+.blockquote::after {
+  content: "";
+}
+
+.blockquote-footer {
+  color: #343a40;
+  display: block;
+  font-size: 80%;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.blockquote-footer::before {
+  content: "\2014\00A0";
+}

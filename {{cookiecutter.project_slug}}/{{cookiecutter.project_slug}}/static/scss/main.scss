@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+// 2. Vendors
+
+// @import "../../../node_modules/normalize.css/normalize";
+
+@import "bourbon";
+
+// https://getbootstrap.com/docs/4.5/getting-started/theming/#sass
+
+// Custom Bootstrap Variables
+@import "abstracts/custom_bootstrap_vars";
+// Set your own initial variables
+@import "abstracts/variables";
+
+// 2. Vendors: Bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// 2. Vendors: Custom vendor overrides
+
+@import "vendors/intltelinput";
+@import "vendors/leafletjs";
+@import "vendors/shufflejs";
+@import "vendors/wagtail";
+
+// 3. Base stuff
+@import "base/base";
+@import "base/typography";
+
+// 4. Layout-related sections
+@import "layout/forms";
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+
+// 5. Components
+@import "components/buttons";
+@import "components/lists";
+@import "components/media";
+@import "components/tables";
+@import "components/blockquote";
+@import "components/navbar";
+
+// 6. Page-specific styles
+@import "pages/home";
+@import "pages/about";
+@import "pages/blog";
+@import "pages/contact";
+
+// 7. Themes
+@import "themes/light";
+@import "themes/dark";

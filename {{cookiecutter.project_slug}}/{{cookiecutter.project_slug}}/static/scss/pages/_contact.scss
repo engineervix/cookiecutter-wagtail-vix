@@ -1,0 +1,85 @@
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-eq-height > [class*="column"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-eq-height.row::after,
+.row-eq-height.row::before {
+  display: flex;
+}
+
+/* CONTACT INFO BOX
+* credits: https://v.gd/ahurux
+* --------------------------------------------------
+*/
+
+.wrap {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 7px 7px 30px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.wrap:hover {
+  background: linear-gradient(135deg, #6394ff 0%, #0a193b 100%);
+  color: #fff;
+}
+
+.wrap:hover a {
+  color: #fff;
+}
+
+.wrap:hover a:hover {
+  color: #d9e7ff;
+}
+
+.ico-wrap {
+  margin: auto;
+}
+
+.mbr-iconfont {
+  color: #313131;
+  font-size: 4.5rem !important;
+  margin: 1rem;
+  padding-right: 1rem;
+}
+
+.vcenter {
+  margin: auto;
+}
+
+.mbr-section-title {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.display-5 {
+  font-size: 1.4rem;
+}
+
+.display-6 {
+  font-size: 1re;
+}
+
+.mbr-text {
+  line-height: 25px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.mbr-bold {
+  font-weight: 700;
+}

@@ -1,0 +1,18 @@
+/* CUSTOM LEAFLET STYLING
+ * --------------------------------------------------
+ */
+
+/* all maps*/
+
+/*.leaflet-container {
+    width:  500px;
+    height: 300px;
+}*/
+
+/* stylelint-disable selector-max-id */
+#contact-us-map {
+  height: 400px;
+  width: 100%;
+  /*background: #f5f5f5;*/
+}
+/* stylelint-enable selector-max-id */

@@ -1,0 +1,19 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+/* Settings for https://vestride.github.io/Shuffle/ */
+
+/* default styles so shuffle doesn't have to set them (it will if they're missing) */
+
+.js-shuffle {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Make vertical gutters the same as the horizontal ones */
+
+/* stylelint-disable selector-class-pattern*/
+.grid__brick {
+  margin-bottom: 30px;
+}
+/* stylelint-enable selector-class-pattern*/
+/* stylelint-enable selector-no-qualifying-type */

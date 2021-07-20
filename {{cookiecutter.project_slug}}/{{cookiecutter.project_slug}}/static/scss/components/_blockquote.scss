@@ -1,0 +1,55 @@
+/* Better Blockquote
+ * based on https://codepen.io/brucebentley/pen/JVmjWw
+ * -------------------------------------------------
+ */
+
+.blockquote {
+  border: 1px solid rgba(222, 226, 230, 0.54);
+  border-left: 0.5rem solid rgba(0, 123, 255, 0.54);
+  color: #6c757d;
+  font-family: "Open Sans", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 1.875rem auto;
+  max-width: 100%;
+  padding: 4.6875rem 1.875rem 1.875rem 4.6875rem;
+  position: relative;
+  width: 100%;
+}
+
+.blockquote::before {
+  color: rgba(0, 123, 255, 0.54);
+  content: "\201C";
+  font-family: "Noto Serif", "Georgia", "Times New Roman", "Times", serif;
+  font-size: 6.875rem;
+  font-size: 5.5rem;
+  height: 3.75rem;
+  left: 0.9375rem;
+  line-height: 1;
+  max-width: 3.75rem;
+  position: absolute;
+  text-align: inherit;
+  top: 0.9375rem;
+  width: 100%;
+}
+
+.blockquote::after {
+  content: "";
+}
+
+.blockquote-footer {
+  color: #343a40;
+  display: block;
+  font-size: 80%;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.blockquote-footer::before {
+  content: "\2014\00A0";
+}

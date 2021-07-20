@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the blog pages.
+// -----------------------------------------------------------------------------
+
+/* stylelint-disable selector-no-qualifying-type */
+
+/* ul.blog-category-list {
+
+} */
+
+.blog-category-list li {
+  cursor: pointer;
+}
+
+.blog-category-list li:hover,
+.blog-category-list li.selected {
+  color: #007bff;
+  transition: color 0.2s ease-in-out;
+}
+
+/* stylelint-enable selector-no-qualifying-type */
