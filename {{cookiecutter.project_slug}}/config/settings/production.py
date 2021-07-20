@@ -1,13 +1,15 @@
-"""See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/"""
+"""See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/"""
 
 import logging
+from email.utils import formataddr, getaddresses
 
-from email.utils import getaddresses
-
-from .base import *  # noqa
 import sentry_sdk
+# from sentry_sdk.integrations.celery import CeleryIntegration
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
+from sentry_sdk.integrations.redis import RedisIntegration
+
+from .base import *  # noqa
 
 DEBUG = False  # just to make sure!
 
@@ -53,7 +55,13 @@ CACHES = {
             # "COMPRESSOR": "django_redis.compressors.zlib.ZlibCompressor",
             "COMPRESSOR": "django_redis.compressors.lz4.Lz4Compressor",
         },
-    }
+    },
+    "renditions": {
+        "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
+        "LOCATION": env("MEMCACHED_URL"),  # noqa F405
+        "TIMEOUT": 600,
+        "OPTIONS": {"MAX_ENTRIES": 1000},
+    },
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
@@ -61,8 +69,7 @@ SESSION_CACHE_ALIAS = "default"
 WAGTAILFRONTENDCACHE = {
     "cloudflare": {
         "BACKEND": "wagtail.contrib.frontend_cache.backends.CloudflareBackend",
-        "EMAIL": env("CLOUDFLARE_EMAIL_ADDRESS"),  # noqa F405
-        "TOKEN": env("CLOUDFLARE_API_TOKEN"),  # noqa F405
+        "BEARER_TOKEN": env("CLOUDFLARE_BEARER_TOKEN"),  # noqa F405
         "ZONEID": env("CLOUDFLARE_DOMAIN_ZONE_ID"),  # noqa F405
     },
 }
@@ -75,26 +82,36 @@ USER_AGENTS_CACHE = "default"
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-# setup email backend
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-SENDGRID_API_KEY = env("SENDGRID_API_KEY")  # noqa F405
+# setup email backend via Anymail
+# ------------------------------------------------------------------------------
+# https://anymail.readthedocs.io/en/stable/installation/#installing-anymail
+INSTALLED_APPS += ["anymail"]  # noqa F405
+# https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
+# https://anymail.readthedocs.io/en/stable/installation/#anymail-settings-reference
+# https://anymail.readthedocs.io/en/stable/esps/sendgrid/
+EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
+ANYMAIL = {
+    "SENDGRID_API_KEY": env("SENDGRID_API_KEY"),  # noqa F405
+    "SENDGRID_GENERATE_MESSAGE_ID": env("SENDGRID_GENERATE_MESSAGE_ID"),  # noqa F405
+    "SENDGRID_MERGE_FIELD_FORMAT": env("SENDGRID_MERGE_FIELD_FORMAT"),  # noqa F405
+    "SENDGRID_API_URL": env(  # noqa F405
+        "SENDGRID_API_URL", default="https://api.sendgrid.com/v3/"
+    ),
+}
 
 if len(getaddresses([env("EMAIL_RECIPIENTS")])) == 1:  # noqa F405
     LIST_OF_EMAIL_RECIPIENTS.append(  # noqa F405
-        getaddresses([env("EMAIL_RECIPIENTS")])[0]  # noqa F405
+        formataddr(getaddresses([env("EMAIL_RECIPIENTS")])[0])  # noqa F405
     )
 else:
-    LIST_OF_EMAIL_RECIPIENTS += getaddresses([env("EMAIL_RECIPIENTS")])  # noqa F405
+    for email_address in getaddresses([env("EMAIL_RECIPIENTS")]):  # noqa F405
+        LIST_OF_EMAIL_RECIPIENTS += formataddr(email_address)  # noqa F405
 
-if len(getaddresses([env("DEFAULT_FROM_EMAIL")])) == 1:  # noqa F405
-    DEFAULT_FROM_EMAIL = getaddresses([env("DEFAULT_FROM_EMAIL")])[0]  # noqa F405
-else:
-    DEFAULT_FROM_EMAIL = getaddresses([env("DEFAULT_FROM_EMAIL")])  # noqa F405
+email_address = getaddresses([env("DEFAULT_FROM_EMAIL")])[0]  # noqa F405
+DEFAULT_FROM_EMAIL = formataddr(email_address)
 
-# try:
-#     from .local import *
-# except ImportError:
-#     pass
+# https://docs.djangoproject.com/en/dev/ref/settings/#server-email
+SERVER_EMAIL = env("DJANGO_SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)  # noqa F405
 
 # enable SSL flag, if the data exchange needs to be secure.
 # Not needed for small apps
@@ -148,10 +165,18 @@ sentry_logging = LoggingIntegration(
     level=SENTRY_LOG_LEVEL,  # Capture info and above as breadcrumbs
     event_level=logging.ERROR,  # Send errors as events
 )
-integrations = [sentry_logging, DjangoIntegration()]
+integrations = [
+    sentry_logging,
+    DjangoIntegration(),
+    # CeleryIntegration(),
+    RedisIntegration(),
+]
 sentry_sdk.init(
     dsn=SENTRY_DSN,
     integrations=integrations,
     environment=env("SENTRY_ENVIRONMENT", default="production"),  # noqa F405
     traces_sample_rate=env.float("SENTRY_TRACES_SAMPLE_RATE", default=0.0),  # noqa F405
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True,
 )

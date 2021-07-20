@@ -14,6 +14,7 @@ import os
 from typing import List
 
 import environ
+# from celery.schedules import crontab
 
 ROOT_DIR = environ.Path(__file__) - 3
 APPS_DIR = ROOT_DIR.path("{{cookiecutter.project_slug}}")
@@ -291,3 +292,40 @@ WAGTAILADMIN_RICH_TEXT_EDITORS = {
         },
     }
 }
+
+# Celery
+# ------------------------------------------------------------------------------
+# if USE_TZ:
+#     # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-timezone
+#     CELERY_TIMEZONE = TIME_ZONE
+# # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-broker_url
+# CELERY_BROKER_URL = env("CELERY_BROKER_URL")
+# # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-result_backend
+# CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+# # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-accept_content
+# CELERY_ACCEPT_CONTENT = ["json"]
+# # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-task_serializer
+# CELERY_TASK_SERIALIZER = "json"
+# # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-result_serializer
+# CELERY_RESULT_SERIALIZER = "json"
+# # http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-time-limit
+# # TODO: set to whatever value is adequate in your circumstances
+# CELERY_TASK_TIME_LIMIT = 5 * 60
+# # http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-soft-time-limit
+# # TODO: set to whatever value is adequate in your circumstances
+# CELERY_TASK_SOFT_TIME_LIMIT = 60
+# # https://docs.celeryproject.org/en/v4.4.7/userguide/configuration.html#task-default-queue
+# CELERY_DEFAULT_QUEUE = "cmcndola.org"
+
+# # https://docs.celeryproject.org/en/v4.4.7/userguide/periodic-tasks.html#beat-entries
+# CELERY_BEAT_SCHEDULE = {
+#     "get_daily_quote": {
+#         "task": "task_fetch_daily_quote",
+#         # Executes everyday at midnight (good for production)
+#         "schedule": crontab(minute=0, hour=0),
+#         # Executes every 2 hours (for development)
+#         # "schedule": crontab(minute=0, hour="*/2"),
+#         # Executes every 5 minutes (for development)
+#         # "schedule": crontab(minute="*/5"),
+#     },
+# }
