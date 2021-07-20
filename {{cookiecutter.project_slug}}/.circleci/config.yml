@@ -72,8 +72,8 @@ jobs:
           path: htmlcov
       - store_artifacts:
           path: coverage.xml
-      - codecov/upload:
-          file: coverage.xml
+      # - codecov/upload:
+      #     file: coverage.xml
   lint:
     docker:
       - image: cimg/python:3.8-node
