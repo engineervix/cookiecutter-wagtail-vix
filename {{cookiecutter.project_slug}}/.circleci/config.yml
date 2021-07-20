@@ -1,0 +1,170 @@
+# Python CircleCI 2.1 configuration file
+version: 2.1
+orbs:
+  codecov: codecov/codecov@1.0.2
+jobs:
+  test:
+    docker:
+      - image: circleci/python:{{cookiecutter.python_version}}-buster
+        environment:
+          ENV_PATH: .envs/.test.env
+          CODECOV_TOKEN: $CODECOV_TOKEN
+          DATABASE_URL: postgis://test_postgis_user:custom_pass@localhost/test_postgis_db?sslmode=disable
+          RECAPTCHA_PUBLIC_KEY: $RECAPTCHA_PUBLIC_KEY
+          RECAPTCHA_PRIVATE_KEY: $RECAPTCHA_PRIVATE_KEY
+          MAPBOX_ACCESS_TOKEN: $MAPBOX_ACCESS_TOKEN
+          CELERY_BROKER_URL: redis://redis:6379/0
+      - image: circleci/postgres:12.4-postgis
+        environment:
+          POSTGRES_USER: test_postgis_user
+          POSTGRES_DB: test_postgis_db
+          POSTGRES_PASSWORD: custom_pass
+      - image: circleci/redis:5.0.9
+
+    working_directory: ~/repo
+
+    steps:
+      # Step 1: obtain repo from GitHub
+      - checkout
+      # Step 2: create virtual env and install dependencies
+      - run:
+          name: install dependencies
+          command: |
+            sudo apt update -y && sudo apt upgrade -y
+            export DEBIAN_FRONTEND=noninteractive
+            sudo ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
+            sudo dpkg-reconfigure --frontend noninteractive tzdata
+            sudo apt install -y postgresql postgresql-contrib postgis libpq-dev
+            python -VV
+            which python
+            pip3 install virtualenv
+            virtualenv ../venv
+            source ../venv/bin/activate
+            export LC_ALL=C.UTF-8
+            export LANG=C.UTF-8
+            pip install --upgrade pip && pip install pip-tools
+            pip-compile requirements.in && pip-sync
+            curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+            sudo apt install nodejs -yqq
+            sudo npm install --global gulp-cli
+            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            sudo apt update -q && sudo apt install yarn -yqq
+            yarn install && gulp cp
+            mkdir .envs/
+            touch .envs/.test.env
+            echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
+            echo "DEBUG=False" >> .envs/.test.env
+            echo "ALLOWED_HOSTS=" >> .envs/.test.env
+            echo "BASE_URL=www.example.com" >> .envs/.test.env
+            echo "NEXMO_API_KEY=" >> .envs/.test.env
+            echo "NEXMO_API_SECRET=" >> .envs/.test.env
+            echo "NEXMO_DEFAULT_FROM=" >> .envs/.test.env
+            python manage.py collectstatic
+            # - celery -A config worker -B --loglevel=debug --purge
+      # Step 3: run tests
+      - run:
+          name: run tests
+          command: |
+            source ../venv/bin/activate
+            pytest
+      - store_artifacts:
+          path: htmlcov
+      - store_artifacts:
+          path: coverage.xml
+      - codecov/upload:
+          file: coverage.xml
+  lint:
+    docker:
+      - image: cimg/python:3.8-node
+
+    working_directory: ~/repo
+
+    steps:
+      # Step 1: obtain repo from GitHub
+      - checkout
+      # Step 2: create virtual env and install dependencies
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv ../venv
+            . ../venv/bin/activate
+            pip install --upgrade pip
+            pip install pip-tools
+            pip-compile requirements.in
+            pip-sync
+            npm install -g gulp-cli
+            yarn install && gulp cp
+      # Step 3: run linters
+      - run:
+          name: Black
+          command: |
+            . ../venv/bin/activate
+            black . --check
+      - run:
+          name: isort
+          command: |
+            . ../venv/bin/activate
+            isort . --check-only --profile black
+      - run:
+          name: Flake8
+          command: |
+            . ../venv/bin/activate
+            flake8 tests {{cookiecutter.project_slug}}
+      - run:
+          name: Stylelint
+          command: |
+            gulp lint-css
+  pre_commit:
+    # based on https://github.com/Unity-Technologies/ml-agents/blob/db19619775f0ca76c41a3780a4c776763aece141/.circleci/config.yml
+    docker:
+      - image: cimg/python:3.8-node
+
+    working_directory: ~/repo
+
+    steps:
+      # Step 1: obtain repo from GitHub
+      - checkout
+      # Step 2: pre-caching operations
+      - run:
+          name: Combine precommit config and python versions for caching
+          command: |
+            cp .pre-commit-config.yaml pre-commit-cache-key.txt
+            python --version --version >> pre-commit-cache-key.txt
+      # Step 3: Restore a previously saved cache based on a key{% raw %}
+      - restore_cache:
+          keys:
+            - v1-pc-cache-{{ checksum "pre-commit-cache-key.txt" }}{% endraw %}
+      # Step 4: create virtual env and install dependencies
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv ../venv
+            . ../venv/bin/activate
+            pip install --upgrade pip
+            pip install pip-tools
+            pip-compile requirements.in
+            pip-sync
+            npm install -g gulp-cli
+            yarn install && gulp cp
+      # Step 5: generates and store a cache{% raw %}
+      - save_cache:
+          key: v1-pc-cache-{{ checksum "pre-commit-cache-key.txt" }}{% endraw %}
+          paths:
+            - ~/.cache/pre-commit
+      # Step 6: run pre-commit
+      - run:
+          name: Check Code Style using pre-commit
+          command: |
+            . ../venv/bin/activate
+            pre-commit run --show-diff-on-failure --all-files
+workflows:
+  version: 2
+  lint_and_test:
+    jobs:
+      - lint
+      - pre_commit
+      - test:
+          requires:
+            - lint
+            - pre_commit
