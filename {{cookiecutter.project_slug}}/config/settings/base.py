@@ -90,6 +90,7 @@ INSTALLED_APPS = [
     "django_social_share",  # https://github.com/fcurella/django-social-share
     "colorful",  # https://github.com/charettes/django-colorful
     "compressor",  # https://django-compressor.readthedocs.io
+    "mjml",  # https://github.com/liminspace/django-mjml
 ]
 
 MIDDLEWARE = [
@@ -292,6 +293,15 @@ WAGTAILADMIN_RICH_TEXT_EDITORS = {
         },
     }
 }
+
+# https://github.com/liminspace/django-mjml
+MJML_BACKEND_MODE = "cmd"
+MJML_EXEC_CMD = [
+    os.path.join(ROOT_DIR, "node_modules/.bin/mjml"),
+    "--config.validationLevel",
+    "skip",
+]
+MJML_CHECK_CMD_ON_STARTUP = False
 
 # Celery
 # ------------------------------------------------------------------------------
