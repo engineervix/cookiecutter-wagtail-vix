@@ -268,3 +268,26 @@ COMPRESS_STORAGE = "compressor.storage.GzipCompressorFileStorage"
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Omitting the 'default' editor now leaves the original default editor intact,
+# so it is no longer necessary to redefine 'default' when adding alternative editors.
+WAGTAILADMIN_RICH_TEXT_EDITORS = {
+    "simple": {
+        "WIDGET": "wagtail.admin.rich_text.DraftailRichTextArea",
+        "OPTIONS": {
+            "features": [
+                "bold",
+                "italic",
+                "ol",
+                "ul",
+                "link",
+                "superscript",
+                "subscript",
+                "strikethrough",
+                "blockquote",
+                "hr",
+                "code",
+            ]
+        },
+    }
+}

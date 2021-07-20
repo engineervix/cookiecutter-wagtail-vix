@@ -78,7 +78,28 @@ class BaseStreamBlock(StreamBlock):
         icon="media",
         template="blocks/embed_block.html",
     )
-    table = TableBlock(template="blocks/table_block.html",)
+    table = TableBlock(
+        template="blocks/table_block.html",
+    )
 
     class Meta:
         required = False
+
+
+class CustomRichTextBlock(StreamBlock):
+    """
+    Define the custom blocks that `StreamField` will utilize
+    """
+
+    paragraph_block = RichTextBlock(
+        icon="fa-paragraph", template="blocks/paragraph_block.html", editor="simple"
+    )
+
+    def get_api_representation(self, value, context=None):
+        # this hack based on https://github.com/wagtail/wagtail/issues/2695#issuecomment-457392434
+        api_representation = super().get_api_representation(value, context)
+        # we don't want the 'id
+        key_to_be_deleted = "id"
+        api_representation.pop(key_to_be_deleted, None)
+        api_representation["paragraph_block"] = str(value["paragraph_block"])
+        return api_representation
