@@ -1,6 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.black]
 line-length = 88
+{% if cookiecutter.python_version == "3.6" %}
 target-version = ['py36']
+{% elif cookiecutter.python_version == "3.7" %}
+target-version = ['py37']
+{% else %}
+target-version = ['py38']
+{% endif %}
 include = '\.pyi?$'
 exclude = '''
 
@@ -20,7 +30,20 @@ exclude = '''
   )/
 )
 '''
+
+[tool.isort]
+profile = "black"
+known_third_party = ["captcha", "django", "environ", "factory", "fake_useragent", "faker", "faker_e164", "feedparser", "intl_tel_input", "model_utils", "modelcluster", "phonenumber_field", "pytest", "readtime", "sentry_sdk", "taggit", "titlecase", "wagtail", "wagtail_factories", "yattag"]
+
 [tool.commitizen]
-version = "{{cookiecutter.version}}"
+version = "{{ cookiecutter.version }}"
+version_files = [
+    "{{cookiecutter.project_slug}}/__init__.py",
+    "docs/conf.py",
+    "{{cookiecutter.project_slug}}/blog/rss_feed_display.py",
+]
 tag_format = "v$major.$minor.$patch"
-changelog_file = "CHANGELOG.md"
+annotated_tag = true
+update_changelog_on_bump = false
+# changelog_file = "CHANGELOG.md"
+# changelog_incremental = true
