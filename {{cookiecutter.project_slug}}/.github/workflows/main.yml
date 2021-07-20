@@ -1,0 +1,282 @@
+name: Continuous Integration
+
+# Enable Buildkit and let compose use it to speed up image building
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
+on:
+  pull_request:
+    branches: ["master", "main"]
+    paths-ignore: ["docs/**"]
+
+  push:
+    branches: ["master", "main"]
+    paths-ignore: ["docs/**"]
+
+jobs:
+  # Runs all steps on the VM
+  # The service containers will use host port binding instead of container networking so you access them via localhost rather than the service name
+  linter:
+    runs-on: ubuntu-20.04
+
+    services:
+      redis:
+        image: redis:5.0
+        ports:
+          - 6379:6379
+      postgres:
+        image: postgis/postgis:12-3.0
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_PASSWORD: postgres
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    {% raw %}
+    env:
+      ENV_PATH: .envs/.test.env
+      # CELERY_BROKER_URL: "redis://localhost:6379/0"
+      # postgres://user:password@host:port/database
+      DATABASE_URL: "postgis://postgres:postgres@localhost:5432/postgres"
+      RECAPTCHA_PUBLIC_KEY: ${{ secrets.RECAPTCHA_PUBLIC_KEY}}
+      RECAPTCHA_PRIVATE_KEY: ${{ secrets.RECAPTCHA_PRIVATE_KEY}}
+      MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN}}
+    {% endraw %}
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python {{cookiecutter.python_version}}
+        uses: actions/setup-python@v2
+        with:
+          python-version: {{cookiecutter.python_version}}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install Dependencies
+        run: |
+          sudo apt update -y && sudo apt upgrade -y
+          export DEBIAN_FRONTEND=noninteractive
+          sudo ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
+          sudo dpkg-reconfigure --frontend noninteractive tzdata
+          sudo apt install -y postgresql postgresql-contrib postgis libpq-dev
+          python -VV # Print out python version for debugging
+          which python # for debugging
+          pip3 install virtualenv
+          virtualenv ../venv
+          source ../venv/bin/activate
+          export LC_ALL=C.UTF-8
+          export LANG=C.UTF-8
+          pip install --upgrade pip
+          pip install pip-tools
+          pip-compile requirements.in
+          pip-sync
+          yarn install && gulp cp
+          mkdir -p .envs/
+          touch .envs/.test.env
+          echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
+          echo "DEBUG=False" >> .envs/.test.env
+          echo "ALLOWED_HOSTS=" >> .envs/.test.env
+          echo "BASE_URL=www.example.com" >> .envs/.test.env
+          echo "NEXMO_API_KEY=" >> .envs/.test.env
+          echo "NEXMO_API_SECRET=" >> .envs/.test.env
+          echo "NEXMO_DEFAULT_FROM=" >> .envs/.test.env
+
+      - name: isort
+        run: |
+          . ../venv/bin/activate
+          isort . --check-only --profile black
+
+      - name: Black
+        run: |
+          . ../venv/bin/activate
+          black . --check
+
+      - name: Flake8
+        run: |
+          . ../venv/bin/activate
+          flake8 tests {{cookiecutter.project_slug}}
+
+      - name: Stylelint
+        run: |
+          gulp lint-css
+
+  # Runs all steps on the VM
+  # The service containers will use host port binding instead of container networking so you access them via localhost rather than the service name
+  precommit:
+    runs-on: ubuntu-20.04
+
+    services:
+      redis:
+        image: redis:5.0
+        ports:
+          - 6379:6379
+      postgres:
+        image: postgis/postgis:12-3.0
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_PASSWORD: postgres
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    {% raw %}
+    env:
+      ENV_PATH: .envs/.test.env
+      # CELERY_BROKER_URL: "redis://localhost:6379/0"
+      # postgres://user:password@host:port/database
+      DATABASE_URL: "postgis://postgres:postgres@localhost:5432/postgres"
+      RECAPTCHA_PUBLIC_KEY: ${{ secrets.RECAPTCHA_PUBLIC_KEY}}
+      RECAPTCHA_PRIVATE_KEY: ${{ secrets.RECAPTCHA_PRIVATE_KEY}}
+      MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN}}
+    {% endraw %}
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python {{cookiecutter.python_version}}
+        uses: actions/setup-python@v2
+        with:
+          python-version: {{cookiecutter.python_version}}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install Dependencies
+        run: |
+          sudo apt update -y && sudo apt upgrade -y
+          export DEBIAN_FRONTEND=noninteractive
+          sudo ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
+          sudo dpkg-reconfigure --frontend noninteractive tzdata
+          sudo apt install -y postgresql postgresql-contrib postgis libpq-dev
+          python -VV # Print out python version for debugging
+          which python # for debugging
+          pip3 install virtualenv
+          virtualenv ../venv
+          source ../venv/bin/activate
+          export LC_ALL=C.UTF-8
+          export LANG=C.UTF-8
+          pip install --upgrade pip
+          pip install pip-tools
+          pip-compile requirements.in
+          pip-sync
+          yarn install && gulp cp
+          mkdir -p .envs/
+          touch .envs/.test.env
+          echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
+          echo "DEBUG=False" >> .envs/.test.env
+          echo "ALLOWED_HOSTS=" >> .envs/.test.env
+          echo "BASE_URL=www.example.com" >> .envs/.test.env
+          echo "NEXMO_API_KEY=" >> .envs/.test.env
+          echo "NEXMO_API_SECRET=" >> .envs/.test.env
+          echo "NEXMO_DEFAULT_FROM=TEST" >> .envs/.test.env
+          python manage.py collectstatic
+          # - celery -A config worker -B --loglevel=debug --purge
+      {% raw %}
+      # Run all pre-commit hooks on all the files.
+      # Getting only staged files can be tricky in case a new PR is opened
+      # since the action is run on a branch in detached head state
+      - name: Install and Run Pre-commit
+        uses: pre-commit/action@v2.0.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      {% endraw %}
+  # runs all of the steps inside the specified container rather than on the VM host.
+  # Because of this the network configuration changes from host based network to a container network.
+  test:
+    runs-on: ubuntu-20.04
+
+    container:
+      image: python:{{cookiecutter.python_version}}-buster
+
+    services:
+      redis:
+        image: redis:5.0
+        ports:
+          - 6379:6379
+      postgres:
+        image: postgis/postgis:12-3.0
+        env:
+          POSTGRES_USER: test_postgis_user
+          POSTGRES_PASSWORD: custom_pass
+          POSTGRES_DB: test_postgis_db
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    {% raw %}
+    env:
+      ENV_PATH: .envs/.test.env
+      # CELERY_BROKER_URL: "redis://redis:6379/0"
+      # postgres://user:password@host:port/database
+      DATABASE_URL: "postgis://test_postgis_user:custom_pass@postgres/test_postgis_db"
+      RECAPTCHA_PUBLIC_KEY: ${{ secrets.RECAPTCHA_PUBLIC_KEY}}
+      RECAPTCHA_PRIVATE_KEY: ${{ secrets.RECAPTCHA_PRIVATE_KEY}}
+      MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN}}
+    {% endraw %}
+    steps:
+      # This Docker file changes sets USER to circleci instead of using the default user, so we need to update file permissions for this image to work on GH Actions.
+      # See https://docs.github.com/actions/reference/virtual-environments-for-github-hosted-runners#docker-container-filesystem
+      - name: Setup file system permissions
+        run: chmod -R 777 $GITHUB_WORKSPACE /github /__w/_temp
+      - name: Checkout Code Repository
+        uses: actions/checkout@v2
+
+      # - name: Set up Python {{cookiecutter.python_version}}
+      #   uses: actions/setup-python@v2
+      #   with:
+      #     python-version: {{cookiecutter.python_version}}
+
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: "14"
+
+      - name: Install Dependencies
+        shell: bash
+        run: |
+          apt update -y && apt upgrade -y
+          export DEBIAN_FRONTEND=noninteractive
+          ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
+          dpkg-reconfigure --frontend noninteractive tzdata
+          apt install -y postgresql postgresql-contrib postgis libpq-dev
+          python -VV # Print out python version for debugging
+          which python # for debugging
+          pip3 install virtualenv
+          virtualenv ~/venv
+          source ~/venv/bin/activate
+          export LC_ALL=C.UTF-8
+          export LANG=C.UTF-8
+          pip install --upgrade pip
+          pip install pip-tools
+          pip-compile requirements.in
+          pip-sync
+          curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+          apt install nodejs -yqq
+          npm install -g gulp-cli
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+          apt update -q && apt install yarn -yqq
+          yarn install && gulp cp
+          mkdir -p .envs/
+          touch .envs/.test.env
+          echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
+          echo "DEBUG=False" >> .envs/.test.env
+          echo "ALLOWED_HOSTS=" >> .envs/.test.env
+          echo "BASE_URL=www.example.com" >> .envs/.test.env
+          echo "NEXMO_API_KEY=" >> .envs/.test.env
+          echo "NEXMO_API_SECRET=" >> .envs/.test.env
+          echo "NEXMO_DEFAULT_FROM=TEST" >> .envs/.test.env
+          python manage.py collectstatic
+          # - celery -A config worker -B --loglevel=debug --purge
+
+      - name: Test with pytest
+        shell: bash
+        run: |
+          source ~/venv/bin/activate
+          pytest
