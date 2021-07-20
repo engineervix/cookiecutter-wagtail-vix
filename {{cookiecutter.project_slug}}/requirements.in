@@ -1,12 +1,8 @@
 # Core
-django>=3.1,<4.0
-wagtail>=2.12,<3.0
-argon2-cffi
-bcrypt
-beautifulsoup4
-bleach
-brotli
-csscompressor
+django[argon2,bcrypt]>=3.1,<4.0
+wagtail>=2.13,<3.0
+
+# Django Extensions
 django-autoslug
 django-colorful
 django-compressor
@@ -23,39 +19,51 @@ django-multiselectfield
 django-nexmo==2.0.0a1
 django-phonenumber-field
 django-recaptcha
+django-redis
 django-social-share
 django-user-agents
 django-widget-tweaks
+
+# Wagtail Extensions
+wagtailfontawesome
+
+# Other third-party libraries
+beautifulsoup4
+bleach
+brotli
+csscompressor
 feedparser
+hiredis
 html5lib
+lz4 # for django_redis.compressors.lz4.Lz4Compressor
 openpyxl
 phonenumbers
 psycopg2
 pyyaml
 readtime
-simplejson
 slimit
 titlecase
 ua-parser
 user-agents
 werkzeug
-wagtailfontawesome
 xlrd
 xlwt
 yattag
 
-# Dev
+# Developer Tools
 bpython
 black
 commitizen
 doc8
 flake8
-powerline-status
+invoke
 isort[requirements_deprecated_finder]
-pip-tools
-pre-commit
+pipdeptree
+pip-tools>=5.5
+powerline-status
+pre-commit>=2.9.2
 
-# Test
+# Testing
 fake-useragent
 faker-e164
 pytest-cov
@@ -67,3 +75,7 @@ pytest-mock
 pytest-sugar
 pytest-xdist
 wagtail-factories @ https://github.com/wagtail/wagtail-factories/archive/master.zip
+
+# Production
+pymemcache
+sentry-sdk

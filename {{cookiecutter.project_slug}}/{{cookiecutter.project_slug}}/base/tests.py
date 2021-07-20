@@ -31,7 +31,7 @@ def test_people():
 
 @pytest.mark.django_db
 def test_base_app():
-    assert BaseConfig.name == "base"
+    assert BaseConfig.name == "{{cookiecutter.project_slug}}.base"
     assert apps.get_app_config("base").name == "{{cookiecutter.project_slug}}.base"
 
 

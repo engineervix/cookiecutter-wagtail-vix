@@ -170,5 +170,5 @@ def test_send_mail_bad_header_error(
 
 @pytest.mark.django_db
 def test_contact_app():
-    assert ContactConfig.name == "contact"
+    assert ContactConfig.name == "{{cookiecutter.project_slug}}.contact"
     assert apps.get_app_config("contact").name == "{{cookiecutter.project_slug}}.contact"

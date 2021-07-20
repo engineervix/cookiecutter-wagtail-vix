@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class BaseConfig(AppConfig):
-    name = "base"
+    name = "{{cookiecutter.project_slug}}.base"

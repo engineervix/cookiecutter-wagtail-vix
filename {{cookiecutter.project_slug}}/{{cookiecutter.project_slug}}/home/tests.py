@@ -40,5 +40,5 @@ def test_aboutpage(client):
 
 @pytest.mark.django_db
 def test_home_app():
-    assert HomeConfig.name == "home"
+    assert HomeConfig.name == "{{cookiecutter.project_slug}}.home"
     assert apps.get_app_config("home").name == "{{cookiecutter.project_slug}}.home"

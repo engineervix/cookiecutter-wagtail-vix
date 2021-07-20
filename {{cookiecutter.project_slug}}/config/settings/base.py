@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from typing import List
 
 import environ
 
@@ -231,7 +232,7 @@ NEXMO_API_KEY = env("NEXMO_API_KEY")
 NEXMO_API_SECRET = env("NEXMO_API_SECRET")
 NEXMO_DEFAULT_FROM = env("NEXMO_DEFAULT_FROM")
 
-LIST_OF_EMAIL_RECIPIENTS = []
+LIST_OF_EMAIL_RECIPIENTS: List[str] = []
 
 ADMINS = (
     ("{{cookiecutter.author_name}}", "{{cookiecutter.email}}"),  # email will be sent to your_email
@@ -265,3 +266,5 @@ COUNTRIES_FIRST = ["ZM"]
 COMPRESS_STORAGE = "compressor.storage.GzipCompressorFileStorage"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

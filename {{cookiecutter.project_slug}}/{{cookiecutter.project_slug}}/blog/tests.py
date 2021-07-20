@@ -106,7 +106,7 @@ def test_blog(client):
 
 @pytest.mark.django_db
 def test_blog_app():
-    assert BlogConfig.name == "blog"
+    assert BlogConfig.name == "{{cookiecutter.project_slug}}.blog"
     assert apps.get_app_config("blog").name == "{{cookiecutter.project_slug}}.blog"
 
 
