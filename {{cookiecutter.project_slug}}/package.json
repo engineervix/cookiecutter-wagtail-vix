@@ -6,14 +6,17 @@
   "author": "{{ cookiecutter.author_name }}",
   "license": "UNLICENSED",
   "scripts": {
-    "toc": "doctoc .",
-    "setup_test_db": "psql -c \"DROP DATABASE IF EXISTS test_postgis_database\" && psql -c \"DROP USER IF EXISTS test_postgis_user\" && psql -c \"CREATE USER test_postgis_user PASSWORD 'testDB-password'\" && psql -c \"CREATE DATABASE test_postgis_database OWNER test_postgis_user\" && psql -c \"GRANT ALL PRIVILEGES ON DATABASE test_postgis_database to test_postgis_user\" && psql -c \"ALTER ROLE test_postgis_user SUPERUSER\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis_topology\"",
-    "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"grunt sync\" \"maildev -o\"",
-    "test": "export ENV_PATH=.envs/.test.env && npm run setup_test_db && pytest -vv --cov=. --cov-report term-missing:skip-covered -s",
+    "collectstatic:dev": "export ENV_PATH=.envs/.dev.env && ./manage.py collectstatic --ignore scss/ --noinput --clear",
+    "collectstatic:prod": "export ENV_PATH=.envs/.prod.env && ./manage.py collectstatic --ignore scss/ --noinput --clear --settings 'config.settings.production'",
     "coverage_html": "export ENV_PATH=.envs/.test.env && concurrently --raw --kill-others \"pytest -vv --cov=. --cov-report html\" \"maildev -o\"",
+    "css-fix": "npx stylelint {{cookiecutter.project_slug}}/static/css/ --fix",
+    "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"grunt sync\" \"maildev -o\"",
     "isort": "isort -rc --atomic .",
+    "release": "standard-version",
+    "setup_test_db": "psql -c \"DROP DATABASE IF EXISTS test_postgis_database\" && psql -c \"DROP USER IF EXISTS test_postgis_user\" && psql -c \"CREATE USER test_postgis_user PASSWORD 'testDB-password'\" && psql -c \"CREATE DATABASE test_postgis_database OWNER test_postgis_user\" && psql -c \"GRANT ALL PRIVILEGES ON DATABASE test_postgis_database to test_postgis_user\" && psql -c \"ALTER ROLE test_postgis_user SUPERUSER\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis_topology\"",
     "stylelint-check": "stylelint-config-prettier-check",
-    "css-fix": "npx stylelint {{cookiecutter.project_slug}}/static/css/ --fix"
+    "test": "export ENV_PATH=.envs/.test.env && npm run setup_test_db && pytest",
+    "toc": "doctoc README.md",
   },
   "private": true,
   "dependencies": {
@@ -38,6 +41,8 @@
     "typed.js": "^2.0.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
     "bourbon": "^7.0.0",
     "browser-sync": "^2.27.4",
     "commitizen": "^4.2.4",
@@ -61,6 +66,7 @@
     "node-sass": "^6.0.0",
     "normalize.css": "^8.0.1",
     "popper.js": "^1.16.1",
+    "standard-version": "^9.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-sass-guidelines": "^8.0.0",
@@ -75,6 +81,83 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-sass-guidelines",
+      "stylelint-config-prettier"
+    ],
+    "ignoreFiles": [
+      "**/vendor/**/*.*",
+      "**/static/css/*.min.css"
+    ]
+  },
+  "standard-version": {
+    "header": "# Changelog\n\nAll notable changes to this project will be documented here.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n",
+    "types": [
+      {
+        "type": "feat",
+        "section": "🚀 Features"
+      },
+      {
+        "type": "fix",
+        "section": "🐛 Bug Fixes"
+      },
+      {
+        "type": "docs",
+        "section": "📝 Docs",
+        "hidden": false
+      },
+      {
+        "type": "style",
+        "section": "💄 Styling",
+        "hidden": false
+      },
+      {
+        "type": "refactor",
+        "hidden": false,
+        "section": "♻️ Code Refactoring"
+      },
+      {
+        "type": "perf",
+        "section": "⚡️ Performance Improvements",
+        "hidden": false
+      },
+      {
+        "type": "test",
+        "section": "✅ Tests",
+        "hidden": false
+      },
+      {
+        "type": "build",
+        "section": "⚙️ Build System",
+        "hidden": false
+      },
+      {
+        "type": "ci",
+        "section": "👷 CI/CD",
+        "hidden": false
+      },
+      {
+        "type": "chore",
+        "section": "🚧 Others",
+        "hidden": true
+      },
+      {
+        "type": "revert",
+        "section": "⏪️ Reverts",
+        "hidden": true
+      }
+    ],
+    "scripts": {
+      "prechangelog": "sed -e '1,6d' -i CHANGELOG.md",
+      "postchangelog": "sed -e 's/###\\ \\[/##\\ \\[v/g' -i CHANGELOG.md && sed -re 's/##\\ \\[([0-9])/##\\ \\[v\\1/g' -i CHANGELOG.md"
     }
   }
 }
