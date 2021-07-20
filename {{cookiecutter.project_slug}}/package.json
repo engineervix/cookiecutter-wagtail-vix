@@ -1,6 +1,6 @@
 {
   "name": "{{cookiecutter.project_slug}}",
-  "version": "0.0.1",
+  "version": "{{ cookiecutter.version }}",
   "description": "{{cookiecutter.description}}",
   "main": "index.js",
   "author": "{{ cookiecutter.author_name }}",
