@@ -23,7 +23,7 @@ INTERNAL_IPS = ["127.0.0.1", "::1"]
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [str(APPS_DIR.path("templates"))],
+        "DIRS": [str(APPS_DIR.path("templates"))],  # noqa: F405
         # 'APP_DIRS': True,  # default setting
         "OPTIONS": {
             "context_processors": [
