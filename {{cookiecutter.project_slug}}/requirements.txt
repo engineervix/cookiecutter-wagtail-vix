@@ -16,7 +16,7 @@ appdirs==1.4.4
     #   virtualenv
 argon2-cffi==20.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-asgiref==3.3.1
+asgiref==3.4.1
     # via django
 async-timeout==3.0.1
     # via aiohttp
@@ -85,7 +85,7 @@ deprecated==1.2.10
     # via nexmo
 distlib==0.3.1
     # via virtualenv
-django==3.1.13
+django==3.2.5
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   django-appconf
