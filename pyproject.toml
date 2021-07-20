@@ -1,6 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.black]
 line-length = 88
-target-version = ['py36']
+target-version = ['py36', 'py37', 'py38']
 include = '\.pyi?$'
 exclude = '''
 
@@ -21,7 +25,14 @@ exclude = '''
   )/
 )
 '''
+
 [tool.commitizen]
 version = "0.0.1"
+version_files = [
+    "cookiecutter.json",
+]
 tag_format = "v$major.$minor.$patch"
-changelog_file = "CHANGELOG.md"
+annotated_tag = true
+update_changelog_on_bump = false
+# changelog_file = "CHANGELOG.md"
+# changelog_incremental = true

@@ -5,7 +5,7 @@ A portion of this code was adopted from Django's standard crypto functions and
 utilities, specifically:
     https://github.com/django/django/blob/master/django/utils/crypto.py
 
-TODO: - Reorganize the private directories and .env files which, do not get added to the repository
+TODO: - Reorganize the private directories and .env files which do not get added to the repository
 """
 
 import os
