@@ -53,8 +53,8 @@
         <div class="card-body">
             <h5 class="card-title">{{ staff_member.first_name }} {{ staff_member.last_name }}</h5>
             <h6 class="card-subtitle mb-3 text-muted font-weight-normal">{{ staff_member.position }}</h6>
-            {# This needs fixing: If, say two staff members have the same surname then you'll have more than one modal with the same ID #}
-            {% if director.bio != "" %}<button class="btn btn-danger artcl-bio" data-toggle="modal" data-target="#bio-{{ staff_member.last_name|slugify }}"><i class="fas fa-info-circle mr-2"></i> Bio</button>{% endif %}
+            {# TODO: This needs fixing: If, say two staff members have the same surname then you'll have more than one modal with the same ID #}
+            {% if staff_member.bio != "" %}<button class="btn btn-danger artcl-bio" data-toggle="modal" data-target="#bio-{{ staff_member.last_name|slugify }}"><i class="fas fa-info-circle mr-2"></i> Bio</button>{% endif %}
             {% if staff_member.facebook %}
             <a href="{{ staff_member.facebook }}" class="card-link"><i class="fab fa-facebook-f"></i></a>
             {% endif %}
