@@ -81,6 +81,7 @@ distlib==0.3.1
 django[argon2,bcrypt]==3.2.5
     # via
     #   -r requirements.in
+    #   django-anymail
     #   django-appconf
     #   django-colorful
     #   django-debug-toolbar
@@ -90,6 +91,7 @@ django[argon2,bcrypt]==3.2.5
     #   django-intl-tel-input
     #   django-leaflet
     #   django-maintenancemode-2
+    #   django-mjml
     #   django-model-utils
     #   django-multiselectfield
     #   django-phonenumber-field
@@ -101,6 +103,8 @@ django[argon2,bcrypt]==3.2.5
     #   djangorestframework
     #   wagtail
     #   wagtailfontawesome
+django-anymail[sendgrid]==8.4
+    # via -r requirements.in
 django-appconf==1.0.4
     # via django-compressor
 django-autoslug==1.9.8
@@ -126,6 +130,8 @@ django-intl-tel-input==0.3.1
 django-leaflet==0.28.1
     # via -r requirements.in
 django-maintenancemode-2==1.2
+    # via -r requirements.in
+django-mjml==0.11.0
     # via -r requirements.in
 django-model-utils==4.1.1
     # via -r requirements.in
@@ -350,6 +356,7 @@ regex==2020.9.27
 requests==2.24.0
     # via
     #   bpython
+    #   django-anymail
     #   nexmo
     #   wagtail
     #   yarg

@@ -3,6 +3,7 @@ django[argon2,bcrypt]>=3.1,<4.0
 wagtail>=2.13,<3.0
 
 # Django Extensions
+django-anymail[sendgrid]
 django-autoslug
 django-colorful
 django-compressor
@@ -14,9 +15,10 @@ django-extensions
 django-intl-tel-input
 django-leaflet
 django-maintenancemode-2
+django-mjml
 django-model-utils
 django-multiselectfield
-django-nexmo==2.0.0a1
+django-nexmo==2.0.0a1  # TODO: migrate to vonage
 django-phonenumber-field
 django-recaptcha
 django-redis
@@ -31,6 +33,7 @@ wagtailfontawesome
 beautifulsoup4
 bleach
 brotli
+# celery[redis,msgpack]<5.0
 csscompressor
 feedparser
 hiredis
