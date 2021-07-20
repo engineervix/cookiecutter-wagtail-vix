@@ -28,7 +28,6 @@ django-user-agents
 django-widget-tweaks
 feedparser
 html5lib
-ipinfo
 openpyxl
 phonenumbers
 psycopg2
