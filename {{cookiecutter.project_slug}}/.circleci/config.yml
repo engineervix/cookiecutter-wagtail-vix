@@ -1,14 +1,14 @@
 # Python CircleCI 2.1 configuration file
 version: 2.1
-orbs:
-  codecov: codecov/codecov@1.0.2
+# orbs:
+#   codecov: codecov/codecov@1.0.2
 jobs:
   test:
     docker:
       - image: circleci/python:{{cookiecutter.python_version}}-buster
         environment:
           ENV_PATH: .envs/.test.env
-          CODECOV_TOKEN: $CODECOV_TOKEN
+          # CODECOV_TOKEN: $CODECOV_TOKEN
           DATABASE_URL: postgis://test_postgis_user:custom_pass@localhost/test_postgis_db?sslmode=disable
           RECAPTCHA_PUBLIC_KEY: $RECAPTCHA_PUBLIC_KEY
           RECAPTCHA_PRIVATE_KEY: $RECAPTCHA_PRIVATE_KEY
