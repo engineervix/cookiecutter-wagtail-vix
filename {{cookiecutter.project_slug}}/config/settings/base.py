@@ -325,7 +325,7 @@ MJML_CHECK_CMD_ON_STARTUP = False
 # # TODO: set to whatever value is adequate in your circumstances
 # CELERY_TASK_SOFT_TIME_LIMIT = 60
 # # https://docs.celeryproject.org/en/v4.4.7/userguide/configuration.html#task-default-queue
-# CELERY_DEFAULT_QUEUE = "cmcndola.org"
+# CELERY_DEFAULT_QUEUE = "{{cookiecutter.project_slug}}"
 
 # # https://docs.celeryproject.org/en/v4.4.7/userguide/periodic-tasks.html#beat-entries
 # CELERY_BEAT_SCHEDULE = {
