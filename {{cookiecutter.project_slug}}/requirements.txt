@@ -250,7 +250,7 @@ ply==3.11
     # via slimit
 powerline-status==2.7
     # via -r requirements.in
-pre-commit==2.7.1
+pre-commit==2.13.0
     # via -r requirements.in
 prompt-toolkit==3.0.7
     # via questionary
