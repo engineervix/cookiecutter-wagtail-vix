@@ -42,13 +42,13 @@ before_script:
   - export LC_ALL=C.UTF-8
   - export LANG=C.UTF-8
   - pipenv sync --dev
-  - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+  - curl -sL https://deb.nodesource.com/setup_lts.x | bash -
   - apt install nodejs -yqq
-  - npm install -g grunt-cli
+  - npm install -g gulp-cli
   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
   - apt update -q && apt install yarn -yqq
-  - yarn install && grunt all
+  - yarn install && gulp cp
   - mkdir .envs/
   - touch .envs/.test.env
   - echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
@@ -68,4 +68,4 @@ test:
     MAPBOX_ACCESS_TOKEN: "$MAPBOX_ACCESS_TOKEN"
 
   script:
-    - pytest -v --cov=. --cov-report term-missing:skip-covered -s
+    - pytest
