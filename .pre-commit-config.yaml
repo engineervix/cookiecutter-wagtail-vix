@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.1.0
+    rev: v4.0.1
     hooks:
       - id: check-added-large-files
         args: ["--maxkb=5000"]
@@ -11,7 +11,7 @@ repos:
       - id: detect-private-key
       - id: check-docstring-first
   - repo: https://github.com/psf/black
-    rev: 19.10b0
+    rev: 21.7b0
     hooks:
       - id: black
         exclude: |
@@ -20,7 +20,7 @@ repos:
                 |(.*)/migrations
             )
   - repo: https://gitlab.com/PyCQA/flake8
-    rev: 3.8.3
+    rev: 3.9.2
     hooks:
       - id: flake8
         exclude: |
@@ -28,7 +28,7 @@ repos:
                 ^{{cookiecutter.project_slug}}/
             )
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: master
+    rev: v2.17.13
     hooks:
       - id: commitizen
         stages: [commit-msg]
