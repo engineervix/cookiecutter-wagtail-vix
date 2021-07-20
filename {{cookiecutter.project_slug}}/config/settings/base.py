@@ -24,7 +24,6 @@ env = environ.Env(
     DATABASE_URL=str,
     RECAPTCHA_PUBLIC_KEY=str,
     RECAPTCHA_PRIVATE_KEY=str,
-    IPINFO_ACCESS_TOKEN=str,
     BASE_URL=str,
 )
 
