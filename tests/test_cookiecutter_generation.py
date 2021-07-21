@@ -17,6 +17,7 @@ def context():
         "project_name": "Test Wagtail Project",
         "project_slug": "test_wagtail_project",
         "author_name": "Test Author",
+        "github_username": "engineervix",
         "email": "somebody@example.com",
         "description": "A short description of the project.",
         "domain_name": "example.com",

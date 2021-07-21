@@ -63,12 +63,12 @@ def execute_bump_hack(c):
             "git describe --abbrev=0 --tags `git rev-list --tags --skip=0  --max-count=1`",
             pty=True,
         )
-        previous_tag = get_current_tag.stdout.strip("\n")
+        previous_tag = get_current_tag.stdout.strip("\n"){% raw %}
         c.run(
             f'npm run release -- --commit-all --release-as {release_type} --releaseCommitMessageFormat "bump: ✈️ {previous_tag} → v{{{{currentTag}}}}"',
             pty=True,
         )
-        # push to origin
+        # push to origin{% endraw %}
         c.run("git push --follow-tags origin master", pty=True)
     else:
         print(
