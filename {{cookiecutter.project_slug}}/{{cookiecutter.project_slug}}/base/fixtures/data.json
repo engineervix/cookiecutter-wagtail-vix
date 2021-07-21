@@ -1,1400 +1,1667 @@
 [
-{
-  "model": "base.people",
-  "pk": 1,
-  "fields": {
-    "created": "2020-03-15T19:09:24.123Z",
-    "modified": "2020-03-15T19:14:06.206Z",
-    "status": "published",
-    "status_changed": "2020-03-15T19:14:06.206Z",
-    "first_name": "George",
-    "last_name": "Benson",
-    "phone_number": "+260975654301",
-    "email_address": "george@company.com",
-    "position": "Marketing Manager",
-    "bio": "<p>George Benson is a 23-year-old semi-professional sports person who enjoys finger painting, photography and eating out. He is energetic and entertaining, but can also be very standoffish and a bit unkind. Physically, Daniel is slightly overweight but otherwise in good shape. He is very short with olive skin, grey hair and black eyes. He grew up in a working class neighbourhood. His parents separated when he was small, but remained friends and provided a happy, stable home.</p>",
-    "facebook": "https://www.facebook.com/naozambia/",
-    "twitter": "https://twitter.com/YasharF3",
-    "linked_in": "https://www.linkedin.com/in/justin-lupele-phd-31a35092",
-    "image": 10
+  {
+    "model": "base.people",
+    "pk": 1,
+    "fields": {
+      "created": "2021-07-20T18:52:08.450Z",
+      "modified": "2021-07-20T18:52:08.450Z",
+      "status": "published",
+      "status_changed": "2021-07-20T18:52:08.492Z",
+      "first_name": "Jessica",
+      "last_name": "Gomez",
+      "phone_number": "+260971234567",
+      "email_address": "jessica44@gmail.com",
+      "position": "CEO",
+      "bio": "<p data-block-key=\"c8ghq\">The French lettering company <a href=\"https://en.wikipedia.org/wiki/Letraset\">Letraset</a> manufactured a set of dry-transfer sheets which included the <i>lorem ipsum</i> filler text in a variety of fonts, sizes, and layouts. These sheets of lettering could be rubbed on anywhere and were quickly adopted by graphic artists, printers, architects, and advertisers for their professional look and ease of use.</p>",
+      "facebook": "https://www.facebook.com/jgomez44",
+      "twitter": "https://twitter.com/jgomez44",
+      "linked_in": "https://www.linkedin.com/in/jgomez44",
+      "image": 2
+    }
+  },
+  {
+    "model": "base.people",
+    "pk": 2,
+    "fields": {
+      "created": "2021-07-20T18:54:51.125Z",
+      "modified": "2021-07-20T18:54:51.125Z",
+      "status": "published",
+      "status_changed": "2021-07-20T18:54:51.183Z",
+      "first_name": "Daniel",
+      "last_name": "Lewis",
+      "phone_number": "+260960123456",
+      "email_address": "daniel2000@gmail.com",
+      "position": "Full Stack Developer",
+      "bio": "<p data-block-key=\"96k38\">The program came bundled with <i>lorem ipsum</i> dummy text for laying out page content, and other word processors like Microsoft Word followed suit. More recently the growth of web design has helped proliferate lorem ipsum across the internet as a placeholder for future text.</p>",
+      "facebook": "",
+      "twitter": "https://twitter.com/fullstack",
+      "linked_in": "",
+      "image": 3
+    }
+  },
+  {
+    "model": "base.people",
+    "pk": 3,
+    "fields": {
+      "created": "2021-07-20T18:56:47.900Z",
+      "modified": "2021-07-20T18:56:47.900Z",
+      "status": "published",
+      "status_changed": "2021-07-20T18:56:47.983Z",
+      "first_name": "Sean",
+      "last_name": "Bennett",
+      "phone_number": "+260950123456",
+      "email_address": "paulgardner@mcmillan.com",
+      "position": "Media Director",
+      "bio": "",
+      "facebook": "",
+      "twitter": "",
+      "linked_in": "",
+      "image": 4
+    }
+  },
+  {
+    "model": "base.people",
+    "pk": 4,
+    "fields": {
+      "created": "2021-07-20T18:58:37.999Z",
+      "modified": "2021-07-20T18:59:14.375Z",
+      "status": "published",
+      "status_changed": "2021-07-20T18:58:38.030Z",
+      "first_name": "Elizabeth",
+      "last_name": "Peterson",
+      "phone_number": "+14587134416",
+      "email_address": "zgriffin@yahoo.com",
+      "position": "Geologist",
+      "bio": "",
+      "facebook": "https://www.facebook.com/elisabeta",
+      "twitter": "",
+      "linked_in": "",
+      "image": 5
+    }
+  },
+  {
+    "model": "home.homepage",
+    "pk": 3,
+    "fields": {}
+  },
+  {
+    "model": "home.aboutpage",
+    "pk": 4,
+    "fields": {}
+  },
+  {
+    "model": "blog.articletag",
+    "pk": 1,
+    "fields": {
+      "tag": 1,
+      "content_object": 7
+    }
+  },
+  {
+    "model": "blog.articletag",
+    "pk": 2,
+    "fields": {
+      "tag": 2,
+      "content_object": 9
+    }
+  },
+  {
+    "model": "blog.articletag",
+    "pk": 3,
+    "fields": {
+      "tag": 1,
+      "content_object": 11
+    }
+  },
+  {
+    "model": "blog.articlepage",
+    "pk": 7,
+    "fields": {
+      "summary": "Creation timelines for the standard lorem ipsum passage vary, with some citing the 15th century and others the 20th.",
+      "cover_picture": 1,
+      "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"k6tav\\\"><i>Lorem ipsum</i>, or <i>lipsum</i> as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero&#x27;s <i>De Finibus Bonorum et Malorum</i> for use in a type specimen book.</p>\", \"id\": \"7e4bb799-dd1e-4457-bae8-55c1a69d6f68\"}, {\"type\": \"embed_block\", \"value\": \"https://www.youtube.com/watch?v=R5agKyMFVzo\", \"id\": \"1bdf382a-2cd0-4ba5-86b6-dcb1dda6cc8b\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"k6tav\\\">Until recently, the prevailing view assumed <i>lorem ipsum</i> was born as a nonsense text. \\u201cIt&#x27;s not Latin, though it looks like it, and it actually says nothing,\\u201d <i>Before &amp; After</i> magazine <a href=\\\"https://www.straightdope.com/columns/read/2290/what-does-the-filler-text-lorem-ipsum-mean/\\\">answered a curious reader</a>, \\u201cIts \\u2018words\\u2019 loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.\\u201d</p>\", \"id\": \"4c0efa55-9f1d-4d10-9f0c-a043ea57d147\"}, {\"type\": \"block_quote\", \"value\": {\"text\": \"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\", \"attribute_name\": \"Cicero\"}, \"id\": \"14de5461-f2a7-42b2-8a9f-1519462b5d00\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"k6tav\\\">McClintock&#x27;s eye for detail certainly helped narrow the whereabouts of <i>lorem ipsum&#x27;s</i> origin, however, the \\u201chow and when\\u201d still remain something of a mystery, with competing theories and timelines.</p>\", \"id\": \"fc39b3db-7c95-4894-b2e5-a13f4388dd05\"}]",
+      "date_published": "2019-07-03",
+      "author": "Staff Writer",
+      "article_type": "Post",
+      "external_url": null
+    }
+  },
+  {
+    "model": "blog.articlepage",
+    "pk": 8,
+    "fields": {
+      "summary": "The strength of lorem ipsum is its weakness: it doesn't communicate. To some, designing a website around placeholder text is unacceptable, akin to sewing a custom suit without taking measurements.",
+      "cover_picture": 6,
+      "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"fx3s3\\\">Please be advised that we can now so ubiquitous because it is so versatile. Select how many paragraphs you want, copy, paste, and break the lines wherever it is convenient. Real copy doesn&#x27;t work that way. Lot must month summer discussion. Must report cost history often lead, money commercial detail mother physical dark force beat. Answer yes total her. Design manage conference arm public character. News oil it between. Statement back sit weight him. Alone manager can add of require. Number add create air group play than.</p><ul><li data-block-key=\\\"dergh\\\">Include I word employee girl modern rise maintain. Tough view stay tree</li><li data-block-key=\\\"9mcl1\\\">Perhaps newspaper particularly activity provide interview campaign. Walk market media cell include style I. Pattern value letter enter fish</li><li data-block-key=\\\"d9r03\\\">Matter evidence thousand half happy of. Rate figure perhaps.</li></ul>\", \"id\": \"92554261-18a5-4c47-acc2-414202d07ecb\"}, {\"type\": \"table\", \"value\": {\"data\": [[\"interest spring\", \"player speech hair\", \"Increase might natural\"], [\"Protect often voice\", \"Act hotel nothing\", \"Event join half\"], [\"two state message\", \"you office key staff\", \"trial already red\"], [\"Head day one\", \"not so fast\", \"well, what do you know?\"], [\"here is some text\", \"hello there\", \"looks pretty, right?\"]], \"cell\": [], \"first_row_is_table_header\": true, \"first_col_is_header\": false, \"table_caption\": \"Five their wonder beyond front\"}, \"id\": \"7a7066e4-00d1-4a9d-b602-46a2a6a62d63\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"fx3s3\\\">And that\\u2019s why a 15th century typesetter might have scrambled a passage of Cicero; he wanted people to focus on his fonts, to imagine their own content on the pages. He wanted people to see, and to get them to see he had to keep them from reading.</p><p data-block-key=\\\"1cor2\\\">So when is it okay to use <i>lorem ipsum</i>? First, <i>lorem ipsum</i> works well for staging. It&#x27;s like the props in a furniture store\\u2014filler text makes it look like someone is home. The same Wordpress template might eventually be home to a fitness blog, a photography website, or the online journal of a cupcake fanatic. <i>Lorem ipsum</i> helps them imagine what the lived-in website might look like.</p>\", \"id\": \"ac55e8ce-658c-461e-b9da-66983ac61201\"}]",
+      "date_published": "2021-04-29",
+      "author": "Brent Johnson",
+      "article_type": "Info",
+      "external_url": null
+    }
+  },
+  {
+    "model": "blog.articlepage",
+    "pk": 9,
+    "fields": {
+      "summary": "Use lorem ipsum if you think the placeholder text will be too distracting. For specific projects, collaboration between copywriters and designers may be best, however, like Karen McGrane said, draft copy has a way of turning any meeting about layout decisions into a discussion about word choice. So don't be afraid to use lorem ipsum to keep everyone focused.",
+      "cover_picture": 7,
+      "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"4rrjf\\\">One word of caution: make sure your client knows that <i>lorem ipsum</i> is filler text. You don&#x27;t want them wondering why you filled their website with a foreign language, and you certainly don&#x27;t want anyone prematurely publishing it. There was <a href=\\\"http://designenvy.aiga.org/the-chipotle-lorem-ipsum-bag/\\\">that time</a> artists at Sequence opted to hand-Sharpie the <i>lorem ipsum</i> passage on a line of paper bags they designed for Chipotle\\u2014the result being a mixture of avant-garde, inside joke, and Sharpie-stained tables. Those with an eye for detail may have caught a tribute to the classic text in an episode of <a href=\\\"http://www.amc.com/shows/mad-men\\\">Mad Men</a> (S6E1 around 1:18:55 for anyone that didn&#x27;t). And here is a <i>lorem ipsum</i> <a href=\\\"http://littlerunningbear.com/465/lorem-ipsum-for-ever/\\\">tattoo</a>.</p>\", \"id\": \"965dd1a6-bb52-475a-9752-eb0efa3ec0aa\"}, {\"type\": \"embed_block\", \"value\": \"https://twitter.com/bencodezen/status/1417496648658399239\", \"id\": \"1e705ae7-b746-4e63-aeac-514ba6f5793d\"}, {\"type\": \"heading_block\", \"value\": {\"heading_text\": \"Campaign though recognize area\", \"size\": \"h3\"}, \"id\": \"8f076d27-d12d-419e-98fb-b90dd211d404\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"4rrjf\\\">So when is it okay to use <i>lorem ipsum</i>? First, <i>lorem ipsum</i> works well for staging. It&#x27;s like the props in a furniture store\\u2014filler text makes it look like someone is home. The same Wordpress template might eventually be home to a fitness blog, a photography website, or the online journal of a cupcake fanatic. <i>Lorem ipsum</i> helps them imagine what the lived-in website might look like.</p><p data-block-key=\\\"4br0c\\\">Second, use <i>lorem ipsum</i> if you think the placeholder text will be too distracting. For specific projects, collaboration between copywriters and designers may be best, however, like Karen McGrane said, draft copy has a way of turning any meeting about layout decisions into a discussion about word choice. So don&#x27;t be afraid to use <i>lorem ipsum</i> to keep everyone focused.</p><p data-block-key=\\\"3uamd\\\">One word of caution: make sure your client knows that <i>lorem ipsum</i> is filler text. You don&#x27;t want them wondering why you filled their website with a foreign language, and you certainly don&#x27;t want anyone prematurely publishing it.</p>\", \"id\": \"8d94025c-4a66-466e-aeeb-dcf4d475f2ad\"}, {\"type\": \"heading_block\", \"value\": {\"heading_text\": \"Style prevent establish those myself stuff\", \"size\": \"h3\"}, \"id\": \"18445257-6d0b-4fdb-8dec-57529c821cb6\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"4rrjf\\\">Among design professionals, there&#x27;s a bit of controversy surrounding the filler text. Controversy, as in <a href=\\\"https://www.lukew.com/ff/entry.asp?927\\\">Death to Lorem Ipsum</a>.</p><p data-block-key=\\\"cvb72\\\">The strength of <i>lorem ipsum</i> is its weakness: it doesn&#x27;t communicate. To some, designing a website around placeholder text is unacceptable, akin to sewing a custom suit without taking measurements. <a href=\\\"http://adaptivepath.org/ideas/death-to-lorem-ipsum-other-adventures-in-content/\\\">Kristina Halvorson</a> notes:</p>\", \"id\": \"27fe6ad2-a208-48de-9d32-556875ed5ea8\"}, {\"type\": \"block_quote\", \"value\": {\"text\": \"I\\u2019ve heard the argument that \\u201clorem ipsum\\u201d is effective in wireframing or design because it helps people focus on the actual layout, or color scheme, or whatever. What kills me here is that we\\u2019re talking about creating a user experience that will (whether we like it or not) be DRIVEN by words. The entire structure of the page or app flow is FOR THE WORDS.\", \"attribute_name\": \"\"}, \"id\": \"1b4f451b-b007-4ed4-8c5d-794fae533c78\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"4rrjf\\\"><i>Lorem ipsum</i> is so ubiquitous because it is so versatile. Select how many paragraphs you want, copy, paste, and break the lines wherever it is convenient. Real copy doesn&#x27;t work that way.</p><p data-block-key=\\\"cg445\\\"></p>\", \"id\": \"0988ba99-fe97-48ff-a769-a11aed2b7042\"}]",
+      "date_published": "2021-04-02",
+      "author": "Staff Writer",
+      "article_type": "Post",
+      "external_url": null
+    }
+  },
+  {
+    "model": "blog.articlepage",
+    "pk": 10,
+    "fields": {
+      "summary": "You must make sure that you have co-authored with others, you can justify on the Derived Program, such Derived Program under their own license agreement, provided that: it complies with the provisions set forth in this license",
+      "cover_picture": 8,
+      "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"k59vb\\\"><b>Public Domain or from the Work, provide any other entity. Each Contributor represents that to its Contributions set forth in this license document the following conditions are met.</b></p><hr/><p data-block-key=\\\"bek2n\\\">I&#x27;m baby 3 wolf moon roof party taiyaki, swag seitan YOLO selvage literally hell of iPhone lo-fi plaid. Seitan lyft helvetica sustainable. Leggings post-ironic selvage gastropub hoodie. Mixtape listicle williamsburg unicorn, 90&#x27;s stumptown pop-up. Health goth williamsburg echo park, la croix franzen lomo cred blog whatever cray tumblr cardigan tilde vaporware.</p><p data-block-key=\\\"c07vv\\\">Heirloom venmo chillwave man braid flannel. Tattooed cornhole four loko, jianbing meditation mlkshk fingerstache normcore skateboard lumbersexual banjo tbh man bun roof party kogi. Jean shorts williamsburg 90&#x27;s, helvetica viral portland listicle keffiyeh coloring book austin single-origin coffee. Bitters selfies trust fund, poutine bespoke aesthetic marfa. Hella beard portland, VHS selfies vinyl hammock gastropub tacos bicycle rights palo santo af tousled health goth.</p><p data-block-key=\\\"erlhk\\\">Cloud bread tumblr succulents plaid gastropub jianbing craft beer, flexitarian tilde fingerstache deep v neutra. Kogi fam knausgaard palo santo af ramps. Church-key neutra tbh pitchfork cred. Small batch selvage authentic tote bag celiac la croix copper mug tacos. Ethical 90&#x27;s blue bottle keytar slow-carb cred distillery pabst yr crucifix godard shoreditch cray offal. Plaid letterpress food truck trust fund live-edge twee mumblecore cloud bread wayfarers.</p><p data-block-key=\\\"3aanu\\\">Tilde microdosing waistcoat, tbh blog ramps drinking vinegar wayfarers locavore seitan gastropub flexitarian. Kinfolk master cleanse fashion axe cornhole letterpress. Hexagon messenger bag four loko pabst vegan fashion axe beard flexitarian. PBR&amp;B bespoke man bun blog chicharrones. Tofu venmo fixie freegan, skateboard blue bottle neutra meh. Flexitarian shaman knausgaard, meggings offal farm-to-table dreamcatcher subway tile. Ramps occupy salvia humblebrag direct trade narwhal cliche yuccie bitters edison bulb.</p><p data-block-key=\\\"6me7a\\\">While redistributing the Work by You to distribute corresponding source code. Distribution Mechanism&quot; means a Recipient that distributes the Program. CC-BY-SA license If you create or to which You create or to build stand-alone binary or bytecode versions of your distribution.</p><p data-block-key=\\\"6i7qf\\\">Tacos pork belly ugh synth slow-carb fanny pack meh try-hard health goth butcher poke lumbersexual. You probably haven&#x27;t heard of them crucifix chambray stumptown, activated charcoal next level leggings franzen asymmetrical. Tacos enamel pin photo booth, +1 blog heirloom hashtag. Narwhal adaptogen tacos hot chicken jianbing. Jianbing keytar 90&#x27;s, ennui hexagon VHS before they sold out gentrify pop-up pour-over church-key thundercats waistcoat artisan vegan.</p><p data-block-key=\\\"2h578\\\">Avoid adding text. This licence is apt for any kind of work (such as by license or b) a copy of the Contribution of such damages. Accepting Warranty or Additional Liability.</p><p data-block-key=\\\"dl4tm\\\">If these instructions, at any time while you are carrying out such distribution, become invalid, you must include a copy of this License shall be governed by this License; they are embedded, and shall take other steps (such as by license or settlement) prior to termination shall survive any termination of this definition, &quot;control&quot;../ means (a) the power, direct or indirect, to cause the modified work as &quot;Original Code&quot; means the Package, do not, by themselves, cause the modified files to carry prominent notices stating that you duplicate all of the Standard Version of this License any code that you provide a difference file from the redistributions of source code <b>control systems</b>, and issue tracking systems that are reasonably necessary to enable recipients of the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA Also add information on how and where You describe recipients&#x27; rights relating to the text you hold the copyright notice appears in all respects by the terms of Sections 1 through 9 of this Agreement , including but not limited to delivery of content, through electronic communication with a client other than IBM has the sole purpose of this Agreement must be sufficiently detailed for a recipient will know whom to contact. If you are also required to justify it to be able to understand it.</p>\", \"id\": \"a1db87c7-2c9f-497a-bc6e-7887ed397d25\"}]",
+      "date_published": "2021-04-15",
+      "author": "Julia Robinson",
+      "article_type": "Shout",
+      "external_url": null
+    }
+  },
+  {
+    "model": "blog.articlepage",
+    "pk": 11,
+    "fields": {
+      "summary": "Bacon ipsum dolor amet ham hock burgdoggen brisket short loin. Frankfurter andouille beef ribs sausage rump. Brisket bresaola alcatra turkey, jowl shank landjaeger beef ribs pancetta leberkas. Porchetta andouille picanha tenderloin, spare ribs shoulder filet mignon alcatra pork buffalo ham meatloaf fatback rump. Cow cupim prosciutto meatball sausage turducken strip steak kielbasa pork chop, andouille bacon. Shank burgdoggen beef capicola short loin, ground round shoulder pork loin turducken meatball pancetta bresaola.",
+      "cover_picture": 9,
+      "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"lcyhu\\\">Ball tip prosciutto leberkas venison, boudin chislic cupim meatloaf frankfurter. Tri-tip filet mignon beef ribs, kevin salami tenderloin pastrami beef. Chuck short ribs pork loin, ham hock boudin beef landjaeger tongue pancetta tri-tip. Picanha ham rump, pig fatback bresaola burgdoggen andouille. Spare ribs burgdoggen landjaeger, shankle corned beef t-bone jowl swine shank turducken ham hock meatball.</p><p data-block-key=\\\"8tu06\\\">Beef tail cupim, swine sausage jowl frankfurter brisket boudin salami alcatra. Corned beef tri-tip pork belly brisket, biltong boudin sausage porchetta chislic picanha ground round. Salami pancetta porchetta, venison swine shank ground round buffalo jowl pastrami beef tenderloin sirloin meatball. Turkey turducken ground round, cupim biltong jerky jowl kielbasa.</p>\", \"id\": \"720a8d4c-0937-437e-8108-509c5ff84af1\"}, {\"type\": \"embed_block\", \"value\": \"https://www.youtube.com/watch?v=99yqAi7YPUI\", \"id\": \"077c3ab2-ab16-4852-b4b0-74ca4561e594\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"lcyhu\\\">Biltong beef flank, fatback chuck chislic filet mignon pancetta ribeye tenderloin cupim tongue shank rump. Spare ribs jerky beef, chicken t-bone sausage shank turducken ball tip tenderloin. Shoulder boudin pork chop andouille sausage fatback jerky picanha. Boudin cupim tail cow ball tip filet mignon ham hock flank brisket tenderloin short ribs ribeye tri-tip ground round.</p><p data-block-key=\\\"evd5h\\\">Capicola biltong kielbasa picanha ham hock chicken doner ham ribeye. Burgdoggen frankfurter sirloin, pancetta tail fatback pork meatball shankle pork belly ham beef jowl sausage. Venison frankfurter bresaola shoulder pork loin porchetta. Cow meatloaf ham venison. Frankfurter beef brisket, tail filet mignon flank pork loin tenderloin andouille short ribs jerky.</p>\", \"id\": \"54fa54dc-43c4-4cc5-a6d6-a3cebca5603f\"}, {\"type\": \"embed_block\", \"value\": \"https://twitter.com/ChloeCondon/status/1417504502765166594\", \"id\": \"3ac06176-127e-4e53-8c55-a64ddcd65eaa\"}, {\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"lcyhu\\\">Spicy jalapeno bacon ipsum dolor amet porchetta ea laboris, picanha in enim mollit ut ullamco spare ribs bacon sed labore. Laboris alcatra aliquip fatback, esse reprehenderit pancetta hamburger ut consectetur eiusmod. Sint deserunt biltong, pig dolor quis ex non ground round.</p><ol><li data-block-key=\\\"b59oh\\\">Chuck ut salami do est pastrami chicken aute fugiat venison consectetur officia t-bone pork belly.</li><li data-block-key=\\\"c91er\\\">Kielbasa anim officia, laborum dolore exercitation et pork chop jowl chislic incididunt swine bresaola pig doner.</li><li data-block-key=\\\"9okbf\\\">Dolor magna lorem, drumstick duis capicola consequat flank eu ut.</li><li data-block-key=\\\"bgi3t\\\">Turkey picanha prosciutto, anim boudin brisket magna short loin excepteur nostrud pastrami ex pariatur tongue et.</li></ol><p data-block-key=\\\"8k7uo\\\">Bresaola lorem pig, t-bone jowl flank ipsum laboris. Non do jowl picanha nisi boudin sausage beef nostrud doner. Excepteur cow meatloaf in, jerky alcatra kielbasa aute pork quis ad beef enim. Landjaeger magna chislic, jowl ut ball tip nulla excepteur ex in venison. Landjaeger magna cillum chislic in consectetur. Shank velit shankle meatloaf quis magna.</p>\", \"id\": \"6c95ac73-0959-4996-9c2a-7d5851b9e13c\"}]",
+      "date_published": "2021-05-06",
+      "author": "Kelsey Barrett",
+      "article_type": "Misc",
+      "external_url": null
+    }
+  },
+  {
+    "model": "blog.articlepage",
+    "pk": 12,
+    "fields": {
+      "summary": "Every year or so, I revisit the current best practices for Python packaging. I.e. the way you’re supposed to distribute your Python packages. The main source is packaging.python.org where the official packaging guidelines are. It is worth noting that the way you’re supposed to package your Python applications is not defined by Python or its maintainers, but rather delegated to a separate entity, the Python Packaging Authority (PyPA).",
+      "cover_picture": 10,
+      "content": "[]",
+      "date_published": "2021-06-26",
+      "author": "Bastian Venthur",
+      "article_type": "URL",
+      "external_url": "https://venthur.de/2021-06-26-python-packaging.html"
+    }
+  },
+  {
+    "model": "blog.articlepage",
+    "pk": 13,
+    "fields": {
+      "summary": "Meatball meatloaf ex lorem elit officia landjaeger hamburger. Porchetta andouille veniam, ham pancetta chislic ut elit. In proident ea rump kielbasa chuck sirloin pork belly ground round nisi bresaola venison pancetta short ribs sausage. Duis ground round eiusmod nulla labore, brisket veniam jowl jerky beef occaecat. Jerky leberkas tenderloin kielbasa, aliquip burgdoggen ut in.",
+      "cover_picture": 11,
+      "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"4jq07\\\">Aute cupidatat enim do tongue excepteur beef ribs doner, tail corned beef nulla lorem pancetta. Tail turkey venison anim, commodo consectetur aliqua in short loin exercitation officia. Laborum commodo drumstick pancetta cillum. Fatback pastrami velit culpa shoulder quis non pork loin ipsum tempor pork aute.</p><p data-block-key=\\\"2hjr3\\\">The purpose of <i>lorem ipsum</i> is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn&#x27;t distract from the layout. A practice not without <a href=\\\"https://loremipsum.io/#controversy\\\">controversy</a>, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</p><p data-block-key=\\\"fda1j\\\">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it&#x27;s seen all around the web; on templates, websites, and stock designs. Use our <a href=\\\"https://loremipsum.io/#generator\\\">generator</a> to get your own, or read on for the authoritative history of <i>lorem ipsum</i>.</p>\", \"id\": \"203907c7-f418-431e-844a-404b8d0d9da5\"}]",
+      "date_published": "2021-05-27",
+      "author": "Staff Writer",
+      "article_type": "Post",
+      "external_url": null
+    }
+  },
+  {
+    "model": "blog.articleindexpage",
+    "pk": 6,
+    "fields": {
+      "introduction": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+    }
+  },
+  {
+    "model": "contact.contactpagephonenumber",
+    "pk": 1,
+    "fields": {
+      "sort_order": 0,
+      "phone_number": "+17247376091",
+      "page": 5
+    }
+  },
+  {
+    "model": "contact.contactpagephonenumber",
+    "pk": 2,
+    "fields": {
+      "sort_order": 1,
+      "phone_number": "+18195393780",
+      "page": 5
+    }
+  },
+  {
+    "model": "contact.contactpageemailaddress",
+    "pk": 1,
+    "fields": {
+      "sort_order": 0,
+      "email_address": "gguzman@lambert.info",
+      "page": 5
+    }
+  },
+  {
+    "model": "contact.contactpageemailaddress",
+    "pk": 2,
+    "fields": {
+      "sort_order": 1,
+      "email_address": "singletonbarry@gmail.com",
+      "page": 5
+    }
+  },
+  {
+    "model": "contact.contactpage",
+    "pk": 5,
+    "fields": {
+      "address": "8614 Leslie Field, New Paul, IL 60863"
+    }
+  },
+  {
+    "model": "wagtailembeds.embed",
+    "pk": 1,
+    "fields": {
+      "url": "https://www.youtube.com/watch?v=R5agKyMFVzo",
+      "max_width": null,
+      "hash": "dabd840b1273220abfe949b62e0c9b2a",
+      "type": "video",
+      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/R5agKyMFVzo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+      "title": "KotlinConf 2018 - I Am a Developer at 54 by Alicia Carr",
+      "author_name": "JetBrainsTV",
+      "provider_name": "YouTube",
+      "thumbnail_url": "https://i.ytimg.com/vi/R5agKyMFVzo/hqdefault.jpg",
+      "width": 200,
+      "height": 113,
+      "last_updated": "2021-07-20T18:45:14.091Z"
+    }
+  },
+  {
+    "model": "wagtailembeds.embed",
+    "pk": 2,
+    "fields": {
+      "url": "https://twitter.com/bencodezen/status/1417496648658399239",
+      "max_width": null,
+      "hash": "27d5966bedceb31050d12498667669c2",
+      "type": "rich",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">With all the recording equipment and digital gadgets, my desk has become quite a nightmare of wires... 😵<br><br>Does anyone have any inspiration/organization tactics they&#39;d recommend?</p>&mdash; Ben Hong (@bencodezen) <a href=\"https://twitter.com/bencodezen/status/1417496648658399239?ref_src=twsrc%5Etfw\">July 20, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "title": "",
+      "author_name": "Ben Hong",
+      "provider_name": "Twitter",
+      "thumbnail_url": "",
+      "width": 550,
+      "height": null,
+      "last_updated": "2021-07-20T19:14:51.393Z"
+    }
+  },
+  {
+    "model": "wagtailembeds.embed",
+    "pk": 3,
+    "fields": {
+      "url": "https://www.youtube.com/watch?v=99yqAi7YPUI",
+      "max_width": null,
+      "hash": "6a22065f1b424aaf61d99ef227adb0cb",
+      "type": "video",
+      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/99yqAi7YPUI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+      "title": "Giant Sulking Dog Hides In Kids House To Avoid BATH TIME!!",
+      "author_name": "Life with Malamutes",
+      "provider_name": "YouTube",
+      "thumbnail_url": "https://i.ytimg.com/vi/99yqAi7YPUI/hqdefault.jpg",
+      "width": 200,
+      "height": 113,
+      "last_updated": "2021-07-20T19:25:21.630Z"
+    }
+  },
+  {
+    "model": "wagtailembeds.embed",
+    "pk": 4,
+    "fields": {
+      "url": "https://twitter.com/ChloeCondon/status/1417504502765166594",
+      "max_width": null,
+      "hash": "96797126d848ccb6739cff766f8ecf20",
+      "type": "rich",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">&quot;First human flight&quot;? Are we just gonna ignore history, Jeff??? <a href=\"https://t.co/VrM9sheZHM\">pic.twitter.com/VrM9sheZHM</a></p>&mdash; Chloe Condon (@ChloeCondon) <a href=\"https://twitter.com/ChloeCondon/status/1417504502765166594?ref_src=twsrc%5Etfw\">July 20, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "title": "",
+      "author_name": "Chloe Condon",
+      "provider_name": "Twitter",
+      "thumbnail_url": "",
+      "width": 550,
+      "height": null,
+      "last_updated": "2021-07-20T19:25:22.909Z"
+    }
+  },
+  {
+    "model": "wagtailusers.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "submitted_notifications": true,
+      "approved_notifications": true,
+      "rejected_notifications": true,
+      "updated_comments_notifications": true,
+      "preferred_language": "",
+      "current_time_zone": "",
+      "avatar": ""
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 1,
+    "fields": {
+      "collection": 1,
+      "title": "the nature of lorem ipsum",
+      "file": "original_images/post_01_oF1Lpzs.jpg",
+      "width": 1280,
+      "height": 800,
+      "created_at": "2021-07-20T18:41:38.915Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 58050,
+      "file_hash": "27363143c9d7117e6b941ddf30e2b0a71360cf07"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 2,
+    "fields": {
+      "collection": 1,
+      "title": "Jessica Gomez",
+      "file": "original_images/person_02_zeQVSNa.jpg",
+      "width": 640,
+      "height": 426,
+      "created_at": "2021-07-20T18:50:43.837Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 45841,
+      "file_hash": "b87d8a36f8cdda77725ce420e215b9d9b555722c"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 3,
+    "fields": {
+      "collection": 1,
+      "title": "Daniel Lewis",
+      "file": "original_images/person_01_pQjIoeQ.jpg",
+      "width": 640,
+      "height": 425,
+      "created_at": "2021-07-20T18:54:13.976Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 48631,
+      "file_hash": "38f337fe3849fd3a88a5298ba2e339fd28d69543"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 4,
+    "fields": {
+      "collection": 1,
+      "title": "Sean Bennett",
+      "file": "original_images/person_04_A9i4X7d.jpg",
+      "width": 640,
+      "height": 423,
+      "created_at": "2021-07-20T18:56:23.611Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 79280,
+      "file_hash": "bdc85862054239ef859664ab32751006258f664a"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 5,
+    "fields": {
+      "collection": 1,
+      "title": "Elizabeth Peterson",
+      "file": "original_images/person_03_J88MK97.jpg",
+      "width": 640,
+      "height": 426,
+      "created_at": "2021-07-20T18:58:19.612Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 62617,
+      "file_hash": "85b3db6991914106c227a8efb336e4f19058b94a"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 6,
+    "fields": {
+      "collection": 1,
+      "title": "Or other president weight camera",
+      "file": "original_images/post_02_GfkrMyh.jpg",
+      "width": 1280,
+      "height": 719,
+      "created_at": "2021-07-20T19:03:15.873Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 197835,
+      "file_hash": "4d4682b128d93132a66008750de86bf94c8d0acf"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 7,
+    "fields": {
+      "collection": 1,
+      "title": "One agency attorney certainly current.",
+      "file": "original_images/post_03_mK428i3.jpg",
+      "width": 1280,
+      "height": 853,
+      "created_at": "2021-07-20T19:11:10.742Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 316408,
+      "file_hash": "d13f8689c1cf145bb1c8d8cae2092db9e64cdafc"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 8,
+    "fields": {
+      "collection": 1,
+      "title": "Fashionista Court thus tough white health capital",
+      "file": "original_images/post_04_zXKrCoW.png",
+      "width": 1280,
+      "height": 920,
+      "created_at": "2021-07-20T19:16:54.403Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 35650,
+      "file_hash": "becf51641c6ac6b5fae3cdabdbf6c8d81a14bc94"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 9,
+    "fields": {
+      "collection": 1,
+      "title": "Summer model soldier word guy fire add show",
+      "file": "original_images/post_05_VKJxzb3.jpg",
+      "width": 1280,
+      "height": 640,
+      "created_at": "2021-07-20T19:21:12.845Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 84594,
+      "file_hash": "69686b85f6c9bbf8d66562766f61e4007b535b51"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 10,
+    "fields": {
+      "collection": 1,
+      "title": "Game particularly free party speak",
+      "file": "original_images/post_06_6uN7DWO.jpg",
+      "width": 640,
+      "height": 428,
+      "created_at": "2021-07-20T19:26:24.985Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 133164,
+      "file_hash": "c8c6d7058f91dccde7c236a1c3370da38ea7d9cb"
+    }
+  },
+  {
+    "model": "wagtailimages.image",
+    "pk": 11,
+    "fields": {
+      "collection": 1,
+      "title": "Necessary provide rather yet",
+      "file": "original_images/post_07_EOfn3Qa.jpg",
+      "width": 1280,
+      "height": 853,
+      "created_at": "2021-07-20T19:29:15.356Z",
+      "uploaded_by_user": ["{{ cookiecutter.wagtail_username }}"],
+      "focal_point_x": null,
+      "focal_point_y": null,
+      "focal_point_width": null,
+      "focal_point_height": null,
+      "file_size": 112263,
+      "file_hash": "721a8c7e8196655374f4fa649643bcf96728dcc3"
+    }
+  },
+  {
+    "model": "wagtailcore.site",
+    "pk": 2,
+    "fields": {
+      "hostname": "127.0.0.1",
+      "port": 80,
+      "site_name": "{{ cookiecutter.project_slug }}",
+      "root_page": 3,
+      "is_default_site": true
+    }
+  },
+  {
+    "model": "wagtailcore.locale",
+    "pk": 1,
+    "fields": {
+      "language_code": "en"
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 1,
+    "fields": {
+      "path": "0001",
+      "depth": 1,
+      "numchild": 1,
+      "translation_key": "4ebc34eb-83b5-4ada-b0cd-ee36d849f502",
+      "locale": 1,
+      "title": "Root",
+      "draft_title": "Root",
+      "slug": "root",
+      "content_type": ["wagtailcore", "page"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/",
+      "owner": null,
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": null,
+      "last_published_at": null,
+      "latest_revision_created_at": null,
+      "live_revision": null,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 3,
+    "fields": {
+      "path": "00010001",
+      "depth": 2,
+      "numchild": 3,
+      "translation_key": "42050017-9ab6-4171-8d89-b9173512ab1c",
+      "locale": 1,
+      "title": "Home",
+      "draft_title": "Home",
+      "slug": "home",
+      "content_type": ["home", "homepage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T18:21:43.465Z",
+      "last_published_at": "2021-07-20T18:21:43.465Z",
+      "latest_revision_created_at": "2021-07-20T18:21:43.190Z",
+      "live_revision": 1,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 4,
+    "fields": {
+      "path": "000100010001",
+      "depth": 3,
+      "numchild": 0,
+      "translation_key": "a8aa7256-26b7-4535-91f9-f3eb54af83ac",
+      "locale": 1,
+      "title": "About",
+      "draft_title": "About",
+      "slug": "about",
+      "content_type": ["home", "aboutpage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/about/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T18:34:40.557Z",
+      "last_published_at": "2021-07-20T18:34:40.557Z",
+      "latest_revision_created_at": "2021-07-20T18:34:40.114Z",
+      "live_revision": 2,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 5,
+    "fields": {
+      "path": "000100010002",
+      "depth": 3,
+      "numchild": 0,
+      "translation_key": "9e0836b1-f04f-4866-b029-293bd0007631",
+      "locale": 1,
+      "title": "Contact",
+      "draft_title": "Contact",
+      "slug": "contact",
+      "content_type": ["contact", "contactpage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/contact/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T18:37:43.419Z",
+      "last_published_at": "2021-07-20T18:37:43.419Z",
+      "latest_revision_created_at": "2021-07-20T18:37:42.877Z",
+      "live_revision": 3,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 6,
+    "fields": {
+      "path": "000100010003",
+      "depth": 3,
+      "numchild": 7,
+      "translation_key": "e4c665bd-660a-4633-b4d2-4d45b975fbc9",
+      "locale": 1,
+      "title": "Blog",
+      "draft_title": "Blog",
+      "slug": "blog",
+      "content_type": ["blog", "articleindexpage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/blog/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T18:39:24.914Z",
+      "last_published_at": "2021-07-20T18:39:24.914Z",
+      "latest_revision_created_at": "2021-07-20T18:39:24.626Z",
+      "live_revision": 4,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 7,
+    "fields": {
+      "path": "0001000100030001",
+      "depth": 4,
+      "numchild": 0,
+      "translation_key": "0bddff5c-c91e-4237-a308-0194c2474587",
+      "locale": 1,
+      "title": "The purpose of lorem ipsum",
+      "draft_title": "The purpose of lorem ipsum",
+      "slug": "the-purpose-of-lorem-ipsum",
+      "content_type": ["blog", "articlepage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/blog/the-purpose-of-lorem-ipsum/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T18:45:32.336Z",
+      "last_published_at": "2021-07-20T18:46:53.568Z",
+      "latest_revision_created_at": "2021-07-20T18:46:52.914Z",
+      "live_revision": 6,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 8,
+    "fields": {
+      "path": "0001000100030002",
+      "depth": 4,
+      "numchild": 0,
+      "translation_key": "c3c10e9a-9742-4c2b-ab7a-05bc97872c8c",
+      "locale": 1,
+      "title": "Sheets of lettering can now be rubbed on anywhere",
+      "draft_title": "Sheets of lettering can now be rubbed on anywhere",
+      "slug": "sheets-of-lettering-can-now-be-rubbed-on-anywhere",
+      "content_type": ["blog", "articlepage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/blog/sheets-of-lettering-can-now-be-rubbed-on-anywhere/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T19:09:41.749Z",
+      "last_published_at": "2021-07-20T19:09:41.749Z",
+      "latest_revision_created_at": "2021-07-20T19:09:41.267Z",
+      "live_revision": 7,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 9,
+    "fields": {
+      "path": "0001000100030003",
+      "depth": 4,
+      "numchild": 0,
+      "translation_key": "5ff0af49-12fb-43f0-8e3f-ae509a856685",
+      "locale": 1,
+      "title": "Fill minute sell my worry hour set",
+      "draft_title": "Fill minute sell my worry hour set",
+      "slug": "fill-minute-sell-my-worry-hour-set",
+      "content_type": ["blog", "articlepage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/blog/fill-minute-sell-my-worry-hour-set/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T19:14:52.501Z",
+      "last_published_at": "2021-07-20T19:14:52.501Z",
+      "latest_revision_created_at": "2021-07-20T19:14:52.048Z",
+      "live_revision": 8,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 10,
+    "fields": {
+      "path": "0001000100030004",
+      "depth": 4,
+      "numchild": 0,
+      "translation_key": "1ddc8b18-febf-4a9c-8618-d2b831613d19",
+      "locale": 1,
+      "title": "For those times when you need some legal-sounding gibberish",
+      "draft_title": "For those times when you need some legal-sounding gibberish",
+      "slug": "for-those-times-when-you-need-some-legal-sounding-gibberish",
+      "content_type": ["blog", "articlepage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/blog/for-those-times-when-you-need-some-legal-sounding-gibberish/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T19:20:34.908Z",
+      "last_published_at": "2021-07-20T19:20:34.908Z",
+      "latest_revision_created_at": "2021-07-20T19:20:34.391Z",
+      "live_revision": 9,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 11,
+    "fields": {
+      "path": "0001000100030005",
+      "depth": 4,
+      "numchild": 0,
+      "translation_key": "cc675c08-998c-44c2-b820-7053110b5090",
+      "locale": 1,
+      "title": "Course play good send dream seem early poor situation great employee",
+      "draft_title": "Course play good send dream seem early poor situation great employee",
+      "slug": "course-play-good-send-dream-seem-early-poor-situation-great-employee",
+      "content_type": ["blog", "articlepage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/blog/course-play-good-send-dream-seem-early-poor-situation-great-employee/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T19:25:24.032Z",
+      "last_published_at": "2021-07-20T19:25:24.032Z",
+      "latest_revision_created_at": "2021-07-20T19:25:23.687Z",
+      "live_revision": 10,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 12,
+    "fields": {
+      "path": "0001000100030006",
+      "depth": 4,
+      "numchild": 0,
+      "translation_key": "ceb7b576-0323-48ed-8b02-a5c59de506da",
+      "locale": 1,
+      "title": "Oil assume describe ability conference learn program evidence back magazine worry play window",
+      "draft_title": "Oil assume describe ability conference learn program evidence back magazine worry play window",
+      "slug": "oil-assume-describe-ability-conference-learn-program-evidence-back-magazine-worry-play-window",
+      "content_type": ["blog", "articlepage"],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/blog/oil-assume-describe-ability-conference-learn-program-evidence-back-magazine-worry-play-window/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2021-07-20T19:27:53.819Z",
+      "last_published_at": "2021-07-20T19:27:53.819Z",
+      "latest_revision_created_at": "2021-07-20T19:27:53.294Z",
+      "live_revision": 11,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 13,
+    "fields": {
+      "path": "0001000100030007",
+      "depth": 4,
+      "numchild": 0,
+      "translation_key": "a20cbe08-8289-4413-9445-3362e07ba46d",
+      "locale": 1,
+      "title": "Aute deserunt salami sunt pork loin officia pariatur andouille pork belly adipisicing non culpa",
+      "draft_title": "Aute deserunt salami sunt pork loin officia pariatur andouille pork belly adipisicing non culpa",
+      "slug": "aute-deserunt-salami-sunt-pork-loin-officia-pariatur-andouille-pork-belly-adipisicing-non-culpa",
+      "content_type": ["blog", "articlepage"],
+      "live": false,
+      "has_unpublished_changes": true,
+      "url_path": "/home/blog/aute-deserunt-salami-sunt-pork-loin-officia-pariatur-andouille-pork-belly-adipisicing-non-culpa/",
+      "owner": ["{{ cookiecutter.wagtail_username }}"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": null,
+      "last_published_at": null,
+      "latest_revision_created_at": "2021-07-20T19:29:56.097Z",
+      "live_revision": null,
+      "alias_of": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 1,
+    "fields": {
+      "page": 3,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T18:21:43.190Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 0, \"translation_key\": \"42050017-9ab6-4171-8d89-b9173512ab1c\", \"locale\": 1, \"title\": \"Home\", \"draft_title\": \"Home\", \"slug\": \"home\", \"content_type\": 8, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"comments\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 2,
+    "fields": {
+      "page": 4,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T18:34:40.114Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"a8aa7256-26b7-4535-91f9-f3eb54af83ac\", \"locale\": 1, \"title\": \"About\", \"draft_title\": \"About\", \"slug\": \"about\", \"content_type\": 7, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/about/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"comments\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 3,
+    "fields": {
+      "page": 5,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T18:37:42.877Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 5, \"path\": \"000100010002\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"9e0836b1-f04f-4866-b029-293bd0007631\", \"locale\": 1, \"title\": \"Contact\", \"draft_title\": \"Contact\", \"slug\": \"contact\", \"content_type\": 12, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/contact/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"address\": \"8614 Leslie Field, New Paul, IL 60863\", \"comments\": [], \"phone_numbers\": [{\"pk\": 1, \"sort_order\": 0, \"phone_number\": \"+17247376091\", \"page\": 5}, {\"pk\": 2, \"sort_order\": 1, \"phone_number\": \"+18195393780\", \"page\": 5}], \"email_addresses\": [{\"pk\": 1, \"sort_order\": 0, \"email_address\": \"gguzman@lambert.info\", \"page\": 5}, {\"pk\": 2, \"sort_order\": 1, \"email_address\": \"singletonbarry@gmail.com\", \"page\": 5}]}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 4,
+    "fields": {
+      "page": 6,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T18:39:24.626Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 6, \"path\": \"000100010003\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"e4c665bd-660a-4633-b4d2-4d45b975fbc9\", \"locale\": 1, \"title\": \"Blog\", \"draft_title\": \"Blog\", \"slug\": \"blog\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"introduction\": \"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.\", \"comments\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 5,
+    "fields": {
+      "page": 7,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T18:45:31.900Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 7, \"path\": \"0001000100030001\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"0bddff5c-c91e-4237-a308-0194c2474587\", \"locale\": 1, \"title\": \"The purpose of lorem ipsum\", \"draft_title\": \"The purpose of lorem ipsum\", \"slug\": \"the-purpose-of-lorem-ipsum\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/the-purpose-of-lorem-ipsum/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"summary\": \"Creation timelines for the standard lorem ipsum passage vary, with some citing the 15th century and others the 20th.\", \"cover_picture\": 1, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"k6tav\\\\\\\"><i>Lorem ipsum</i>, or <i>lipsum</i> as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero&#x27;s <i>De Finibus Bonorum et Malorum</i> for use in a type specimen book.</p>\\\", \\\"id\\\": \\\"7e4bb799-dd1e-4457-bae8-55c1a69d6f68\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://www.youtube.com/watch?v=R5agKyMFVzo\\\", \\\"id\\\": \\\"1bdf382a-2cd0-4ba5-86b6-dcb1dda6cc8b\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"k6tav\\\\\\\">Until recently, the prevailing view assumed <i>lorem ipsum</i> was born as a nonsense text. \\\\u201cIt&#x27;s not Latin, though it looks like it, and it actually says nothing,\\\\u201d <i>Before &amp; After</i> magazine <a href=\\\\\\\"https://www.straightdope.com/columns/read/2290/what-does-the-filler-text-lorem-ipsum-mean/\\\\\\\">answered a curious reader</a>, \\\\u201cIts \\\\u2018words\\\\u2019 loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.\\\\u201d</p>\\\", \\\"id\\\": \\\"4c0efa55-9f1d-4d10-9f0c-a043ea57d147\\\"}, {\\\"type\\\": \\\"block_quote\\\", \\\"value\\\": {\\\"text\\\": \\\"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\\\", \\\"attribute_name\\\": \\\"Cicero\\\"}, \\\"id\\\": \\\"14de5461-f2a7-42b2-8a9f-1519462b5d00\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"k6tav\\\\\\\">McClintock&#x27;s eye for detail certainly helped narrow the whereabouts of <i>lorem ipsum&#x27;s</i> origin, however, the \\\\u201chow and when\\\\u201d still remain something of a mystery, with competing theories and timelines.</p>\\\", \\\"id\\\": \\\"fc39b3db-7c95-4894-b2e5-a13f4388dd05\\\"}]\", \"date_published\": \"2019-07-03\", \"author\": \"Staff Writer\", \"article_type\": \"Post\", \"external_url\": null, \"comments\": [], \"tagged_items\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 6,
+    "fields": {
+      "page": 7,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T18:46:52.914Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 7, \"path\": \"0001000100030001\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"0bddff5c-c91e-4237-a308-0194c2474587\", \"locale\": 1, \"title\": \"The purpose of lorem ipsum\", \"draft_title\": \"The purpose of lorem ipsum\", \"slug\": \"the-purpose-of-lorem-ipsum\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/the-purpose-of-lorem-ipsum/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2021-07-20T18:45:32.336Z\", \"last_published_at\": \"2021-07-20T18:45:32.336Z\", \"latest_revision_created_at\": \"2021-07-20T18:45:31.900Z\", \"live_revision\": 5, \"alias_of\": null, \"summary\": \"Creation timelines for the standard lorem ipsum passage vary, with some citing the 15th century and others the 20th.\", \"cover_picture\": 1, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"k6tav\\\\\\\"><i>Lorem ipsum</i>, or <i>lipsum</i> as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero&#x27;s <i>De Finibus Bonorum et Malorum</i> for use in a type specimen book.</p>\\\", \\\"id\\\": \\\"7e4bb799-dd1e-4457-bae8-55c1a69d6f68\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://www.youtube.com/watch?v=R5agKyMFVzo\\\", \\\"id\\\": \\\"1bdf382a-2cd0-4ba5-86b6-dcb1dda6cc8b\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"k6tav\\\\\\\">Until recently, the prevailing view assumed <i>lorem ipsum</i> was born as a nonsense text. \\\\u201cIt&#x27;s not Latin, though it looks like it, and it actually says nothing,\\\\u201d <i>Before &amp; After</i> magazine <a href=\\\\\\\"https://www.straightdope.com/columns/read/2290/what-does-the-filler-text-lorem-ipsum-mean/\\\\\\\">answered a curious reader</a>, \\\\u201cIts \\\\u2018words\\\\u2019 loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.\\\\u201d</p>\\\", \\\"id\\\": \\\"4c0efa55-9f1d-4d10-9f0c-a043ea57d147\\\"}, {\\\"type\\\": \\\"block_quote\\\", \\\"value\\\": {\\\"text\\\": \\\"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\\\", \\\"attribute_name\\\": \\\"Cicero\\\"}, \\\"id\\\": \\\"14de5461-f2a7-42b2-8a9f-1519462b5d00\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"k6tav\\\\\\\">McClintock&#x27;s eye for detail certainly helped narrow the whereabouts of <i>lorem ipsum&#x27;s</i> origin, however, the \\\\u201chow and when\\\\u201d still remain something of a mystery, with competing theories and timelines.</p>\\\", \\\"id\\\": \\\"fc39b3db-7c95-4894-b2e5-a13f4388dd05\\\"}]\", \"date_published\": \"2019-07-03\", \"author\": \"Staff Writer\", \"article_type\": \"Post\", \"external_url\": null, \"comments\": [], \"tagged_items\": [{\"pk\": null, \"tag\": 1, \"content_object\": 7}]}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 7,
+    "fields": {
+      "page": 8,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T19:09:41.267Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 8, \"path\": \"0001000100030002\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"c3c10e9a-9742-4c2b-ab7a-05bc97872c8c\", \"locale\": 1, \"title\": \"Sheets of lettering can now be rubbed on anywhere\", \"draft_title\": \"Sheets of lettering can now be rubbed on anywhere\", \"slug\": \"sheets-of-lettering-can-now-be-rubbed-on-anywhere\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/sheets-of-lettering-can-now-be-rubbed-on-anywhere/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"summary\": \"The strength of lorem ipsum is its weakness: it doesn't communicate. To some, designing a website around placeholder text is unacceptable, akin to sewing a custom suit without taking measurements.\", \"cover_picture\": 6, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"fx3s3\\\\\\\">Please be advised that we can now so ubiquitous because it is so versatile. Select how many paragraphs you want, copy, paste, and break the lines wherever it is convenient. Real copy doesn&#x27;t work that way. Lot must month summer discussion. Must report cost history often lead, money commercial detail mother physical dark force beat. Answer yes total her. Design manage conference arm public character. News oil it between. Statement back sit weight him. Alone manager can add of require. Number add create air group play than.</p><ul><li data-block-key=\\\\\\\"dergh\\\\\\\">Include I word employee girl modern rise maintain. Tough view stay tree</li><li data-block-key=\\\\\\\"9mcl1\\\\\\\">Perhaps newspaper particularly activity provide interview campaign. Walk market media cell include style I. Pattern value letter enter fish</li><li data-block-key=\\\\\\\"d9r03\\\\\\\">Matter evidence thousand half happy of. Rate figure perhaps.</li></ul>\\\", \\\"id\\\": \\\"92554261-18a5-4c47-acc2-414202d07ecb\\\"}, {\\\"type\\\": \\\"table\\\", \\\"value\\\": {\\\"data\\\": [[\\\"interest spring\\\", \\\"player speech hair\\\", \\\"Increase might natural\\\"], [\\\"Protect often voice\\\", \\\"Act hotel nothing\\\", \\\"Event join half\\\"], [\\\"two state message\\\", \\\"you office key staff\\\", \\\"trial already red\\\"], [\\\"Head day one\\\", \\\"not so fast\\\", \\\"well, what do you know?\\\"], [\\\"here is some text\\\", \\\"hello there\\\", \\\"looks pretty, right?\\\"]], \\\"cell\\\": [], \\\"first_row_is_table_header\\\": true, \\\"first_col_is_header\\\": false, \\\"table_caption\\\": \\\"Five their wonder beyond front\\\"}, \\\"id\\\": \\\"7a7066e4-00d1-4a9d-b602-46a2a6a62d63\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"fx3s3\\\\\\\">And that\\\\u2019s why a 15th century typesetter might have scrambled a passage of Cicero; he wanted people to focus on his fonts, to imagine their own content on the pages. He wanted people to see, and to get them to see he had to keep them from reading.</p><p data-block-key=\\\\\\\"1cor2\\\\\\\">So when is it okay to use <i>lorem ipsum</i>? First, <i>lorem ipsum</i> works well for staging. It&#x27;s like the props in a furniture store\\\\u2014filler text makes it look like someone is home. The same Wordpress template might eventually be home to a fitness blog, a photography website, or the online journal of a cupcake fanatic. <i>Lorem ipsum</i> helps them imagine what the lived-in website might look like.</p>\\\", \\\"id\\\": \\\"ac55e8ce-658c-461e-b9da-66983ac61201\\\"}]\", \"date_published\": \"2021-04-29\", \"author\": \"Brent Johnson\", \"article_type\": \"Info\", \"external_url\": null, \"comments\": [], \"tagged_items\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 8,
+    "fields": {
+      "page": 9,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T19:14:52.048Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 9, \"path\": \"0001000100030003\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"5ff0af49-12fb-43f0-8e3f-ae509a856685\", \"locale\": 1, \"title\": \"Fill minute sell my worry hour set\", \"draft_title\": \"Fill minute sell my worry hour set\", \"slug\": \"fill-minute-sell-my-worry-hour-set\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/fill-minute-sell-my-worry-hour-set/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"summary\": \"Use lorem ipsum if you think the placeholder text will be too distracting. For specific projects, collaboration between copywriters and designers may be best, however, like Karen McGrane said, draft copy has a way of turning any meeting about layout decisions into a discussion about word choice. So don't be afraid to use lorem ipsum to keep everyone focused.\", \"cover_picture\": 7, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"4rrjf\\\\\\\">One word of caution: make sure your client knows that <i>lorem ipsum</i> is filler text. You don&#x27;t want them wondering why you filled their website with a foreign language, and you certainly don&#x27;t want anyone prematurely publishing it. There was <a href=\\\\\\\"http://designenvy.aiga.org/the-chipotle-lorem-ipsum-bag/\\\\\\\">that time</a> artists at Sequence opted to hand-Sharpie the <i>lorem ipsum</i> passage on a line of paper bags they designed for Chipotle\\\\u2014the result being a mixture of avant-garde, inside joke, and Sharpie-stained tables. Those with an eye for detail may have caught a tribute to the classic text in an episode of <a href=\\\\\\\"http://www.amc.com/shows/mad-men\\\\\\\">Mad Men</a> (S6E1 around 1:18:55 for anyone that didn&#x27;t). And here is a <i>lorem ipsum</i> <a href=\\\\\\\"http://littlerunningbear.com/465/lorem-ipsum-for-ever/\\\\\\\">tattoo</a>.</p>\\\", \\\"id\\\": \\\"965dd1a6-bb52-475a-9752-eb0efa3ec0aa\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://twitter.com/bencodezen/status/1417496648658399239\\\", \\\"id\\\": \\\"1e705ae7-b746-4e63-aeac-514ba6f5793d\\\"}, {\\\"type\\\": \\\"heading_block\\\", \\\"value\\\": {\\\"heading_text\\\": \\\"Campaign though recognize area\\\", \\\"size\\\": \\\"h3\\\"}, \\\"id\\\": \\\"8f076d27-d12d-419e-98fb-b90dd211d404\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"4rrjf\\\\\\\">So when is it okay to use <i>lorem ipsum</i>? First, <i>lorem ipsum</i> works well for staging. It&#x27;s like the props in a furniture store\\\\u2014filler text makes it look like someone is home. The same Wordpress template might eventually be home to a fitness blog, a photography website, or the online journal of a cupcake fanatic. <i>Lorem ipsum</i> helps them imagine what the lived-in website might look like.</p><p data-block-key=\\\\\\\"4br0c\\\\\\\">Second, use <i>lorem ipsum</i> if you think the placeholder text will be too distracting. For specific projects, collaboration between copywriters and designers may be best, however, like Karen McGrane said, draft copy has a way of turning any meeting about layout decisions into a discussion about word choice. So don&#x27;t be afraid to use <i>lorem ipsum</i> to keep everyone focused.</p><p data-block-key=\\\\\\\"3uamd\\\\\\\">One word of caution: make sure your client knows that <i>lorem ipsum</i> is filler text. You don&#x27;t want them wondering why you filled their website with a foreign language, and you certainly don&#x27;t want anyone prematurely publishing it.</p>\\\", \\\"id\\\": \\\"8d94025c-4a66-466e-aeeb-dcf4d475f2ad\\\"}, {\\\"type\\\": \\\"heading_block\\\", \\\"value\\\": {\\\"heading_text\\\": \\\"Style prevent establish those myself stuff\\\", \\\"size\\\": \\\"h3\\\"}, \\\"id\\\": \\\"18445257-6d0b-4fdb-8dec-57529c821cb6\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"4rrjf\\\\\\\">Among design professionals, there&#x27;s a bit of controversy surrounding the filler text. Controversy, as in <a href=\\\\\\\"https://www.lukew.com/ff/entry.asp?927\\\\\\\">Death to Lorem Ipsum</a>.</p><p data-block-key=\\\\\\\"cvb72\\\\\\\">The strength of <i>lorem ipsum</i> is its weakness: it doesn&#x27;t communicate. To some, designing a website around placeholder text is unacceptable, akin to sewing a custom suit without taking measurements. <a href=\\\\\\\"http://adaptivepath.org/ideas/death-to-lorem-ipsum-other-adventures-in-content/\\\\\\\">Kristina Halvorson</a> notes:</p>\\\", \\\"id\\\": \\\"27fe6ad2-a208-48de-9d32-556875ed5ea8\\\"}, {\\\"type\\\": \\\"block_quote\\\", \\\"value\\\": {\\\"text\\\": \\\"I\\\\u2019ve heard the argument that \\\\u201clorem ipsum\\\\u201d is effective in wireframing or design because it helps people focus on the actual layout, or color scheme, or whatever. What kills me here is that we\\\\u2019re talking about creating a user experience that will (whether we like it or not) be DRIVEN by words. The entire structure of the page or app flow is FOR THE WORDS.\\\", \\\"attribute_name\\\": \\\"\\\"}, \\\"id\\\": \\\"1b4f451b-b007-4ed4-8c5d-794fae533c78\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"4rrjf\\\\\\\"><i>Lorem ipsum</i> is so ubiquitous because it is so versatile. Select how many paragraphs you want, copy, paste, and break the lines wherever it is convenient. Real copy doesn&#x27;t work that way.</p><p data-block-key=\\\\\\\"cg445\\\\\\\"></p>\\\", \\\"id\\\": \\\"0988ba99-fe97-48ff-a769-a11aed2b7042\\\"}]\", \"date_published\": \"2021-04-02\", \"author\": \"Staff Writer\", \"article_type\": \"Post\", \"external_url\": null, \"comments\": [], \"tagged_items\": [{\"pk\": 2, \"tag\": 2, \"content_object\": 9}]}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 9,
+    "fields": {
+      "page": 10,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T19:20:34.391Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 10, \"path\": \"0001000100030004\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"1ddc8b18-febf-4a9c-8618-d2b831613d19\", \"locale\": 1, \"title\": \"For those times when you need some legal-sounding gibberish\", \"draft_title\": \"For those times when you need some legal-sounding gibberish\", \"slug\": \"for-those-times-when-you-need-some-legal-sounding-gibberish\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/for-those-times-when-you-need-some-legal-sounding-gibberish/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"summary\": \"You must make sure that you have co-authored with others, you can justify on the Derived Program, such Derived Program under their own license agreement, provided that: it complies with the provisions set forth in this license\", \"cover_picture\": 8, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"k59vb\\\\\\\"><b>Public Domain or from the Work, provide any other entity. Each Contributor represents that to its Contributions set forth in this license document the following conditions are met.</b></p><hr/><p data-block-key=\\\\\\\"bek2n\\\\\\\">I&#x27;m baby 3 wolf moon roof party taiyaki, swag seitan YOLO selvage literally hell of iPhone lo-fi plaid. Seitan lyft helvetica sustainable. Leggings post-ironic selvage gastropub hoodie. Mixtape listicle williamsburg unicorn, 90&#x27;s stumptown pop-up. Health goth williamsburg echo park, la croix franzen lomo cred blog whatever cray tumblr cardigan tilde vaporware.</p><p data-block-key=\\\\\\\"c07vv\\\\\\\">Heirloom venmo chillwave man braid flannel. Tattooed cornhole four loko, jianbing meditation mlkshk fingerstache normcore skateboard lumbersexual banjo tbh man bun roof party kogi. Jean shorts williamsburg 90&#x27;s, helvetica viral portland listicle keffiyeh coloring book austin single-origin coffee. Bitters selfies trust fund, poutine bespoke aesthetic marfa. Hella beard portland, VHS selfies vinyl hammock gastropub tacos bicycle rights palo santo af tousled health goth.</p><p data-block-key=\\\\\\\"erlhk\\\\\\\">Cloud bread tumblr succulents plaid gastropub jianbing craft beer, flexitarian tilde fingerstache deep v neutra. Kogi fam knausgaard palo santo af ramps. Church-key neutra tbh pitchfork cred. Small batch selvage authentic tote bag celiac la croix copper mug tacos. Ethical 90&#x27;s blue bottle keytar slow-carb cred distillery pabst yr crucifix godard shoreditch cray offal. Plaid letterpress food truck trust fund live-edge twee mumblecore cloud bread wayfarers.</p><p data-block-key=\\\\\\\"3aanu\\\\\\\">Tilde microdosing waistcoat, tbh blog ramps drinking vinegar wayfarers locavore seitan gastropub flexitarian. Kinfolk master cleanse fashion axe cornhole letterpress. Hexagon messenger bag four loko pabst vegan fashion axe beard flexitarian. PBR&amp;B bespoke man bun blog chicharrones. Tofu venmo fixie freegan, skateboard blue bottle neutra meh. Flexitarian shaman knausgaard, meggings offal farm-to-table dreamcatcher subway tile. Ramps occupy salvia humblebrag direct trade narwhal cliche yuccie bitters edison bulb.</p><p data-block-key=\\\\\\\"6me7a\\\\\\\">While redistributing the Work by You to distribute corresponding source code. Distribution Mechanism&quot; means a Recipient that distributes the Program. CC-BY-SA license If you create or to which You create or to build stand-alone binary or bytecode versions of your distribution.</p><p data-block-key=\\\\\\\"6i7qf\\\\\\\">Tacos pork belly ugh synth slow-carb fanny pack meh try-hard health goth butcher poke lumbersexual. You probably haven&#x27;t heard of them crucifix chambray stumptown, activated charcoal next level leggings franzen asymmetrical. Tacos enamel pin photo booth, +1 blog heirloom hashtag. Narwhal adaptogen tacos hot chicken jianbing. Jianbing keytar 90&#x27;s, ennui hexagon VHS before they sold out gentrify pop-up pour-over church-key thundercats waistcoat artisan vegan.</p><p data-block-key=\\\\\\\"2h578\\\\\\\">Avoid adding text. This licence is apt for any kind of work (such as by license or b) a copy of the Contribution of such damages. Accepting Warranty or Additional Liability.</p><p data-block-key=\\\\\\\"dl4tm\\\\\\\">If these instructions, at any time while you are carrying out such distribution, become invalid, you must include a copy of this License shall be governed by this License; they are embedded, and shall take other steps (such as by license or settlement) prior to termination shall survive any termination of this definition, &quot;control&quot;../ means (a) the power, direct or indirect, to cause the modified work as &quot;Original Code&quot; means the Package, do not, by themselves, cause the modified files to carry prominent notices stating that you duplicate all of the Standard Version of this License any code that you provide a difference file from the redistributions of source code <b>control systems</b>, and issue tracking systems that are reasonably necessary to enable recipients of the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA Also add information on how and where You describe recipients&#x27; rights relating to the text you hold the copyright notice appears in all respects by the terms of Sections 1 through 9 of this Agreement , including but not limited to delivery of content, through electronic communication with a client other than IBM has the sole purpose of this Agreement must be sufficiently detailed for a recipient will know whom to contact. If you are also required to justify it to be able to understand it.</p>\\\", \\\"id\\\": \\\"a1db87c7-2c9f-497a-bc6e-7887ed397d25\\\"}]\", \"date_published\": \"2021-04-15\", \"author\": \"Julia Robinson\", \"article_type\": \"Shout\", \"external_url\": null, \"comments\": [], \"tagged_items\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 10,
+    "fields": {
+      "page": 11,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T19:25:23.687Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 11, \"path\": \"0001000100030005\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"cc675c08-998c-44c2-b820-7053110b5090\", \"locale\": 1, \"title\": \"Course play good send dream seem early poor situation great employee\", \"draft_title\": \"Course play good send dream seem early poor situation great employee\", \"slug\": \"course-play-good-send-dream-seem-early-poor-situation-great-employee\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/course-play-good-send-dream-seem-early-poor-situation-great-employee/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"summary\": \"Bacon ipsum dolor amet ham hock burgdoggen brisket short loin. Frankfurter andouille beef ribs sausage rump. Brisket bresaola alcatra turkey, jowl shank landjaeger beef ribs pancetta leberkas. Porchetta andouille picanha tenderloin, spare ribs shoulder filet mignon alcatra pork buffalo ham meatloaf fatback rump. Cow cupim prosciutto meatball sausage turducken strip steak kielbasa pork chop, andouille bacon. Shank burgdoggen beef capicola short loin, ground round shoulder pork loin turducken meatball pancetta bresaola.\", \"cover_picture\": 9, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"lcyhu\\\\\\\">Ball tip prosciutto leberkas venison, boudin chislic cupim meatloaf frankfurter. Tri-tip filet mignon beef ribs, kevin salami tenderloin pastrami beef. Chuck short ribs pork loin, ham hock boudin beef landjaeger tongue pancetta tri-tip. Picanha ham rump, pig fatback bresaola burgdoggen andouille. Spare ribs burgdoggen landjaeger, shankle corned beef t-bone jowl swine shank turducken ham hock meatball.</p><p data-block-key=\\\\\\\"8tu06\\\\\\\">Beef tail cupim, swine sausage jowl frankfurter brisket boudin salami alcatra. Corned beef tri-tip pork belly brisket, biltong boudin sausage porchetta chislic picanha ground round. Salami pancetta porchetta, venison swine shank ground round buffalo jowl pastrami beef tenderloin sirloin meatball. Turkey turducken ground round, cupim biltong jerky jowl kielbasa.</p>\\\", \\\"id\\\": \\\"720a8d4c-0937-437e-8108-509c5ff84af1\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://www.youtube.com/watch?v=99yqAi7YPUI\\\", \\\"id\\\": \\\"077c3ab2-ab16-4852-b4b0-74ca4561e594\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"lcyhu\\\\\\\">Biltong beef flank, fatback chuck chislic filet mignon pancetta ribeye tenderloin cupim tongue shank rump. Spare ribs jerky beef, chicken t-bone sausage shank turducken ball tip tenderloin. Shoulder boudin pork chop andouille sausage fatback jerky picanha. Boudin cupim tail cow ball tip filet mignon ham hock flank brisket tenderloin short ribs ribeye tri-tip ground round.</p><p data-block-key=\\\\\\\"evd5h\\\\\\\">Capicola biltong kielbasa picanha ham hock chicken doner ham ribeye. Burgdoggen frankfurter sirloin, pancetta tail fatback pork meatball shankle pork belly ham beef jowl sausage. Venison frankfurter bresaola shoulder pork loin porchetta. Cow meatloaf ham venison. Frankfurter beef brisket, tail filet mignon flank pork loin tenderloin andouille short ribs jerky.</p>\\\", \\\"id\\\": \\\"54fa54dc-43c4-4cc5-a6d6-a3cebca5603f\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://twitter.com/ChloeCondon/status/1417504502765166594\\\", \\\"id\\\": \\\"3ac06176-127e-4e53-8c55-a64ddcd65eaa\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"lcyhu\\\\\\\">Spicy jalapeno bacon ipsum dolor amet porchetta ea laboris, picanha in enim mollit ut ullamco spare ribs bacon sed labore. Laboris alcatra aliquip fatback, esse reprehenderit pancetta hamburger ut consectetur eiusmod. Sint deserunt biltong, pig dolor quis ex non ground round.</p><ol><li data-block-key=\\\\\\\"b59oh\\\\\\\">Chuck ut salami do est pastrami chicken aute fugiat venison consectetur officia t-bone pork belly.</li><li data-block-key=\\\\\\\"c91er\\\\\\\">Kielbasa anim officia, laborum dolore exercitation et pork chop jowl chislic incididunt swine bresaola pig doner.</li><li data-block-key=\\\\\\\"9okbf\\\\\\\">Dolor magna lorem, drumstick duis capicola consequat flank eu ut.</li><li data-block-key=\\\\\\\"bgi3t\\\\\\\">Turkey picanha prosciutto, anim boudin brisket magna short loin excepteur nostrud pastrami ex pariatur tongue et.</li></ol><p data-block-key=\\\\\\\"8k7uo\\\\\\\">Bresaola lorem pig, t-bone jowl flank ipsum laboris. Non do jowl picanha nisi boudin sausage beef nostrud doner. Excepteur cow meatloaf in, jerky alcatra kielbasa aute pork quis ad beef enim. Landjaeger magna chislic, jowl ut ball tip nulla excepteur ex in venison. Landjaeger magna cillum chislic in consectetur. Shank velit shankle meatloaf quis magna.</p>\\\", \\\"id\\\": \\\"6c95ac73-0959-4996-9c2a-7d5851b9e13c\\\"}]\", \"date_published\": \"2021-05-06\", \"author\": \"Kelsey Barrett\", \"article_type\": \"Misc\", \"external_url\": null, \"comments\": [], \"tagged_items\": [{\"pk\": 3, \"tag\": 1, \"content_object\": 11}]}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 11,
+    "fields": {
+      "page": 12,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T19:27:53.294Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 12, \"path\": \"0001000100030006\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"ceb7b576-0323-48ed-8b02-a5c59de506da\", \"locale\": 1, \"title\": \"Oil assume describe ability conference learn program evidence back magazine worry play window\", \"draft_title\": \"Oil assume describe ability conference learn program evidence back magazine worry play window\", \"slug\": \"oil-assume-describe-ability-conference-learn-program-evidence-back-magazine-worry-play-window\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/oil-assume-describe-ability-conference-learn-program-evidence-back-magazine-worry-play-window/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"summary\": \"Every year or so, I revisit the current best practices for Python packaging. I.e. the way you\\u2019re supposed to distribute your Python packages. The main source is packaging.python.org where the official packaging guidelines are. It is worth noting that the way you\\u2019re supposed to package your Python applications is not defined by Python or its maintainers, but rather delegated to a separate entity, the Python Packaging Authority (PyPA).\", \"cover_picture\": 10, \"content\": \"[]\", \"date_published\": \"2021-06-26\", \"author\": \"Bastian Venthur\", \"article_type\": \"URL\", \"external_url\": \"https://venthur.de/2021-06-26-python-packaging.html\", \"comments\": [], \"tagged_items\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 12,
+    "fields": {
+      "page": 13,
+      "submitted_for_moderation": false,
+      "created_at": "2021-07-20T19:29:56.097Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_json": "{\"pk\": 13, \"path\": \"0001000100030007\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"a20cbe08-8289-4413-9445-3362e07ba46d\", \"locale\": 1, \"title\": \"Aute deserunt salami sunt pork loin officia pariatur andouille pork belly adipisicing non culpa\", \"draft_title\": \"Aute deserunt salami sunt pork loin officia pariatur andouille pork belly adipisicing non culpa\", \"slug\": \"aute-deserunt-salami-sunt-pork-loin-officia-pariatur-andouille-pork-belly-adipisicing-non-culpa\", \"content_type\": 10, \"live\": false, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog/aute-deserunt-salami-sunt-pork-loin-officia-pariatur-andouille-pork-belly-adipisicing-non-culpa/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"summary\": \"Meatball meatloaf ex lorem elit officia landjaeger hamburger. Porchetta andouille veniam, ham pancetta chislic ut elit. In proident ea rump kielbasa chuck sirloin pork belly ground round nisi bresaola venison pancetta short ribs sausage. Duis ground round eiusmod nulla labore, brisket veniam jowl jerky beef occaecat. Jerky leberkas tenderloin kielbasa, aliquip burgdoggen ut in.\", \"cover_picture\": 11, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p data-block-key=\\\\\\\"4jq07\\\\\\\">Aute cupidatat enim do tongue excepteur beef ribs doner, tail corned beef nulla lorem pancetta. Tail turkey venison anim, commodo consectetur aliqua in short loin exercitation officia. Laborum commodo drumstick pancetta cillum. Fatback pastrami velit culpa shoulder quis non pork loin ipsum tempor pork aute.</p><p data-block-key=\\\\\\\"2hjr3\\\\\\\">The purpose of <i>lorem ipsum</i> is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn&#x27;t distract from the layout. A practice not without <a href=\\\\\\\"https://loremipsum.io/#controversy\\\\\\\">controversy</a>, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</p><p data-block-key=\\\\\\\"fda1j\\\\\\\">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it&#x27;s seen all around the web; on templates, websites, and stock designs. Use our <a href=\\\\\\\"https://loremipsum.io/#generator\\\\\\\">generator</a> to get your own, or read on for the authoritative history of <i>lorem ipsum</i>.</p>\\\", \\\"id\\\": \\\"203907c7-f418-431e-844a-404b8d0d9da5\\\"}]\", \"date_published\": \"2021-05-27\", \"author\": \"Staff Writer\", \"article_type\": \"Post\", \"external_url\": null, \"comments\": [], \"tagged_items\": []}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.collection",
+    "pk": 1,
+    "fields": {
+      "path": "0001",
+      "depth": 1,
+      "numchild": 0,
+      "name": "Root"
+    }
+  },
+  {
+    "model": "wagtailcore.workflowpage",
+    "pk": 1,
+    "fields": {
+      "workflow": 1
+    }
+  },
+  {
+    "model": "wagtailcore.workflowtask",
+    "pk": 1,
+    "fields": {
+      "sort_order": 0,
+      "workflow": 1,
+      "task": 1
+    }
+  },
+  {
+    "model": "wagtailcore.task",
+    "pk": 1,
+    "fields": {
+      "name": "Moderators approval",
+      "content_type": ["wagtailcore", "groupapprovaltask"],
+      "active": true
+    }
+  },
+  {
+    "model": "wagtailcore.workflow",
+    "pk": 1,
+    "fields": {
+      "name": "Moderators approval",
+      "active": true
+    }
+  },
+  {
+    "model": "wagtailcore.groupapprovaltask",
+    "pk": 1,
+    "fields": {
+      "groups": [["Moderators"]]
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 1,
+    "fields": {
+      "content_type": ["wagtailcore", "page"],
+      "label": "Welcome to your new Wagtail site!",
+      "action": "wagtail.delete",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T18:09:31.977Z",
+      "user": null,
+      "content_changed": false,
+      "deleted": true,
+      "page": 2,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 2,
+    "fields": {
+      "content_type": ["home", "homepage"],
+      "label": "Home",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T18:21:42.962Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 3,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 3,
+    "fields": {
+      "content_type": ["home", "homepage"],
+      "label": "Home",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T18:21:44.182Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 3,
+      "revision": 1
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 4,
+    "fields": {
+      "content_type": ["home", "aboutpage"],
+      "label": "About",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T18:34:39.851Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 4,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 5,
+    "fields": {
+      "content_type": ["home", "aboutpage"],
+      "label": "About",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T18:34:41.236Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 4,
+      "revision": 2
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 6,
+    "fields": {
+      "content_type": ["contact", "contactpage"],
+      "label": "Contact",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T18:37:42.405Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 5,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 7,
+    "fields": {
+      "content_type": ["contact", "contactpage"],
+      "label": "Contact",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T18:37:43.783Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 5,
+      "revision": 3
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 8,
+    "fields": {
+      "content_type": ["blog", "articleindexpage"],
+      "label": "Blog",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T18:39:24.377Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 6,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 9,
+    "fields": {
+      "content_type": ["blog", "articleindexpage"],
+      "label": "Blog",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T18:39:25.485Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 6,
+      "revision": 4
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 10,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "The purpose of lorem ipsum",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T18:45:31.609Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 7,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 11,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "The purpose of lorem ipsum",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T18:45:33.013Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 7,
+      "revision": 5
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 12,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "The purpose of lorem ipsum",
+      "action": "wagtail.edit",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T18:46:53.052Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 7,
+      "revision": 6
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 13,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "The purpose of lorem ipsum",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T18:46:54.374Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 7,
+      "revision": 6
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 14,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Sheets of lettering can now be rubbed on anywhere",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T19:09:40.968Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 8,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 15,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Sheets of lettering can now be rubbed on anywhere",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T19:09:42.424Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 8,
+      "revision": 7
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 16,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Fill minute sell my worry hour set",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T19:14:51.792Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 9,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 17,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Fill minute sell my worry hour set",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T19:14:53.244Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 9,
+      "revision": 8
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 18,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "For those times when you need some legal-sounding gibberish",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T19:20:33.826Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 10,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 19,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "For those times when you need some legal-sounding gibberish",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T19:20:35.406Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 10,
+      "revision": 9
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 20,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Course play good send dream seem early poor situation great employee",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T19:25:23.432Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 11,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 21,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Course play good send dream seem early poor situation great employee",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T19:25:24.502Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 11,
+      "revision": 10
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 22,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Oil assume describe ability conference learn program evidence back magazine worry play window",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T19:27:53.059Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 12,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 23,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Oil assume describe ability conference learn program evidence back magazine worry play window",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2021-07-20T19:27:54.486Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 12,
+      "revision": 11
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 24,
+    "fields": {
+      "content_type": ["blog", "articlepage"],
+      "label": "Aute deserunt salami sunt pork loin officia pariatur andouille pork belly adipisicing non culpa",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2021-07-20T19:29:55.803Z",
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "content_changed": true,
+      "deleted": false,
+      "page": 13,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 1,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 3,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 2,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 4,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 3,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 5,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 4,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 6,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 5,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 7,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 6,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 8,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 7,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 9,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 8,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 10,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 9,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 11,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 10,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 12,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "wagtailcore.pagesubscription",
+    "pk": 11,
+    "fields": {
+      "user": ["{{ cookiecutter.wagtail_username }}"],
+      "page": 13,
+      "comment_notifications": true
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+      "name": "prose",
+      "slug": "prose"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+      "name": "machines",
+      "slug": "machines"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "example.com",
+      "name": "example.com"
+    }
   }
-},
-{
-  "model": "base.people",
-  "pk": 2,
-  "fields": {
-    "created": "2020-03-15T19:13:58.303Z",
-    "modified": "2020-03-15T19:13:58.303Z",
-    "status": "published",
-    "status_changed": "2020-03-15T19:13:58.327Z",
-    "first_name": "Jennipher",
-    "last_name": "Alchemy",
-    "phone_number": "+260975632399",
-    "email_address": "jennipher@company.com",
-    "position": "Administrator",
-    "bio": "<p>Ms. Alchemy is a 27-year-old woman who enjoys social card games, cycling and  football. She is brave and smart, but can also be very untrustworthy and a bit greedy. She is currently single. Her most recent romance was with a screenplay  writer called Teddy Maya Anderson,  who was 2 years older than him.  They broke up because of trust issues.</p>",
-    "facebook": "",
-    "twitter": "http://twitter.com/joshjs",
-    "linked_in": "",
-    "image": 11
-  }
-},
-{
-  "model": "base.people",
-  "pk": 3,
-  "fields": {
-    "created": "2020-03-15T19:17:11.156Z",
-    "modified": "2020-03-15T19:17:11.156Z",
-    "status": "published",
-    "status_changed": "2020-03-15T19:17:11.191Z",
-    "first_name": "Mandy",
-    "last_name": "Zulu",
-    "phone_number": "+260975632388",
-    "email_address": "mandy@company.com",
-    "position": "Chef",
-    "bio": "<p>Biker, coffee addict, music blogger,  Swiss design-head and javascripter. Acting at the sweet spot between art  and sustainability to create great work for living breathing human  beings.  Infuriatingly humble tv trailblazer. Internet practitioner. Certified travel specialist. Let&#x27;s chat. </p>",
-    "facebook": "https://www.facebook.com/pages/category/Media/Tumfweko-305307429890814/",
-    "twitter": "http://twitter.com/joshjs",
-    "linked_in": "",
-    "image": 12
-  }
-},
-{
-  "model": "base.people",
-  "pk": 4,
-  "fields": {
-    "created": "2020-03-15T19:19:42.740Z",
-    "modified": "2020-03-15T19:19:42.740Z",
-    "status": "published",
-    "status_changed": "2020-03-15T19:19:42.766Z",
-    "first_name": "Mike",
-    "last_name": "Thompson",
-    "phone_number": "+260975632355",
-    "email_address": "mike@company.com",
-    "position": "Lead Developer",
-    "bio": "<p>Surfer, father of 3, DJ, reclaimed wood  collector and identity designer. Acting at the crossroads of minimalism  and function to craft meaningful ideas that endure. Nothing ventured,  nothing gained. Doing at the nexus of minimalism and programing to create strong, lasting and remarkable design. Basketball fan, nature enthusiast, fender owner, Mad Men fan and holistic designer. Let&#x27;s design a world that&#x27;s thoughtful, considered and  aesthetically pleasing.</p>",
-    "facebook": "",
-    "twitter": "https://twitter.com/rickycodes",
-    "linked_in": "https://www.linkedin.com/in/justin-lupele-phd-31a35092",
-    "image": 13
-  }
-},
-{
-  "model": "home.homepage",
-  "pk": 4,
-  "fields": {}
-},
-{
-  "model": "home.aboutpage",
-  "pk": 5,
-  "fields": {}
-},
-{
-  "model": "blog.articletag",
-  "pk": 1,
-  "fields": {
-    "tag": 1,
-    "content_object": 8
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 2,
-  "fields": {
-    "tag": 2,
-    "content_object": 8
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 3,
-  "fields": {
-    "tag": 2,
-    "content_object": 9
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 4,
-  "fields": {
-    "tag": 3,
-    "content_object": 9
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 5,
-  "fields": {
-    "tag": 3,
-    "content_object": 10
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 6,
-  "fields": {
-    "tag": 4,
-    "content_object": 10
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 7,
-  "fields": {
-    "tag": 5,
-    "content_object": 11
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 8,
-  "fields": {
-    "tag": 1,
-    "content_object": 13
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 9,
-  "fields": {
-    "tag": 6,
-    "content_object": 13
-  }
-},
-{
-  "model": "blog.articletag",
-  "pk": 11,
-  "fields": {
-    "tag": 3,
-    "content_object": 14
-  }
-},
-{
-  "model": "blog.articlepage",
-  "pk": 8,
-  "fields": {
-    "summary": "The lost tapes is a compelling tale of two brothers who never thought it was possible to ever have a smart connected world over the fence. Very thrilling story, you might wanna check this out!",
-    "cover_picture": 1,
-    "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p>So, this is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\", \"id\": \"1c80a37d-07d5-4776-b23c-024b30086a94\"}, {\"type\": \"block_quote\", \"value\": {\"text\": \"An From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.\", \"attribute_name\": \"What is Lorem Ipsum\"}, \"id\": \"3290b120-604f-4cff-bd97-023e9941cc5d\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn&#x27;t distract from the layout. A practice not without <a href=\\\"https://loremipsum.io/#controversy\\\">controversy</a>, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content. </p>\", \"id\": \"7925c959-9e40-4625-8d8b-f88de1e9ba65\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it&#x27;s seen all around the web; on templates, websites, and stock designs. Use our <a href=\\\"https://loremipsum.io/#generator\\\">generator</a> to get your own, or read on for the authoritative history of <i>lorem ipsum</i>. </p>\", \"id\": \"6aa79a1a-2726-4d93-8c95-159d73ec3105\"}, {\"type\": \"embed_block\", \"value\": \"https://www.youtube.com/watch?v=Arkq3lLuo0U\", \"id\": \"9ec42dac-5c4a-43e3-91d6-3d08024ed166\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. \\u201cIt&#x27;s not Latin, though it looks like it, and it actually says nothing,\\u201d <i>Before &amp; After</i> magazine <a href=\\\"https://www.straightdope.com/columns/read/2290/what-does-the-filler-text-lorem-ipsum-mean/\\\">answered a curious reader</a>, \\u201cIts \\u2018words\\u2019 loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.\\u201d</p>\", \"id\": \"cace834b-3e0a-4508-a976-e9c2abecf44a\"}]",
-    "date_published": "2020-03-02",
-    "author": "Some Random Dude",
-    "article_type": "Post",
-    "external_url": null
-  }
-},
-{
-  "model": "blog.articlepage",
-  "pk": 9,
-  "fields": {
-    "summary": "The placeholder text, beginning with the line \u201cLorem ipsum dolor sit amet, consectetur adipiscing elit\u201d, looks like Latin because in its youth, centuries ago, it was Latin.",
-    "cover_picture": 2,
-    "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p>Richard McClintock, a Latin scholar from Hampden-Sydney College, is <a href=\\\"https://en.wikipedia.org/wiki/Lorem_ipsum\\\">credited</a> with discovering the source behind the ubiquitous filler text. In seeing a sample of <i>lorem ipsum</i>, his interest was piqued by <i>consectetur</i>\\u2014a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from <i>De Finibus Bonorum et Malorum</i> (\\u201cOn the Extremes of Good and Evil\\u201d), a first-century B.C. text from the Roman philosopher Cicero.</p>\", \"id\": \"27b2b15b-1d8d-4c4c-a52d-b150ec8af9b5\"}, {\"type\": \"heading_block\", \"value\": {\"heading_text\": \"What this means for you\", \"size\": \"h2\"}, \"id\": \"a5097e38-373a-4ed5-aa9b-c97c23b3b49a\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>McClintock&#x27;s eye for detail certainly helped narrow the whereabouts of <i>lorem ipsum&#x27;s</i> origin, however, the \\u201chow and when\\u201d still remain something of a mystery, with competing theories and timelines. So how did the classical Latin become so incoherent? According to  McClintock, a 15th century typesetter likely scrambled part of Cicero&#x27;s <i>De Finibus</i> in order to provide placeholder text to mockup various fonts for a type specimen book.</p>\", \"id\": \"fe23bc4c-1311-48ea-9c7c-2e148c040317\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>It&#x27;s difficult to find examples of <i>lorem ipsum</i> in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the <i>lorem ipsum</i>  passage in a book of old metal type samples. So far he hasn&#x27;t relocated  where he once saw the passage, but the popularity of Cicero in the 15th  century supports the theory that the filler text has been used for  centuries.</p><hr/><p></p>\", \"id\": \"6165a59b-6c39-4819-b0b4-308f38beec0a\"}]",
-    "date_published": "2020-03-13",
-    "author": null,
-    "article_type": "Info",
-    "external_url": null
-  }
-},
-{
-  "model": "blog.articlepage",
-  "pk": 10,
-  "fields": {
-    "summary": "As an alternative theory, (and because Latin scholars do this sort of thing) someone tracked down a 1914 Latin edition of De Finibus which challenges McClintock's 15th century claims and suggests that the dawn of lorem ipsum was as recent as the 20th century.",
-    "cover_picture": 3,
-    "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p>Whether a medieval typesetter chose to garble a well-known (but  non-Biblical\\u2014that would have been sacrilegious) text, or whether a quirk  in the 1914 Loeb Edition inspired a graphic designer, it&#x27;s admittedly  an odd way for Cicero to sail into the 21st century.</p>\", \"id\": \"0a8eb2cd-0948-4030-ba97-1f01efbed370\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Don&#x27;t bother typing \\u201clorem ipsum\\u201d into Google translate. If you already tried, you may have gotten <a href=\\\"https://krebsonsecurity.com/2014/08/lorem-ipsum-of-good-evil-google-china/\\\">anything from &quot;NATO&quot; to &quot;China&quot;</a>,  depending on how you capitalized the letters. The bizarre translation  was fodder for conspiracy theories, but Google has since updated its  \\u201clorem ipsum\\u201d translation to, boringly enough, \\u201clorem ipsum\\u201d.</p>\", \"id\": \"0bf2ee66-6aeb-493f-9004-f29a355c93d5\"}, {\"type\": \"table\", \"value\": {\"data\": [[\"#\", \"Cats\", \"Dogs\"], [\"1\", \"Kruger\", \"German Shepherd\"], [\"2\", \"Meaow\", \"Woof\"], [\"3\", \"Verizon\", \"AT & T\"], [\"4\", \"Smiley\", \"Boat\"]], \"cell\": [], \"first_row_is_table_header\": true, \"first_col_is_header\": false, \"table_caption\": \"Awesome Locations & Hours\"}, \"id\": \"7c011aa8-937d-4fdb-8b6c-f489c902f5ef\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>One brave soul did take a stab at translating the almost-not-quite-Latin. According to <a href=\\\"https://www.theguardian.com/books/booksblog/2014/mar/21/lorem-ipsum-translated-latin-placeholder-text\\\">The Guardian</a>,  Jaspreet Singh Boparai undertook the challenge with the goal of making  the text \\u201cprecisely as incoherent in English as it is in Latin - and to  make it incoherent in the same way\\u201d. As a result, \\u201cthe Greek &#x27;eu&#x27; in  Latin became the French &#x27;bien&#x27; [...] and the &#x27;-ing&#x27; ending in &#x27;lorem  ipsum&#x27; seemed best rendered by an &#x27;-iendum&#x27; in English.\\u201d</p>\", \"id\": \"51fe60df-370f-401b-bbc4-06f7b2898264\"}]",
-    "date_published": "2019-09-04",
-    "author": null,
-    "article_type": "Misc",
-    "external_url": null
-  }
-},
-{
-  "model": "blog.articlepage",
-  "pk": 11,
-  "fields": {
-    "summary": "Row itself, let it be sorrow; let him love it; let him pursue it, ishing for its acquisitiendum. Because he will ab hold, uniess but through concer, and also of those who resist. Now a pure snore disturbeded sum dust. He ejjnoyes, in order that somewon, also with a severe one, unless of life",
-    "cover_picture": 4,
-    "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p>The French lettering company <a href=\\\"https://en.wikipedia.org/wiki/Letraset\\\">Letraset</a> manufactured a set of dry-transfer sheets which included the <i>lorem ipsum</i>  filler text in a variety of fonts, sizes, and layouts. These sheets of  lettering could be rubbed on anywhere and were quickly adopted by  graphic artists, printers, architects, and advertisers for their  professional look and ease of use.</p>\", \"id\": \"c5b4cf00-2338-4c66-be94-5c6c3e56eada\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Aldus Corporation, which later merged with Adobe Systems, ushered <i>lorem ipsum</i> into the information age with its desktop publishing software <a href=\\\"https://en.wikipedia.org/wiki/Adobe_PageMaker\\\">Aldus PageMaker</a>. The program came bundled with <i>lorem ipsum</i>  dummy text for laying out page content, and other word processors like  Microsoft Word followed suit. More recently the growth of web design has  helped proliferate lorem ipsum across the internet as a placeholder for  future text\\u2014and in some cases <a href=\\\"http://loremoopsum.tumblr.com/\\\">the final content</a> (this is why we proofread, kids).</p>\", \"id\": \"3206a713-f395-400c-b365-29965b7a6fe7\"}, {\"type\": \"image_block\", \"value\": {\"image\": 5, \"caption\": \"professional look and ease of use\", \"attribution\": \"picsum.photos\"}, \"id\": \"02013951-1eff-4614-9fdc-a44294942506\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Among design professionals, there&#x27;s a bit of controversy surrounding the filler text. Controversy, as in <a href=\\\"https://www.lukew.com/ff/entry.asp?927\\\">Death to Lorem Ipsum</a>. The strength of <i>lorem ipsum</i> is its  weakness: it doesn&#x27;t communicate. To some, designing a website around  placeholder text is unacceptable, akin to sewing a custom suit without  taking measurements. <a href=\\\"http://adaptivepath.org/ideas/death-to-lorem-ipsum-other-adventures-in-content/\\\">Kristina Halvorson</a> notes</p>\", \"id\": \"e5e7f0b5-f7b2-47ba-804f-9d78fcda1d80\"}, {\"type\": \"block_quote\", \"value\": {\"text\": \"I\\u2019ve heard the argument that \\u201clorem ipsum\\u201d is effective in wireframing or design because it helps people focus on the actual layout, or color scheme, or whatever. What kills me here is that we\\u2019re talking about creating a user experience that will (whether we like it or not) be DRIVEN by words. The entire structure of the page or app flow is FOR THE WORDS.\", \"attribute_name\": \"Kristina Halvorson\"}, \"id\": \"703db003-9545-4077-9b50-e1c5d467893c\"}, {\"type\": \"paragraph_block\", \"value\": \"<p><i>Lorem ipsum</i> is so ubiquitous because  it is so versatile. Select how many paragraphs you want, copy, paste,  and break the lines wherever it is convenient. Real copy doesn&#x27;t work  that way.</p>\", \"id\": \"04052907-b6ab-40c7-81ab-b62293719997\"}]",
-    "date_published": "2018-08-08",
-    "author": "President of Vice",
-    "article_type": "Misc",
-    "external_url": null
-  }
-},
-{
-  "model": "blog.articlepage",
-  "pk": 12,
-  "fields": {
-    "summary": "That\u2019s why a 15th century typesetter might have scrambled a passage of Cicero; he wanted people to focus on his fonts, to imagine their own content on the pages according to boats.",
-    "cover_picture": 6,
-    "content": "[]",
-    "date_published": "2019-06-04",
-    "author": "Sam Quincy",
-    "article_type": "URL",
-    "external_url": "https://www.explainthatstuff.com/how-ships-work.html"
-  }
-},
-{
-  "model": "blog.articlepage",
-  "pk": 13,
-  "fields": {
-    "summary": "So when is it okay to use lorem ipsum? First, lorem ipsum works well for staging. It's like the props in a furniture store\u2014filler text makes it look like someone is home.",
-    "cover_picture": 7,
-    "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p>One word of caution: make sure your client knows that <i>lorem ipsum</i>  is filler text. You don&#x27;t want them wondering why you filled their  website with a foreign language, and you certainly don&#x27;t want anyone  prematurely publishing it.</p>\", \"id\": \"25982369-a09c-4f18-bc4b-99fd3bbd003b\"}, {\"type\": \"heading_block\", \"value\": {\"heading_text\": \"Lorem Ipsum All the Things\", \"size\": \"h2\"}, \"id\": \"fa14de14-cad6-42aa-8445-fe27dc45d554\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>There was <a href=\\\"http://designenvy.aiga.org/the-chipotle-lorem-ipsum-bag/\\\">that time</a> artists at Sequence opted to hand-Sharpie the <i>lorem ipsum</i>  passage on a line of paper bags they designed for Chipotle\\u2014the result  being a mixture of avant-garde, inside joke, and Sharpie-stained tables.  Those with an eye for detail may have caught a tribute to the classic  text in an episode of <a href=\\\"http://www.amc.com/shows/mad-men\\\">Mad Men</a> (S6E1 around 1:18:55 for anyone that didn&#x27;t). And here is a <i>lorem ipsum</i> <a href=\\\"http://littlerunningbear.com/465/lorem-ipsum-for-ever/\\\">tattoo</a>.</p>\", \"id\": \"730bec83-f6e3-49d6-9842-8db02ec3ca36\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Of course, we&#x27;d be remiss not to include the veritable cadre of <i>lorem ipsum</i> knock offs featuring:</p><ul><li><a href=\\\"https://baconipsum.com/\\\">Bacon Ipsum</a> \\u2013 Served all day. \\u201cBacon ipsum dolor amet chicken turducken spare ribs.\\u201d</li><li><a href=\\\"https://hipsum.co/\\\">Hipster Ipsum</a> \\u2013 In case you&#x27;re in need of a \\u201cshoreditch direct trade four dollar toast copper mug.\\u201d</li><li><a href=\\\"http://www.cipsum.com/\\\">Corporate Ipsum</a> \\u2013 \\u201cLeveraging agile frameworks to provide a robust synopsis\\u201d from eight to five.</li><li><a href=\\\"http://legalipsum.com/\\\">Legal Ipsum</a> \\u2013 Fully unlicensed legalese for those times you don&#x27;t want to pay $400/hr.</li></ul><p>Not to mention, <a href=\\\"http://www.cupcakeipsum.com/\\\">Cupcake Ipsum</a>, <a href=\\\"http://www.bobrosslipsum.com/\\\">Bob Ross Ipsum</a> (\\u201chappy little clouds\\u201d), and the furry <a href=\\\"http://www.catipsum.com/\\\">Cat Ipsum</a>. And in case that&#x27;s not enough, check out our very own <a href=\\\"https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/\\\">Ultimate List of Lorem Ipsum Generators</a>.</p>\", \"id\": \"6c0ef40a-44f0-4fae-adad-a1cc0f511867\"}, {\"type\": \"image_block\", \"value\": {\"image\": 8, \"caption\": \"Leveraging agile frameworks to provide a robust synopsis\", \"attribution\": \"https://i.picsum.photos/id/430/720/480.jpg\"}, \"id\": \"98b07ebc-3ad2-4ed4-a884-187a005cdf45\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Bring to the table win-win survival strategies to ensure proactive  domination. At the end of the day, going forward, a new normal that has  evolved from generation X is on the runway heading towards a streamlined  cloud solution. User generated content in real-time will have multiple  touchpoints for offshoring.</p>\", \"id\": \"46d7b832-9533-4042-98e4-31c5946ca792\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Capitalize on low hanging fruit to identify a ballpark value added  activity to beta test.  Override the digital divide with additional  clickthroughs from DevOps. Nanotechnology immersion along the  information highway will close the loop on focusing solely on the bottom  line.</p>\", \"id\": \"59dbb2ce-53d3-4457-8f1e-57b3780158c1\"}]",
-    "date_published": "2020-01-02",
-    "author": "Some Random Dude",
-    "article_type": "Post",
-    "external_url": null
-  }
-},
-{
-  "model": "blog.articlepage",
-  "pk": 14,
-  "fields": {
-    "summary": "Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.",
-    "cover_picture": 9,
-    "content": "[{\"type\": \"paragraph_block\", \"value\": \"<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>\", \"id\": \"dcab7182-4e74-4a05-b594-03b2fd1fa7b9\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. The purpose of <i>lorem ipsum</i> is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn&#x27;t distract from the layout. A practice not without <a href=\\\"https://loremipsum.io/#controversy\\\">controversy</a>, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</p>\", \"id\": \"930dff36-3976-4a60-9f1e-46b08b8b6e82\"}, {\"type\": \"embed_block\", \"value\": \"https://www.youtube.com/watch?v=5ldbggv2zaQ\", \"id\": \"c5fa2ad8-8c40-4ef0-8382-a2f2c8251150\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric &quot;outside the box&quot; thinking. Completely pursue scalable customer service through sustainable potentialities. Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower fully researched growth strategies and interoperable internal or &quot;organic&quot; sources.</p>\", \"id\": \"3ea49bc6-a171-4e30-9324-89b4748d456b\"}, {\"type\": \"paragraph_block\", \"value\": \"<p>Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures. Credibly reintermediate backend ideas for cross-platform models. Continually reintermediate integrated processes through technically sound intellectual capital.</p><ul><li>Holistically foster superior methodologies without market-driven best practices.</li><li>Distinctively exploit optimal alignments for intuitive bandwidth.</li><li>Quickly coordinate e-business applications through revolutionary catalysts for change</li><li>Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.</li><li>Synergistically evolve 2.0 technologies rather than just in time initiatives</li><li>Dynamically target high-payoff intellectual capital for customized technologies</li><li>Progressively maintain extensive infomediaries via extensible niches</li><li>Quickly aggregate B2B users and worldwide potentialities</li></ul><p>Appropriately empower dynamic leadership skills after business portals. Globally myocardinate interactive supply chains with distinctive quality vectors. Globally revolutionize global sources through interoperable services.</p>\", \"id\": \"12c0d9e1-741f-455b-904f-e7648907fdbd\"}]",
-    "date_published": "2019-12-03",
-    "author": null,
-    "article_type": "Shout",
-    "external_url": null
-  }
-},
-{
-  "model": "blog.articleindexpage",
-  "pk": 7,
-  "fields": {
-    "introduction": "This is where we write all sorts of things pertaining to business information modelling and outer space travel via Infinix"
-  }
-},
-{
-  "model": "contact.contactpagephonenumber",
-  "pk": 1,
-  "fields": {
-    "sort_order": 0,
-    "phone_number": "+260974125857",
-    "page": 6
-  }
-},
-{
-  "model": "contact.contactpagephonenumber",
-  "pk": 2,
-  "fields": {
-    "sort_order": 1,
-    "phone_number": "+260211025789",
-    "page": 6
-  }
-},
-{
-  "model": "contact.contactpageemailaddress",
-  "pk": 1,
-  "fields": {
-    "sort_order": 0,
-    "email_address": "someone@ourplace.org",
-    "page": 6
-  }
-},
-{
-  "model": "contact.contactpage",
-  "pk": 6,
-  "fields": {
-    "address": "Suite X763, Gregory White Building, South Luangwa Ave, North Carolina, Lusaka"
-  }
-},
-{
-  "model": "wagtailembeds.embed",
-  "pk": 1,
-  "fields": {
-    "url": "https://www.youtube.com/watch?v=Arkq3lLuo0U",
-    "max_width": null,
-    "type": "video",
-    "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/Arkq3lLuo0U?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-    "title": "Couple Builds SHIPPING CONTAINER HOME With No Experience",
-    "author_name": "Life Uncontained",
-    "provider_name": "YouTube",
-    "thumbnail_url": "https://i.ytimg.com/vi/Arkq3lLuo0U/hqdefault.jpg",
-    "width": 480,
-    "height": 270,
-    "last_updated": "2020-03-15T18:05:36.877Z"
-  }
-},
-{
-  "model": "wagtailembeds.embed",
-  "pk": 2,
-  "fields": {
-    "url": "https://www.youtube.com/watch?v=5ldbggv2zaQ",
-    "max_width": null,
-    "type": "video",
-    "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/5ldbggv2zaQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-    "title": "Kings Kaleidoscope - The Rush (Lyric Video)",
-    "author_name": "KingsKVEVO",
-    "provider_name": "YouTube",
-    "thumbnail_url": "https://i.ytimg.com/vi/5ldbggv2zaQ/hqdefault.jpg",
-    "width": 480,
-    "height": 270,
-    "last_updated": "2020-03-15T19:04:48.850Z"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 1,
-  "fields": {
-    "collection": 1,
-    "title": "post_01",
-    "file": "original_images/post_01.jpg",
-    "width": 1280,
-    "height": 800,
-    "created_at": "2020-03-15T18:00:16.591Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 58050,
-    "file_hash": "27363143c9d7117e6b941ddf30e2b0a71360cf07"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 2,
-  "fields": {
-    "collection": 1,
-    "title": "post_02",
-    "file": "original_images/post_02.jpg",
-    "width": 1280,
-    "height": 719,
-    "created_at": "2020-03-15T18:09:13.835Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 197835,
-    "file_hash": "4d4682b128d93132a66008750de86bf94c8d0acf"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 3,
-  "fields": {
-    "collection": 1,
-    "title": "post_03",
-    "file": "original_images/post_03.jpg",
-    "width": 1280,
-    "height": 853,
-    "created_at": "2020-03-15T18:28:38.304Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 316408,
-    "file_hash": "d13f8689c1cf145bb1c8d8cae2092db9e64cdafc"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 4,
-  "fields": {
-    "collection": 1,
-    "title": "post_04",
-    "file": "original_images/post_04.png",
-    "width": 1280,
-    "height": 920,
-    "created_at": "2020-03-15T18:42:08.954Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 35650,
-    "file_hash": "becf51641c6ac6b5fae3cdabdbf6c8d81a14bc94"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 5,
-  "fields": {
-    "collection": 1,
-    "title": "sample 01",
-    "file": "original_images/sample.jpg",
-    "width": 640,
-    "height": 360,
-    "created_at": "2020-03-15T18:44:42.839Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 30474,
-    "file_hash": "816067bcac124b8901524e48e6299e8de14bc342"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 6,
-  "fields": {
-    "collection": 1,
-    "title": "post_05",
-    "file": "original_images/post_05.jpg",
-    "width": 1280,
-    "height": 640,
-    "created_at": "2020-03-15T18:49:38.794Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 84594,
-    "file_hash": "69686b85f6c9bbf8d66562766f61e4007b535b51"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 7,
-  "fields": {
-    "collection": 1,
-    "title": "post_06",
-    "file": "original_images/post_06.jpg",
-    "width": 640,
-    "height": 428,
-    "created_at": "2020-03-15T18:51:33.897Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 133164,
-    "file_hash": "c8c6d7058f91dccde7c236a1c3370da38ea7d9cb"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 8,
-  "fields": {
-    "collection": 1,
-    "title": "sample 02",
-    "file": "original_images/sample_02.jpg",
-    "width": 720,
-    "height": 480,
-    "created_at": "2020-03-15T18:56:28.928Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 35646,
-    "file_hash": "52e2a32b66705a5b61e4be6027ea6819f9ddb69a"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 9,
-  "fields": {
-    "collection": 1,
-    "title": "post_07",
-    "file": "original_images/post_07.jpg",
-    "width": 1280,
-    "height": 853,
-    "created_at": "2020-03-15T18:59:31.676Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 112263,
-    "file_hash": "721a8c7e8196655374f4fa649643bcf96728dcc3"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 10,
-  "fields": {
-    "collection": 1,
-    "title": "person_01",
-    "file": "original_images/person_01.jpg",
-    "width": 640,
-    "height": 425,
-    "created_at": "2020-03-15T19:06:25.553Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 48631,
-    "file_hash": "38f337fe3849fd3a88a5298ba2e339fd28d69543"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 11,
-  "fields": {
-    "collection": 1,
-    "title": "person_02",
-    "file": "original_images/person_02.jpg",
-    "width": 640,
-    "height": 426,
-    "created_at": "2020-03-15T19:09:49.653Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 45841,
-    "file_hash": "b87d8a36f8cdda77725ce420e215b9d9b555722c"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 12,
-  "fields": {
-    "collection": 1,
-    "title": "person_03",
-    "file": "original_images/person_03.jpg",
-    "width": 640,
-    "height": 426,
-    "created_at": "2020-03-15T19:14:33.123Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 62617,
-    "file_hash": "85b3db6991914106c227a8efb336e4f19058b94a"
-  }
-},
-{
-  "model": "wagtailimages.image",
-  "pk": 13,
-  "fields": {
-    "collection": 1,
-    "title": "person_04",
-    "file": "original_images/person_04.jpg",
-    "width": 640,
-    "height": 423,
-    "created_at": "2020-03-15T19:17:28.167Z",
-    "uploaded_by_user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 79280,
-    "file_hash": "bdc85862054239ef859664ab32751006258f664a"
-  }
-},
-{
-  "model": "wagtailsearch.query",
-  "pk": 1,
-  "fields": {
-    "query_string": "foo"
-  }
-},
-{
-  "model": "wagtailsearch.query",
-  "pk": 2,
-  "fields": {
-    "query_string": "lorem"
-  }
-},
-{
-  "model": "wagtailsearch.query",
-  "pk": 3,
-  "fields": {
-    "query_string": "lorem?page=2"
-  }
-},
-{
-  "model": "wagtailsearch.query",
-  "pk": 4,
-  "fields": {
-    "query_string": "discovering"
-  }
-},
-{
-  "model": "wagtailsearch.query",
-  "pk": 5,
-  "fields": {
-    "query_string": "real"
-  }
-},
-{
-  "model": "wagtailsearch.query",
-  "pk": 6,
-  "fields": {
-    "query_string": "flamingo"
-  }
-},
-{
-  "model": "wagtailsearch.query",
-  "pk": 7,
-  "fields": {
-    "query_string": "strong"
-  }
-},
-{
-  "model": "wagtailsearch.querydailyhits",
-  "pk": 1,
-  "fields": {
-    "query": 1,
-    "date": "2020-03-31",
-    "hits": 1
-  }
-},
-{
-  "model": "wagtailsearch.querydailyhits",
-  "pk": 2,
-  "fields": {
-    "query": 2,
-    "date": "2020-03-31",
-    "hits": 16
-  }
-},
-{
-  "model": "wagtailsearch.querydailyhits",
-  "pk": 3,
-  "fields": {
-    "query": 3,
-    "date": "2020-03-31",
-    "hits": 9
-  }
-},
-{
-  "model": "wagtailsearch.querydailyhits",
-  "pk": 4,
-  "fields": {
-    "query": 4,
-    "date": "2020-03-31",
-    "hits": 2
-  }
-},
-{
-  "model": "wagtailsearch.querydailyhits",
-  "pk": 5,
-  "fields": {
-    "query": 5,
-    "date": "2020-03-31",
-    "hits": 1
-  }
-},
-{
-  "model": "wagtailsearch.querydailyhits",
-  "pk": 6,
-  "fields": {
-    "query": 6,
-    "date": "2020-03-31",
-    "hits": 1
-  }
-},
-{
-  "model": "wagtailsearch.querydailyhits",
-  "pk": 7,
-  "fields": {
-    "query": 7,
-    "date": "2020-03-31",
-    "hits": 2
-  }
-},
-{
-  "model": "wagtailcore.site",
-  "pk": 1,
-  "fields": {
-    "hostname": "127.0.0.1",
-    "port": 8000,
-    "site_name": "{{ cookiecutter.project_slug }}",
-    "root_page": 4,
-    "is_default_site": true
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 1,
-  "fields": {
-    "path": "0001",
-    "depth": 1,
-    "numchild": 1,
-    "title": "Root",
-    "draft_title": "Root",
-    "slug": "root",
-    "content_type": [
-      "wagtailcore",
-      "page"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/",
-    "owner": null,
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": null,
-    "last_published_at": null,
-    "latest_revision_created_at": null,
-    "live_revision": null
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 4,
-  "fields": {
-    "path": "00010002",
-    "depth": 2,
-    "numchild": 3,
-    "title": "Home",
-    "draft_title": "Home",
-    "slug": "foo",
-    "content_type": [
-      "home",
-      "homepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T17:54:47.053Z",
-    "last_published_at": "2020-03-15T17:55:35.665Z",
-    "latest_revision_created_at": "2020-03-15T17:55:35.309Z",
-    "live_revision": 3
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 5,
-  "fields": {
-    "path": "000100020001",
-    "depth": 3,
-    "numchild": 0,
-    "title": "About",
-    "draft_title": "About",
-    "slug": "about",
-    "content_type": [
-      "home",
-      "aboutpage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/about/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T17:55:50.904Z",
-    "last_published_at": "2020-03-15T17:55:50.904Z",
-    "latest_revision_created_at": "2020-03-15T17:55:50.670Z",
-    "live_revision": 4
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 6,
-  "fields": {
-    "path": "000100020002",
-    "depth": 3,
-    "numchild": 0,
-    "title": "Contact",
-    "draft_title": "Contact",
-    "slug": "contact",
-    "content_type": [
-      "contact",
-      "contactpage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/contact/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T17:57:08.279Z",
-    "last_published_at": "2020-03-15T17:57:08.279Z",
-    "latest_revision_created_at": "2020-03-15T17:57:07.968Z",
-    "live_revision": 5
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 7,
-  "fields": {
-    "path": "000100020003",
-    "depth": 3,
-    "numchild": 7,
-    "title": "Blog",
-    "draft_title": "Blog",
-    "slug": "blog",
-    "content_type": [
-      "blog",
-      "articleindexpage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T17:57:54.078Z",
-    "last_published_at": "2020-03-15T17:57:54.078Z",
-    "latest_revision_created_at": "2020-03-15T17:57:53.853Z",
-    "live_revision": 6
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 8,
-  "fields": {
-    "path": "0001000200030001",
-    "depth": 4,
-    "numchild": 0,
-    "title": "The lost tapes",
-    "draft_title": "The lost tapes",
-    "slug": "lost-tapes",
-    "content_type": [
-      "blog",
-      "articlepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/lost-tapes/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T18:05:37.775Z",
-    "last_published_at": "2020-03-15T18:05:37.775Z",
-    "latest_revision_created_at": "2020-03-15T18:05:37.438Z",
-    "live_revision": 7
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 9,
-  "fields": {
-    "path": "0001000200030002",
-    "depth": 4,
-    "numchild": 0,
-    "title": "We're opening a new branch in Avondale, Lusaka!",
-    "draft_title": "We're opening a new branch in Avondale, Lusaka!",
-    "slug": "were-opening-new-branch-avondale-lusaka",
-    "content_type": [
-      "blog",
-      "articlepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/were-opening-new-branch-avondale-lusaka/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T18:10:41.319Z",
-    "last_published_at": "2020-03-15T18:10:41.319Z",
-    "latest_revision_created_at": "2020-03-15T18:10:41.011Z",
-    "live_revision": 8
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 10,
-  "fields": {
-    "path": "0001000200030003",
-    "depth": 4,
-    "numchild": 0,
-    "title": "how come this isn't working as advertised?",
-    "draft_title": "how come this isn't working as advertised?",
-    "slug": "how-come-isnt-working-advertised",
-    "content_type": [
-      "blog",
-      "articlepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/how-come-isnt-working-advertised/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T18:39:58.546Z",
-    "last_published_at": "2020-03-15T18:39:58.546Z",
-    "latest_revision_created_at": "2020-03-15T18:39:58.095Z",
-    "live_revision": 9
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 11,
-  "fields": {
-    "path": "0001000200030004",
-    "depth": 4,
-    "numchild": 0,
-    "title": "Bits of it have known the goal somebody",
-    "draft_title": "Bits of it have known the goal somebody",
-    "slug": "bits-it-have-known-goal-somebody",
-    "content_type": [
-      "blog",
-      "articlepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/bits-it-have-known-goal-somebody/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T18:46:29.155Z",
-    "last_published_at": "2020-03-15T18:46:29.155Z",
-    "latest_revision_created_at": "2020-03-15T18:46:28.849Z",
-    "live_revision": 10
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 12,
-  "fields": {
-    "path": "0001000200030005",
-    "depth": 4,
-    "numchild": 0,
-    "title": "Why boats float on water even on Mars",
-    "draft_title": "Why boats float on water even on Mars",
-    "slug": "why-boats-float-water-even-mars",
-    "content_type": [
-      "blog",
-      "articlepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/why-boats-float-water-even-mars/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T18:51:09.911Z",
-    "last_published_at": "2020-03-15T18:51:09.911Z",
-    "latest_revision_created_at": "2020-03-15T18:51:09.671Z",
-    "live_revision": 11
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 13,
-  "fields": {
-    "path": "0001000200030006",
-    "depth": 4,
-    "numchild": 0,
-    "title": "Generally, lorem ipsum is best suited to keeping templates from looking bare",
-    "draft_title": "Generally, lorem ipsum is best suited to keeping templates from looking bare",
-    "slug": "generally-lorem-ipsum-best-suited-keeping-templates-looking-bare",
-    "content_type": [
-      "blog",
-      "articlepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/generally-lorem-ipsum-best-suited-keeping-templates-looking-bare/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T18:58:16.451Z",
-    "last_published_at": "2020-03-15T18:58:16.451Z",
-    "latest_revision_created_at": "2020-03-15T18:58:16.066Z",
-    "live_revision": 12
-  }
-},
-{
-  "model": "wagtailcore.page",
-  "pk": 14,
-  "fields": {
-    "path": "0001000200030007",
-    "depth": 4,
-    "numchild": 0,
-    "title": "Podcasting operational change management inside of workflows to establish a framework",
-    "draft_title": "Podcasting operational change management inside of workflows to establish a framework",
-    "slug": "podcasting-operational-change-management-inside-workflows-establish-framework",
-    "content_type": [
-      "blog",
-      "articlepage"
-    ],
-    "live": true,
-    "has_unpublished_changes": false,
-    "url_path": "/foo/blog/podcasting-operational-change-management-inside-workflows-establish-framework/",
-    "owner": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "seo_title": "",
-    "show_in_menus": false,
-    "search_description": "",
-    "go_live_at": null,
-    "expire_at": null,
-    "expired": false,
-    "locked": false,
-    "locked_at": null,
-    "locked_by": null,
-    "first_published_at": "2020-03-15T19:04:49.550Z",
-    "last_published_at": "2020-03-30T18:24:45.797Z",
-    "latest_revision_created_at": "2020-03-30T18:24:45.406Z",
-    "live_revision": 14
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 2,
-  "fields": {
-    "page": 4,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T17:54:46.385Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 4, \"path\": \"00010002\", \"depth\": 2, \"numchild\": 0, \"title\": \"Foo\", \"draft_title\": \"Foo\", \"slug\": \"foo\", \"content_type\": 7, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 3,
-  "fields": {
-    "page": 4,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T17:55:35.309Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 4, \"path\": \"00010002\", \"depth\": 2, \"numchild\": 0, \"title\": \"Home\", \"draft_title\": \"Foo\", \"slug\": \"foo\", \"content_type\": 7, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-03-15T17:54:47.053Z\", \"last_published_at\": \"2020-03-15T17:54:47.053Z\", \"latest_revision_created_at\": \"2020-03-15T17:54:46.385Z\", \"live_revision\": 2}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 4,
-  "fields": {
-    "page": 5,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T17:55:50.670Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 5, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"About\", \"draft_title\": \"About\", \"slug\": \"about\", \"content_type\": 6, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/about/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 5,
-  "fields": {
-    "page": 6,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T17:57:07.968Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 6, \"path\": \"000100020002\", \"depth\": 3, \"numchild\": 0, \"title\": \"Contact\", \"draft_title\": \"Contact\", \"slug\": \"contact\", \"content_type\": 11, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/contact/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"address\": \"Suite X763, Gregory White Building, South Luangwa Ave, North Carolina, Lusaka\", \"phone_numbers\": [{\"pk\": 1, \"sort_order\": 0, \"phone_number\": \"+260974125857\", \"page\": 6}, {\"pk\": 2, \"sort_order\": 1, \"phone_number\": \"+260211025789\", \"page\": 6}], \"email_addresses\": [{\"pk\": 1, \"sort_order\": 0, \"email_address\": \"someone@ourplace.org\", \"page\": 6}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 6,
-  "fields": {
-    "page": 7,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T17:57:53.853Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 7, \"path\": \"000100020003\", \"depth\": 3, \"numchild\": 0, \"title\": \"Blog\", \"draft_title\": \"Blog\", \"slug\": \"blog\", \"content_type\": 8, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"introduction\": \"This is where we write all sorts of things pertaining to business information modelling and outer space travel via Infinix\"}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 7,
-  "fields": {
-    "page": 8,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T18:05:37.438Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 8, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"The lost tapes\", \"draft_title\": \"The lost tapes\", \"slug\": \"lost-tapes\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/lost-tapes/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"summary\": \"The lost tapes is a compelling tale of two brothers who never thought it was possible to ever have a smart connected world over the fence. Very thrilling story, you might wanna check this out!\", \"cover_picture\": 1, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>So, this is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\\", \\\"id\\\": \\\"1c80a37d-07d5-4776-b23c-024b30086a94\\\"}, {\\\"type\\\": \\\"block_quote\\\", \\\"value\\\": {\\\"text\\\": \\\"An From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.\\\", \\\"attribute_name\\\": \\\"What is Lorem Ipsum\\\"}, \\\"id\\\": \\\"3290b120-604f-4cff-bd97-023e9941cc5d\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn&#x27;t distract from the layout. A practice not without <a href=\\\\\\\"https://loremipsum.io/#controversy\\\\\\\">controversy</a>, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content. </p>\\\", \\\"id\\\": \\\"7925c959-9e40-4625-8d8b-f88de1e9ba65\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it&#x27;s seen all around the web; on templates, websites, and stock designs. Use our <a href=\\\\\\\"https://loremipsum.io/#generator\\\\\\\">generator</a> to get your own, or read on for the authoritative history of <i>lorem ipsum</i>. </p>\\\", \\\"id\\\": \\\"6aa79a1a-2726-4d93-8c95-159d73ec3105\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://www.youtube.com/watch?v=Arkq3lLuo0U\\\", \\\"id\\\": \\\"9ec42dac-5c4a-43e3-91d6-3d08024ed166\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. \\\\u201cIt&#x27;s not Latin, though it looks like it, and it actually says nothing,\\\\u201d <i>Before &amp; After</i> magazine <a href=\\\\\\\"https://www.straightdope.com/columns/read/2290/what-does-the-filler-text-lorem-ipsum-mean/\\\\\\\">answered a curious reader</a>, \\\\u201cIts \\\\u2018words\\\\u2019 loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.\\\\u201d</p>\\\", \\\"id\\\": \\\"cace834b-3e0a-4508-a976-e9c2abecf44a\\\"}]\", \"date_published\": \"2020-03-02\", \"author\": \"Some Random Dude\", \"article_type\": \"Post\", \"external_url\": null, \"tagged_items\": [{\"pk\": 1, \"tag\": 1, \"content_object\": 8}, {\"pk\": 2, \"tag\": 2, \"content_object\": 8}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 8,
-  "fields": {
-    "page": 9,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T18:10:41.011Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 9, \"path\": \"0001000200030002\", \"depth\": 4, \"numchild\": 0, \"title\": \"We're opening a new branch in Avondale, Lusaka!\", \"draft_title\": \"We're opening a new branch in Avondale, Lusaka!\", \"slug\": \"were-opening-new-branch-avondale-lusaka\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/were-opening-new-branch-avondale-lusaka/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"summary\": \"The placeholder text, beginning with the line \\u201cLorem ipsum dolor sit amet, consectetur adipiscing elit\\u201d, looks like Latin because in its youth, centuries ago, it was Latin.\", \"cover_picture\": 2, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Richard McClintock, a Latin scholar from Hampden-Sydney College, is <a href=\\\\\\\"https://en.wikipedia.org/wiki/Lorem_ipsum\\\\\\\">credited</a> with discovering the source behind the ubiquitous filler text. In seeing a sample of <i>lorem ipsum</i>, his interest was piqued by <i>consectetur</i>\\\\u2014a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from <i>De Finibus Bonorum et Malorum</i> (\\\\u201cOn the Extremes of Good and Evil\\\\u201d), a first-century B.C. text from the Roman philosopher Cicero.</p>\\\", \\\"id\\\": \\\"27b2b15b-1d8d-4c4c-a52d-b150ec8af9b5\\\"}, {\\\"type\\\": \\\"heading_block\\\", \\\"value\\\": {\\\"heading_text\\\": \\\"What this means for you\\\", \\\"size\\\": \\\"h2\\\"}, \\\"id\\\": \\\"a5097e38-373a-4ed5-aa9b-c97c23b3b49a\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>McClintock&#x27;s eye for detail certainly helped narrow the whereabouts of <i>lorem ipsum&#x27;s</i> origin, however, the \\\\u201chow and when\\\\u201d still remain something of a mystery, with competing theories and timelines. So how did the classical Latin become so incoherent? According to  McClintock, a 15th century typesetter likely scrambled part of Cicero&#x27;s <i>De Finibus</i> in order to provide placeholder text to mockup various fonts for a type specimen book.</p>\\\", \\\"id\\\": \\\"fe23bc4c-1311-48ea-9c7c-2e148c040317\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>It&#x27;s difficult to find examples of <i>lorem ipsum</i> in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the <i>lorem ipsum</i>  passage in a book of old metal type samples. So far he hasn&#x27;t relocated  where he once saw the passage, but the popularity of Cicero in the 15th  century supports the theory that the filler text has been used for  centuries.</p><hr/><p></p>\\\", \\\"id\\\": \\\"6165a59b-6c39-4819-b0b4-308f38beec0a\\\"}]\", \"date_published\": \"2020-03-13\", \"author\": null, \"article_type\": \"Info\", \"external_url\": null, \"tagged_items\": [{\"pk\": 3, \"tag\": 2, \"content_object\": 9}, {\"pk\": 4, \"tag\": 3, \"content_object\": 9}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 9,
-  "fields": {
-    "page": 10,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T18:39:58.095Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 10, \"path\": \"0001000200030003\", \"depth\": 4, \"numchild\": 0, \"title\": \"how come this isn't working as advertised?\", \"draft_title\": \"how come this isn't working as advertised?\", \"slug\": \"how-come-isnt-working-advertised\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/how-come-isnt-working-advertised/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"summary\": \"As an alternative theory, (and because Latin scholars do this sort of thing) someone tracked down a 1914 Latin edition of De Finibus which challenges McClintock's 15th century claims and suggests that the dawn of lorem ipsum was as recent as the 20th century.\", \"cover_picture\": 3, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Whether a medieval typesetter chose to garble a well-known (but  non-Biblical\\\\u2014that would have been sacrilegious) text, or whether a quirk  in the 1914 Loeb Edition inspired a graphic designer, it&#x27;s admittedly  an odd way for Cicero to sail into the 21st century.</p>\\\", \\\"id\\\": \\\"0a8eb2cd-0948-4030-ba97-1f01efbed370\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Don&#x27;t bother typing \\\\u201clorem ipsum\\\\u201d into Google translate. If you already tried, you may have gotten <a href=\\\\\\\"https://krebsonsecurity.com/2014/08/lorem-ipsum-of-good-evil-google-china/\\\\\\\">anything from &quot;NATO&quot; to &quot;China&quot;</a>,  depending on how you capitalized the letters. The bizarre translation  was fodder for conspiracy theories, but Google has since updated its  \\\\u201clorem ipsum\\\\u201d translation to, boringly enough, \\\\u201clorem ipsum\\\\u201d.</p>\\\", \\\"id\\\": \\\"0bf2ee66-6aeb-493f-9004-f29a355c93d5\\\"}, {\\\"type\\\": \\\"table\\\", \\\"value\\\": {\\\"data\\\": [[\\\"#\\\", \\\"Cats\\\", \\\"Dogs\\\"], [\\\"1\\\", \\\"Kruger\\\", \\\"German Shepherd\\\"], [\\\"2\\\", \\\"Meaow\\\", \\\"Woof\\\"], [\\\"3\\\", \\\"Verizon\\\", \\\"AT & T\\\"], [\\\"4\\\", \\\"Smiley\\\", \\\"Boat\\\"]], \\\"cell\\\": [], \\\"first_row_is_table_header\\\": true, \\\"first_col_is_header\\\": false, \\\"table_caption\\\": \\\"Awesome Locations & Hours\\\"}, \\\"id\\\": \\\"7c011aa8-937d-4fdb-8b6c-f489c902f5ef\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>One brave soul did take a stab at translating the almost-not-quite-Latin. According to <a href=\\\\\\\"https://www.theguardian.com/books/booksblog/2014/mar/21/lorem-ipsum-translated-latin-placeholder-text\\\\\\\">The Guardian</a>,  Jaspreet Singh Boparai undertook the challenge with the goal of making  the text \\\\u201cprecisely as incoherent in English as it is in Latin - and to  make it incoherent in the same way\\\\u201d. As a result, \\\\u201cthe Greek &#x27;eu&#x27; in  Latin became the French &#x27;bien&#x27; [...] and the &#x27;-ing&#x27; ending in &#x27;lorem  ipsum&#x27; seemed best rendered by an &#x27;-iendum&#x27; in English.\\\\u201d</p>\\\", \\\"id\\\": \\\"51fe60df-370f-401b-bbc4-06f7b2898264\\\"}]\", \"date_published\": \"2019-09-04\", \"author\": null, \"article_type\": \"Misc\", \"external_url\": null, \"tagged_items\": [{\"pk\": 5, \"tag\": 3, \"content_object\": 10}, {\"pk\": 6, \"tag\": 4, \"content_object\": 10}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 10,
-  "fields": {
-    "page": 11,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T18:46:28.849Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 11, \"path\": \"0001000200030004\", \"depth\": 4, \"numchild\": 0, \"title\": \"Bits of it have known the goal somebody\", \"draft_title\": \"Bits of it have known the goal somebody\", \"slug\": \"bits-it-have-known-goal-somebody\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/bits-it-have-known-goal-somebody/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"summary\": \"Row itself, let it be sorrow; let him love it; let him pursue it, ishing for its acquisitiendum. Because he will ab hold, uniess but through concer, and also of those who resist. Now a pure snore disturbeded sum dust. He ejjnoyes, in order that somewon, also with a severe one, unless of life\", \"cover_picture\": 4, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>The French lettering company <a href=\\\\\\\"https://en.wikipedia.org/wiki/Letraset\\\\\\\">Letraset</a> manufactured a set of dry-transfer sheets which included the <i>lorem ipsum</i>  filler text in a variety of fonts, sizes, and layouts. These sheets of  lettering could be rubbed on anywhere and were quickly adopted by  graphic artists, printers, architects, and advertisers for their  professional look and ease of use.</p>\\\", \\\"id\\\": \\\"c5b4cf00-2338-4c66-be94-5c6c3e56eada\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Aldus Corporation, which later merged with Adobe Systems, ushered <i>lorem ipsum</i> into the information age with its desktop publishing software <a href=\\\\\\\"https://en.wikipedia.org/wiki/Adobe_PageMaker\\\\\\\">Aldus PageMaker</a>. The program came bundled with <i>lorem ipsum</i>  dummy text for laying out page content, and other word processors like  Microsoft Word followed suit. More recently the growth of web design has  helped proliferate lorem ipsum across the internet as a placeholder for  future text\\\\u2014and in some cases <a href=\\\\\\\"http://loremoopsum.tumblr.com/\\\\\\\">the final content</a> (this is why we proofread, kids).</p>\\\", \\\"id\\\": \\\"3206a713-f395-400c-b365-29965b7a6fe7\\\"}, {\\\"type\\\": \\\"image_block\\\", \\\"value\\\": {\\\"image\\\": 5, \\\"caption\\\": \\\"professional look and ease of use\\\", \\\"attribution\\\": \\\"picsum.photos\\\"}, \\\"id\\\": \\\"02013951-1eff-4614-9fdc-a44294942506\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Among design professionals, there&#x27;s a bit of controversy surrounding the filler text. Controversy, as in <a href=\\\\\\\"https://www.lukew.com/ff/entry.asp?927\\\\\\\">Death to Lorem Ipsum</a>. The strength of <i>lorem ipsum</i> is its  weakness: it doesn&#x27;t communicate. To some, designing a website around  placeholder text is unacceptable, akin to sewing a custom suit without  taking measurements. <a href=\\\\\\\"http://adaptivepath.org/ideas/death-to-lorem-ipsum-other-adventures-in-content/\\\\\\\">Kristina Halvorson</a> notes</p>\\\", \\\"id\\\": \\\"e5e7f0b5-f7b2-47ba-804f-9d78fcda1d80\\\"}, {\\\"type\\\": \\\"block_quote\\\", \\\"value\\\": {\\\"text\\\": \\\"I\\\\u2019ve heard the argument that \\\\u201clorem ipsum\\\\u201d is effective in wireframing or design because it helps people focus on the actual layout, or color scheme, or whatever. What kills me here is that we\\\\u2019re talking about creating a user experience that will (whether we like it or not) be DRIVEN by words. The entire structure of the page or app flow is FOR THE WORDS.\\\", \\\"attribute_name\\\": \\\"Kristina Halvorson\\\"}, \\\"id\\\": \\\"703db003-9545-4077-9b50-e1c5d467893c\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p><i>Lorem ipsum</i> is so ubiquitous because  it is so versatile. Select how many paragraphs you want, copy, paste,  and break the lines wherever it is convenient. Real copy doesn&#x27;t work  that way.</p>\\\", \\\"id\\\": \\\"04052907-b6ab-40c7-81ab-b62293719997\\\"}]\", \"date_published\": \"2018-08-08\", \"author\": \"President of Vice\", \"article_type\": \"Misc\", \"external_url\": null, \"tagged_items\": [{\"pk\": 7, \"tag\": 5, \"content_object\": 11}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 11,
-  "fields": {
-    "page": 12,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T18:51:09.671Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 12, \"path\": \"0001000200030005\", \"depth\": 4, \"numchild\": 0, \"title\": \"Why boats float on water even on Mars\", \"draft_title\": \"Why boats float on water even on Mars\", \"slug\": \"why-boats-float-water-even-mars\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/why-boats-float-water-even-mars/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"summary\": \"That\\u2019s why a 15th century typesetter might have scrambled a passage of Cicero; he wanted people to focus on his fonts, to imagine their own content on the pages according to boats.\", \"cover_picture\": 6, \"content\": \"[]\", \"date_published\": \"2019-06-04\", \"author\": \"Sam Quincy\", \"article_type\": \"URL\", \"external_url\": \"https://www.explainthatstuff.com/how-ships-work.html\", \"tagged_items\": []}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 12,
-  "fields": {
-    "page": 13,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T18:58:16.066Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 13, \"path\": \"0001000200030006\", \"depth\": 4, \"numchild\": 0, \"title\": \"Generally, lorem ipsum is best suited to keeping templates from looking bare\", \"draft_title\": \"Generally, lorem ipsum is best suited to keeping templates from looking bare\", \"slug\": \"generally-lorem-ipsum-best-suited-keeping-templates-looking-bare\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/generally-lorem-ipsum-best-suited-keeping-templates-looking-bare/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"summary\": \"So when is it okay to use lorem ipsum? First, lorem ipsum works well for staging. It's like the props in a furniture store\\u2014filler text makes it look like someone is home.\", \"cover_picture\": 7, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>One word of caution: make sure your client knows that <i>lorem ipsum</i>  is filler text. You don&#x27;t want them wondering why you filled their  website with a foreign language, and you certainly don&#x27;t want anyone  prematurely publishing it.</p>\\\", \\\"id\\\": \\\"25982369-a09c-4f18-bc4b-99fd3bbd003b\\\"}, {\\\"type\\\": \\\"heading_block\\\", \\\"value\\\": {\\\"heading_text\\\": \\\"Lorem Ipsum All the Things\\\", \\\"size\\\": \\\"h2\\\"}, \\\"id\\\": \\\"fa14de14-cad6-42aa-8445-fe27dc45d554\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>There was <a href=\\\\\\\"http://designenvy.aiga.org/the-chipotle-lorem-ipsum-bag/\\\\\\\">that time</a> artists at Sequence opted to hand-Sharpie the <i>lorem ipsum</i>  passage on a line of paper bags they designed for Chipotle\\\\u2014the result  being a mixture of avant-garde, inside joke, and Sharpie-stained tables.  Those with an eye for detail may have caught a tribute to the classic  text in an episode of <a href=\\\\\\\"http://www.amc.com/shows/mad-men\\\\\\\">Mad Men</a> (S6E1 around 1:18:55 for anyone that didn&#x27;t). And here is a <i>lorem ipsum</i> <a href=\\\\\\\"http://littlerunningbear.com/465/lorem-ipsum-for-ever/\\\\\\\">tattoo</a>.</p>\\\", \\\"id\\\": \\\"730bec83-f6e3-49d6-9842-8db02ec3ca36\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Of course, we&#x27;d be remiss not to include the veritable cadre of <i>lorem ipsum</i> knock offs featuring:</p><ul><li><a href=\\\\\\\"https://baconipsum.com/\\\\\\\">Bacon Ipsum</a> \\\\u2013 Served all day. \\\\u201cBacon ipsum dolor amet chicken turducken spare ribs.\\\\u201d</li><li><a href=\\\\\\\"https://hipsum.co/\\\\\\\">Hipster Ipsum</a> \\\\u2013 In case you&#x27;re in need of a \\\\u201cshoreditch direct trade four dollar toast copper mug.\\\\u201d</li><li><a href=\\\\\\\"http://www.cipsum.com/\\\\\\\">Corporate Ipsum</a> \\\\u2013 \\\\u201cLeveraging agile frameworks to provide a robust synopsis\\\\u201d from eight to five.</li><li><a href=\\\\\\\"http://legalipsum.com/\\\\\\\">Legal Ipsum</a> \\\\u2013 Fully unlicensed legalese for those times you don&#x27;t want to pay $400/hr.</li></ul><p>Not to mention, <a href=\\\\\\\"http://www.cupcakeipsum.com/\\\\\\\">Cupcake Ipsum</a>, <a href=\\\\\\\"http://www.bobrosslipsum.com/\\\\\\\">Bob Ross Ipsum</a> (\\\\u201chappy little clouds\\\\u201d), and the furry <a href=\\\\\\\"http://www.catipsum.com/\\\\\\\">Cat Ipsum</a>. And in case that&#x27;s not enough, check out our very own <a href=\\\\\\\"https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/\\\\\\\">Ultimate List of Lorem Ipsum Generators</a>.</p>\\\", \\\"id\\\": \\\"6c0ef40a-44f0-4fae-adad-a1cc0f511867\\\"}, {\\\"type\\\": \\\"image_block\\\", \\\"value\\\": {\\\"image\\\": 8, \\\"caption\\\": \\\"Leveraging agile frameworks to provide a robust synopsis\\\", \\\"attribution\\\": \\\"https://i.picsum.photos/id/430/720/480.jpg\\\"}, \\\"id\\\": \\\"98b07ebc-3ad2-4ed4-a884-187a005cdf45\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Bring to the table win-win survival strategies to ensure proactive  domination. At the end of the day, going forward, a new normal that has  evolved from generation X is on the runway heading towards a streamlined  cloud solution. User generated content in real-time will have multiple  touchpoints for offshoring.</p>\\\", \\\"id\\\": \\\"46d7b832-9533-4042-98e4-31c5946ca792\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Capitalize on low hanging fruit to identify a ballpark value added  activity to beta test.  Override the digital divide with additional  clickthroughs from DevOps. Nanotechnology immersion along the  information highway will close the loop on focusing solely on the bottom  line.</p>\\\", \\\"id\\\": \\\"59dbb2ce-53d3-4457-8f1e-57b3780158c1\\\"}]\", \"date_published\": \"2020-01-02\", \"author\": \"Some Random Dude\", \"article_type\": \"Post\", \"external_url\": null, \"tagged_items\": [{\"pk\": 8, \"tag\": 1, \"content_object\": 13}, {\"pk\": 9, \"tag\": 6, \"content_object\": 13}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 13,
-  "fields": {
-    "page": 14,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-15T19:04:49.171Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 14, \"path\": \"0001000200030007\", \"depth\": 4, \"numchild\": 0, \"title\": \"Podcasting operational change management inside of workflows to establish a framework\", \"draft_title\": \"Podcasting operational change management inside of workflows to establish a framework\", \"slug\": \"podcasting-operational-change-management-inside-workflows-establish-framework\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/podcasting-operational-change-management-inside-workflows-establish-framework/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"summary\": \"Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.\", \"cover_picture\": 9, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Collaboratively administrate empowered markets via plug-and-play  networks. Dynamically procrastinate B2C users after installed base  benefits. Dramatically visualize customer directed convergence without  revolutionary ROI.</p>\\\", \\\"id\\\": \\\"dcab7182-4e74-4a05-b594-03b2fd1fa7b9\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Efficiently unleash cross-media information without cross-media value.  Quickly maximize timely deliverables for real-time schemas. Dramatically  maintain clicks-and-mortar solutions without functional solutions. The purpose of <i>lorem ipsum</i> is to  create a natural looking block of text (sentence, paragraph, page, etc.)  that doesn&#x27;t distract from the layout. A practice not without <a href=\\\\\\\"https://loremipsum.io/#controversy\\\\\\\">controversy</a>, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</p>\\\", \\\"id\\\": \\\"930dff36-3976-4a60-9f1e-46b08b8b6e82\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://www.youtube.com/watch?v=5ldbggv2zaQ\\\", \\\"id\\\": \\\"c5fa2ad8-8c40-4ef0-8382-a2f2c8251150\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Phosfluorescently engage worldwide methodologies with web-enabled  technology. Interactively coordinate proactive e-commerce via  process-centric &quot;outside the box&quot; thinking. Completely pursue scalable  customer service through sustainable potentialities. Collaboratively administrate turnkey channels whereas virtual e-tailers.  Objectively seize scalable metrics whereas proactive e-services.  Seamlessly empower fully researched growth strategies and interoperable  internal or &quot;organic&quot; sources.</p>\\\", \\\"id\\\": \\\"3ea49bc6-a171-4e30-9324-89b4748d456b\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Globally incubate standards compliant  channels before scalable benefits. Quickly disseminate superior  deliverables whereas web-enabled applications. Quickly drive  clicks-and-mortar catalysts for change before vertical architectures. Credibly  reintermediate backend ideas for cross-platform models. Continually  reintermediate integrated processes through technically sound  intellectual capital. </p><ul><li>Holistically foster superior methodologies without  market-driven best practices.</li><li>Distinctively exploit optimal alignments for intuitive bandwidth.</li><li>Quickly coordinate e-business applications through revolutionary catalysts for change</li><li>Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.</li><li>Synergistically evolve 2.0 technologies rather than just in time initiatives</li><li>Dynamically target high-payoff intellectual capital for customized technologies</li><li>Progressively maintain extensive infomediaries via extensible niches</li><li>Quickly aggregate B2B users and worldwide potentialities</li></ul><p>Appropriately empower dynamic leadership skills after business portals.  Globally myocardinate interactive supply chains with distinctive quality  vectors. Globally revolutionize global sources through interoperable  services.</p>\\\", \\\"id\\\": \\\"12c0d9e1-741f-455b-904f-e7648907fdbd\\\"}]\", \"date_published\": \"2019-12-03\", \"author\": null, \"article_type\": \"Misc\", \"external_url\": null, \"tagged_items\": [{\"pk\": 10, \"tag\": 3, \"content_object\": 14}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.pagerevision",
-  "pk": 14,
-  "fields": {
-    "page": 14,
-    "submitted_for_moderation": false,
-    "created_at": "2020-03-30T18:24:45.406Z",
-    "user": [
-      "{{ cookiecutter.wagtail_username }}"
-    ],
-    "content_json": "{\"pk\": 14, \"path\": \"0001000200030007\", \"depth\": 4, \"numchild\": 0, \"title\": \"Podcasting operational change management inside of workflows to establish a framework\", \"draft_title\": \"Podcasting operational change management inside of workflows to establish a framework\", \"slug\": \"podcasting-operational-change-management-inside-workflows-establish-framework\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/foo/blog/podcasting-operational-change-management-inside-workflows-establish-framework/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-03-15T19:04:49.550Z\", \"last_published_at\": \"2020-03-15T19:04:49.550Z\", \"latest_revision_created_at\": \"2020-03-15T19:04:49.171Z\", \"live_revision\": 13, \"summary\": \"Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.\", \"cover_picture\": 9, \"content\": \"[{\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>\\\", \\\"id\\\": \\\"dcab7182-4e74-4a05-b594-03b2fd1fa7b9\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. The purpose of <i>lorem ipsum</i> is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn&#x27;t distract from the layout. A practice not without <a href=\\\\\\\"https://loremipsum.io/#controversy\\\\\\\">controversy</a>, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</p>\\\", \\\"id\\\": \\\"930dff36-3976-4a60-9f1e-46b08b8b6e82\\\"}, {\\\"type\\\": \\\"embed_block\\\", \\\"value\\\": \\\"https://www.youtube.com/watch?v=5ldbggv2zaQ\\\", \\\"id\\\": \\\"c5fa2ad8-8c40-4ef0-8382-a2f2c8251150\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric &quot;outside the box&quot; thinking. Completely pursue scalable customer service through sustainable potentialities. Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower fully researched growth strategies and interoperable internal or &quot;organic&quot; sources.</p>\\\", \\\"id\\\": \\\"3ea49bc6-a171-4e30-9324-89b4748d456b\\\"}, {\\\"type\\\": \\\"paragraph_block\\\", \\\"value\\\": \\\"<p>Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures. Credibly reintermediate backend ideas for cross-platform models. Continually reintermediate integrated processes through technically sound intellectual capital.</p><ul><li>Holistically foster superior methodologies without market-driven best practices.</li><li>Distinctively exploit optimal alignments for intuitive bandwidth.</li><li>Quickly coordinate e-business applications through revolutionary catalysts for change</li><li>Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.</li><li>Synergistically evolve 2.0 technologies rather than just in time initiatives</li><li>Dynamically target high-payoff intellectual capital for customized technologies</li><li>Progressively maintain extensive infomediaries via extensible niches</li><li>Quickly aggregate B2B users and worldwide potentialities</li></ul><p>Appropriately empower dynamic leadership skills after business portals. Globally myocardinate interactive supply chains with distinctive quality vectors. Globally revolutionize global sources through interoperable services.</p>\\\", \\\"id\\\": \\\"12c0d9e1-741f-455b-904f-e7648907fdbd\\\"}]\", \"date_published\": \"2019-12-03\", \"author\": null, \"article_type\": \"Shout\", \"external_url\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 3, \"content_object\": 14}]}",
-    "approved_go_live_at": null
-  }
-},
-{
-  "model": "wagtailcore.collection",
-  "pk": 1,
-  "fields": {
-    "path": "0001",
-    "depth": 1,
-    "numchild": 0,
-    "name": "Root"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 1,
-  "fields": {
-    "name": "tech",
-    "slug": "tech"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 2,
-  "fields": {
-    "name": "space",
-    "slug": "space"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 3,
-  "fields": {
-    "name": "business",
-    "slug": "business"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 4,
-  "fields": {
-    "name": "announcement",
-    "slug": "announcement"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 5,
-  "fields": {
-    "name": "fashion",
-    "slug": "fashion"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 6,
-  "fields": {
-    "name": "typography",
-    "slug": "typography"
-  }
-},
-{
-  "model": "sites.site",
-  "pk": 1,
-  "fields": {
-    "domain": "example.com",
-    "name": "example.com"
-  }
-}
 ]
