@@ -27,7 +27,7 @@ exclude = '''
 '''
 
 [tool.commitizen]
-version = "0.0.1"
+version = "0.1.0"
 version_files = [
     "cookiecutter.json",
 ]
