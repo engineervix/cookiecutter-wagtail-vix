@@ -1,0 +1,38 @@
+# /etc/conf.d/celery-project
+
+# See
+# http://docs.celeryproject.org/en/latest/userguide/daemonizing.html#usage-systemd
+# and https://www.willandskill.se/en/celery-4-with-django-on-ubuntu-18-04/
+
+# App instance to use
+# comment out this line if you don't use an app
+CELERY_APP="config"
+
+# Name of nodes to start
+# here we have a single node
+CELERYD_NODES="celeryproject"
+# or we could have three nodes:
+#CELERYD_NODES="celeryproject1 celeryproject2 celeryproject3"
+
+# Extra command-line arguments to the worker
+CELERYD_OPTS="--time-limit=300 --concurrency=8"
+
+# Absolute or relative path to the 'celery' command:
+# I'm using virtualenvwrapper, and celery is installed in the 'celery_project' virtual environment
+CELERY_BIN="/home/username/Env/celery_project/bin/celery"
+
+# How to call manage.py
+# CELERYD_MULTI="multi"
+
+# - %n will be replaced with the first part of the nodename.
+# - %I will be replaced with the current child process index
+#   and is important when using the prefork pool to avoid race conditions.
+CELERYD_PID_FILE="/var/run/celery/%n.pid"
+CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
+CELERYD_LOG_LEVEL="INFO"
+
+# The below lines should be uncommented if using the celerybeat-project.service
+# unit file, but are unnecessary otherwise
+
+CELERYBEAT_PID_FILE="/var/run/celery/celeryproject_beat.pid"
+CELERYBEAT_LOG_FILE="/var/log/celery/celeryproject_beat.log"

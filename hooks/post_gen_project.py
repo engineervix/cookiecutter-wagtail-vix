@@ -68,14 +68,22 @@ def make_secret_key(project_directory):
     example_dev_env_file = os.path.join(project_directory, "#envs/env_dev.example")
 
     dev_env_file = os.path.join(project_directory, "#envs/.dev.env")
+    dev_env_sample = os.path.join(project_directory, "#envs/.dev.env.sample")
 
     example_prod_env_file = os.path.join(project_directory, "#envs/env_prod.example")
 
     prod_env_file = os.path.join(project_directory, "#envs/.prod.env")
+    prod_env_sample = os.path.join(project_directory, "#envs/.prod.env.sample")
 
     example_test_env_file = os.path.join(project_directory, "#envs/env_test.example")
 
     test_env_file = os.path.join(project_directory, "#envs/.test.env")
+    test_env_sample = os.path.join(project_directory, "#envs/.test.env.sample")
+
+    # create *.env.sample files which should be part of version control
+    shutil.copy(example_dev_env_file, dev_env_sample)
+    shutil.copy(example_prod_env_file, prod_env_sample)
+    shutil.copy(example_test_env_file, test_env_sample)
 
     shutil.move(example_dev_env_file, dev_env_file)
     shutil.move(example_prod_env_file, prod_env_file)

@@ -1,0 +1,20 @@
+[Unit]
+Description=Celery Beat Service for celeryproject.example.com
+After=network.target
+
+[Service]
+Type=simple
+User=celery
+Group=celery
+Environment="ENV_PATH=.envs/.prod.env"
+EnvironmentFile=/etc/conf.d/celery-project
+WorkingDirectory=/path/to/your/django-project
+ExecStart=/bin/sh -c '${CELERY_BIN} -A ${CELERY_APP} beat  \
+    --pidfile=${CELERYBEAT_PID_FILE} \
+    --logfile=${CELERYBEAT_LOG_FILE} \
+    --loglevel=${CELERYD_LOG_LEVEL} \
+    --schedule=/home/celery/celerybeat-schedule'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,27 @@
+# Ignore everything in this directory
+*
+
+## Except the following files:
+
+### 0. this .gitignore file
+!.gitignore
+
+### 1. sample .env files
+!.dev.env.sample
+!.test.env.sample
+!.prod.env.sample
+
+### 2. sample nginx configs
+!nginx
+!nginx/example_nginx_https.conf
+!nginx/example_nginx_no-https.conf
+
+### 3. sample uwsgi config
+!uwsgi
+!uwsgi/example.ini
+
+### 4. sample celery configs
+!celery
+!celery/example_celery-project
+!celery/example_celery-project.service
+!celery/example_celerybeat-project.service
