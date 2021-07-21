@@ -50,7 +50,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
   - a minimal functional blog with simplified categories and tags,
   - a contact page with contact form and location map. Includes SMS support powered by [Vonage](https://www.vonage.com/) (formerly _Nexmo_)
 - Tests written using [pytest](https://docs.pytest.org/en/latest/) in conjunction with [pytest-django](https://pytest-django.readthedocs.io/en/latest/) (plus other pytest plugins), [factory_boy](https://factoryboy.readthedocs.io/en/latest/) and [wagtail-factories](https://github.com/mvantellingen/wagtail-factories). Test coverage currently stands at about 85%.
-- Latest [Bootstrap 4](https://getbootstrap.com/) with additional themes courtesy of [Bootswatch](https://bootswatch.com/).
+- Custom [Bootstrap 4](https://getbootstrap.com/) Compilation using Sass.
 - [Font Awesome 5 (free)](https://fontawesome.com/icons?m=free) icons.
 - [shufflejs](https://vestride.github.io/Shuffle/) — Categorize, sort, and filter a responsive grid of items
 - Live reload courtesy of [BrowserSync](https://browsersync.io/).
@@ -58,7 +58,7 @@ Notwithstanding the foregoing, it is nowhere near perfect, and thus remains a wo
   - copying minified (dist) files of modules listed in package.json "dependencies" field to the `static/vendors` directory,
   - deleting files and directories in the `static/vendors` directory,
   - transpiling ES6 code to ES5 using [babel](https://babeljs.io/), and _uglifying_ the resulting JS files,
-  - _minifying_ css files
+  - compiling SCSS to CSS and _minifying_ css files
   - _watching_ for file changes (in conjunction with BrowserSync)
 - [django-environ](https://github.com/joke2k/django-environ) — allows you to utilize 12factor inspired environment variables to configure your Django application.
 - [django-extensions](https://github.com/django-extensions/django-extensions) — global custom management extensions for the Django Framework. I especially like [`runserver_plus`](https://django-extensions.readthedocs.io/en/latest/runserver_plus.html) (the standard runserver stuff but with the Werkzeug debugger baked in) and [`shell_plus`](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) (Django shell with autoloading of the apps database models and subclasses of user-defined classes).
@@ -168,15 +168,12 @@ Simply choose one of the three and delete the others. If you don't like any of t
 ### Automation
 
 - [ ] Automate Steps 1 to 10 by adding these in the `post_gen_project` hook or incorporating them in invoke's `tasks.py`
-- [ ] The cookiecutter prompt asks if you wanna use bootswatch themes. If you say "n", it shouldn't prompt you with another question on which bootswatch theme to use! See [this](https://github.com/polyswarm/participant-template/issues/2) and [that](https://github.com/cookiecutter/cookiecutter/issues/913).
-
 
 ### Testing and Code Quality
 
 - [ ] Improve test coverage for the generated wagtail project
 - [ ] Setup integrated tests / e2e tests (Cypress / Selenium ?)
 - [ ] Improve on code style (*This is already in progress*)
-
 
 ### CI/CD / Production
 
@@ -202,7 +199,8 @@ Simply choose one of the three and delete the others. If you don't like any of t
 
 ### Deprecated
 
-- [X] ~~Add support for different Databases right from the beginning~~. Use Postgres/PostGIS.
+- [X] ~~Add support for different Databases right from the beginning~~. Even though this cookiecuter generates an SQLite `DATABASE_URL` for you, some of the generated project's features (like **search**) depend on using Postgres, so you should use Postgres/PostGIS.
+- [X] ~~The cookiecutter prompt asks if you wanna use bootswatch themes. If you say "n", it shouldn't prompt you with another question on which bootswatch theme to use! See [this](https://github.com/polyswarm/participant-template/issues/2) and [that](https://github.com/cookiecutter/cookiecutter/issues/913)~~. Since we're customizing bootstrap using Sass, no need to use bootswatch.
 
 ## 📋 Reference
 

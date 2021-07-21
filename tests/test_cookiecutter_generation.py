@@ -31,54 +31,13 @@ SUPPORTED_COMBINATIONS = [
     {"python_version": "3.6"},
     {"python_version": "3.7"},
     {"python_version": "3.8"},
-    {"use_bootswatch": "n", "bootswatch_theme": "none"},
-    {"use_bootswatch": "y", "bootswatch_theme": "cerulean"},
-    {"use_bootswatch": "y", "bootswatch_theme": "cosmo"},
-    {"use_bootswatch": "y", "bootswatch_theme": "cyborg"},
-    {"use_bootswatch": "y", "bootswatch_theme": "darkly"},
-    {"use_bootswatch": "y", "bootswatch_theme": "flatly"},
-    {"use_bootswatch": "y", "bootswatch_theme": "journal"},
-    {"use_bootswatch": "y", "bootswatch_theme": "litera"},
-    {"use_bootswatch": "y", "bootswatch_theme": "lumen"},
-    {"use_bootswatch": "y", "bootswatch_theme": "lux"},
-    {"use_bootswatch": "y", "bootswatch_theme": "materia"},
-    {"use_bootswatch": "y", "bootswatch_theme": "minty"},
-    {"use_bootswatch": "y", "bootswatch_theme": "pulse"},
-    {"use_bootswatch": "y", "bootswatch_theme": "sandstone"},
-    {"use_bootswatch": "y", "bootswatch_theme": "simplex"},
-    {"use_bootswatch": "y", "bootswatch_theme": "sketchy"},
-    {"use_bootswatch": "y", "bootswatch_theme": "slate"},
-    {"use_bootswatch": "y", "bootswatch_theme": "solar"},
-    {"use_bootswatch": "y", "bootswatch_theme": "spacelab"},
-    {"use_bootswatch": "y", "bootswatch_theme": "superhero"},
-    {"use_bootswatch": "y", "bootswatch_theme": "united"},
-    {"use_bootswatch": "y", "bootswatch_theme": "yeti"},
+    {"python_version": "3.9"},
 ]
 
-UNSUPPORTED_COMBINATIONS = [
-    {"use_bootswatch": "y", "bootswatch_theme": "none"},
-    {"use_bootswatch": "n", "bootswatch_theme": "cerulean"},
-    {"use_bootswatch": "n", "bootswatch_theme": "cosmo"},
-    {"use_bootswatch": "n", "bootswatch_theme": "cyborg"},
-    {"use_bootswatch": "n", "bootswatch_theme": "darkly"},
-    {"use_bootswatch": "n", "bootswatch_theme": "flatly"},
-    {"use_bootswatch": "n", "bootswatch_theme": "journal"},
-    {"use_bootswatch": "n", "bootswatch_theme": "litera"},
-    {"use_bootswatch": "n", "bootswatch_theme": "lumen"},
-    {"use_bootswatch": "n", "bootswatch_theme": "lux"},
-    {"use_bootswatch": "n", "bootswatch_theme": "materia"},
-    {"use_bootswatch": "n", "bootswatch_theme": "minty"},
-    {"use_bootswatch": "n", "bootswatch_theme": "pulse"},
-    {"use_bootswatch": "n", "bootswatch_theme": "sandstone"},
-    {"use_bootswatch": "n", "bootswatch_theme": "simplex"},
-    {"use_bootswatch": "n", "bootswatch_theme": "sketchy"},
-    {"use_bootswatch": "n", "bootswatch_theme": "slate"},
-    {"use_bootswatch": "n", "bootswatch_theme": "solar"},
-    {"use_bootswatch": "n", "bootswatch_theme": "spacelab"},
-    {"use_bootswatch": "n", "bootswatch_theme": "superhero"},
-    {"use_bootswatch": "n", "bootswatch_theme": "united"},
-    {"use_bootswatch": "n", "bootswatch_theme": "yeti"},
-]
+# UNSUPPORTED_COMBINATIONS = [
+#     {"use_bootswatch": "y", "bootswatch_theme": "none"},
+#     {"use_bootswatch": "n", "bootswatch_theme": "cerulean"},
+# ]
 
 
 def _fixture_id(ctx):
@@ -133,11 +92,11 @@ def test_invalid_slug(cookies, context, slug):
     assert isinstance(result.exception, FailedHookException)
 
 
-@pytest.mark.parametrize("invalid_context", UNSUPPORTED_COMBINATIONS)
-def test_error_if_incompatible(cookies, context, invalid_context):
-    """It should not generate project if an incompatible combination is selected."""
-    context.update(invalid_context)
-    result = cookies.bake(extra_context=context)
+# @pytest.mark.parametrize("invalid_context", UNSUPPORTED_COMBINATIONS)
+# def test_error_if_incompatible(cookies, context, invalid_context):
+#     """It should not generate project if an incompatible combination is selected."""
+#     context.update(invalid_context)
+#     result = cookies.bake(extra_context=context)
 
-    assert result.exit_code != 0
-    assert isinstance(result.exception, FailedHookException)
+#     assert result.exit_code != 0
+#     assert isinstance(result.exception, FailedHookException)
