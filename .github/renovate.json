@@ -1,0 +1,49 @@
+{
+  "extends": ["config:base"],
+  "pin": {
+    "automerge": true,
+    "labels": ["dependencies"]
+  },
+  "packageRules": [
+    {
+      "matchLanguages": ["python"],
+      "labels": ["dependencies", "python"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommitType": "build"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true,
+      "labels": ["dependencies"]
+    },
+    {
+      "matchLanguages": ["javascript"],
+      "matchDepTypes": ["dependencies"],
+      "labels": ["dependencies", "javascript"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommitType": "build"
+    },
+    {
+      "matchManagers": ["pre-commit"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommitType": "ci"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "updateTypes": ["patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommitType": "ci"
+    },
+    {
+      "matchManagers": ["circleci", "github-actions"],
+      "updateTypes": ["patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommitType": "ci"
+    }
+  ],
+  "timezone": "Africa/Lusaka",
+  "schedule": ["after 7pm every weekday", "every weekend"]
+}
