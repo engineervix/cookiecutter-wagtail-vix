@@ -49,6 +49,7 @@ repos:
               (.*)/ico|
               ^.+\.html$|
               package-lock.json|
+              CHANGELOG.md|
               ^.+\.min\.(js|css)$
           )$
   - repo: https://github.com/commitizen-tools/commitizen
