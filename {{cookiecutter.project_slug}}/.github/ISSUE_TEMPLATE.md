@@ -1,4 +1,4 @@
-- project version:
+- project version (git tag or commit SHA):
 - Python version:
 - Operating System:
 
