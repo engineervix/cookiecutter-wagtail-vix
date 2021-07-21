@@ -179,7 +179,6 @@ Simply choose one of the three and delete the others. If you don't like any of t
 
 - [ ] Add docker support
 - [ ] Improve the CI/CD pipelines for the generated wagtail project, to handle automatic deployments
-- [ ] Add better production-level features to make it easy to move from development to production (serving static assets, mail, caching, perfomance, task queues, Nginx and uWsgi/Gunicorn configuration, etc.) (*This is already in progress*)
 
 ### Project Features
 
@@ -196,6 +195,7 @@ Simply choose one of the three and delete the others. If you don't like any of t
 - [X] Write tests and setup CI for this cookiecutter package
 - [X] Possibly add support for other popular CI options (added CircleCI and GitHub Actions)
 - [X] Add `Gulp` support (No longer using `Grunt`)
+- [X] Add better production-level features to make it easy to move from development to production (serving static assets, mail, caching, perfomance, task queues, Nginx and uWsgi/Gunicorn configuration, etc.) (*This is always a work in progress, will continue updating as necessary*)
 
 ### Deprecated
 
