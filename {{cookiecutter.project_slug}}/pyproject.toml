@@ -4,13 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.black]
 line-length = 88
-{% if cookiecutter.python_version == "3.6" %}
-target-version = ['py36']
-{% elif cookiecutter.python_version == "3.7" %}
-target-version = ['py37']
-{% else %}
-target-version = ['py38']
-{% endif %}
+target-version = ["py{{cookiecutter.python_version|replace('.', '')}}"]
 include = '\.pyi?$'
 exclude = '''
 
