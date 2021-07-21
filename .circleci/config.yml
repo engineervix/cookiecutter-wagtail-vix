@@ -23,7 +23,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            pytest -vv --cov-report html --cov-report xml --cov=.
+            pytest
             flake8 --exclude=venv* --statistics --exit-zero
             coveralls
       - store_artifacts:
