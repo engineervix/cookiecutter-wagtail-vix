@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/first-interaction@v1
         with:{% raw %}
-          repo-token: ${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: "Hello @${{ github.actor }}, thank you for submitting an issue! 🙂"
           pr-message: "Hello @${{ github.actor }}, thank you submitting a pull request!"
+{% endraw %}
