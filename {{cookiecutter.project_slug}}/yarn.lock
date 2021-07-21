@@ -1569,10 +1569,10 @@ bootstrap@~3:
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
   integrity sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==
 
-bootswatch@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-4.6.0.tgz#295237ed0e118decb3e3543f2ac14e9bb8ae48ea"
-  integrity sha512-Yr6YqFBC8jwTzoJoLViYlvO97IhPWGqZEm+6FXHfD/G6gbUok6sZkdXxdh4Zb6iCGEwr9p7zGCn38yKQD/bh2Q==
+bootswatch@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-5.0.2.tgz#b733a5b50384299d660ae4d3963252805bad1c03"
+  integrity sha512-mND4kaJ8/j9Iy1IRBrJfP6bi92wICTxuT9ZA2+b8RuVU9YYBH6du2yzgPt+yQ+kBjgRaIq3enhPpy8LU7J8Trg==
 
 bourbon@^7.0.0:
   version "7.0.0"
