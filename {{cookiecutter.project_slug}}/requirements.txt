@@ -72,7 +72,7 @@ cwcwidth==0.1.4
     #   curtsies
 decli==0.5.2
     # via commitizen
-deprecated==1.2.10
+deprecated==1.2.12
     # via nexmo
 distlib==0.3.1
     # via virtualenv
