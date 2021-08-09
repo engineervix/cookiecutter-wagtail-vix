@@ -336,7 +336,7 @@ pytz==2020.1
     #   nexmo
 pyxdg==0.27
     # via bpython
-pyyaml==5.4
+pyyaml==5.4.1
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   commitizen
