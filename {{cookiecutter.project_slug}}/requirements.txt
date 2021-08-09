@@ -324,7 +324,7 @@ pytest-sugar==0.9.4
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-xdist==2.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-python-dateutil==2.8.1
+python-dateutil==2.8.2
     # via faker
 python-dotenv==0.14.0
     # via pytest-dotenv
