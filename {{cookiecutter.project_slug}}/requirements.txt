@@ -72,9 +72,9 @@ cwcwidth==0.1.4
     #   curtsies
 decli==0.5.2
     # via commitizen
-deprecated==1.2.10
+deprecated==1.2.12
     # via nexmo
-distlib==0.3.1
+distlib==0.3.2
     # via virtualenv
 django[argon2,bcrypt]==3.2.5
     # via
@@ -155,7 +155,7 @@ django-user-agents==0.4.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-widget-tweaks==1.4.8
     # via -r {{cookiecutter.project_slug}}/requirements.in
-djangorestframework==3.12.2
+djangorestframework==3.12.4
     # via wagtail
 doc8==0.9.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
@@ -247,13 +247,13 @@ pbr==5.5.0
     # via stevedore
 pep517==0.10.0
     # via pip-tools
-phonenumbers==8.12.26
+phonenumbers==8.12.29
     # via -r {{cookiecutter.project_slug}}/requirements.in
-phonenumberslite==8.12.10
+phonenumberslite==8.12.29
     # via faker-e164
-pillow==8.3.0
+pillow==8.3.1
     # via wagtail
-pip-api==0.0.14
+pip-api==0.0.20
     # via isort
 pip-tools==6.2.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
