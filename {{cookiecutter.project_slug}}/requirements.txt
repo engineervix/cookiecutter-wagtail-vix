@@ -209,7 +209,7 @@ iniconfig==1.1.1
     # via pytest
 invoke==1.6.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-isort[requirements_deprecated_finder]==5.9.2
+isort[requirements_deprecated_finder]==5.9.3
     # via -r {{cookiecutter.project_slug}}/requirements.in
 jinja2==2.11.3
     # via commitizen
