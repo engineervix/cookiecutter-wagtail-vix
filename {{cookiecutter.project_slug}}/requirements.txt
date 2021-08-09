@@ -251,7 +251,7 @@ phonenumbers==8.12.29
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.29
     # via faker-e164
-pillow==8.3.0
+pillow==8.3.1
     # via wagtail
 pip-api==0.0.14
     # via isort
