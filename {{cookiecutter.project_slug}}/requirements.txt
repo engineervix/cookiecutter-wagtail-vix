@@ -295,7 +295,7 @@ pyparsing==2.4.7
     # via packaging
 pyquery==1.4.3
     # via readtime
-pytest==6.2.0
+pytest==6.2.4
     # via
     #   pytest-cov
     #   pytest-django
