@@ -76,7 +76,7 @@ deprecated==1.2.12
     # via nexmo
 distlib==0.3.2
     # via virtualenv
-django[argon2,bcrypt]==3.2.5
+django[argon2,bcrypt]==3.2.6
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   django-anymail
