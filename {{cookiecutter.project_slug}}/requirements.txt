@@ -293,7 +293,7 @@ pymemcache==3.5.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pyparsing==2.4.7
     # via packaging
-pyquery==1.4.1
+pyquery==1.4.3
     # via readtime
 pytest==6.2.0
     # via
