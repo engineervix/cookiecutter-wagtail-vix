@@ -35,7 +35,7 @@ bpython==0.21
     # via -r {{cookiecutter.project_slug}}/requirements.in
 brotli==1.0.9
     # via -r {{cookiecutter.project_slug}}/requirements.in
-certifi==2020.6.20
+certifi==2020.12.5
     # via
     #   requests
     #   sentry-sdk
