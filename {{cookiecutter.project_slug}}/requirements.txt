@@ -54,7 +54,7 @@ click==7.1.2
     #   pip-tools
 colorama==0.4.4
     # via commitizen
-commitizen==2.6.0
+commitizen==2.17.13
     # via -r {{cookiecutter.project_slug}}/requirements.in
 coverage==5.3
     # via pytest-cov
