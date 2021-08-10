@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-anyascii==0.1.7
+anyascii==0.2.0
     # via wagtail
 apipkg==1.5
     # via execnet
