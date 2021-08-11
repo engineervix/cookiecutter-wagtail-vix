@@ -56,7 +56,7 @@ colorama==0.4.4
     # via commitizen
 commitizen==2.17.13
     # via -r {{cookiecutter.project_slug}}/requirements.in
-coverage==5.3
+coverage==5.5
     # via pytest-cov
 cryptography==3.3.2
     # via pyjwt
