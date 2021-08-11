@@ -149,7 +149,7 @@ django-social-share==2.2.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-taggit==1.5.1
     # via wagtail
-django-treebeard==4.3.1
+django-treebeard==4.5.1
     # via wagtail
 django-user-agents==0.4.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
