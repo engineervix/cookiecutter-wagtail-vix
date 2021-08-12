@@ -187,7 +187,7 @@ feedparser==6.0.8
     # via -r {{cookiecutter.project_slug}}/requirements.in
 filelock==3.0.12
     # via virtualenv
-flake8==3.8.3
+flake8==3.9.2
     # via -r {{cookiecutter.project_slug}}/requirements.in
 future==0.18.2
     # via pytest-logger
