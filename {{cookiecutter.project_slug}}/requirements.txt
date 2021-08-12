@@ -199,7 +199,7 @@ html5lib==1.1
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   wagtail
-identify==1.5.5
+identify==1.6.2
     # via pre-commit
 idna==2.10
     # via requests
