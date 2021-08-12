@@ -167,7 +167,7 @@ docutils==0.17.1
     #   restructuredtext-lint
 draftjs-exporter==2.1.7
     # via wagtail
-et-xmlfile==1.0.1
+et-xmlfile==1.1.0
     # via openpyxl
 execnet==1.7.1
     # via pytest-xdist
