@@ -235,7 +235,7 @@ openpyxl==3.0.7
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   tablib
-packaging==20.4
+packaging==20.9
     # via
     #   bleach
     #   commitizen
