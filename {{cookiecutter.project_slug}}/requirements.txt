@@ -241,7 +241,7 @@ packaging==20.9
     #   commitizen
     #   pytest
     #   pytest-sugar
-pathspec==0.8.0
+pathspec==0.9.0
     # via black
 pbr==5.5.0
     # via stevedore
