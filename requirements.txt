@@ -11,7 +11,7 @@ isort[requirements_deprecated_finder]==5.9.3
 
 # Dev
 # ----------------------------------------------------------------------------
-commitizen==2.17.13
+commitizen==2.18.0
 powerline-status
 bpython
 invoke==1.6.0
