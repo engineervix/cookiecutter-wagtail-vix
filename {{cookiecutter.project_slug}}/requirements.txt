@@ -408,7 +408,7 @@ toml==0.10.2
     #   pep517
     #   pre-commit
     #   pytest
-tomlkit==0.5.11
+tomlkit==0.7.2
     # via commitizen
 typed-ast==1.4.3
     # via black
