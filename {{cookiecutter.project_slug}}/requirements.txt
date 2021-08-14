@@ -113,7 +113,7 @@ django-compressor==2.4.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-countries==7.2.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
-django-debug-toolbar==3.2.1
+django-debug-toolbar==3.2.2
     # via -r {{cookiecutter.project_slug}}/requirements.in
 django-el-pagination==3.3.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
