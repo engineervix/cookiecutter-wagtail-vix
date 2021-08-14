@@ -322,7 +322,7 @@ pytest-mock==3.6.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-sugar==0.9.4
     # via -r {{cookiecutter.project_slug}}/requirements.in
-pytest-xdist==2.1.0
+pytest-xdist==2.3.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 python-dateutil==2.8.2
     # via faker
