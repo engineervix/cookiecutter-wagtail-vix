@@ -257,7 +257,7 @@ pip-api==0.0.20
     # via isort
 pip-tools==6.2.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
-pipdeptree==2.0.0
+pipdeptree==2.1.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pipreqs==0.4.10
     # via isort
