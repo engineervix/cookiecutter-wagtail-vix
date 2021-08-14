@@ -97,10 +97,9 @@ The project comes with three Continuous Integration configurations:
 
 - [GitLab CI](https://docs.gitlab.com/ee/ci/yaml/).
 - [CircleCI](https://circleci.com/),
-- [GitHub Actions]()
+- [GitHub Actions](https://github.com/features/actions)
 
 Simply choose one of the three and delete the others. If you don't like any of these three, feel free to use other options such as [Travis CI](https://travis-ci.org/), [Jenkins](https://jenkins.io/), etc.
-
 
 ## :computer: Setup
 
