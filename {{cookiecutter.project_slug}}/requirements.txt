@@ -412,7 +412,7 @@ tomlkit==0.7.2
     # via commitizen
 typed-ast==1.4.3
     # via black
-typing-extensions==3.7.4.3
+typing-extensions==3.10.0.0
     # via black
 ua-parser==0.10.0
     # via
