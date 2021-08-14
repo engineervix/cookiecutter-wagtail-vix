@@ -341,7 +341,7 @@ pyyaml==5.4.1
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   commitizen
     #   pre-commit
-questionary==1.6.0
+questionary==1.10.0
     # via commitizen
 rcssmin==1.0.6
     # via django-compressor
@@ -349,7 +349,7 @@ readtime==1.1.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 redis==3.5.3
     # via django-redis
-regex==2020.9.27
+regex==2020.11.13
     # via black
 requests==2.26.0
     # via
@@ -384,7 +384,7 @@ slimit==0.8.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 soupsieve==2.2.1
     # via beautifulsoup4
-sqlparse==0.3.1
+sqlparse==0.4.1
     # via
     #   django
     #   django-debug-toolbar
@@ -412,7 +412,7 @@ tomlkit==0.7.2
     # via commitizen
 typed-ast==1.4.3
     # via black
-typing-extensions==3.7.4.3
+typing-extensions==3.10.0.0
     # via black
 ua-parser==0.10.0
     # via
