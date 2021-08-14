@@ -44,8 +44,8 @@
     "typed.js": "2.0.12"
   },
   "devDependencies": {
-    "@babel/core": "7.14.6",
-    "@babel/preset-env": "7.14.7",
+    "@babel/core": "7.15.0",
+    "@babel/preset-env": "7.15.0",
     "bourbon": "7.0.0",
     "browser-sync": "2.27.5",
     "commitizen": "4.2.4",
