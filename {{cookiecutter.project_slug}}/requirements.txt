@@ -382,7 +382,7 @@ six==1.16.0
     #   virtualenv
 slimit==0.8.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
-soupsieve==2.0.1
+soupsieve==2.2.1
     # via beautifulsoup4
 sqlparse==0.3.1
     # via
