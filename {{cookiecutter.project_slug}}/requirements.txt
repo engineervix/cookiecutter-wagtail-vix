@@ -349,7 +349,7 @@ readtime==1.1.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 redis==3.5.3
     # via django-redis
-regex==2020.9.27
+regex==2020.11.13
     # via black
 requests==2.26.0
     # via
