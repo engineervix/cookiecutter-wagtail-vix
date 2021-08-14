@@ -15,7 +15,7 @@ commitizen==2.18.0
 powerline-status
 bpython
 invoke==1.6.0
-pre-commit==2.13.0
+pre-commit==2.14.0
 
 # Testing
 # ----------------------------------------------------------------------------
