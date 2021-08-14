@@ -267,7 +267,7 @@ ply==3.11
     # via slimit
 powerline-status==2.7
     # via -r {{cookiecutter.project_slug}}/requirements.in
-pre-commit==2.13.0
+pre-commit==2.14.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 prompt-toolkit==3.0.19
     # via questionary
