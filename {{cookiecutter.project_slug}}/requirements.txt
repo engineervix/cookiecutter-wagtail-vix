@@ -306,7 +306,7 @@ pytest==6.2.4
     #   pytest-mock
     #   pytest-sugar
     #   pytest-xdist
-pytest-cov==2.10.1
+pytest-cov==2.12.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 pytest-django==4.4.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
