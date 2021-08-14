@@ -426,7 +426,7 @@ user-agents==2.2.0
     # via
     #   -r {{cookiecutter.project_slug}}/requirements.in
     #   django-user-agents
-virtualenv==20.0.31
+virtualenv==20.7.2
     # via pre-commit
 wagtail==2.13.4
     # via
