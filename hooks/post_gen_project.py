@@ -148,7 +148,7 @@ def main():
     shutil.move(backups, os.path.join(PROJECT_DIRECTORY, ".backups/"))
 
     print(
-        "Please ensure that you use {{ cookiecutter.wagtail_username }} as your username when you run `./manage.py createsuperuser`"
+        "Please ensure that you use {{ cookiecutter.wagtail_user_email }} as your email address when you run `./manage.py createsuperuser`"
     )
 
 

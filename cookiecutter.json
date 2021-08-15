@@ -9,5 +9,5 @@
     "version": "0.1.0",
     "timezone": "Africa/Lusaka",
     "python_version": ["3.6", "3.7", "3.8", "3.9"],
-    "wagtail_username": "user"
+    "wagtail_user_email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@{{ cookiecutter.domain_name.lower()|replace(' ', '-') }}"
 }

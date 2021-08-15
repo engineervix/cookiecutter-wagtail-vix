@@ -39,6 +39,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # Application definition
 
 INSTALLED_APPS = [
+    "{{cookiecutter.project_slug}}.users",
     "{{cookiecutter.project_slug}}.base",
     "{{cookiecutter.project_slug}}.home",
     "{{cookiecutter.project_slug}}.blog",
@@ -268,6 +269,8 @@ COUNTRIES_FIRST = ["ZM"]
 COMPRESS_STORAGE = "compressor.storage.GzipCompressorFileStorage"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+AUTH_USER_MODEL = "users.User"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
