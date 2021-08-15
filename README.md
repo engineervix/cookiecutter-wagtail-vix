@@ -22,6 +22,15 @@
 <a href="https://github.com/engineervix/cookiecutter-wagtail-vix/LICENSE" target="_blank">
   <img src="https://img.shields.io/github/license/engineervix/cookiecutter-wagtail-vix" alt="License: MIT">
 </a>
+<a href="https://github.com/engineervix/cookiecutter-wagtail-vix/commits/master" target="_blank">
+  <img alt="GitHub commits since latest release (by SemVer)" src="https://img.shields.io/github/commits-since/engineervix/cookiecutter-wagtail-vix/latest/master">
+</a>
+<a href="https://conventionalcommits.org">
+  <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square" alt="Conventional Commits">
+</a>
+<a href="https://commitizen-tools.github.io/commitizen/">
+  <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly">
+</a>
 </p>
 
 > a batteries-included, reusable Wagtail project skeleton to serve as a starting point for a CMS-based website project.
@@ -172,16 +181,13 @@
 - [ ] Generate RSS Feeds from Blog
 - [ ] Add custom `sitemap.xml` and `robots.txt`
 
-### Misc
-
-- [ ] Add some more [badges](https://shields.io/) if need be :wink:
-
 ### Done
 
 - [X] ~~Make the `Makefile` functional~~ I've removed the `Makefile` and [replaced it with *invoke*](https://importthis.tech/task-execution-and-automation-using-invoke).
 - [X] Write tests and setup CI for this cookiecutter package
 - [X] Possibly add support for other popular CI options (added CircleCI and GitHub Actions)
 - [X] Add `Gulp` support (No longer using `Grunt`)
+- [X] Add some more [badges](https://shields.io/) if need be :wink:
 - [X] Add better production-level features to make it easy to move from development to production (serving static assets, mail, caching, performance, task queues, Nginx and uWsgi/Gunicorn configuration, etc.) (*This is always a work in progress, will continue updating as necessary*)
 
 ### Deprecated
