@@ -10,8 +10,8 @@
 <a href="https://python3statement.org/#sections50-why" target="_blank">
   <img src="https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-brightgreen.svg" alt="python3">
 </a>
-<a href="https://requires.io/github/engineervix/cookiecutter-django-vix/requirements/?branch=master">
-  <img src="https://requires.io/github/engineervix/cookiecutter-django-vix/requirements.svg?branch=master" alt="Requirements Status" />
+<a href="https://requires.io/github/engineervix/cookiecutter-wagtail-vix/requirements/?branch=master">
+  <img src="https://requires.io/github/engineervix/cookiecutter-wagtail-vix/requirements.svg?branch=master" alt="Requirements Status" />
 </a>
 <a href="https://github.com/psf/black" target="_blank">
   <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
