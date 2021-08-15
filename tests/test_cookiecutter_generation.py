@@ -23,7 +23,7 @@ def context():
         "domain_name": "example.com",
         "version": "0.0.1",
         "timezone": "Africa/Lusaka",
-        "wagtail_username": "somebody",
+        "wagtail_user_email": "somebody@example.com",
     }
 
 

@@ -106,12 +106,12 @@ Simply choose one of the three and delete the others. If you don't like any of t
 ### ⌨️ to get started
 
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
-2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_username** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
+2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_user_email** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
 3. create a virtual environment for your project. `cd` into the project folder created above and install python dependencies: First, install [pip-tools](https://github.com/jazzband/pip-tools): `pip install pip-tools`, then run `pip-compile requirements.in` followed by `pip install -r requirements.txt`.
 4. Now would be a good time to setup your postgres/postgis database and ensure that you update `DATABASE_URL` and the other environment variables in your `.env` files. The essential ones for starters are `RECAPTCHA_PUBLIC_KEY`, `RECAPTCHA_PRIVATE_KEY` and `MAPBOX_ACCESS_TOKEN`.
 5. `export ENV_PATH=.envs/.dev.env`
 6. `./manage.py migrate`
-7. `./manage.py createsuperuser`. When prompted for a username, please use the **wagtail_username** you specified in step 2. This is important to ensure that you don't have issues when populating the database with initial data, which is tied to the username provided in step 2.
+7. `./manage.py createsuperuser`. When prompted for an email address, please use the **wagtail_user_email** you specified in step 2. This is important to ensure that you don't have issues when populating the database with initial data, which is tied to the email address provided in step 2.
 8. `./manage.py load_initial_data`
 9. `yarn`
 10. `gulp cp`

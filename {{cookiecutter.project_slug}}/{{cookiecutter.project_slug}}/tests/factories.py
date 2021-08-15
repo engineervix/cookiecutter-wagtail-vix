@@ -1,6 +1,5 @@
 import random
 import wagtail_factories
-from django.contrib.auth.models import User
 import factory
 from wagtail.core import blocks
 from wagtail.contrib.table_block.blocks import TableBlock
@@ -12,6 +11,7 @@ from {{cookiecutter.project_slug}}.base.blocks import HeadingBlock, ImageBlock, 
 
 from {{cookiecutter.project_slug}}.blog.models import ArticlePage, ArticleIndexPage
 
+from {{cookiecutter.project_slug}}.users.models import User
 from {{cookiecutter.project_slug}}.contact.models import ContactPage
 from {{cookiecutter.project_slug}}.home.models import AboutPage, HomePage
 
@@ -51,7 +51,7 @@ class ContactPageFactory(wagtail_factories.PageFactory):
 class UserFactory(factory.django.DjangoModelFactory):
     """Factory for creating Django User objects"""
 
-    username = factory.Faker("user_name")
+    # username = factory.Faker("user_name")
     email = factory.Faker("email")
     first_name = factory.Faker("first_name")
     last_name = factory.Faker("last_name")
