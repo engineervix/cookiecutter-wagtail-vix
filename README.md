@@ -26,7 +26,7 @@
   <img alt="GitHub commits since latest release (by SemVer)" src="https://img.shields.io/github/commits-since/engineervix/cookiecutter-wagtail-vix/latest/master">
 </a>
 <a href="https://conventionalcommits.org">
-  <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square" alt="Conventional Commits">
+  <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg" alt="Conventional Commits">
 </a>
 <a href="https://commitizen-tools.github.io/commitizen/">
   <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly">
