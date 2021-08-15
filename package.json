@@ -1,6 +1,6 @@
 {
   "name": "cookiecutter-wagtail-vix",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a batteries-included, reusable Wagtail project skeleton to serve as a starting point for a CMS-based website project",
   "scripts": {
     "test": "pytest",

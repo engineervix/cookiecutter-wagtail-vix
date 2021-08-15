@@ -4,6 +4,114 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.2.0](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.1.0...v0.2.0) (2021-08-15)
+
+
+### ♻️ Code Refactoring
+
+* rename the javascript files to main ([#268](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/268)) ([a27e2d7](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a27e2d77efaf0d744f1082260c1b711010643077))
+
+
+### ⚙️ Build System
+
+* **deps-dev:** bump sqlparse to 0.4.1 ([#336](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/336)) ([ace76a6](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/ace76a633ec9fc95b59d26d0881183a4be91da64))
+* **deps-dev:** bump typing-extensions to 3.10.0.0 ([#339](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/339)) ([bef1f39](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bef1f39dfc80e7decca9f00e5d1dadd13dd75c13))
+* **deps-dev:** bump wheel to 0.37.0 ([#343](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/343)) ([8348909](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/8348909459fe1587cf639292185805e79a2bd1ff))
+* **deps-dev:** security upgrade urllib3 from 1.25.11 to 1.26.5 ([#289](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/289)) ([e32311a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e32311a4d6f630b0ec5d19c95314c5bcd11cb1d9))
+* **deps:** bump cryptography to 3.4.7 ([#303](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/303)) ([8a669d2](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/8a669d2ee02a6a9a60e704a3b12faf21c8454e8c))
+* **deps:** bump doc8 from 0.8.1 to 0.9.0 ([#260](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/260)) ([4c3f1ca](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/4c3f1cab03e1eb5fbe7e67fc0ff89fd6e043b030))
+* **deps:** bump questionary to 1.10.0 ([#331](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/331)) ([f9a2aac](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/f9a2aacafe12c3726ea4e63ac01bd6e0c8d23e0d))
+* **deps:** bump regex to 2020.11.13 ([#332](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/332)) ([920f76c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/920f76cf16b758dfe8974d6a4f02640f698dfa65))
+* **deps:** update dependency @fortawesome/fontawesome-free to v5.15.4 ([#322](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/322)) ([5d348d5](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5d348d56a1cfaf562c66105fd4eb3a49bd48b761))
+* **deps:** update dependency anyascii to v0.2.0 ([#297](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/297)) ([ed685fd](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/ed685fd586cdd61eab52e65c94438e640f6745d8))
+* **deps:** update dependency attrs to v20.3.0 ([#298](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/298)) ([f961fc0](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/f961fc0c762c61476347306acb9e5069d5a01178))
+* **deps:** update dependency bleach to v3.3.1 ([#270](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/270)) ([4137e94](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/4137e9455f44ba9fc77618a2855f664e5f46d8a7))
+* **deps:** update dependency certifi to v2020.12.5 ([#299](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/299)) ([dbb4038](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/dbb403854d963c8cbc4cf2bea45ac0ef19674431))
+* **deps:** update dependency cffi to v1.14.6 ([#271](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/271)) ([bed94e9](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bed94e912be2f5720165ae9882067a2d85f2fa67))
+* **deps:** update dependency cfgv to v3.3.0 ([#300](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/300)) ([619092c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/619092cf36ffa57de2d862824bc77de3673c27d3))
+* **deps:** update dependency commitizen to v2.17.13 ([#301](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/301)) ([b8da34c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/b8da34c92596c5f35dd3abf05708456fa9bbd445))
+* **deps:** update dependency commitizen to v2.18.0 ([#316](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/316)) ([3126697](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/31266976fe6e0c0cfd5d05dd1d190ea83ef573d2))
+* **deps:** update dependency coverage to v5.5 ([#302](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/302)) ([bc58b51](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bc58b51bc6a621474f722c4ec5baf21ab80d263c))
+* **deps:** update dependency deprecated to v1.2.12 ([#272](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/272)) ([c210adb](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c210adb7a19e90559d41ac64bb66467fff385927))
+* **deps:** update dependency distlib to v0.3.2 ([#273](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/273)) ([e5a247b](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e5a247b95e8c8e1837320c9f3aad09703fe94ab9))
+* **deps:** update dependency django to v3.2.6 ([#290](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/290)) ([6e5a27e](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/6e5a27e83701c5895c3cb16506c4426283b600c2))
+* **deps:** update dependency django-debug-toolbar to v3.2.2 ([#344](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/344)) ([240bf9f](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/240bf9f8a3f6a5b8505d66df82ca55806bae9065))
+* **deps:** update dependency django-maintenancemode-2 to v1.3.1 ([#304](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/304)) ([c3cce70](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c3cce709d3b0c6af726e1260c282df062eac434f))
+* **deps:** update dependency django-taggit to v1.5.1 ([#305](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/305)) ([6e5a741](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/6e5a74174da4bb957cd487d46bbd71276009b851))
+* **deps:** update dependency django-treebeard to v4.5.1 ([#306](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/306)) ([732acc3](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/732acc30c495005910572d172ed31b26c5566669))
+* **deps:** update dependency djangorestframework to v3.12.4 ([#274](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/274)) ([737651c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/737651c2bb767dd155b7df8dbd3c69fed02423d7))
+* **deps:** update dependency docutils to v0.17.1 ([#307](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/307)) ([feed0b9](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/feed0b9b272dfb18ffc9e841cd86a2628bde831c))
+* **deps:** update dependency et-xmlfile to v1.1.0 ([#308](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/308)) ([5b60e56](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5b60e563ae17618b0e2571af34ba65970b8afee4))
+* **deps:** update dependency execnet to v1.9.0 ([#309](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/309)) ([ca2bdd8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/ca2bdd862e86e178890052812d3eda059a84cea6))
+* **deps:** update dependency factory-boy to v3.2.0 ([#310](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/310)) ([b9aadf8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/b9aadf8e4d524fd4af10965bbfd5e86bb38de463))
+* **deps:** update dependency faker to v4.18.0 ([#311](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/311)) ([7ab28db](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/7ab28dbc0b28757cf7ca7b061dd3903d1a42116b))
+* **deps:** update dependency flake8 to v3.9.2 ([#312](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/312)) ([bfeebfd](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bfeebfd3b567153c12710fab970da745c3558d44))
+* **deps:** update dependency identify to v1.6.2 ([#313](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/313)) ([b49a6a4](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/b49a6a43fa774ff7265cb74bfbdc8749a43445e6))
+* **deps:** update dependency isort to v5.9.3 ([#291](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/291)) ([90f577b](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/90f577b3bbb081b721088d5f5dc54f8bd646db7f))
+* **deps:** update dependency mjml to v4.10.2 ([#296](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/296)) ([6ad8673](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/6ad8673b5c6701ef662f4a7d8bfef6b770ae294e))
+* **deps:** update dependency nodeenv to v1.6.0 ([#314](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/314)) ([5ff861c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5ff861caa1d48de07a5b4de317f369a65153a851))
+* **deps:** update dependency packaging to v20.9 ([#315](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/315)) ([86bfb24](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/86bfb2404644db52da85ae6839a9fe0ae13d9d33))
+* **deps:** update dependency pathspec to v0.9.0 ([#317](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/317)) ([079ccca](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/079ccca7bf0247312df9b6993ea9611fb2d135c4))
+* **deps:** update dependency pbr to v5.6.0 ([#318](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/318)) ([fe822b7](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/fe822b71e035e2b41b5beba8124992c6a8431fcc))
+* **deps:** update dependency pep517 to v0.11.0 ([#319](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/319)) ([c3fb6a7](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c3fb6a7653f60edf67e6757455537304d883962a))
+* **deps:** update dependency phonenumbers to v8.12.29 ([#275](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/275)) ([28d8c16](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/28d8c16ee7cd0d73bbc71f8857eb370380f3445a))
+* **deps:** update dependency phonenumberslite to v8.12.29 ([#276](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/276)) ([5a3eacd](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5a3eacda73a2175febbbaf9b4c1178358a31bd98))
+* **deps:** update dependency pillow to v8.3.1 ([#277](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/277)) ([2d1477a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/2d1477a35d421b49bcd8bd6c537e27f12ade70b1))
+* **deps:** update dependency pip-api to v0.0.20 ([#278](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/278)) ([8d58141](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/8d5814149863fcdafa4bcfa98ccb89abc866f18b))
+* **deps:** update dependency pipdeptree to v2.1.0 ([#320](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/320)) ([f2b9e02](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/f2b9e024ca021423dc60f40aafcbc469b628c413))
+* **deps:** update dependency pre-commit to v2.14.0 ([#321](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/321)) ([c4a60dc](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c4a60dc47d96bffdb8521d9390027940e3b5c2a2))
+* **deps:** update dependency prompt-toolkit to v3.0.19 ([#279](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/279)) ([c76db5b](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c76db5bb4d8f932722229ac1d9ccde7036866312))
+* **deps:** update dependency pycodestyle to v2.7.0 ([#323](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/323)) ([8c61bcf](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/8c61bcf72c6e624d16267b2b35e74ac3e102b1e2))
+* **deps:** update dependency pyflakes to v2.3.1 ([#324](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/324)) ([74037cd](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/74037cd7d19c40509b5394e07cda29b90641b354))
+* **deps:** update dependency pyquery to v1.4.3 ([#280](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/280)) ([e21104c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e21104cfddd758ce6e1a49efbd216125686948ac))
+* **deps:** update dependency pytest to v6.2.4 ([#281](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/281)) ([5c1a069](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5c1a069c3977a82cba74b6f782f7afd1a764ba0d))
+* **deps:** update dependency pytest-cov to v2.12.1 ([#325](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/325)) ([0451ce7](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/0451ce730cf1f9c0f6071b8a6035b12150f5926f))
+* **deps:** update dependency pytest-factoryboy to v2.1.0 ([#326](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/326)) ([0fc2f26](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/0fc2f26c0078ff09edaa5a41bb99e94425b64719))
+* **deps:** update dependency pytest-mock to v3.6.1 ([#327](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/327)) ([50472e8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/50472e866432e3ce05693c78a40b0705af1d0c15))
+* **deps:** update dependency pytest-xdist to v2.3.0 ([#328](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/328)) ([00583fd](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/00583fd75c062e8ac4507ae591f2bd9408626f12))
+* **deps:** update dependency python-dateutil to v2.8.2 ([#282](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/282)) ([01e5a26](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/01e5a260d04a539f94dc078dcf7852a432f0ba17))
+* **deps:** update dependency python-dotenv to v0.19.0 ([#329](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/329)) ([3eae4b2](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/3eae4b2bca34954f7826e4d3a1a47ef544108b70))
+* **deps:** update dependency pytz to v2020.5 ([#330](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/330)) ([34b3436](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/34b34368f1f43a6b00cbce7ea28e55e31309ed80))
+* **deps:** update dependency pyyaml to v5.4.1 ([#283](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/283)) ([7d99afe](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/7d99afed879c1066dd0079a16e9857eb200479ce))
+* **deps:** update dependency requests to v2.26.0 ([#333](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/333)) ([df535b6](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/df535b6e300b820c6fc38f68da7e7cdd423cc734))
+* **deps:** update dependency restructuredtext-lint to v1.3.2 ([#284](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/284)) ([c1b4794](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c1b479405af86545b904f1f5cce681f21936de8c))
+* **deps:** update dependency sentry-sdk to v1.3.1 ([#292](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/292)) ([a4c9a26](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a4c9a267cdebda0f83a61175c00a8af8858fea15))
+* **deps:** update dependency six to v1.16.0 ([#334](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/334)) ([dc15378](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/dc15378dbbf0ea51935678b692eb7b6aff3471a9))
+* **deps:** update dependency soupsieve to v2.2.1 ([#335](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/335)) ([636f322](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/636f322ae19f7f02d913d84431b48b730f0e847b))
+* **deps:** update dependency stevedore to v3.3.0 ([#337](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/337)) ([fd27a7a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/fd27a7acef74f747b2d25909a6dc63073bd6e044))
+* **deps:** update dependency toml to v0.10.2 ([#285](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/285)) ([41d402d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/41d402da6e834f2fc4d7f95e5a15bef97ef04585))
+* **deps:** update dependency tomlkit to v0.7.2 ([#338](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/338)) ([56e482d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/56e482d0729c114c04d5debdebe656c75d2aded6))
+* **deps:** update dependency typed-ast to v1.4.3 ([#286](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/286)) ([d54761f](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/d54761fab479639c903e7a76c6d55bfdb1c79096))
+* **deps:** update dependency urllib3 to v1.26.6 ([#340](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/340)) ([05d0681](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/05d0681a64e734e6a90a7e7065bfb1ea7b7a468e))
+* **deps:** update dependency virtualenv to v20.7.2 ([#341](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/341)) ([b78243c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/b78243ca413c30f1f770cefb0a37b10d0f0596ff))
+* **deps:** update dependency wagtail to v2.14.1 ([#342](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/342)) ([70a074e](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/70a074e69a7f0a6847201faecb789b1b3b05e1d1))
+* **deps:** update dependency xlsxwriter to v1.4.5 ([#345](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/345)) ([bb59e6e](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bb59e6e0fac0bd0293999a0fe2006d05092a123c))
+
+
+### 👷 CI/CD
+
+* **deps:** update circleci/redis docker tag to v5.0.13 ([#294](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/294)) ([205356e](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/205356e03a5d9f28f883281b1fc021d543d885c2))
+* **deps:** update precommit hook commitizen-tools/commitizen to v2.18.0 ([#353](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/353)) ([2368c38](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/2368c389164511cd4e55e69000b1b24e10ea6219))
+* **deps:** update precommit hook pre-commit/mirrors-isort to v5.9.3 ([#295](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/295)) ([7d40104](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/7d40104e1a5a1a1eabac8fbfa686358b8d800577))
+
+
+### 🚀 Features
+
+* use a Custom User Model ([#262](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/262)) ([9d0289b](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/9d0289b8ead36b5030a165c7c4e879fc8b750457))
+
+
+### 🐛 Bug Fixes
+
+* {{cookiecutter.project_slug}}/requirements.txt to reduce vulnerabilities ([#352](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/352)) ([29146ca](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/29146cac5e6a3ac466117ee5e2d04876a3ea7691))
+* **deps:** pin dependencies ([#267](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/267)) ([ae2410e](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/ae2410e4aa4ae196e930b5c86e0b095079a38558))
+* **deps:** pin dependency @fortawesome/fontawesome-free to v5.15.3 ([#269](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/269)) ([5b25c31](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5b25c318656da8427e4c7f78e82621970c3068b6))
+* update gulpfile to conform to gulp-sass v5 ([#365](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/365)) ([ab9e374](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/ab9e374f7ec87d47b58ffcd9657ec51938a112fc))
+
+
+### 📝 Docs
+
+* improve docs and add contribution guidelines ([#265](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/265)) ([df26f4d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/df26f4da10dc0b3545071d903adb5ae9851e13bc))
+
 ## [v0.1.0](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.0.1...v0.1.0) (2021-07-21)
 
 
