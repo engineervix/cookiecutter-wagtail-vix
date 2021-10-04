@@ -177,7 +177,7 @@ factory-boy==3.2.0
     #   wagtail-factories
 fake-useragent==0.1.11
     # via -r {{cookiecutter.project_slug}}/requirements.in
-faker==4.18.0
+faker==8.16.0
     # via
     #   factory-boy
     #   faker-e164
