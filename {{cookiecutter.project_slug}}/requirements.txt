@@ -219,7 +219,7 @@ lxml==4.6.3
     # via pyquery
 lz4==3.1.3
     # via -r {{cookiecutter.project_slug}}/requirements.in
-markdown2==2.4.0
+markdown2==2.4.2
     # via readtime
 markupsafe==1.1.1
     # via jinja2
@@ -251,7 +251,7 @@ phonenumbers==8.12.29
     # via -r {{cookiecutter.project_slug}}/requirements.in
 phonenumberslite==8.12.29
     # via faker-e164
-pillow==8.3.1
+pillow==8.3.2
     # via wagtail
 pip-api==0.0.20
     # via isort
@@ -384,7 +384,7 @@ slimit==0.8.1
     # via -r {{cookiecutter.project_slug}}/requirements.in
 soupsieve==2.2.1
     # via beautifulsoup4
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   django
     #   django-debug-toolbar
