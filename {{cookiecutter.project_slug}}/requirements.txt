@@ -165,7 +165,7 @@ docutils==0.17.1
     # via
     #   doc8
     #   restructuredtext-lint
-draftjs-exporter==2.1.7
+draftjs-exporter==4.1.2
     # via wagtail
 et-xmlfile==1.1.0
     # via openpyxl
