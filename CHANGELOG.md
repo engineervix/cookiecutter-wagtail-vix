@@ -4,6 +4,23 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.2.2](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.2.0...v0.2.2) (2021-12-09)
+
+
+### ⚙️ Build System
+
+* **deps:** update dependency popper.js to v1.16.1 ([#351](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/351)) ([a377b65](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a377b652f73d3479fdc6b3b6842e6f06c377e01b))
+* **deps:** update dependency pygments to v2.10.0 ([#371](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/371)) ([6d0e33d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/6d0e33d3aebe75d25259c4c3bffea94d424d5522))
+
+
+### 🐛 Bug Fixes
+
+* add `FORCE_IMAGE_PATH` to leaflet configuration ([219c4b6](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/219c4b63ab968d9eb85fdfed5171efcea3a9af2b))
+* **config/settings/production.py:** determination of `LIST_OF_EMAIL_RECIPIENTS` ([f2cc88d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/f2cc88d3356bf8a66f1a2f85a5a9b905b3300538))
+* **config/settings/production.py:** remove `OPTIONS` key in "renditions" ([fcdc5b4](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/fcdc5b4a8f7c9e1404a0009fbb894011c728cac3))
+* correct the fontawesome css reference in 404 template ([c705e83](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c705e83afa6c3797e2630e3868996920e099b04c))
+* **deps:** update python dependencies with known security vulnerabilities ([1de19df](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/1de19dfa33376b6d53cbe7815e5f40ab2351464f))
+
 ## [v0.2.1](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.2.0...v0.2.1) (2021-12-09)
 
 
