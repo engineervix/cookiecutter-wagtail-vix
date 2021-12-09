@@ -76,7 +76,7 @@ jobs:
       #     file: coverage.xml
   lint:
     docker:
-      - image: cimg/python:3.8-node
+      - image: cimg/python:3.10-node
 
     working_directory: ~/repo
 
@@ -118,7 +118,7 @@ jobs:
   pre_commit:
     # based on https://github.com/Unity-Technologies/ml-agents/blob/db19619775f0ca76c41a3780a4c776763aece141/.circleci/config.yml
     docker:
-      - image: cimg/python:3.8-node
+      - image: cimg/python:3.10-node
 
     working_directory: ~/repo
 
