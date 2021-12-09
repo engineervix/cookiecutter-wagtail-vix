@@ -6,7 +6,7 @@
     "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
     "description": "A wagtail powered website.",
     "domain_name": "example.com",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "timezone": "Africa/Lusaka",
     "python_version": ["3.6", "3.7", "3.8", "3.9"],
     "wagtail_user_email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@{{ cookiecutter.domain_name.lower()|replace(' ', '-') }}"
