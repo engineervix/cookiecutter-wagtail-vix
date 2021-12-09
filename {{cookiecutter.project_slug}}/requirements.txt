@@ -211,7 +211,7 @@ invoke==1.6.0
     # via -r {{cookiecutter.project_slug}}/requirements.in
 isort[requirements_deprecated_finder]==5.9.3
     # via -r {{cookiecutter.project_slug}}/requirements.in
-jinja2==2.11.3
+jinja2==3.0.3
     # via commitizen
 l18n==2020.6.1
     # via wagtail
