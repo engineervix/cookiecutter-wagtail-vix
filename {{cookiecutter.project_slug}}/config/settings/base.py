@@ -229,6 +229,8 @@ LEAFLET_CONFIG = {
             },
         ),
     ],
+    # https://django-leaflet.readthedocs.io/en/latest/templates.html#force-leaflet-image-path
+    "FORCE_IMAGE_PATH": True,
 }
 {% endraw %}
 NEXMO_API_KEY = env("NEXMO_API_KEY")
