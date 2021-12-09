@@ -27,7 +27,7 @@ beautifulsoup4==4.9.3
     #   wagtail
 black==20.8b1
     # via -r requirements.in
-bleach==3.3.1
+bleach==4.1.0
     # via -r requirements.in
 blessings==1.7
     # via curtsies
