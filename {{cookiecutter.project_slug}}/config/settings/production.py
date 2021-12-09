@@ -60,7 +60,8 @@ CACHES = {
         "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
         "LOCATION": env("MEMCACHED_URL"),  # noqa F405
         "TIMEOUT": 600,
-        "OPTIONS": {"MAX_ENTRIES": 1000},
+        # __init__() got an unexpected keyword argument 'MAX_ENTRIES'
+        # "OPTIONS": {"MAX_ENTRIES": 1000},
     },
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
