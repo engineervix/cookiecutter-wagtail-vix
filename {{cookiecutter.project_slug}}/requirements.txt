@@ -251,7 +251,7 @@ phonenumbers==8.12.29
     # via -r requirements.in
 phonenumberslite==8.12.29
     # via faker-e164
-pillow==8.4.0
+pillow==9.0.0
     # via wagtail
 pip-api==0.0.20
     # via isort
@@ -471,3 +471,4 @@ yattag==1.14.0
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
+django>=2.2.26 # not directly required, pinned by Snyk to avoid a vulnerability
