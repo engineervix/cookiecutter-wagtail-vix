@@ -14,7 +14,7 @@ jobs:
           RECAPTCHA_PRIVATE_KEY: $RECAPTCHA_PRIVATE_KEY
           MAPBOX_ACCESS_TOKEN: $MAPBOX_ACCESS_TOKEN
           CELERY_BROKER_URL: redis://redis:6379/0
-      - image: circleci/postgres:12.4-postgis
+      - image: circleci/postgres:13.5-postgis
         environment:
           POSTGRES_USER: test_postgis_user
           POSTGRES_DB: test_postgis_db
