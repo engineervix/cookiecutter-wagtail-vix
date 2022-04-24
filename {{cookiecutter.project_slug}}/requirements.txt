@@ -14,7 +14,7 @@ argon2-cffi==20.1.0
     # via django
 asgiref==3.4.1
     # via django
-attrs==20.3.0
+attrs==21.4.0
     # via pytest
 backports.entry-points-selectable==1.1.1
     # via virtualenv
