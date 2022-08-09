@@ -60,7 +60,8 @@ CACHES = {
         "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
         "LOCATION": env("MEMCACHED_URL"),  # noqa F405
         "TIMEOUT": 600,
-        "OPTIONS": {"MAX_ENTRIES": 1000},
+        # __init__() got an unexpected keyword argument 'MAX_ENTRIES'
+        # "OPTIONS": {"MAX_ENTRIES": 1000},
     },
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
@@ -100,12 +101,10 @@ ANYMAIL = {
 }
 
 if len(getaddresses([env("EMAIL_RECIPIENTS")])) == 1:  # noqa F405
-    LIST_OF_EMAIL_RECIPIENTS.append(  # noqa F405
-        formataddr(getaddresses([env("EMAIL_RECIPIENTS")])[0])  # noqa F405
-    )
+    LIST_OF_EMAIL_RECIPIENTS.append(formataddr(getaddresses([env("EMAIL_RECIPIENTS")])[0]))  # noqa F405  # noqa F405
 else:
-    for email_address in getaddresses([env("EMAIL_RECIPIENTS")]):  # noqa F405
-        LIST_OF_EMAIL_RECIPIENTS += formataddr(email_address)  # noqa F405
+    recipients = getaddresses([env("EMAIL_RECIPIENTS")])  # noqa F405
+    LIST_OF_EMAIL_RECIPIENTS += list(map(lambda recipient: formataddr(recipient), recipients))  # noqa F405
 
 email_address = getaddresses([env("DEFAULT_FROM_EMAIL")])[0]  # noqa F405
 DEFAULT_FROM_EMAIL = formataddr(email_address)
