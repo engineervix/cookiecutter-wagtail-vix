@@ -447,7 +447,7 @@ webencodings==0.5.1
     #   html5lib
 werkzeug==2.0.2
     # via -r requirements.in
-wheel==0.37.0
+wheel==0.38.0
     # via pip-tools
 willow==1.4
     # via wagtail
@@ -471,3 +471,4 @@ yattag==1.14.0
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
