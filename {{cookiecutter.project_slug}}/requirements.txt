@@ -189,7 +189,7 @@ filelock==3.0.12
     # via virtualenv
 flake8==3.9.2
     # via -r requirements.in
-future==0.18.2
+future==0.18.3
     # via pytest-logger
 greenlet==0.4.17
     # via bpython
