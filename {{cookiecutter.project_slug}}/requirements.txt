@@ -58,7 +58,7 @@ commitizen==2.18.0
     # via -r requirements.in
 coverage==5.5
     # via pytest-cov
-cryptography==3.4.7
+cryptography==39.0.1
     # via pyjwt
 csscompressor==0.9.5
     # via -r requirements.in
