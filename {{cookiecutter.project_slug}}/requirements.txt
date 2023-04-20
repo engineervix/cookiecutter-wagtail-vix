@@ -384,7 +384,7 @@ slimit==0.8.1
     # via -r requirements.in
 soupsieve==2.2.1
     # via beautifulsoup4
-sqlparse==0.4.2
+sqlparse==0.4.4
     # via
     #   django
     #   django-debug-toolbar
