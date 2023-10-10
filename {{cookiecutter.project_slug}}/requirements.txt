@@ -35,7 +35,7 @@ bpython==0.21
     # via -r requirements.in
 brotli==1.0.9
     # via -r requirements.in
-certifi==2020.12.5
+certifi==2023.7.22
     # via
     #   requests
     #   sentry-sdk
@@ -285,7 +285,7 @@ pycparser==2.20
     # via cffi
 pyflakes==2.3.1
     # via flake8
-pygments==2.10.0
+pygments==2.15.0
     # via
     #   bpython
     #   doc8
@@ -349,11 +349,11 @@ rcssmin==1.0.6
     # via django-compressor
 readtime==1.1.1
     # via -r requirements.in
-redis==3.5.3
+redis==4.3.6
     # via django-redis
 regex==2020.11.13
     # via black
-requests==2.26.0
+requests==2.31.0
     # via
     #   bpython
     #   django-anymail
@@ -384,7 +384,7 @@ slimit==0.8.1
     # via -r requirements.in
 soupsieve==2.2.1
     # via beautifulsoup4
-sqlparse==0.4.2
+sqlparse==0.4.4
     # via
     #   django
     #   django-debug-toolbar
@@ -420,7 +420,7 @@ ua-parser==0.10.0
     # via
     #   -r requirements.in
     #   user-agents
-urllib3==1.26.6
+urllib3==1.26.17
     # via
     #   requests
     #   sentry-sdk
@@ -445,9 +445,9 @@ webencodings==0.5.1
     # via
     #   bleach
     #   html5lib
-werkzeug==2.0.2
+werkzeug==2.2.3
     # via -r requirements.in
-wheel==0.37.0
+wheel==0.38.0
     # via pip-tools
 willow==1.4
     # via wagtail
@@ -471,3 +471,6 @@ yattag==1.14.0
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
+django>=3.2.22 # not directly required, pinned by Snyk to avoid a vulnerability
+pyjwt>=2.4.0 # not directly required, pinned by Snyk to avoid a vulnerability
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
