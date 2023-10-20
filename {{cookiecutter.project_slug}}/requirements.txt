@@ -430,7 +430,7 @@ user-agents==2.2.0
     #   django-user-agents
 virtualenv==20.7.2
     # via pre-commit
-wagtail==2.14.1
+wagtail==4.1.9
     # via
     #   -r requirements.in
     #   wagtail-factories
