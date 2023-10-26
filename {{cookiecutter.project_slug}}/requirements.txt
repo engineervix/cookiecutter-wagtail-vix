@@ -58,7 +58,7 @@ commitizen==2.18.0
     # via -r requirements.in
 coverage==5.5
     # via pytest-cov
-cryptography==3.4.7
+cryptography==41.0.5
     # via pyjwt
 csscompressor==0.9.5
     # via -r requirements.in
@@ -445,7 +445,7 @@ webencodings==0.5.1
     # via
     #   bleach
     #   html5lib
-werkzeug==2.0.2
+werkzeug==3.0.1
     # via -r requirements.in
 wheel==0.37.0
     # via pip-tools
