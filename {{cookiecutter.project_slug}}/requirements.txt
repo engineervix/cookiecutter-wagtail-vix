@@ -199,7 +199,7 @@ html5lib==1.1
     # via
     #   -r requirements.in
     #   wagtail
-identify==1.6.2
+identify==2.5.33
     # via pre-commit
 idna==2.10
     # via requests
