@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to cookiecutter-wagtail-vix 👋</h1>
 
-> a batteries-included, reusable Wagtail project skeleton to serve as a starting point for a CMS-based website project.
+> a minimal, batteries-included, reusable project skeleton to serve as a starting point for a Wagtail project.
 
 [![Continuous Integration](https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml/badge.svg)](https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/engineervix/cookiecutter-wagtail-vix/badge.svg?branch=main)](https://coveralls.io/github/engineervix/cookiecutter-wagtail-vix?branch=main)
@@ -24,6 +24,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
+- [Introduction](#introduction)
 - [Features ✨](#features-)
 - [Getting Started 🚀](#getting-started-)
 - [Contributing 🤝](#contributing-)
@@ -37,6 +38,12 @@
 <p align="center">
   <img src="https://github.com/engineervix/cookiecutter-wagtail-vix/blob/main/docs/img/screenshot.png" alt="Screenshot">
 </p>
+
+## Introduction
+
+Embarking on any project "from scratch" is a formidable undertaking, entailing intricate configurations and setup that can quickly become overwhelming. Whether it's the time-consuming task of handling dependencies, structuring the project, or setting up a cohesive development environment – the challenges are universal.
+
+Enter `cookiecutter-wagtail-vix` – a template crafted to simplify the kick-off of [Wagtail](https://wagtail.org/) projects. This template is designed to streamline the setup process, sparing you from the headaches that often accompany the early stages of a project. By starting your new [Wagtail](https://wagtail.org/) project using  `cookiecutter-wagtail-vix`, you leapfrog the tedious setup tasks, allowing you to focus on what truly matters – crafting your project's unique functionality with ease.
 
 ## Features ✨
 

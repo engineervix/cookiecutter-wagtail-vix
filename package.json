@@ -1,7 +1,7 @@
 {
   "name": "cookiecutter-wagtail-vix",
   "version": "0.2.2",
-  "description": "a batteries-included, reusable Wagtail project skeleton to serve as a starting point for a CMS-based website project",
+  "description": "a minimal, batteries-included, reusable project skeleton to serve as a starting point for a Wagtail project",
   "scripts": {
     "test": "pytest",
     "release": "standard-version"
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/engineervix/cookiecutter-wagtail-vix#readme",
   "devDependencies": {
-    "standard-version": "9.3.1"
+    "standard-version": "^9.5.0"
   },
   "standard-version": {
     "header": "# Changelog\n\nAll notable changes to this project will be documented here.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n",
@@ -85,6 +85,10 @@
     "scripts": {
       "prechangelog": "sed -e '1,6d' -i CHANGELOG.md",
       "postchangelog": "sed -e 's/###\\ \\[/##\\ \\[v/g' -i CHANGELOG.md && sed -re 's/##\\ \\[([0-9])/##\\ \\[v\\1/g' -i CHANGELOG.md"
+    },
+    "engines": {
+      "node": ">= 18 <19",
+      "npm": ">= 10"
     }
   }
 }
