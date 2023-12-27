@@ -18,7 +18,7 @@ attrs==20.3.0
     # via pytest
 backports.entry-points-selectable==1.1.1
     # via virtualenv
-bcrypt==3.2.0
+bcrypt==3.2.2
     # via django
 beautifulsoup4==4.9.3
     # via
