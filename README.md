@@ -1,29 +1,26 @@
 <h1 align="center">Welcome to cookiecutter-wagtail-vix 👋</h1>
 
+<blockquote align="center"> a batteries-included, reusable Wagtail project skeleton to serve as a starting point for a CMS-based website project.
+</blockquote>
+
 <p align="center">
-<a href="https://circleci.com/gh/engineervix/cookiecutter-wagtail-vix/tree/master" target="_blank">
-  <img src="https://circleci.com/gh/engineervix/cookiecutter-wagtail-vix/tree/master.svg?style=svg" alt="CircleCI">
+<a href="https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml">
+  <img src="https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml/badge.svg" alt="Continuous Integration">
 </a>
-<a href="https://coveralls.io/github/engineervix/cookiecutter-wagtail-vix?branch=master" target="_blank">
-  <img src="https://coveralls.io/repos/github/engineervix/cookiecutter-wagtail-vix/badge.svg?branch=master" alt="Coverage Status">
+<a href="https://coveralls.io/github/engineervix/cookiecutter-wagtail-vix?branch=main" target="_blank">
+  <img src="https://coveralls.io/repos/github/engineervix/cookiecutter-wagtail-vix/badge.svg?branch=main" alt="Coverage Status">
 </a>
-<a href="https://python3statement.org/#sections50-why" target="_blank">
-  <img src="https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-brightgreen.svg" alt="python3">
-</a>
-<a href="https://requires.io/github/engineervix/cookiecutter-wagtail-vix/requirements/?branch=master">
-  <img src="https://requires.io/github/engineervix/cookiecutter-wagtail-vix/requirements.svg?branch=master" alt="Requirements Status" />
+<a href="https://python.org" target="_blank">
+  <img src="https://img.shields.io/badge/python-3.12-brightgreen.svg" alt="python 3.12">
 </a>
 <a href="https://github.com/psf/black" target="_blank">
   <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
 </a>
-<a href="https://github.com/pre-commit/pre-commit" target="_blank">
-  <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" alt="pre-commit">
-</a>
 <a href="https://github.com/engineervix/cookiecutter-wagtail-vix/LICENSE" target="_blank">
   <img src="https://img.shields.io/github/license/engineervix/cookiecutter-wagtail-vix" alt="License: MIT">
 </a>
-<a href="https://github.com/engineervix/cookiecutter-wagtail-vix/commits/master" target="_blank">
-  <img alt="GitHub commits since latest release (by SemVer)" src="https://img.shields.io/github/commits-since/engineervix/cookiecutter-wagtail-vix/latest/master">
+<a href="https://github.com/engineervix/cookiecutter-wagtail-vix/commits/main" target="_blank">
+  <img alt="GitHub commits since latest release (by SemVer)" src="https://img.shields.io/github/commits-since/engineervix/cookiecutter-wagtail-vix/latest/main">
 </a>
 <a href="https://conventionalcommits.org">
   <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg" alt="Conventional Commits">
@@ -33,10 +30,15 @@
 </a>
 </p>
 
-> a batteries-included, reusable Wagtail project skeleton to serve as a starting point for a CMS-based website project.
+---
+
+![Breaking Changes](https://source.unsplash.com/zkOg39koe80/640x320)
+
+**IMPORTANT NOTE**: **This project has been inactive for a long time. Breaking changes coming through ...**
+---
 
 <p align="center">
-  <img src="https://github.com/engineervix/cookiecutter-wagtail-vix/blob/master/docs/img/homepage_screenshot.png" alt="demo.gif">
+  <img src="https://github.com/engineervix/cookiecutter-wagtail-vix/blob/main/docs/img/homepage_screenshot.png" alt="demo.gif">
 </p>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -55,7 +57,6 @@
   - [Testing and Code Quality](#testing-and-code-quality)
   - [CI/CD / Production](#cicd--production)
   - [Project Features](#project-features)
-  - [Misc](#misc)
   - [Done](#done)
   - [Deprecated](#deprecated)
 - [Contributing 🤝](#contributing-)
@@ -199,7 +200,7 @@
 
 Contributions, issues and feature requests are most welcome! A good place to start is by helping out with the unchecked items in the [TODO](#todo-) section above!
 
-Feel free to check the [issues page](https://github.com/engineervix/cookiecutter-wagtail-vix/issues) and take a look at the [contributing guide](https://github.com/engineervix/cookiecutter-wagtail-vix/blob/master/CONTRIBUTING.md) before you get started. In addition, please note the following:
+Feel free to check the [issues page](https://github.com/engineervix/cookiecutter-wagtail-vix/issues) and take a look at the [contributing guide](https://github.com/engineervix/cookiecutter-wagtail-vix/blob/main/CONTRIBUTING.md) before you get started. In addition, please note the following:
 
 - if you're making code contributions, please try and write some tests to accompany your code, and ensure that the tests pass. Also, where necessary, update the docs so that they reflect your changes.
 - commit your changes via `cz commit`. Follow the prompts. When you're done, `pre-commit` will be invoked to ensure that your contributions and commits follow defined conventions. See `pre-commit-config.yaml` for more details.
@@ -238,12 +239,12 @@ The data was dumped as follows:
 
 👤 **Victor Miti**
 
-- Blog: <https://importthis.tech>
-- Twitter: [![Twitter: engineervix](https://img.shields.io/twitter/follow/engineervix.svg?style=social)](https://twitter.com/engineervix)
+- Blog: <https://blog.victor.co.zm>
+- [![X: engineervix](https://img.shields.io/twitter/follow/engineervix.svg?style=social)](https://twitter.com/engineervix)
 - Github: [@engineervix](https://github.com/engineervix)
 
 ## License 📝
 
-Copyright © 2021 [Victor Miti](https://github.com/engineervix).
+Copyright © 2024 [Victor Miti](https://github.com/engineervix).
 
-This project is licensed under the terms of the [MIT](https://github.com/engineervix/engineervix/blob/master/LICENSE) license.
+This project is licensed under the terms of the [MIT](https://github.com/engineervix/engineervix/blob/main/LICENSE) license.
