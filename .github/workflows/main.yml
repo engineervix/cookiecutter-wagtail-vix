@@ -14,7 +14,7 @@ on:
       - "v*"
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-22.04
 
     steps:
@@ -35,8 +35,48 @@ jobs:
       - name: Run tests
         run: |
           source venv/bin/activate
-          pytest
           flake8 --exclude=venv* --statistics --exit-zero
+          pytest
 
       - name: coveralls.io
         uses: coverallsapp/github-action@v2
+
+  # Creates a GitHub Release when the tests job succeeds, and only on pushes to tags.
+  release:
+    needs: [tests]
+
+    permissions:
+      contents: write
+
+    if: needs.python_tests.result == 'success' && startsWith( github.ref, 'refs/tags/v' )
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install invoke colorama tomli
+      - name: Get the version
+        id: get_version
+        run: |
+          echo "${{ github.ref }}"
+          echo "VERSION=$(echo $GITHUB_REF | sed 's/refs\/tags\///')" >> $GITHUB_ENV
+      - name: Generate Release Title
+        id: get_release_title
+        shell: bash
+        run: |
+          export TODAY="($(TZ=Africa/Lusaka date --iso))"
+          echo "RELEASE_NAME=$VERSION $TODAY" >> $GITHUB_ENV
+      - name: Extract Release Notes
+        # This creates a file LATEST_RELEASE_NOTES.md in the parent directory (../)
+        shell: bash
+        run: |
+          invoke get-release-notes
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: ${{ env.RELEASE_NAME }}
+          body_path: ../LATEST_RELEASE_NOTES.md
