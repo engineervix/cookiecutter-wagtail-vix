@@ -1,22 +1,30 @@
-name: Python CI
+name: Continuous Integration
+
+# Enable Buildkit and let compose use it to speed up image building
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
 
 on:
+  pull_request:
+    branches: ["main"]
   push:
-    branches:
-      - main
+    branches: ["main"]
+    tags:
+      - "v*"
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.7
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
