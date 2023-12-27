@@ -31,19 +31,12 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
-          pip install coveralls
 
       - name: Run tests
         run: |
           source venv/bin/activate
           pytest
           flake8 --exclude=venv* --statistics --exit-zero
-          coveralls
 
-      - name: Upload coverage artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: coverage
-          path: |
-            htmlcov
-            coverage.xml
+      - name: coveralls.io
+        uses: coverallsapp/github-action@v2
