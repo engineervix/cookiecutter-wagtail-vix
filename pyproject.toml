@@ -26,13 +26,21 @@ exclude = '''
 )
 '''
 
-[tool.commitizen]
-version = "0.2.2"
-version_files = [
-    "cookiecutter.json",
+[bumpver]
+current_version = "v2021.12.09"
+version_pattern = "vYYYY.0M.0D[-TAG]"
+commit_message = "bump: ✈️ {old_version} → {new_version}"
+commit = true
+tag = false
+push = false
+
+[bumpver.file_patterns]
+"package.json" = [
+    '"version": "{version}"',
 ]
-tag_format = "v$major.$minor.$patch"
-annotated_tag = true
-update_changelog_on_bump = false
-# changelog_file = "CHANGELOG.md"
-# changelog_incremental = true
+"cookiecutter.json" = [
+    '"version": "{version}"',
+]
+# "pyproject.toml" = [
+#     'version = "{version}"',
+# ]
