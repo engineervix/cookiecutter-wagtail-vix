@@ -1,34 +1,27 @@
-cookiecutter==1.7.3
-sh==1.14.2
-binaryornot==0.4.4
+cookiecutter==2.5.0
+sh==2.0.6
 
 # Code quality
 # ----------------------------------------------------------------------------
-black==20.8b1
-flake8==3.9.2
-flake8-isort==4.0.0
-isort[requirements_deprecated_finder]==5.9.3
+black==23.12.1
+flake8==6.1.0
+flake8-isort==6.1.1
 
 # Dev
 # ----------------------------------------------------------------------------
-commitizen==2.18.0
-powerline-status
+commitizen==3.13.0
 bpython
-invoke==1.6.0
-pre-commit==2.14.0
+invoke==2.2.0
+pre-commit==3.6.0
 
 # Testing
 # ----------------------------------------------------------------------------
-pytest==6.2.4
-pytest-cookies==0.6.1
-pytest-cov==2.12.1
-pytest-factoryboy==2.1.0
-pytest-instafail==0.4.2
+pytest==7.4.3
+pytest-cookies==0.7.0
+pytest-cov==4.1.0
+pytest-factoryboy==2.6.0
+pytest-instafail==0.5.0
 pytest-logger==0.5.1
-pytest-mock==3.6.1
-pytest-sugar==0.9.4
-pytest-xdist==2.3.0
-pyyaml==5.4.1
-
-# Pinned by Snyk
-pygments==2.10.0 # not directly required, pinned by Snyk to avoid a vulnerability
+pytest-mock==3.12.0
+pytest-sugar==0.9.7
+pytest-xdist==3.5.0
