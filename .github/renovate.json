@@ -45,5 +45,5 @@
     }
   ],
   "timezone": "Africa/Lusaka",
-  "schedule": ["after 7pm every weekday", "every weekend"]
+  "schedule": ["every weekend"]
 }
