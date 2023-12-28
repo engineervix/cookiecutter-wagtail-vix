@@ -9,6 +9,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 [![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/engineervix/cookiecutter-wagtail-vix/latest/main)](https://github.com/engineervix/cookiecutter-wagtail-vix/commits/main)
+[![All Contributors](https://img.shields.io/github/all-contributors/engineervix/cookiecutter-wagtail-vix?color=ee8449&style=flat-square)](#contributing-)
+
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
 [![Conventional Changelog](https://img.shields.io/badge/changelog-conventional-brightgreen.svg)](https://github.com/conventional-changelog)
