@@ -55,10 +55,16 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
-      - name: Install Dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install invoke colorama
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install invoke colorama
       - name: Get the version
         id: get_version
         run: |
@@ -74,6 +80,7 @@ jobs:
         # This creates a file LATEST_RELEASE_NOTES.md in the parent directory (../)
         shell: bash
         run: |
+          source venv/bin/activate
           invoke get-release-notes
       - name: GitHub Release
         uses: softprops/action-gh-release@v1
