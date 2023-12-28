@@ -4,6 +4,13 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2021.12.09](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.2.2...v2021.12.09) (2023-12-09)
+
+### ⚙️ Build System
+
+* **deps:** update dependency cfgv to v3.3.1 ([#377](https://github.com/engineervix/cookiecutter-wagtail-vix/pull/377)) ([15ac019](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/15ac0194fcf7a29e63472b07a1b7386fb7cd8a3c))
+
+
 ## [v0.2.2](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.2.1...v0.2.2) (2021-12-09)
 
 
