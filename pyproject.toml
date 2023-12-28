@@ -28,7 +28,7 @@ exclude = '''
 
 [bumpver]
 current_version = "2021.12.09"
-version_pattern = "YYYY.0M.0D[-TAG]"
+version_pattern = "[v]YYYY.0M.0D[-TAG]"
 commit = false
 tag = false
 push = false
