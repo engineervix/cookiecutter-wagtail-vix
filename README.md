@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to cookiecutter-wagtail-vix 👋</h1>
+# Welcome to cookiecutter-wagtail-vix 👋
 
 > a minimal, batteries-included, reusable project skeleton to serve as a starting point for a Wagtail project.
 
