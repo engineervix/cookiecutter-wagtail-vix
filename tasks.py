@@ -1,6 +1,7 @@
 import os
 from pathlib import Path  # noqa: F401
 
+import tomllib
 from colorama import Fore, init
 from invoke import task
 
@@ -67,8 +68,17 @@ def bump(c, branch="main", push=False):
         )
         previous_tag = get_current_tag.stdout.rstrip()
         c.run("bumpver update", pty=True)
+
+        with open("pyproject.toml", "rb") as f:
+            toml_dict = tomllib.load(f)
+        version_files = toml_dict["bumpver"]["file_patterns"].keys()
+        files_to_add = " ".join(list(version_files))
         c.run(
-            f'npm run release -- --skip.bump --releaseCommitMessageFormat "bump: ✈️ {previous_tag} → v{{{{currentTag}}}}"',
+            f"git add {files_to_add}",
+            pty=True,
+        )
+        c.run(
+            f'npm run release -- --skip.bump --tag-prefix "" --releaseCommitMessageFormat "bump: ✈️ {previous_tag} → v{{{{currentTag}}}}"',
             pty=True,
         )
         if push:
