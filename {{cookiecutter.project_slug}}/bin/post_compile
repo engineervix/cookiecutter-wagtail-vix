@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# the script should exit whenever it encounters an error
+set -o errexit
+# exit execution if one of the commands in the pipe fails.
+set -o pipefail
+# exit when the script tries to use undeclared variables.
+set -o nounset
+
+python manage.py collectstatic --noinput --clear
+python manage.py check --deploy

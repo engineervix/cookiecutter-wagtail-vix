@@ -1,8 +1,12 @@
 {
-  "python.pythonPath": "/path/to/virtualenvironment/bin/python",
-  "python.linting.pycodestyleEnabled": true,
-  "cSpell.enabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.linting.enabled": true,
-  "python.formatting.provider": "black"
+  "python.defaultInterpreterPath": "~/.virtualenvs/{{cookiecutter.project_slug}}/bin/python",
+  "files.associations": {
+    "*.html": "django-html"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  }
 }

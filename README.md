@@ -27,6 +27,7 @@
 - [Introduction](#introduction)
 - [Features ✨](#features-)
 - [Getting Started 🚀](#getting-started-)
+  - [A note regarding django-rq](#a-note-regarding-django-rq)
 - [Contributing 🤝](#contributing-)
 - [Show your support 🙌](#show-your-support-)
 - [Credits 👏](#credits-)
@@ -61,7 +62,8 @@ Here are some key highlights:
   - `home`: Has a `HomePage` model which just extends the Wagtail `Page` model and does nothing else. This gives you freedom to set it up as you please.
   - `core`: has **search** functionality and [wagtail-font-awesome-svg](https://github.com/wagtail-nest/wagtail-font-awesome-svg) configuration. The idea is to use this app for global functions, utilities, etc. Feel free to rename it to `utils` or `utilities` if you like!
   - `users`: Custom User model as [recommended in the Django docs](https://docs.djangoproject.com/en/5.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project). The model just extends `AbstractUser` and does nothing else, so you can customise it as you please.
-- [Django-RQ](https://github.com/rq/django-rq) ready
+- [Django-RQ](https://github.com/rq/django-rq) ready:
+  - The [`django-rq`](https://github.com/rq/django-rq) package is installed, and all the configuration available, though commented out. Please see [note below](#a-note-regarding-django-rq).
 - Custom [Bootstrap 5](https://getbootstrap.com/) Compilation using Sass. No other frontend dependencies.
 - Configured to work with [pytest](https://docs.pytest.org/en/latest/) in conjunction with [pytest-django](https://pytest-django.readthedocs.io/en/latest/) (plus other pytest plugins), [factory_boy](https://factoryboy.readthedocs.io/en/latest/) and [wagtail-factories](https://github.com/wagtail/wagtail-factories). You have a starting test coverage of 100%! Ain't that great?
 - Task execution and automation using [`invoke`](http://www.pyinvoke.org/).
@@ -86,8 +88,28 @@ Here are some key highlights:
 In order to generate a new project from this cookiecutter template:
 
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
-2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email**, **wagtail_user_email** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
+2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
 3. Thereafter, `cd` into the project folder created above and follow the instructions in your shiny new project's README.
+
+### A note regarding django-rq
+
+If you need to use [`django-rq`](https://github.com/rq/django-rq), you'll need to make the following changes:
+
+1. in `settings/base.py`
+  - uncomment the entry in the `THIRD_PARTY_APPS` list
+  - uncomment `RQ_QUEUES`
+2. in `settings/production.py`
+  - uncomment `RQ_QUEUES`
+  - uncomment the commented out items in the `LOGGING` dict
+3. in `Procfile`
+  - uncomment the `worker` entry
+4. in `.env`
+  - uncomment the line `RQ_QUEUE=redis://redis:6379/0`
+5. in `urls.py`
+  - uncomment the line with `path("dj-rq/", include("django_rq.urls")),`
+6. in `docker-compose.yml`
+  - uncomment the `redis` service entry
+  - uncomment the `worker` service entry
 
 ## Contributing 🤝
 

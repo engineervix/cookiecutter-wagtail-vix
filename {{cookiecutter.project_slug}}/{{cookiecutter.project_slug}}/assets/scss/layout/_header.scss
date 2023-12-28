@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+// we use this to shift the content down when the navbar is fixed to the top
+// in order to prevent overlap.
+// See: https://getbootstrap.com/docs/5.3/components/navbar/#placement
+// and https://getbootstrap.com/docs/5.3/components/navbar/#sass-variables
+$navbar-height: $nav-link-height + $navbar-padding-y + $navbar-toggler-padding-y;
+
+.hero {
+  &--home {
+    // Styles for hero--home
+
+    nav.navbar {
+      // Styles for the navbar
+
+      ~ div.container {
+        margin-top: $navbar-height;
+      }
+    }
+  }
+}

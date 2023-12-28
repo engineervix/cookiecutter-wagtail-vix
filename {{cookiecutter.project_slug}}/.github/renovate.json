@@ -44,6 +44,6 @@
       "semanticCommitType": "ci"
     }
   ],
-  "timezone": "Africa/Lusaka",
-  "schedule": ["after 1am every weekday", "every weekend"]
+  "timezone": "{{ cookiecutter.timezone }}",
+  "schedule": ["every weekend"]
 }

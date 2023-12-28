@@ -1,115 +1,32 @@
+{% raw %}
 <!DOCTYPE html>
+{% comment %}
+    * H031 = Consider adding meta keywords.
+{% endcomment %}
+{# djlint:off H031 #}
 <html lang="en">
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="500 Internal Server Error">
-    <meta name="author" content="{{ cookiecutter.author_name }}">
-    <title>500 Internal Server Error</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-    /* Error Page Inline Styles */
-
-    body {
-        padding-top: 20px;
-    }
-    /* Layout */
-
-    .jumbotron {
-        font-size: 21px;
-        font-weight: 200;
-        line-height: 2.1428571435;
-        color: inherit;
-        padding: 10px 0px;
-    }
-    /* Everything but the jumbotron gets side spacing for mobile-first views */
-
-    .masthead,
-    .body-content,
-    {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    /* Main marketing message and sign up button */
-
-    .jumbotron {
-        text-align: center;
-        background-color: transparent;
-    }
-
-    .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
-    /* Colors */
-
-    .green {
-        color: #5cb85c;
-    }
-
-    .orange {
-        color: #f0ad4e;
-    }
-
-    .red {
-        color: #d9534f;
-    }
-    </style>
-    <script type="text/javascript">
-    function loadDomain() {
-        var display = document.getElementById("display-domain");
-        display.innerHTML = document.domain;
-    }
-    </script>
-</head>
-
-<body onload="javascript:loadDomain();">
-    <!-- Error Page Content -->
-    <div class="container">
-        <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1><span class="glyphicon glyphicon-fire red"></span> 500 Internal Server Error</h1>
-            <p class="lead">The web server is returning an internal error for <em><span id="display-domain"></span></em>.</p>
-            <a href="javascript:document.location.reload(true);" class="btn btn-outline-secondary btn-lg text-center"><span class="green">Try This Page Again</span></a>
+    <head>
+        <!-- Simple HttpErrorPages | MIT License | https://github.com/HttpErrorPages -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description"
+              content="Something went wrong on our server. We're working to fix the issue. Please try again later or contact our support team for assistance.">
+        <title>We’ve got some trouble | 500 - Service currently unavailable</title>
+        <style type="text/css">/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}/*! Simple HttpErrorPages | MIT X11 License | https://github.com/AndiDittrich/HttpErrorPages */body,html{width:100%;height:100%;background-color:#21232a}body{color:#fff;text-align:center;text-shadow:0 2px 4px rgba(0,0,0,.5);padding:0;min-height:100%;-webkit-box-shadow:inset 0 0 100px rgba(0,0,0,.8);box-shadow:inset 0 0 100px rgba(0,0,0,.8);display:table;font-family:"Open Sans",Arial,sans-serif}h1{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;font-size:36px}h1 small{font-size:68%;font-weight:400;line-height:1;color:#777}a{text-decoration:none;color:#fff;font-size:inherit;border-bottom:dotted 1px #707070}.lead{color:silver;font-size:21px;line-height:1.4}.cover{display:table-cell;vertical-align:middle;padding:0 20px}footer{position:fixed;width:100%;height:40px;left:0;bottom:0;color:#a0a0a0;font-size:14px} </style>
+    </head>
+    {# djlint:on #}
+    <body>
+        <div class="cover">
+            <h1>
+                Service currently unavailable <small>500</small>
+            </h1>
+            <p class="lead">
+                An unexpected condition was encountered.
+                <br />
+                Our service team has been dispatched to bring it back online.
+            </p>
         </div>
-    </div>
-    <div class="container">
-        <div class="body-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>What happened?</h2>
-                    <p class="lead">A 500 error status implies there is a problem with the web server's software causing it to malfunction.</p>
-                </div>
-                <div class="col-md-6">
-                    <h2>What can I do?</h2>
-                    <p class="lead">If you're a site visitor</p>
-                    <p> Nothing you can do at the moment. If you need immediate assistance, please <a href="mailto:support@{{ cookiecutter.domain_name }}">get in touch with us</a> instead. We apologize for any inconvenience.</p>
-                    <p class="lead">If you're the site owner</p>
-                    <p>This error can only be fixed by server admins, please contact your website provider.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Error Page Content -->
-    <!--Scripts-->
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw==" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-</body>
-
+    </body>
 </html>
+{% endraw %}

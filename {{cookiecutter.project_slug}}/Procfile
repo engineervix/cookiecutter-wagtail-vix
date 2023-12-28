@@ -1,0 +1,5 @@
+web: gunicorn {{cookiecutter.project_slug}}.wsgi:application
+
+release: python manage.py migrate --no-input
+
+# worker: python manage.py rqworker default

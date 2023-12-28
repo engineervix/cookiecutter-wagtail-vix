@@ -1,9 +1,26 @@
-# Ignore the CHANGELOG so that prettier doesn't mess with the custom "bump hack"
-# (see tasks.py in the project root for details of the "bump hack")
+# Ignore CHANGELOG
 CHANGELOG.md
 
-# Ignore all HTML files:
+# Ignore all HTML/MJML files:
 *.html
+*.mjml
+# **/**/*.html
+# **/**/*.mjml
 
-# Ignore the vendors folder:
+# Ignore images
+**/assets/img/**/*.*
+
+# Ignore favicon webmanifest
+**/assets/ico/**/*.*
+
+# Ignore things in the vendors folder
 **/vendors/**/*.*
+
+# ignore lottiefiles
+**/img/lottiefiles/*.json
+
+# Ignore static assets build folder
+**/static/**/*.*
+
+# Ignore collectstatic folder
+**/staticfiles/**/*.*

@@ -4,206 +4,153 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
-[![python3](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-brightgreen.svg)](https://python3statement.org/#sections50-why)
+[![python3](https://img.shields.io/badge/python-3.12-brightgreen.svg)](https://python.org/)
+[![Node v18](https://img.shields.io/badge/Node-v18-teal.svg)](https://nodejs.org/en/blog/release/v18.0.0)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![code style: prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg)](https://prettier.io/)
+
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Conventional Changelog](https://img.shields.io/badge/changelog-conventional-brightgreen.svg)](https://github.com/conventional-changelog)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Introduction](#introduction)
+- [Development](#development)
+  - [First things first](#first-things-first)
+  - [Getting Started](#getting-started)
+  - [Commits, Releases and Changelogs](#commits-releases-and-changelogs)
+  - [Tips](#tips)
+- [Project Technical Documentation](#project-technical-documentation)
+- [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Features ✨
+## Introduction
 
-- This is a [Python](https://www.python.org/) project built using [Wagtail](https://wagtail.io/) – a powerful [Django](https://www.djangoproject.com/) Content Management System.
-- As with most web projects, the frontend dependencies, tasks, etc. are managed using [Node.js](https://nodejs.org/). This project uses [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com/)
-- [PostgreSQL](https://www.postgresql.org/)/[PostGIS](https://postgis.net/) Database
-- [Celery](https://docs.celeryproject.org/en/stable/) Tasks
-- [Redis](https://redis.io/) as a fast, persistent cache and Celery backend
-- [Google Recaptcha](https://www.google.com/recaptcha/about/) for added security on forms
-- [Leaflet](https://leafletjs.com/) and [Mapbox](https://www.mapbox.com/) for maps
-<!-- - [Vonage](https://www.vonage.com/) (formerly _Nexmo_) for SMS -->
-- [Sendgrid](https://sendgrid.com/) for transactional email
-- [Sentry](https://sentry.io) for error tracking in production
-- [Memcached](http://memcached.org/) for caching image renditions in production
-- [Frontend-cache invalidation](https://docs.wagtail.io/en/stable/reference/contrib/frontendcache.html#frontend-cache-invalidator) using [Cloudflare](https://www.cloudflare.com/)
+This is a [Python](https://www.python.org/) project built using [Wagtail](https://wagtail.org/) – a powerful [Django](https://www.djangoproject.com/) Content Management System.
+
+- As with most web projects, the frontend dependencies, tasks, etc. are managed using [Node.js](https://nodejs.org/). This project uses [Webpack](https://webpack.js.org/) to bundle frontend assets.
 - Tests via [pytest](https://pytest.org/)
-- Linting using [Black](https://black.readthedocs.io/), [Flake8](https://flake8.pycqa.org/) and [isort](https://pycqa.github.io/isort/)
+- Linting and formatting:
+  - _python_: [Black](https://black.readthedocs.io/) and [ruff](https://github.com/astral-sh/ruff)
+  - _frontend_: [ESLint](https://eslint.org/), [Stylelint](https://stylelint.io/), [prettier](https://prettier.io/) and [djLint](https://www.djlint.com/).
 - Task execution and automation using [`invoke`](http://www.pyinvoke.org/).
-- [Continuous integration (CI)](https://www.atlassian.com/continuous-delivery/continuous-integration) via [GitHub Actions](https://github.com/features/actions) / [circleCI](https://circleci.com/) / [GitLab CI/CD](https://docs.gitlab.com/ee/ci/).
-- Automatic dependency management via [Renovate](https://github.com/marketplace/renovate)
+- [Continuous integration (CI)](https://www.atlassian.com/continuous-delivery/continuous-integration) via [Github Actions](https://github.com/features/actions) / [Gitlab CI/CD](https://docs.gitlab.com/ee/ci/).
 
-## Development 💻
+## Development
 
 ### First things first
 
-A [\*nix](https://en.wikipedia.org/wiki/Unix-like) environment is highly recommended. Although you can possibly develop on Windows too (if you do, and you're using Powershell or CMD, you'll probably have to adapt some commands to suit a Windows Environment, because these docs assume you're running in a \*nix environment). You need to:
+Start by ensuring that you have Docker and Docker Compose:
 
-- ensure that [Python 3.6+](https://www.python.org/) is installed on your machine, and that you are able to configure python [**virtual environment**](https://realpython.com/python-virtual-environments-a-primer/)s;
-- ensure that you have [git](https://git-scm.com/) setup on your machine;
-- install and configure [PostGIS](https://postgis.net/) on your machine.
-- install and configure [redis](https://redis.io/) on your development machine.
-- Ensure that you have [Node.js 12+](https://nodejs.org/) and [yarn](https://yarnpkg.com/) with the following packages installed **globally**:
-  - [Browsersync](https://browsersync.io/): `npm install -g browser-sync`
-  - [commitizen](https://github.com/commitizen/cz-cli/): `npm install commitizen -g`
-  - [concurrently](https://github.com/kimmobrunfeldt/concurrently): `npm install -g concurrently`
-  - [DocToc](https://github.com/thlorenz/doctoc): `npm install -g doctoc`
-  - [Gulp](https://gulpjs.com/): `npm install gulp-cli -g`
-  - [MailDev](https://github.com/maildev/maildev) – `npm install -g maildev`
-  - [prettier](https://github.com/prettier/prettier/): `npm install prettier -g`
-  - [Sass](https://sass-lang.com): `npm install -g sass`
+```sh
+# check that you have docker on your machine
+docker -v
 
-Other considerations:
+# check that you have docker-compose on your machine
+docker-compose -v
+```
 
-- If you're running Windows, we highly recommend using [Cmder](https://cmder.net/) as your console emulator. It comes bundled with [Git](https://git-scm.com/), and will be less frustrating than using the default Windows console.
-- We also recommend using either [VSCode](https://code.visualstudio.com/) or [PyCharm](https://www.jetbrains.com/pycharm/) as your editor. Of course you're free to use whatever editor you want!
+For the best developer experience, you need to have [Python 3.12](https://www.python.org/) and [Poetry](https://python-poetry.org/) installed on your machine. If, for some reason, you have a different python version, you can use [pyenv](https://github.com/pyenv/pyenv) to install multiple python versions on your machine. Once you have Python 3.12 installed, create a [**virtual environment**](https://realpython.com/python-virtual-environments-a-primer/) and install dependencies via `poetry install --with dev,test,docs`.
 
 ### Getting Started
 
-First, [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) this repository, then fire up your command prompt and clone the forked repository.
+Here, we assume that you have `git` on your machine, and that you have created a Python 3.12 virtual environment and installed the development dependencies.
 
-Then, navigate to the cloned project directory: `cd {{cookiecutter.project_slug}}`
+Now, upon cloning this repository (or forking + cloning your fork), navigate to the cloned project directory.
 
-Activate your python virtual environment and `pip install --upgrade pip`
+Skip the next step (involving `.env`) if you have just created a new project using the  [`cookiecutter-wagtail-vix`](https://github.com/engineervix/cookiecutter-wagtail-vix) project template.
 
-Install [pip-tools](https://github.com/jazzband/pip-tools): `pip install pip-tools`.
-
-Run `pip-compile requirements.in` followed by `pip install -r requirements.txt`
-
-Setup [pre-commit](https://pre-commit.com/) by running `pre-commit install` followed by `pre-commit install --hook-type commit-msg`. Optionally run `pre-commit run --all-files` to make sure your pre-commit setup is okay.
-
-Install the Node.js dependencies and copy the vendor libraries to the `static` directory:
+Then create the required `.env` file:
 
 ```sh
-yarn install && gulp cp
+cp -v .env.sample .env
 ```
 
-Create a Postgres/PostGIS database and user for the project. If you are using tools such as [PGAdmin](https://www.pgadmin.org/) or [Postgres.app](https://postgresapp.com/), you please feel free to use them according to their documentation. If you are using the CLI like me, you could do it as follows:
+At this point, you might wanna edit `.env` by replacing `CHANGEME!!` with appropriate values, as indicated in the comments above such an environment variable. You can leave the other values as they are.
+
+Now, build the images and spin up the containers:
 
 ```sh
-# assuming your DATABASE is my_DB
-# assuming USER is my_user
-# assuming your PASSWORD is my_password
-psql -c "CREATE USER my_user PASSWORD 'my_password'" \
-&& psql -c "CREATE DATABASE my_DB OWNER my_user" \
-&& psql -c "GRANT ALL PRIVILEGES ON DATABASE my_DB TO my_user" \
-&& psql -c "ALTER ROLE my_user SUPERUSER" \
-&& psql -d my_DB -c "CREATE EXTENSION postgis" \
-&& psql -d my_DB -c "CREATE EXTENSION postgis_topology"
+inv up --build
 ```
 
-Now that your database is set up, it's time to set up your environment variables. This repo contains a directory `.envs` which has `*.env.sample` files for you to build on and customize. Make copies of these files and remove the `.sample` from the copies:
+This is basically the same as running `docker-compose up -d --build`, but is obviously much shorter 😎. The above is made possible by [Invoke](https://www.pyinvoke.org/), which is [used extensively on this project to automate some tasks](#tips). Also note that `inv` is short for `invoke` — the two can be used interchangeably.
+
+Running the above command may take a while, you might wanna grab a cup of tea ☕.
+
+> **Note**
+>
+> every time you want to spin up the containers, you can just run `inv up` without specifying the `--build` argument. Only add the `--build` argument if you wanna rebuild the images.
+
+If everything goes well, you should be able to get into the `web` container and access the shell.
 
 ```sh
-# first, rename the `.envs.sample` directory to `.envs`
-cp -v .envs/.dev.env.sample .envs/.dev.env
-cp -v .envs/.test.env.sample .envs/.testenv
-cp -v .envs/.prod.env.sample .envs/.prod.env
+inv exec web bash
 ```
 
-There are three `.env` files:
+Once you're in the container,
 
-1. `.dev.env` – for the **development** environment
-2. `.test.env` – for the **test** environment
-3. `.prod.env` – for the **production** environment
-
-Edit those files and update the environment variables accordingly. The table below shows the environment variables that need to be updated. For now, you can skip the environment variables for production, and only update them when you are ready to go into production. For starters (development and test), you'll need to:
-
-- generate a `DJANGO_SECRET_KEY` (There are many ways to do this, one of which is suggested in all the `*.env` files). Another quick way is to run `openssl rand -hex 32` in your terminal.
-- create a [Google Recaptcha](https://www.google.com/recaptcha/about/) account and obtain the `RECAPTCHA_PUBLIC_KEY` and `RECAPTCHA_PRIVATE_KEY`.
-- create a [Mapbox](https://www.mapbox.com/) account and obtain the `MAPBOX_ACCESS_TOKEN`.
-
-|     | development           | test                  | production                |
-| --- | --------------------- | --------------------- | ------------------------- |
-| 1   | DJANGO_SECRET_KEY     | DJANGO_SECRET_KEY     | DJANGO_SECRET_KEY         |
-| 2   | DATABASE_URL          | RECAPTCHA_PUBLIC_KEY  | DATABASE_URL              |
-| 3   | RECAPTCHA_PUBLIC_KEY  | RECAPTCHA_PRIVATE_KEY | EMAIL_RECIPIENTS          |
-| 4   | RECAPTCHA_PRIVATE_KEY | MAPBOX_ACCESS_TOKEN   | DEFAULT_FROM_EMAIL        |
-| 5   | MAPBOX_ACCESS_TOKEN   |                       | ALLOWED_HOSTS             |
-| 6   |                       |                       | BASE_URL                  |
-| 7   |                       |                       | RECAPTCHA_PUBLIC_KEY      |
-| 8   |                       |                       | RECAPTCHA_PRIVATE_KEY     |
-| 9   |                       |                       | SENDGRID_API_KEY          |
-| 10  |                       |                       | MAPBOX_ACCESS_TOKEN       |
-| 11  |                       |                       | NEXMO_API_KEY             |
-| 12  |                       |                       | NEXMO_API_SECRET          |
-| 13  |                       |                       | NEXMO_DEFAULT_FROM        |
-| 14  |                       |                       | CLOUDFLARE_BEARER_TOKEN   |
-| 15  |                       |                       | CLOUDFLARE_DOMAIN_ZONE_ID |
-| 16  |                       |                       | SENTRY_DSN                |
-| 17  |                       |                       | REDIS_KEY_PREFIX          |
-
-Please note that, in production, this project uses
-
-- [Sendgrid](https://sendgrid.com/) for sending emails via [django-anymail](https://github.com/anymail/django-anymail). You can use your preferred provider and update both the [production settings](config/settings/production.py) and environment variables accordingly.
-- [Sentry](https://sentry.io) for error tracking.
-
-Okay, now that you have installed all dependencies and have set up your database and environment variables, you can now create database migrations and create the superuser in readiness to run the project:
+- apply database migrations via `./manage.py migrate`,
+- [create a cache table](https://docs.djangoproject.com/en/5.0/topics/cache/#creating-the-cache-table) via `./manage.py createcachetable`
+- create a `superuser` via `./manage.py createsuperuser`,
+- run the following to simultaneously launch the [django development server](https://docs.djangoproject.com/en/5.0/ref/django-admin/#django-admin-runserver) and the [webpack dev server](https://webpack.js.org/configuration/dev-server/):
 
 ```sh
-# **Important Note**:
-# You have to set the `ENV_PATH` variable otherwise you will get an error when you try to run anything.
-# Setting this tells Django which environment file to use.
-# This can be automated in many ways, as has been done, for example, using yarn/npm scripts.
-export ENV_PATH=.envs/.dev.env
-./manage.py makemigrations && ./manage.py migrate
-./manage.py createsuperuser
+inv start
 ```
 
-At this stage, hopefully everything should be working fine, and you should be able to start hacking on the project.
+You can access the dev server at <http://127.0.0.1:8000>. This project uses [MailDev](https://github.com/maildev/maildev) for viewing and testing emails generated during development. The `MailDev` server is accessible at <http://127.0.0.1:1080>.
 
-### Tests
+### Commits, Releases and Changelogs
 
-Simply run `yarn test` to run tests using `pytest`.
+This project follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification for structured and [semantic](https://semver.org/spec/v2.0.0.html) commit messages. It also utilizes a [conventional changelog](https://github.com/conventional-changelog/conventional-changelog#getting-started) to keep track of changes and releases in a standardized way.
 
-### Code Formatting
+Creating a release is as simple as running
 
-- Run `invoke lint` to run [`flake8`](https://flake8.pycqa.org/en/latest/), [`black`](https://black.readthedocs.io/en/stable/), [`isort`](https://pycqa.github.io/isort/) on the code.
-- If you get any errors from `black` and/or `isort`, run `invoke lint --fix` or `invoke lint -f` so that black and isort can format your files. If this still doesn't work, don't worry, there's a bunch of pre-commit hooks that that have been set up to deal with this. Take a look at [.pre-commit-config.yaml](.pre-commit-config.yaml).
-
-### Contributing 🤝
-
-Contributions of any kind welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute. In addition, please note the following:
-
-- if you're making code contributions, please try and write some tests to accompany your code, and ensure that the tests pass. Also, were necessary, update the docs so that they reflect your changes.
-- commit your changes via `git commit`. Follow the prompts. When you're done, `pre-commit` will be invoked to ensure that your contributions and commits follow defined conventions. See `pre-commit-config.yaml` for more details.
-- your commit messages should follow the conventions described [here](https://www.conventionalcommits.org/en/v1.0.0/). Write your commit message in the imperative: "Fix bug" and not "Fixed bug" or "Fixes bug." This convention matches up with commit messages generated by commands like `git merge` and `git revert`.
-  Once you are done, please create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-## Running the application 🚀
-
-### without celery
-
-Launch the development server by running:
-
-```sh
-yarn dev
+```bash
+inv bump main
 ```
 
-### with celery
+Assuming you are working with the `main` branch.
 
-Launch the development server by running:
+If it's your first release:
 
-```sh
-yarn dev:celery
+```bash
+inv bump main --first
 ```
 
-If all goes well, this will launch two tabs in your default browser – a `maildev` tab and a `django` tab. The [Browsersync](https://browsersync.io/) and [gulp](https://gulpjs.com/) setup provides for automatic restarting of the dev server and autoreload of the browser, so you can work on the project and make changes to the files without having to do this manually. Any emails you send or receive during development will appear in the `maildev` tab. [MailDev](https://github.com/maildev/maildev) provides an excellent way to test emails during development, without having to send actual emails to real email addresses!
+This will
 
-## TODO ✅
+- create a `v0.0.0` and a `v0.1.0` tag
+- update the changelog accordingly
+- push the changes to your origin and create a release, complete with release notes.
 
-- [ ] ...
-- [ ] ...
+For the first release, you can also supply the `--major` argument and this will create a `v1.0.0` tag instead of `v0.1.0`
 
-## Credits 👏
+### Tips
+
+- Run `invoke -l` to see all available [Invoke](https://www.pyinvoke.org/) tasks. These are defined in the [tasks.py](tasks.py) file.
+- You'll want to setup [pre-commit](https://pre-commit.com/) by running `pre-commit install` followed by `pre-commit install --hook-type commit-msg`. Optionally run `pre-commit run --all-files` to make sure your pre-commit setup is okay.
+- You'll probably also want to install Node.js 18 on your machine, together with the dependencies. We recommend using [fnm](https://github.com/Schniz/fnm) or [volta](https://volta.sh/) to simplify managing Node.js versions on your machine.
+
+## Project Technical Documentation
+
+The project's documentation is powered by [mkdocs](https://www.mkdocs.org/), and lives in the [`docs`](./docs/) directory.
+
+You can view it by running the following in the `web` container:
+
+```bash
+mkdocs serve
+```
+
+The documentation will be available at: <http://127.0.0.1:8001/>
+
+
+## Credits
 
 This project was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [`engineervix/cookiecutter-wagtail-vix`](https://github.com/engineervix/cookiecutter-wagtail-vix) project template.
-
-## Design Notes 📝
-
-...
-...
-...
 
 ---

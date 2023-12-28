@@ -1,0 +1,21 @@
+{
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "cron": [
+    {
+      "command": "python manage.py clearsessions",
+      "schedule": "@daily"
+    }
+  ],
+  "scripts": {
+    "dokku": {
+      "predeploy": "./bin/post_compile"
+    }
+  }
+}

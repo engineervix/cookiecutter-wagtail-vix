@@ -1,103 +1,88 @@
 {
   "name": "{{cookiecutter.project_slug}}",
-  "version": "{{ cookiecutter.version }}",
+  "version": "0.0.0",
   "description": "{{cookiecutter.description}}",
-  "main": "index.js",
   "author": "{{ cookiecutter.author_name }}",
   "license": "UNLICENSED",
-  "scripts": {
-    "collectstatic:dev": "export ENV_PATH=.envs/.dev.env && ./manage.py collectstatic --ignore scss/ --noinput --clear",
-    "collectstatic:prod": "export ENV_PATH=.envs/.prod.env && ./manage.py collectstatic --ignore scss/ --noinput --clear --settings 'config.settings.production'",
-    "coverage_html": "export ENV_PATH=.envs/.test.env && concurrently --raw --kill-others \"pytest -vv --cov=. --cov-report html\" \"maildev -o\"",
-    "css-fix": "npx stylelint {{cookiecutter.project_slug}}/static/css/ --fix",
-    "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"gulp\" \"maildev -o\"",
-    "dev:celery": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"gulp\" \"maildev -o\" \"celery -A config worker -l info -E -B\"",
-    "isort": "isort -rc --atomic .",
-    "release": "standard-version",
-    "setup_test_db": "psql -c \"DROP DATABASE IF EXISTS test_postgis_database\" && psql -c \"DROP USER IF EXISTS test_postgis_user\" && psql -c \"CREATE USER test_postgis_user PASSWORD 'testDB-password'\" && psql -c \"CREATE DATABASE test_postgis_database OWNER test_postgis_user\" && psql -c \"GRANT ALL PRIVILEGES ON DATABASE test_postgis_database to test_postgis_user\" && psql -c \"ALTER ROLE test_postgis_user SUPERUSER\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis\" && psql -d test_postgis_database -c \"CREATE EXTENSION postgis_topology\"",
-    "stylelint-check": "stylelint-config-prettier-check",
-    "test": "export ENV_PATH=.envs/.test.env && npm run setup_test_db && pytest",
-    "toc": "doctoc README.md"
-  },
   "private": true,
+  "scripts": {
+    "build": "webpack --mode development --progress",
+    "build:prod": "webpack --mode production",
+    "commit": "git-cz",
+    "css-fix": "npx stylelint {{cookiecutter.project_slug}}/static/css/ --fix",
+    "dev": "webpack --mode development --progress --watch",
+    "dev:reload": "webpack serve",
+    "lint:format": "prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml}'",
+    "lint:js": "eslint --ext \".js\" --ignore-path .gitignore {{cookiecutter.project_slug}}/assets/js/",
+    "lint:style": "stylelint \"{{cookiecutter.project_slug}}/assets/scss/**/*.{scss,css}\" --ignore-path .gitignore",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:format",
+    "release": "standard-version"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.15.4",
-    "animate.css": "4.1.1",
-    "bootstrap": "4.6.0",
-    "bootstrap-notify": "3.1.3",
-    "bootstrap-sweetalert": "1.0.1",
-    "chartist": "0.11.4",
-    "glightbox": "3.0.9",
-    "holderjs": "2.9.9",
-    "imagesloaded": "4.1.4",
-    "jquery": "3.6.0",
-    "jquery-countdown": "2.2.0",
-    "js.sortable": "0.8.0",
-    "lightslider": "1.1.6",
-    "masonry-layout": "4.2.2",
-    "mjml": "4.10.2",
-    "moment": "2.29.1",
-    "photoswipe": "4.1.3",
-    "select2": "4.0.13",
-    "shufflejs": "5.4.1",
-    "tingle.js": "0.16.0",
-    "typed.js": "2.0.12"
+    "bootstrap": "^5.3.2"
   },
   "devDependencies": {
-    "@babel/core": "7.15.0",
-    "@babel/preset-env": "7.15.0",
-    "bourbon": "7.0.0",
-    "browser-sync": "2.27.5",
-    "commitizen": "4.2.4",
-    "cz-conventional-changelog": "3.3.0",
-    "cz-emoji": "1.3.1",
-    "date-fns": "2.17.0",
-    "del": "6.0.0",
-    "gulp": "4.0.2",
-    "gulp-autoprefixer": "8.0.0",
-    "gulp-babel": "8.0.0",
-    "gulp-clean-css": "4.3.0",
-    "gulp-conventional-changelog": "2.0.35",
-    "gulp-npm-dist": "1.0.3",
-    "gulp-rename": "2.0.0",
-    "gulp-sass": "5.0.0",
-    "gulp-sourcemaps": "3.0.0",
-    "gulp-stylelint": "13.0.0",
-    "gulp-uglify": "3.0.2",
-    "node-sass": "6.0.1",
-    "normalize.css": "8.0.1",
-    "popper.js": "1.16.1",
-    "sass-mq": "5.0.1",
-    "standard-version": "9.3.1",
-    "stylelint": "13.13.1",
-    "stylelint-config-prettier": "8.0.2",
-    "stylelint-config-sass-guidelines": "8.0.0",
-    "stylelint-config-standard": "22.0.0"
+    "@babel/core": "^7.23.6",
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/preset-env": "^7.23.6",
+    "autoprefixer": "^10.4.16",
+    "babel-loader": "^9.1.3",
+    "bourbon": "^7.3.0",
+    "commitizen": "^4.3.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.1",
+    "eslint-webpack-plugin": "^4.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "mjml": "^4.14.1",
+    "postcss-custom-properties": "^13.3.3",
+    "postcss-loader": "^7.3.3",
+    "prettier": "^3.1.1",
+    "sass": "~1.32.11",
+    "sass-loader": "^13.3.2",
+    "standard-version": "^9.5.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-webpack-plugin": "^4.1.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
-  "browserslist": [
-    "defaults",
-    "cover 99.5%",
-    "not ie < 8"
-  ],
+  "browserslist": {
+    "production": [
+      ">5%",
+      "last 2 versions",
+      "not ie > 0",
+      "not ie_mob > 0",
+      "Firefox ESR"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 edge version"
+    ]
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
   "stylelint": {
     "extends": [
-      "stylelint-config-sass-guidelines",
-      "stylelint-config-prettier"
+      "stylelint-config-standard-scss"
     ],
+    "rules": {
+      "at-rule-no-unknown": null,
+      "scss/at-rule-no-unknown": true,
+      "scss/at-import-partial-extension": null
+    },
     "ignoreFiles": [
-      "**/vendor/**/*.*",
-      "**/static/css/*.min.css",
-      "**/static/css/main.css"
+      "**/static/**/*.*",
+      "**/staticfiles/css/*.*"
     ]
   },
   "standard-version": {
@@ -161,5 +146,9 @@
       "prechangelog": "sed -e '1,6d' -i CHANGELOG.md",
       "postchangelog": "sed -e 's/###\\ \\[/##\\ \\[v/g' -i CHANGELOG.md && sed -re 's/##\\ \\[([0-9])/##\\ \\[v\\1/g' -i CHANGELOG.md"
     }
+  },
+  "engines": {
+    "node": ">= 18 <19",
+    "npm": ">= 10"
   }
 }

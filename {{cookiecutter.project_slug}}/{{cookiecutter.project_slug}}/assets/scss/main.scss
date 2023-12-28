@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// This is *roughly* based on the [7-1 pattern](https://sass-guidelin.es/).
+
+// 1. Configuration and helpers
+// 2. Vendors
+
+@import "bourbon";
+
+// https://getbootstrap.com/docs/5.3/customize/sass/
+
+// Custom Bootstrap Variables
+@import "abstracts/custom_bootstrap_vars";
+
+// Set your own initial variables
+@import "abstracts/variables";
+
+// 2. Vendors: Bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// 2. Vendors: Custom vendor overrides
+
+@import "vendors/wagtail";
+
+// 3. Base stuff
+@import "base/base";
+@import "base/typography";
+
+// 4. Layout-related sections
+@import "layout/header";
+@import "layout/footer";
+
+// 5. Components
+@import "components/navbar";
+
+// 6. Page-specific styles
+@import "pages/home";
+
+// 7. Themes
+@import "themes/dark";

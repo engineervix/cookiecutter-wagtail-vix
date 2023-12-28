@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/* Border box declaration
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+
+/* inherit border-box on all elements in the universe and before and after */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

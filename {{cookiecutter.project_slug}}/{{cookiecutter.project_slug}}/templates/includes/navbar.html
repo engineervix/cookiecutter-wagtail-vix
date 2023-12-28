@@ -1,0 +1,44 @@
+{% raw %}{% load static wagtailcore_tags %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        {# djlint:off D018,H006,H021 #}
+        <a class="navbar-brand" href="/">
+            <img src="{% static 'img/fake-logo.svg' %}"{% endraw %}
+                 alt="{{ cookiecutter.project_name }}"{% raw %}
+                 style="height: 60px">
+        </a>
+        {# djlint:on #}
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-underline me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    {# djlint:off D018 #}
+                    <a class="nav-link {% if page.slug == 'home' %}active{% endif %}" {% if page.slug == 'home' %}aria-current="page"{% endif %}" href="/">Home</a>
+                    {# djlint:on #}
+                </li>
+            </ul>
+            <form action="{% url 'search' %}"
+                  class="d-flex m-2 m-sm-2 my-md-2"
+                  method="get"
+                  role="search">
+                <input name="query"
+                       class="form-control me-2"
+                       type="search"
+                       placeholder="Search"
+                       {% if search_query %}value="{{ search_query }}"{% endif %}
+                       aria-label="Search" />
+                <button class="btn btn-primary d-none d-lg-block" type="submit">Search</button>
+                <button class="btn btn-warning d-lg-none" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+{% endraw %}

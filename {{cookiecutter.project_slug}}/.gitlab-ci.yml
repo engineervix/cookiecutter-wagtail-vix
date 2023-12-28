@@ -1,65 +1,204 @@
 include:
-  template: Dependency-Scanning.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
 
-image: python:{{cookiecutter.python_version}}-buster
-services:
-  - postgis/postgis:10-2.5
+stages:
+  - lint
+  - test
+  - prepare
+  - release
+  - pages
 
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
 variables:
-  ENV_PATH: .envs/.test.env
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/pip-cache"
-  POSTGRES_DB: test_postgis_db
-  POSTGRES_USER: test_postgis_user
-  POSTGRES_PASSWORD: custom_pass
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
-# This folder is cached between builds
+# These folders are cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
-  paths:
-    - "$CI_PROJECT_DIR/pip-cache"
-  key: "$CI_PROJECT_ID"
+  # Pip's cache doesn't store the python packages
+  # https://pip.pypa.io/en/stable/reference/pip_install/#caching
+  - key: "$CI_PROJECT_ID"
+    paths:
+      - .cache/pip
+  - key: virtualenv
+    paths:
+      - .venv/
+  - key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
 
-before_script:
-  - apt update -y && apt upgrade -y
-  - export DEBIAN_FRONTEND=noninteractive
-  - ln -fs /usr/share/zoneinfo/{{ cookiecutter.timezone }} /etc/localtime
-  - dpkg-reconfigure --frontend noninteractive tzdata
-  - apt install -y postgresql postgresql-contrib postgis libpq-dev
-  - export PGPASSWORD=$POSTGRES_PASSWORD
-  - export PGUSER=$POSTGRES_USER
-  - python -VV # Print out python version for debugging
-  - which python # for debugging
-  - pip3 install virtualenv
-  - virtualenv ../venv
-  - source ../venv/bin/activate
-  - export LC_ALL=C.UTF-8
-  - export LANG=C.UTF-8
-  - pip install --upgrade pip && pip install pip-tools
-  - pip-compile requirements.in && pip-sync
-  - curl -sL https://deb.nodesource.com/setup_lts.x | bash -
-  - apt install nodejs -yqq
-  - npm install -g gulp-cli
-  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-  - apt update -q && apt install yarn -yqq
-  - yarn install && gulp cp
-  - mkdir .envs/
-  - touch .envs/.test.env
-  - echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
-  - echo "DEBUG=False" >> .envs/.test.env
-  - echo "ALLOWED_HOSTS=" >> .envs/.test.env
-  - echo "BASE_URL=www.example.com" >> .envs/.test.env
-  - echo "NEXMO_API_KEY=" >> .envs/.test.env
-  - echo "NEXMO_API_SECRET=" >> .envs/.test.env
-  - echo "NEXMO_DEFAULT_FROM=" >> .envs/.test.env
-  - python manage.py collectstatic
-
-test:
-  variables:
-    DATABASE_URL: "postgis://test_postgis_user:custom_pass@postgis-postgis/test_postgis_db"
-    RECAPTCHA_PUBLIC_KEY: "$RECAPTCHA_PUBLIC_KEY"
-    RECAPTCHA_PRIVATE_KEY: "$RECAPTCHA_PRIVATE_KEY"
-    MAPBOX_ACCESS_TOKEN: "$MAPBOX_ACCESS_TOKEN"
-
+ruff:
+  stage: lint
+  image: python:3.12-slim-bookworm
+  before_script:
+    - pip install ruff
   script:
+    - ruff check . --output-format=gitlab
+
+black:
+  stage: lint
+  image: python:3.12-slim-bookworm
+  before_script:
+    - pip install black
+  script:
+    - black . --check
+
+djlint:
+  image: python:3.12-slim-bookworm
+  stage: lint
+  before_script:
+    - pip install djlint
+  script:
+    - find {{cookiecutter.project_slug}}/ -name '*.html' -o -name '*.mjml' | xargs djlint --check
+
+stylelint:
+  stage: lint
+  image: node:18.19-bookworm
+  before_script:
+    - npm ci --cache .npm --prefer-offline
+  script:
+    - npm run lint:style
+
+eslint:
+  stage: lint
+  image: node:18.19-bookworm
+  before_script:
+    - npm ci --cache .npm --prefer-offline
+  script:
+    - npm run lint:js
+
+prettier:
+  stage: lint
+  image: node:18.19-bookworm
+  before_script:
+    - npm ci --cache .npm --prefer-offline
+  script:
+    - npm run lint:format
+
+python_tests:
+  stage: test
+  image: python:3.12-slim-bookworm
+  services:
+    - postgis/postgis:15-3.4
+  variables:
+    POSTGRES_DB: test_postgis_db
+    POSTGRES_USER: test_postgis_user
+    POSTGRES_PASSWORD: custom_pass
+    DATABASE_URL: "postgis://test_postgis_user:custom_pass@postgis-postgis/test_postgis_db"
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - ln -fs /usr/share/zoneinfo/{{ cookiecutter.timezone }} /etc/localtime
+    - dpkg-reconfigure --frontend noninteractive tzdata
+    - apt-get update -y
+    - apt-get install -y --no-install-recommends
+      build-essential
+      curl
+      gdal-bin libgdal-dev binutils libproj-dev
+      git
+      gnupg
+      libjpeg62-turbo-dev
+      libmagic1
+      libpq-dev
+      libwebp-dev
+      zlib1g-dev
+    - export PGPASSWORD=$POSTGRES_PASSWORD
+    - export PGUSER=$POSTGRES_USER
+    - export LC_ALL=C.UTF-8
+    - export LANG=C.UTF-8
+    - pip install --upgrade pip
+    - python -m pip install poetry==1.6.1
+    - poetry config virtualenvs.in-project true
+    - poetry install --with dev,test,docs
+    - mkdir -p /etc/apt/keyrings
+    - curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+    - echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+    - apt-get update -y
+    - apt install nodejs -y
+    - npm ci --cache .npm --prefer-offline
+    - npm run build:prod
+    - touch .env
+    - echo "DJANGO_SECRET_KEY=secret" >> .env
+    - echo "DEBUG=False" >> .env
+    - echo "ALLOWED_HOSTS=" >> .env
+    - echo "WAGTAILADMIN_BASE_URL=www.example.com" >> .env
+    - source "$(poetry env info --path)/bin/activate"
+    - ./manage.py collectstatic --noinput --clear
+  script:
+    # Run system checks
+    - ./manage.py check
+
+    # Check for missing migrations
+    - ./manage.py makemigrations --check --noinput
+
+    # Create cache table.
+    - ./manage.py createcachetable
+
+    # Run back-end tests
     - pytest
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+
+prepare:
+  stage: prepare # This stage must run before the release stage
+  image: python:3.12-slim-bookworm
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - echo "TODAY=($(TZ={{ cookiecutter.timezone }} date --iso))" >> variables.env # Generate the TODAY environment variable
+    - python -m pip install --upgrade pip
+    - python -m pip install invoke colorama tomli
+    - invoke get-release-notes
+    - mv -v ../LATEST_RELEASE_NOTES.md .
+  artifacts:
+    paths:
+      - LATEST_RELEASE_NOTES.md
+    reports:
+      dotenv: variables.env
+
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  needs:
+    - job: prepare
+      artifacts: true
+  rules:
+    - if: $CI_COMMIT_TAG # Run this job when a tag is created
+  script:
+    - echo "Creating a Gitlab Release for $CI_COMMIT_TAG"
+  release: # See https://docs.gitlab.com/ee/ci/yaml/#release for available properties
+    name: "$CI_COMMIT_TAG $TODAY"
+    description: LATEST_RELEASE_NOTES.md
+    tag_name: "$CI_COMMIT_TAG"
+
+# https://docs.gitlab.com/ee/user/project/pages/pages_access_control.html
+pages:
+  image: python:3.12-slim-bookworm
+  stage: pages
+  variables:
+    GIT_DEPTH: 0
+  only:
+    refs:
+      - main
+    changes:
+      - docs/**/*
+      - mkdocs.yml
+  before_script:
+    - apt-get update -y
+    - apt-get install -y --no-install-recommends git
+    - source ./.venv/bin/activate
+  script:
+    - mkdocs build
+    - cp -vr site public
+    # optionally, you can activate gzip support with the following line:
+    - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
+
+  artifacts:
+    paths:
+      - public

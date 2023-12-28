@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: {{ cookiecutter.project_name }}
+dev_addr: 0.0.0.0:8001
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - navigation.footer
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+
+repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug|replace('_', '-') }}.git
+edit_uri: edit/main/docs/
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      enable_creation_date: true
+      type: datetime
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - codehilite
+  - footnotes
+  - md_in_html
+  - sane_lists
+  - toc:
+      permalink: "¶"
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - "Home": "index.md"
+  - "Introduction": "introduction.md"
+  - "Architecture": "architecture.md"
+  - "Development Setup": "dev-setup.md"
+  - "Project Structure": "project-structure.md"
+  - "Configuration": "configuration.md"
+  - "Frontend Tooling": "frontend.md"
+  - "Testing": "testing.md"
+  - "Deployment": "deployment.md"
+  - "Maintenance": "maintenance.md"
+  - "References": "references.md"

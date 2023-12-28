@@ -1,0 +1,67 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        DEVELOPMENT: 1
+      target: dev
+    command: tail -f /dev/null
+    ports:
+      - 8000:8000
+      - 8001:8001 # mkdocs
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE={{cookiecutter.project_slug}}.settings.dev
+      - NODE_ENV=development
+    volumes:
+      - ./:/home/wagtail/app/
+    depends_on:
+      - db
+      # - redis
+      - maildev
+
+  db:
+    build:
+      context: ./docker/db
+      dockerfile: Dockerfile
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=wagtail_dev_user
+      - POSTGRES_PASSWORD=wagtail_dev_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  # redis:
+  #   image: redis:7-alpine
+
+  # worker:
+  #   build:
+  #     context: .
+  #     args:
+  #       DEVELOPMENT: 1
+  #     target: dev
+  #   command: python manage.py rqworker default
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./:/home/wagtail/app/
+  #   environment:
+  #     - DJANGO_SETTINGS_MODULE={{cookiecutter.project_slug}}.settings.dev
+  #     - NODE_ENV=development
+  #     - RQ_QUEUE=redis://redis:6379/0
+  #   depends_on:
+  #     - web
+  #     - redis
+  #     - maildev
+
+  maildev:
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
+
+volumes:
+  postgres_data:

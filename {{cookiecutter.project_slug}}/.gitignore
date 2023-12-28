@@ -11,11 +11,13 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
-staticfiles
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
-# <django-project-name>/staticfiles/
+{{cookiecutter.project_slug}}/staticfiles/
+
+# This is the build directory
+{{cookiecutter.project_slug}}/static/
 
 ### Django.Python Stack ###
 # Byte-compiled / optimized / DLL files
@@ -63,7 +65,7 @@ htmlcov/
 .coverage.*
 .cache
 nosetests.xml
-coverage.xml
+coverage.*
 *.cover
 *.py,cover
 .hypothesis/
@@ -695,10 +697,3 @@ webpack-stats.json
 .idea
 
 mediafiles/
-
-# @engineervix's custom settings
-# .envs/
-.backups/
-.logs/
-.research/
-.resources/

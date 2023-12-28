@@ -7,276 +7,242 @@ env:
 
 on:
   pull_request:
-    branches: ["master", "main"]
+    branches: ["main"]
     paths-ignore: ["docs/**"]
 
   push:
-    branches: ["master", "main"]
+    branches: ["main", "staging"]
     paths-ignore: ["docs/**"]
+    tags:
+      - "v*"
 
 jobs:
-  # Runs all steps on the VM
-  # The service containers will use host port binding instead of container networking so you access them via localhost rather than the service name
-  linter:
-    runs-on: ubuntu-20.04
+  # Runs the ruff & black linting steps inside the specified containers rather than on the VM host.
+  # Because of this the network configuration changes from host based network to a container network.
+  ruff:
+    runs-on: ubuntu-22.04
+    container: python:3.12-slim-bookworm
 
-    services:
-      redis:
-        image: redis:5.0
-        ports:
-          - 6379:6379
-      postgres:
-        image: postgis/postgis:12-3.0
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_PASSWORD: postgres
-        # needed because the postgres container does not provide a healthcheck
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
-    {% raw %}
-    env:
-      ENV_PATH: .envs/.test.env
-      # CELERY_BROKER_URL: "redis://localhost:6379/0"
-      # postgres://user:password@host:port/database
-      DATABASE_URL: "postgis://postgres:postgres@localhost:5432/postgres"
-      RECAPTCHA_PUBLIC_KEY: ${{ secrets.RECAPTCHA_PUBLIC_KEY}}
-      RECAPTCHA_PRIVATE_KEY: ${{ secrets.RECAPTCHA_PRIVATE_KEY}}
-      MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN}}
-    {% endraw %}
     steps:
       - name: Checkout Code Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python {{cookiecutter.python_version}}
-        uses: actions/setup-python@v2
-        with:
-          python-version: {{cookiecutter.python_version}}
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
+        uses: actions/checkout@v4
 
       - name: Install Dependencies
         run: |
-          sudo apt update -y && sudo apt upgrade -y
-          export DEBIAN_FRONTEND=noninteractive
-          sudo ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
-          sudo dpkg-reconfigure --frontend noninteractive tzdata
-          sudo apt install -y postgresql postgresql-contrib postgis libpq-dev
-          python -VV # Print out python version for debugging
-          which python # for debugging
-          pip3 install virtualenv
-          virtualenv ../venv
-          source ../venv/bin/activate
-          export LC_ALL=C.UTF-8
-          export LANG=C.UTF-8
-          pip install --upgrade pip
-          pip install pip-tools
-          pip-compile requirements.in
-          pip-sync
-          yarn install && gulp cp
-          mkdir -p .envs/
-          touch .envs/.test.env
-          echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
-          echo "DEBUG=False" >> .envs/.test.env
-          echo "ALLOWED_HOSTS=" >> .envs/.test.env
-          echo "BASE_URL=www.example.com" >> .envs/.test.env
-          echo "NEXMO_API_KEY=" >> .envs/.test.env
-          echo "NEXMO_API_SECRET=" >> .envs/.test.env
-          echo "NEXMO_DEFAULT_FROM=" >> .envs/.test.env
-
-      - name: isort
+          pip install -q ruff==0.1.9
+      - name: ruff
         run: |
-          . ../venv/bin/activate
-          isort . --check-only --profile black
+          ruff check . --output-format=github
 
-      - name: Black
+  black:
+    runs-on: ubuntu-22.04
+    container: python:3.12-slim-bookworm
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
         run: |
-          . ../venv/bin/activate
+          pip install -q black==23.12.1
+      - name: black
+        run: |
           black . --check
 
-      - name: Flake8
+  # Runs the frontend linting steps on the VM
+  djlint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip" # caching pip dependencies
+
+      - name: Install dependencies
         run: |
-          . ../venv/bin/activate
-          flake8 {{cookiecutter.project_slug}}
+          python -m pip install --upgrade pip
+          python -m pip install djlint==1.34.1
+
+      - name: djlint
+        run: |
+          find {{cookiecutter.project_slug}}/ -name '*.html' -o -name '*.mjml' | xargs djlint --check
+
+  stylelint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: |
+          npm ci
 
       - name: Stylelint
         run: |
-          gulp lint-css
+          npm run lint:style
 
-  # Runs all steps on the VM
-  # The service containers will use host port binding instead of container networking so you access them via localhost rather than the service name
-  precommit:
-    runs-on: ubuntu-20.04
+  eslint:
+    runs-on: ubuntu-22.04
 
-    services:
-      redis:
-        image: redis:5.0
-        ports:
-          - 6379:6379
-      postgres:
-        image: postgis/postgis:12-3.0
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_PASSWORD: postgres
-        # needed because the postgres container does not provide a healthcheck
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
-    {% raw %}
-    env:
-      ENV_PATH: .envs/.test.env
-      # CELERY_BROKER_URL: "redis://localhost:6379/0"
-      # postgres://user:password@host:port/database
-      DATABASE_URL: "postgis://postgres:postgres@localhost:5432/postgres"
-      RECAPTCHA_PUBLIC_KEY: ${{ secrets.RECAPTCHA_PUBLIC_KEY}}
-      RECAPTCHA_PRIVATE_KEY: ${{ secrets.RECAPTCHA_PRIVATE_KEY}}
-      MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN}}
-    {% endraw %}
     steps:
       - name: Checkout Code Repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v4
 
-      - name: Set up Python {{cookiecutter.python_version}}
-        uses: actions/setup-python@v2
+      - uses: actions/setup-node@v3
         with:
-          python-version: {{cookiecutter.python_version}}
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
+          node-version: 18
+          cache: "npm"
 
       - name: Install Dependencies
         run: |
-          sudo apt update -y && sudo apt upgrade -y
-          export DEBIAN_FRONTEND=noninteractive
-          sudo ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
-          sudo dpkg-reconfigure --frontend noninteractive tzdata
-          sudo apt install -y postgresql postgresql-contrib postgis libpq-dev
-          python -VV # Print out python version for debugging
-          which python # for debugging
-          pip3 install virtualenv
-          virtualenv ../venv
-          source ../venv/bin/activate
-          export LC_ALL=C.UTF-8
-          export LANG=C.UTF-8
-          pip install --upgrade pip
-          pip install pip-tools
-          pip-compile requirements.in
-          pip-sync
-          yarn install && gulp cp
-          mkdir -p .envs/
-          touch .envs/.test.env
-          echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
-          echo "DEBUG=False" >> .envs/.test.env
-          echo "ALLOWED_HOSTS=" >> .envs/.test.env
-          echo "BASE_URL=www.example.com" >> .envs/.test.env
-          echo "NEXMO_API_KEY=" >> .envs/.test.env
-          echo "NEXMO_API_SECRET=" >> .envs/.test.env
-          echo "NEXMO_DEFAULT_FROM=TEST" >> .envs/.test.env
-          python manage.py collectstatic
-          # - celery -A config worker -B --loglevel=debug --purge
-      {% raw %}
-      # Run all pre-commit hooks on all the files.
-      # Getting only staged files can be tricky in case a new PR is opened
-      # since the action is run on a branch in detached head state
-      - name: Install and Run Pre-commit
-        uses: pre-commit/action@v2.0.3
+          npm ci
+
+      - name: ESLint
+        run: |
+          npm run lint:js
+
+  prettier:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      {% endraw %}
-  # runs all of the steps inside the specified container rather than on the VM host.
-  # Because of this the network configuration changes from host based network to a container network.
-  test:
-    runs-on: ubuntu-20.04
+          node-version: 18
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+
+      - name: Prettier
+        run: |
+          npm run lint:format
+
+  # Runs the python test suite inside a specified container rather than on the VM host.
+  python_tests:
+    runs-on: ubuntu-22.04
+    needs: [ruff, black, stylelint, eslint, prettier, djlint]
 
     container:
-      image: python:{{cookiecutter.python_version}}-buster
+      image: python:3.12-slim-bookworm
 
     services:
-      redis:
-        image: redis:5.0
-        ports:
-          - 6379:6379
       postgres:
-        image: postgis/postgis:12-3.0
+        image: postgis/postgis:15-3.4
         env:
-          POSTGRES_USER: test_postgis_user
+          POSTGRES_USER: test_postgres_user
           POSTGRES_PASSWORD: custom_pass
-          POSTGRES_DB: test_postgis_db
+          POSTGRES_DB: test_postgres_db
         # needed because the postgres container does not provide a healthcheck
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
-    {% raw %}
+
     env:
-      ENV_PATH: .envs/.test.env
-      # CELERY_BROKER_URL: "redis://redis:6379/0"
       # postgres://user:password@host:port/database
-      DATABASE_URL: "postgis://test_postgis_user:custom_pass@postgres/test_postgis_db"
-      RECAPTCHA_PUBLIC_KEY: ${{ secrets.RECAPTCHA_PUBLIC_KEY}}
-      RECAPTCHA_PRIVATE_KEY: ${{ secrets.RECAPTCHA_PRIVATE_KEY}}
-      MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN}}
-    {% endraw %}
+      DATABASE_URL: "postgres://test_postgres_user:custom_pass@postgres/test_postgres_db"
+
     steps:
-      # This Docker file changes sets USER to circleci instead of using the default user, so we need to update file permissions for this image to work on GH Actions.
-      # See https://docs.github.com/actions/reference/virtual-environments-for-github-hosted-runners#docker-container-filesystem
-      - name: Setup file system permissions
-        run: chmod -R 777 $GITHUB_WORKSPACE /github /__w/_temp
       - name: Checkout Code Repository
-        uses: actions/checkout@v2
-
-      # - name: Set up Python {{cookiecutter.python_version}}
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: {{cookiecutter.python_version}}
-
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: "14"
+        uses: actions/checkout@v4
 
       - name: Install Dependencies
         shell: bash
         run: |
           apt update -y && apt upgrade -y
           export DEBIAN_FRONTEND=noninteractive
-          ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
+          ln -fs /usr/share/zoneinfo/{{ cookiecutter.timezone }} /etc/localtime
           dpkg-reconfigure --frontend noninteractive tzdata
-          apt install -y postgresql postgresql-contrib postgis libpq-dev
-          python -VV # Print out python version for debugging
-          which python # for debugging
-          pip3 install virtualenv
-          virtualenv ~/venv
+          apt install -y build-essential curl gdal-bin libgdal-dev binutils libproj-dev git gnupg libjpeg62-turbo-dev libmagic1 libpq-dev libwebp-dev zlib1g-dev
+          python -m venv ~/venv
           source ~/venv/bin/activate
           export LC_ALL=C.UTF-8
           export LANG=C.UTF-8
           pip install --upgrade pip
-          pip install pip-tools
-          pip-compile requirements.in
-          pip-sync
-          curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
-          apt install nodejs -yqq
-          npm install -g gulp-cli
-          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-          echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-          apt update -q && apt install yarn -yqq
-          yarn install && gulp cp
-          mkdir -p .envs/
-          touch .envs/.test.env
-          echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
-          echo "DEBUG=False" >> .envs/.test.env
-          echo "ALLOWED_HOSTS=" >> .envs/.test.env
-          echo "BASE_URL=www.example.com" >> .envs/.test.env
-          echo "NEXMO_API_KEY=" >> .envs/.test.env
-          echo "NEXMO_API_SECRET=" >> .envs/.test.env
-          echo "NEXMO_DEFAULT_FROM=TEST" >> .envs/.test.env
-          python manage.py collectstatic
-          # - celery -A config worker -B --loglevel=debug --purge
+          python -m pip install poetry==1.6.1
+          poetry install --with dev,test,docs
+          mkdir -p /etc/apt/keyrings
+          curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+          echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+          apt-get update -y
+          apt install nodejs -y
+          npm ci --cache .npm --prefer-offline
+          npm run build:prod
+          touch .env
+          echo "DJANGO_SECRET_KEY=secret" >> .env
+          echo "DEBUG=False" >> .env
+          echo "ALLOWED_HOSTS=" >> .env
+          echo "WAGTAILADMIN_BASE_URL=www.example.com" >> .env
+          python manage.py collectstatic --noinput --clear
 
       - name: Test with pytest
         shell: bash
         run: |
+          # Note that you have to activate the virtualenv in every step
+          # because GitHub actions doesn't preserve the environment
           source ~/venv/bin/activate
+
+          # Run system checks
+          python manage.py check
+
+          # Check for missing migrations
+          python manage.py makemigrations --check --noinput
+
+          # Create cache table.
+          python manage.py createcachetable
+
+          # Run backend tests
           pytest
+
+  # Runs the next steps on the VM
+  # Creates a GitHub Release when the lint & python_tests jobs succeeds, and only on pushes to tags.
+  release:
+    needs: [ruff, black, stylelint, eslint, prettier, djlint, python_tests]
+
+    permissions:
+      contents: write
+
+    if: needs.python_tests.result == 'success' && startsWith( github.ref, 'refs/tags/v' )
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install invoke colorama tomli
+      - name: Get the version
+        id: get_version
+        run: |{% raw %}
+          echo "${{ github.ref }}"{% endraw %}
+          echo "VERSION=$(echo $GITHUB_REF | sed 's/refs\/tags\///')" >> $GITHUB_ENV
+      - name: Generate Release Title
+        id: get_release_title
+        shell: bash
+        run: |
+          export TODAY="($(TZ={{ cookiecutter.timezone }} date --iso))"
+          echo "RELEASE_NAME=$VERSION $TODAY" >> $GITHUB_ENV
+      - name: Extract Release Notes
+        # This creates a file LATEST_RELEASE_NOTES.md in the parent directory (../)
+        shell: bash
+        run: |
+          invoke get-release-notes
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: {% raw %}${{ env.RELEASE_NAME }}{% endraw %}
+          body_path: ../LATEST_RELEASE_NOTES.md

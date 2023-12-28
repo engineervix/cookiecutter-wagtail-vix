@@ -1,0 +1,18 @@
+/* Responsive Wagtail Embeds
+ * https://docs.wagtail.org/en/v5.2/topics/writing_templates.html#responsive-embeds
+ * -------------------------------------------------
+ */
+
+.responsive-object {
+  position: relative;
+}
+
+.responsive-object iframe,
+.responsive-object object,
+.responsive-object embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

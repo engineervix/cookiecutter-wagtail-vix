@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.5.0
     hooks:
       - id: check-added-large-files
         args: ["--maxkb=5000"]
@@ -11,65 +11,62 @@ repos:
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-json
+      - id: check-toml
       - id: check-yaml
+        args: ["--unsafe"]
+      - id: debug-statements
       - id: detect-private-key
       - id: end-of-file-fixer
+        exclude: ^.+\.min\.(js|css)$
       - id: mixed-line-ending
+        args: ["--fix=lf"]
       - id: trailing-whitespace
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.9
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
   - repo: https://github.com/psf/black
-    rev: 21.7b0
+    rev: 23.12.1
     hooks:
       - id: black
-        exclude: (.*)/migrations
-  - repo: https://gitlab.com/PyCQA/flake8
-    rev: 3.9.2
+  - repo: https://github.com/Riverside-Healthcare/djLint
+    rev: v1.34.1
     hooks:
-      - id: flake8
-  - repo: https://github.com/asottile/seed-isort-config
-    rev: v2.2.0
+      - id: djlint-django
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.13.0
     hooks:
-      - id: seed-isort-config
-  - repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.9.3
-    hooks:
-      - id: isort
-        args: ["--profile", "black"]
-  # - repo: https://github.com/PyCQA/bandit
-  #   rev: 1.6.2
-  #   hooks:
-  #     - id: bandit
+      - id: commitizen
+        stages: [commit-msg]
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.3.2
+    rev: v4.0.0-alpha.6
     hooks:
       - id: prettier
         stages: [commit]
         exclude: >
           (?x)^(
+              (.*)/static|
               (.*)/vendors|
-              (.*)/ico|
               ^.+\.html$|
+              ^.+\.mjml$|
               package-lock.json|
-              CHANGELOG.md|
+              (.*)/img/lottiefiles|
               ^.+\.min\.(js|css)$
           )$
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.18.0
-    hooks:
-      - id: commitizen
-        stages: [commit-msg]
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: 0.0.2
+        additional_dependencies:
+          - prettier@3.1.0
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: v15.11.0
     hooks:
       - id: stylelint
         additional_dependencies:
-          [
-            "stylelint@13.13.1",
-            "stylelint-config-sass-guidelines@8.0.0",
-            "stylelint-config-prettier@8.0.2",
-          ]
+          - "postcss-scss"
+          - "stylelint@15.11.0"
+          - "stylelint-config-standard-scss@11.1.0"
         exclude: >
           (?x)^(
-              (.*)/static/vendors|
-              (.*)/static/css/main\.css|
+              (.*)/static|
+              (.*)/vendors|
               ^.+\.min\.(css)$
           )$

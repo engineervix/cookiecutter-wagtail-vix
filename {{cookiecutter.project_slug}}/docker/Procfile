@@ -1,0 +1,2 @@
+web: inv dev
+frontend: npm run dev:reload

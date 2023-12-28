@@ -40,9 +40,6 @@ push = false
 "package-lock.json" = [
     '"version": "{version}"',
 ]
-"cookiecutter.json" = [
-    '"version": "{version}"',
-]
 "pyproject.toml" = [
     'current_version = "{version}"',
     # 'version = "{version}"',
