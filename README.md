@@ -13,13 +13,6 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
 [![Conventional Changelog](https://img.shields.io/badge/changelog-conventional-brightgreen.svg)](https://github.com/conventional-changelog)
 
----
-
-![Breaking Changes](https://source.unsplash.com/zkOg39koe80/640x320)
-
-**IMPORTANT NOTE**: **This project has been inactive for a long time. Breaking changes coming through ...**
----
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -96,20 +89,30 @@ In order to generate a new project from this cookiecutter template:
 If you need to use [`django-rq`](https://github.com/rq/django-rq), you'll need to make the following changes:
 
 1. in `settings/base.py`
-  - uncomment the entry in the `THIRD_PARTY_APPS` list
-  - uncomment `RQ_QUEUES`
+
+    - uncomment the entry in the `THIRD_PARTY_APPS` list
+    - uncomment `RQ_QUEUES`
+
 2. in `settings/production.py`
-  - uncomment `RQ_QUEUES`
-  - uncomment the commented out items in the `LOGGING` dict
+
+    - uncomment `RQ_QUEUES`
+    - uncomment the commented out items in the `LOGGING` dict
+
 3. in `Procfile`
-  - uncomment the `worker` entry
+
+    - uncomment the `worker` entry
+
 4. in `.env`
-  - uncomment the line `RQ_QUEUE=redis://redis:6379/0`
+
+    - uncomment the line `RQ_QUEUE=redis://redis:6379/0`
+
 5. in `urls.py`
-  - uncomment the line with `path("dj-rq/", include("django_rq.urls")),`
+
+    - uncomment the line with `path("dj-rq/", include("django_rq.urls")),`
+
 6. in `docker-compose.yml`
-  - uncomment the `redis` service entry
-  - uncomment the `worker` service entry
+    - uncomment the `redis` service entry
+    - uncomment the `worker` service entry
 
 ## Contributing 🤝
 
