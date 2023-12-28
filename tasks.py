@@ -78,7 +78,7 @@ def bump(c, branch="main", push=False):
             pty=True,
         )
         c.run(
-            f'npm run release -- --skip.bump --releaseCommitMessageFormat "bump: ✈️ {previous_tag} → v{{{{currentTag}}}}"',
+            f'npm run release -- --commit-all --skip.bump --releaseCommitMessageFormat "bump: ✈️ {previous_tag} → v{{{{currentTag}}}}"',
             pty=True,
         )
         if push:
