@@ -28,7 +28,7 @@ exclude = '''
 
 [bumpver]
 current_version = "v2021.12.09"
-version_pattern = "vYYYY.0M.0D"
+version_pattern = "vYYYY.0M.0D[-TAG]"
 commit_message = "bump: ✈️ {old_version} → {new_version}"
 commit = true
 tag = false
@@ -38,10 +38,13 @@ push = false
 "package.json" = [
     '"version": "{version}"',
 ]
+"package-lock.json" = [
+    '"version": "{version}"',
+]
 "cookiecutter.json" = [
     '"version": "{version}"',
 ]
 "pyproject.toml" = [
     'current_version = "{version}"',
-    'version = "{version}"',
+    # 'version = "{version}"',
 ]
