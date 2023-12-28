@@ -4,6 +4,50 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [vv2023.12.28](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.2.0...v2023.12.28) (2023-12-28)
+
+
+### 🐛 Bug Fixes
+
+* add `FORCE_IMAGE_PATH` to leaflet configuration ([219c4b6](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/219c4b63ab968d9eb85fdfed5171efcea3a9af2b))
+* **config/settings/production.py:** determination of `LIST_OF_EMAIL_RECIPIENTS` ([f2cc88d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/f2cc88d3356bf8a66f1a2f85a5a9b905b3300538))
+* **config/settings/production.py:** remove `OPTIONS` key in "renditions" ([fcdc5b4](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/fcdc5b4a8f7c9e1404a0009fbb894011c728cac3))
+* correct the fontawesome css reference in 404 template ([c705e83](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c705e83afa6c3797e2630e3868996920e099b04c))
+* **deps:** update python dependencies with known security vulnerabilities ([1de19df](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/1de19dfa33376b6d53cbe7815e5f40ab2351464f))
+
+
+### ♻️ Code Refactoring
+
+* change master to main, and use Github Actions instead of Circle CI ([2d8f009](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/2d8f00952df858999adc860a4a40a16e65c596ae))
+
+
+### 👷 CI/CD
+
+* add release job ([6605cc1](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/6605cc11177c8a52a49201df747cda90111c727b))
+* update GitHub Actions and use Python 3.12 ([d3f8ed5](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/d3f8ed57447992c81571064f7cf06fba9e354c00))
+* use official coveralls.io Action ([e985cc8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e985cc81bc87d4a97a001b51cc549f09b2455b8e))
+
+
+### ✅ Tests
+
+* refactor imports and remove unnecessary code ([637bd94](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/637bd94930919403feb7a93be0010ddc7b39e774))
+* update pytest config ([48aee8f](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/48aee8fde8bf69477ecc78499b6585a42e77d24b)), closes [/github.com/pytest-dev/pytest-cov/issues/243#issuecomment-441005875](https://github.com/engineervix//github.com/pytest-dev/pytest-cov/issues/243/issues/issuecomment-441005875)
+
+
+### 📝 Docs
+
+* rewrite the README and associated docs ([a15e624](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a15e6244fe9de46d62e9637d922c0c7ca6f6315c))
+
+
+### ⚙️ Build System
+
+* **deps-dev:** actually, we need commitizen ([168dd90](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/168dd9080503206cd525bbb8e5f5db5569ae1015))
+* **deps:** install tomli ([bcd9885](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bcd9885e932a488b846176ad9311ef64b023d01d))
+* **deps:** update dependency cfgv to v3.3.1 ([#377](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/377)) ([15ac019](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/15ac0194fcf7a29e63472b07a1b7386fb7cd8a3c))
+* **deps:** update dependency popper.js to v1.16.1 ([#351](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/351)) ([a377b65](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a377b652f73d3479fdc6b3b6842e6f06c377e01b))
+* **deps:** update dependency pygments to v2.10.0 ([#371](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/371)) ([6d0e33d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/6d0e33d3aebe75d25259c4c3bffea94d424d5522))
+* **deps:** update python dependencies ([5e91e52](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5e91e52de3be3e36888b6f94472c5027202315ab))
+
 ## [v0.2.2](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v0.2.1...v0.2.2) (2021-12-09)
 
 
