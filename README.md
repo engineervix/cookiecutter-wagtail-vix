@@ -4,10 +4,11 @@
 
 [![Continuous Integration](https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml/badge.svg)](https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/engineervix/cookiecutter-wagtail-vix/badge.svg?branch=main)](https://coveralls.io/github/engineervix/cookiecutter-wagtail-vix?branch=main)
-[![License: MIT](https://img.shields.io/github/license/engineervix/cookiecutter-wagtail-vix)](https://github.com/engineervix/cookiecutter-wagtail-vix/LICENSE)
+[![Updates](https://pyup.io/repos/github/engineervix/cookiecutter-wagtail-vix/shield.svg)](https://pyup.io/repos/github/engineervix/cookiecutter-wagtail-vix/)
 [![python 3.12](https://img.shields.io/badge/python-3.12-brightgreen.svg)](https://python.org)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+[![License: MIT](https://img.shields.io/github/license/engineervix/cookiecutter-wagtail-vix)](https://github.com/engineervix/cookiecutter-wagtail-vix/LICENSE)
 [![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/engineervix/cookiecutter-wagtail-vix/latest/main)](https://github.com/engineervix/cookiecutter-wagtail-vix/commits/main)
 [![All Contributors](https://img.shields.io/github/all-contributors/engineervix/cookiecutter-wagtail-vix?color=ee8449&style=flat-square)](#contributing-)
 
