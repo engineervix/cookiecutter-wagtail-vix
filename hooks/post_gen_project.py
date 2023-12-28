@@ -14,8 +14,10 @@ def generate_secret_key(config_file_location):
     # Generate a SECRET_KEY
     SECRET_KEY = secrets.token_hex(25)
 
-    # Replace "CHANGEME!!!" with SECRET_KEY
-    file_ = file_.replace("secret", SECRET_KEY, 1)
+    file_ = file_.replace(
+        "DJANGO_SECRET_KEY=secret",
+        f"DJANGO_SECRET_KEY={SECRET_KEY}",
+    )
 
     # Write the results to file
     with open(config_file_location, "w") as f:
