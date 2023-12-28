@@ -14,7 +14,7 @@ on:
       - "v*"
 
 jobs:
-  tests:
+  test:
     runs-on: ubuntu-22.04
 
     steps:
@@ -41,14 +41,14 @@ jobs:
       - name: coveralls.io
         uses: coverallsapp/github-action@v2
 
-  # Creates a GitHub Release when the tests job succeeds, and only on pushes to tags.
+  # Creates a GitHub Release when the test job succeeds, and only on pushes to tags.
   release:
-    needs: [tests]
+    needs: [test]
 
     permissions:
       contents: write
 
-    if: needs.tests.result == 'success' && startsWith( github.ref, 'refs/tags/v' )
+    if: needs.test.result == 'success' && startsWith( github.ref, 'refs/tags/v' )
 
     runs-on: ubuntu-22.04
 
