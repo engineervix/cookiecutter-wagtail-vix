@@ -41,6 +41,7 @@ push = false
 "cookiecutter.json" = [
     '"version": "{version}"',
 ]
-# "pyproject.toml" = [
-#     'version = "{version}"',
-# ]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"',
+]
