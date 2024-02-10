@@ -44,7 +44,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -q black==23.12.1
+          pip install -q black==24.1.1
       - name: black
         run: |
           black . --check
