@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented here.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project uses ~~[Semantic Versioning](https://semver.org/spec/v2.0.0.html)~~ [Calendar Versioning](https://calver.org/).
 
 ## [v2024.02.10](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v2023.12.28...v2024.02.10) (2024-02-10)
 
@@ -14,7 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### 🐛 Bug Fixes
 
-* use latest NodeSource installation script ([5ddfaf7](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5ddfaf745cf833800084ed13b0ece0377b9df47d)), closes [/github.com/nodesource/distributions/issues/1770#issuecomment-1906566381](https://github.com/engineervix//github.com/nodesource/distributions/issues/1770/issues/issuecomment-1906566381) [/github.com/nodesource/distributions/issues/1601#issuecomment-1906829295](https://github.com/engineervix//github.com/nodesource/distributions/issues/1601/issues/issuecomment-1906829295)
+* use latest NodeSource installation script ([5ddfaf7](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5ddfaf745cf833800084ed13b0ece0377b9df47d)), see [/github.com/nodesource/distributions/issues/1770#issuecomment-1906566381](https://github.com/engineervix//github.com/nodesource/distributions/issues/1770/issues/issuecomment-1906566381) [/github.com/nodesource/distributions/issues/1601#issuecomment-1906829295](https://github.com/engineervix//github.com/nodesource/distributions/issues/1601/issues/issuecomment-1906829295)
+* fix author formatting in `tool.poetry` section of pyproject.toml ([923acdb](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/923acdbeda7f51fcc6bdead2fe344e4744804b3e))
 
 
 ### ✅ Tests
