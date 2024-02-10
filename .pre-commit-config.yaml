@@ -11,7 +11,7 @@ repos:
       - id: detect-private-key
       - id: check-docstring-first
   - repo: https://github.com/psf/black
-    rev: 23.12.1
+    rev: 24.1.1
     hooks:
       - id: black
         exclude: |
@@ -20,7 +20,7 @@ repos:
                 |(.*)/migrations
             )
   - repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0
+    rev: 7.0.0
     hooks:
       - id: flake8
         exclude: |
@@ -28,7 +28,7 @@ repos:
                 ^{{cookiecutter.project_slug}}/
             )
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.13.0
+    rev: v3.14.1
     hooks:
       - id: commitizen
         stages: [commit-msg]
