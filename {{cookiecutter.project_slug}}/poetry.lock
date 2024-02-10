@@ -999,13 +999,13 @@ requests = ["requests (>=2.24)"]
 
 [[package]]
 name = "django-modelcluster"
-version = "6.1"
+version = "6.2.1"
 description = "Django extension to allow working with 'clusters' of models as a single unit, independently of the database"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django-modelcluster-6.1.tar.gz", hash = "sha256:3b1791638046c73ae7415327cf54bfa0adad9d89d342a5b86d0ec29a2504e067"},
-    {file = "django_modelcluster-6.1-py2.py3-none-any.whl", hash = "sha256:8ce72635db4b90b34993afda5021ed8676ef94f1d4c607466d0f8d3f676c5b64"},
+    {file = "django-modelcluster-6.2.1.tar.gz", hash = "sha256:3f53d47e1af7aec5e238724be16bbebdac9c518e4788b31429e773dcd8e8ea49"},
+    {file = "django_modelcluster-6.2.1-py2.py3-none-any.whl", hash = "sha256:725c005de22191165b690ea05588b1c702ac34b1e9cd8a8b26fadc2a35fcd337"},
 ]
 
 [package.dependencies]
@@ -1013,7 +1013,7 @@ django = ">=3.2"
 pytz = ">=2022.4"
 
 [package.extras]
-taggit = ["django-taggit (>=2.0)"]
+taggit = ["django-taggit (>=3.1)"]
 
 [[package]]
 name = "django-permissionedforms"
