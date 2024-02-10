@@ -112,11 +112,8 @@ python_tests:
     - python -m pip install poetry==1.6.1
     - poetry config virtualenvs.in-project true
     - poetry install --with dev,test,docs
-    - mkdir -p /etc/apt/keyrings
-    - curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-    - echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
-    - apt-get update -y
-    - apt install nodejs -y
+    - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+    - apt-get install -y nodejs
     - npm ci --cache .npm --prefer-offline
     - npm run build:prod
     - touch .env
