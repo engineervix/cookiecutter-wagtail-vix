@@ -50,7 +50,7 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.1.1"
-commitizen = "^3.13.0"
+commitizen = "^3.14.1"
 django-debug-toolbar = "3.2.2"
 djlint = "^1.34.1"
 dslr = "^0.4.0"
