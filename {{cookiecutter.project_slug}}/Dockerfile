@@ -82,7 +82,7 @@ RUN poetry install ${DEVELOPMENT:+--with dev,test,docs} --no-root
 
 # install mjml
 # NOTE: the version must match the one in package.json
-RUN npm install -D mjml@"^4.14.1"
+RUN npm install -D mjml@"^4.15.3"
 
 # Copy build artifacts from frontend-builder stage
 RUN mkdir -p /home/wagtail/app/{{cookiecutter.project_slug}}/static
