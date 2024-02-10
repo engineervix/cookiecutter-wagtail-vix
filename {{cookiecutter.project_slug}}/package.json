@@ -41,7 +41,7 @@
     "mjml": "^4.14.1",
     "postcss-custom-properties": "^13.3.4",
     "postcss-loader": "^7.3.3",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.5",
     "sass": "~1.32.11",
     "sass-loader": "^13.3.2",
     "standard-version": "^9.5.0",
