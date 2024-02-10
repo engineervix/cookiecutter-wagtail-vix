@@ -972,24 +972,20 @@ Django = ">=3.2"
 
 [[package]]
 name = "django-mjml"
-version = "1.1"
+version = "1.2"
 description = "Use MJML in Django templates"
 optional = false
 python-versions = ">=3.6"
-files = []
-develop = false
+files = [
+    {file = "django-mjml-1.2.tar.gz", hash = "sha256:5a8a670614602016bac11470a0499b77c451768af32ed253983c80597bb2f449"},
+    {file = "django_mjml-1.2-py3-none-any.whl", hash = "sha256:6ede759763f46f74fb0f9346e9b10d282bb88599c077aaa11939cfb67e3b2845"},
+]
 
 [package.dependencies]
 django = ">=2.2,<5.1"
 
 [package.extras]
 requests = ["requests (>=2.24)"]
-
-[package.source]
-type = "git"
-url = "https://github.com/jpells/django-mjml.git"
-reference = "dd0bfe7ba9ef72719f5ec89470379b102d5b79a0"
-resolved_reference = "dd0bfe7ba9ef72719f5ec89470379b102d5b79a0"
 
 [[package]]
 name = "django-modelcluster"
@@ -3597,4 +3593,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "~=3.12"
-content-hash = "3bb7532c1c077f12108266922ce0ada9c867b7a05816709b800fb878d5067665"
+content-hash = "771eb85e7c976f5af13419b65496177de1fec35133be7f9894a6bcbd0183cc77"
