@@ -48,7 +48,7 @@ class SiteSearchTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that the search results are an empty queryset
-        self.assertQuerysetEqual(response.context["search_results"], Page.objects.none())
+        self.assertQuerySetEqual(response.context["search_results"], Page.objects.none())
 
         # Check that the search query is present in the response context
         self.assertEqual(response.context["search_query"], search_query)
@@ -114,7 +114,7 @@ class SiteSearchTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that the search results are an empty queryset
-        self.assertQuerysetEqual(response.context["search_results"], Page.objects.none())
+        self.assertQuerySetEqual(response.context["search_results"], Page.objects.none())
 
         # Check that the search query in the response context is None
         self.assertIsNone(response.context["search_query"])
