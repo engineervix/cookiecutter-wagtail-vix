@@ -3150,12 +3150,12 @@ test = ["pytest", "pytest-cov"]
 
 [[package]]
 name = "svix"
-version = "1.15.0"
-description = "Svix"
+version = "1.17.0"
+description = "Svix webhooks API client and webhook verification library"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "svix-1.15.0.tar.gz", hash = "sha256:b91cc3fada8afa6c41aaea08881866b2bb42dc64703951a644057cec66d13c83"},
+    {file = "svix-1.17.0.tar.gz", hash = "sha256:9a7c866e305043d66d6a3911e91f5222f20571348d34fcca79f25ab4e9643849"},
 ]
 
 [package.dependencies]
