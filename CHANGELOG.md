@@ -2,7 +2,63 @@
 
 All notable changes to this project will be documented here.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project uses ~~[Semantic Versioning](https://semver.org/spec/v2.0.0.html)~~ [Calendar Versioning](https://calver.org/).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [v2024.02.10](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v2023.12.28...v2024.02.10) (2024-02-10)
+
+
+### 📝 Docs
+
+* make it immediately clear what django-rq is about ([0bd591c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/0bd591cedef5771cf737ff6ee408aa421f166853))
+
+
+### 🐛 Bug Fixes
+
+* use latest NodeSource installation script ([5ddfaf7](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5ddfaf745cf833800084ed13b0ece0377b9df47d)), closes [/github.com/nodesource/distributions/issues/1770#issuecomment-1906566381](https://github.com/engineervix//github.com/nodesource/distributions/issues/1770/issues/issuecomment-1906566381) [/github.com/nodesource/distributions/issues/1601#issuecomment-1906829295](https://github.com/engineervix//github.com/nodesource/distributions/issues/1601/issues/issuecomment-1906829295)
+
+
+### ✅ Tests
+
+* use `assertQuerySetEqual()` instead of `assertQuerysetEqual()` ([9d54735](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/9d547357596ed61ddce99f9f0a727eecdd62c847))
+
+
+### 👷 CI/CD
+
+* update Node.js instalation for GitHub Actions & Gitlab CI ([a34f917](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a34f917d0a03aa0073d1f06ce24213fe552e8eee))
+
+
+### ⚙️ Build System
+
+* **deps-dev:** bump @babel/core, @babel/eslint-parser & @babel/preset-env ([4adcc48](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/4adcc486a547dd036a2bb7264c131da4b96103f4))
+* **deps-dev:** bump attrs (23.1.0 -> 23.2.0) ([fae7229](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/fae7229dd70a9558d7e29093ade94565df0c8a92))
+* **deps-dev:** bump autoprefixer, cssnano, eslint-plugin-prettier & postcss-custom-properties ([1f69c9c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/1f69c9c20969a8feb4000e1d317f2bac534b4bef))
+* **deps-dev:** bump black from 23.12.1 to 24.1.1 ([0045298](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/004529849f225d21d9e8e7cb193c2f07da53aabd))
+* **deps-dev:** bump certifi (2023.11.17 -> 2024.2.2) ([8147312](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/81473123333127aacbd49a7e092a55c52e318c45))
+* **deps-dev:** bump commitizen (3.13.0 -> 3.14.1) ([5c206a2](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5c206a2f845f71efb9cc9378d6625bca9a5cdc38))
+* **deps-dev:** bump cryptography (41.0.7 -> 42.0.2) ([53a6e73](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/53a6e73e72880685ef19a40710b829f41a5b2543))
+* **deps-dev:** bump css-loader & mini-css-extract-plugin ([e23837a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e23837ac1d930873620e0c765be51b112daa441c))
+* **deps-dev:** bump flake8 to 7.0.0 & pytest to 7.4.4 ([2cb7d43](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/2cb7d43e95d1c6878fe93ea56824b29ff85c0af5))
+* **deps-dev:** bump prettier (3.1.1 ❯ 3.2.5) ([076ba7f](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/076ba7f0ef5dbc810406b61bc19596599b3a157e))
+* **deps-dev:** bump ruff from 0.1.9 to 0.1.15 ([1a6aba3](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/1a6aba353541ae5e647c2594f33f994031d3ebf8))
+* **deps-dev:** bump types-python-dateutil (2.8.19.14 -> 2.8.19.20240106) ([88195e8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/88195e84dd0d3a028d803bb46a73cf65df3f3492))
+* **deps-dev:** bump webpack (5.89.0 ❯ 5.90.1) ([c46c585](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c46c585b2babf4e4c900d5f4d9d6dae69aeab019))
+* **deps-docs:** bump mkdocs-glightbox (0.3.5 -> 0.3.7) ([e3a0e40](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e3a0e40e0594384076066c4f655e4a78d399db5a))
+* **deps-docs:** bump mkdocs-material (9.5.3 -> 9.5.9) ([912e931](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/912e931369fd0cdaf64559d389f7037d2f3745d3))
+* **deps:** bump boto3 & botocore (1.34.7 -> 1.34.39) ([76e9919](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/76e99191bd1a18c1110000b37fb87631027bfb1c))
+* **deps:** bump Django from 5.0 to 5.0.2 ([4df7f82](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/4df7f82313954adb8282ebbfd2df9b6ec21daa60))
+* **deps:** bump django-modelcluster (6.1 -> 6.2.1) ([c6fa330](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c6fa3307289a2dee031ad5f5b9b6639fa98caec5))
+* **deps:** bump django-treebeard (4.7 -> 4.7.1) ([3d7298d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/3d7298d05f900b6cb1eb7e185fe5f713785f8850))
+* **deps:** bump mjml (4.14.1 ❯ 4.15.3) ([edf5005](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/edf50059ffa913120524a196e6bf4b7f4e8ddfee))
+* **deps:** bump pillow (10.1.0 -> 10.2.0) ([5c7af7d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5c7af7d9b503d8e561b372486100e2f59485b4af))
+* **deps:** bump pillow-heif (0.14.0 -> 0.15.0) ([35098c8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/35098c8352bc7aa366e1cd4ac52aca60ac29f993))
+* **deps:** bump pydantic (2.5.3 -> 2.6.1) ([e880ecf](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e880ecf336c1948be8ad6e3fcad9d6feba280e4f))
+* **deps:** bump sentry-sdk from 1.39.1 to 1.40.3 ([8feb7b4](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/8feb7b405c8d84392087c0d6c75db78dd2051b88))
+* **deps:** bump svix (1.15.0 -> 1.17.0) ([886c0e9](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/886c0e95fb789bd72450c2b3c2f42c4895e826dc))
+* **deps:** bump wagtail (5.2.2 -> 5.2.3) ([0e0161b](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/0e0161bae3e9f2b6b97673922a6570cbe401f889))
+* **deps:** bump wcwidth (0.2.12 -> 0.2.13) ([ac935fa](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/ac935fa72cd4c931c4de5310feb7755f60586e33))
+* **deps:** install latest release of django-mjml ([c171d38](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c171d381d61055b2ecd07bc7a0ad823f11aa4dfa))
+* run `npm audit fix` ([5724555](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5724555b634f0d9484c753e0a2fd60c48fe69c98))
+* update cookiecutter-wagtail-vix dev dependencies & pre-commit config ([aa21967](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/aa21967e06f33232df545d13179e7b1199a6a7db))
 
 ## [v2023.12.28](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v2021.12.09...v2023.12.28) (2023-12-28)
 
