@@ -1109,13 +1109,13 @@ Django = ">=3.2"
 
 [[package]]
 name = "django-treebeard"
-version = "4.7"
+version = "4.7.1"
 description = "Efficient tree implementations for Django"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django-treebeard-4.7.tar.gz", hash = "sha256:c751a3f924158c288fea89afc25a7151979faf01bf11fdc7be3b858099dfa56d"},
-    {file = "django_treebeard-4.7-py3-none-any.whl", hash = "sha256:787117995ff985d98e6c2b241ef6b9d37fe8ff7051cd7535c283616a0b5b2645"},
+    {file = "django-treebeard-4.7.1.tar.gz", hash = "sha256:846e462904b437155f76e04907ba4e48480716855f88b898df4122bdcfbd6e98"},
+    {file = "django_treebeard-4.7.1-py3-none-any.whl", hash = "sha256:995c7120153ab999898fe3043bbdcd8a0fc77cc106eb94de7350e9d02c885135"},
 ]
 
 [package.dependencies]
