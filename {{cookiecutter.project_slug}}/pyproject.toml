@@ -24,7 +24,7 @@ django-environ = "0.11.2"
 django-extensions = "3.2.3"
 # django-mjml = "1.1" # Doesn't support Django 5.0 yet
 # TODO: Remove this and uncomment above once the pending PR is merged
-django-mjml = { git = "https://github.com/jpells/django-mjml.git", rev = "dd0bfe7ba9ef72719f5ec89470379b102d5b79a0" }
+django-mjml = { git = "https://github.com/jpells/django-mjml.git", rev = "701629c75905bc082279723751e9dc3511a5e023" }
 django-redis = "5.4.0"
 django-rq = "^2.10.1"
 django-widget-tweaks = "1.5.0"
