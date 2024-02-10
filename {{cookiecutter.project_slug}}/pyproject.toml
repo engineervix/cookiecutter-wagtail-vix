@@ -3,7 +3,7 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
 [tool.poetry]
-authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.email }}"]
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>"]
 description = "{{ cookiecutter.description }}"
 name = "{{cookiecutter.project_slug}}"
 packages = [{ include = "{{cookiecutter.project_slug}}" }]
