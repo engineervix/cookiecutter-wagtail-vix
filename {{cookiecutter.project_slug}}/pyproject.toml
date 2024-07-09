@@ -107,12 +107,14 @@ target-version = ["py38", "py39", "py310", "py311", "py312"]
 
 [tool.ruff]
 exclude = [".git", "__pycache__", "node_modules", "public", "venv"]
-ignore = ["E203", "E266", "E501"]
 line-length = 120
-select = ["B", "C", "E", "F", "W", "B9"]
 target-version = "py312"
 
-[tool.ruff.isort]
+[tool.ruff.lint]
+ignore = ["E203", "E266", "E501"]
+select = ["B", "C", "E", "F", "W", "B9"]
+
+[tool.ruff.lint.isort]
 known-first-party = ["{{cookiecutter.project_slug}}"]
 section-order = [
   "future",
@@ -122,10 +124,10 @@ section-order = [
   "local-folder",
 ]
 
-[tool.ruff.pycodestyle]
+[tool.ruff.lint.pycodestyle]
 max-doc-length = 120
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
 [tool.coverage.run]
