@@ -337,8 +337,8 @@ const webpackConfig = (environment, argv) => {
       },
       proxy: [
         {
-        context: () => true,
-        target: "http://web:8000",
+          context: () => true,
+          target: "http://web:8000",
         },
       ],
     };

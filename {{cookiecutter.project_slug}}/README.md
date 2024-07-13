@@ -148,7 +148,6 @@ mkdocs serve
 
 The documentation will be available at: <http://127.0.0.1:8001/>
 
-
 ## Credits
 
 This project was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [`engineervix/cookiecutter-wagtail-vix`](https://github.com/engineervix/cookiecutter-wagtail-vix) project template.
