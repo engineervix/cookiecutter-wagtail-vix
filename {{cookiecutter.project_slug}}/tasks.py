@@ -177,12 +177,12 @@ def execute_bump_hack(c, branch, is_first_release=False, major=False):
                 f"git add pyproject.toml {files_to_add}",
                 pty=True,
             )
-            {% raw %}
+{% raw %}
             c.run(
                 f'npm run release -- --commit-all --release-as {release_type} --releaseCommitMessageFormat "chore: This is {project} v{{{{currentTag}}}} 🎉"',
                 pty=True,
             )
-            {% endraw %}
+{% endraw %}
             # push to origin
             c.run(f"git push --follow-tags origin {branch}", pty=True)
         else:
@@ -220,12 +220,12 @@ def execute_bump_hack(c, branch, is_first_release=False, major=False):
                 pty=True,
             )
             previous_tag = get_current_tag.stdout.rstrip()
-            {% raw %}
+{% raw %}
             c.run(
                 f'npm run release -- --commit-all --release-as {release_type} --releaseCommitMessageFormat "bump: ✈️ {previous_tag} → v{{{{currentTag}}}}"',
                 pty=True,
             )
-            {% endraw %}
+{% endraw %}
             # push to origin
             c.run(f"git push --follow-tags origin {branch}", pty=True)
         else:
