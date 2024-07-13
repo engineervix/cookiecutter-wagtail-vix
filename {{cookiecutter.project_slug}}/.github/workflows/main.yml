@@ -81,7 +81,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
 
       - name: Install Dependencies
@@ -101,7 +101,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
 
       - name: Install Dependencies
@@ -121,7 +121,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
 
       - name: Install Dependencies
@@ -173,7 +173,7 @@ jobs:
           pip install --upgrade pip
           python -m pip install poetry==1.6.1
           poetry install --with dev,test,docs
-          curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+          curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
           apt-get install -y nodejs
           npm ci --cache .npm --prefer-offline
           npm run build:prod

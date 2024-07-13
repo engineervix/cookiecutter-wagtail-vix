@@ -50,8 +50,8 @@ Here are some key highlights:
   - Docker
   - Python 3.12, with Poetry for dependency management, and [Black](https://black.readthedocs.io/) + [ruff](https://github.com/astral-sh/ruff) for linting.
   - Django 5.0
-  - Wagtail 5.2
-  - Node.js 18, with [Webpack](https://webpack.js.org/) 5 to bundle frontend assets
+  - Wagtail 6.0
+  - Node.js 20, with [Webpack](https://webpack.js.org/) 5 to bundle frontend assets
 - A good starting point for any Wagtail project, with essential batteries included and very minimal assumptions on what you are building.
 - Production-ready setup, so you don't waste time going from development to production.
 - Includes 3 Django apps to start with:
@@ -84,7 +84,7 @@ Here are some key highlights:
 In order to generate a new project from this cookiecutter template:
 
 1. ensure that you have [cookiecutter](https://github.com/audreyr/cookiecutter) installed on your computer
-2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, , **project_slug**, **email** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
+2. run `cookiecutter https://github.com/engineervix/cookiecutter-wagtail-vix.git` in your favourite shell. You’ll be prompted for some values, such as **project_name**, **project_slug**, **email** etc. A new wagtail project will be created in a folder named according to the **project_slug** at your current location.
 3. Thereafter, `cd` into the project folder created above and follow the instructions in your shiny new project's README.
 
 ### A note regarding django-rq
