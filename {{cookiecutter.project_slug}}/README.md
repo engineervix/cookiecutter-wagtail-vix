@@ -5,7 +5,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 [![python3](https://img.shields.io/badge/python-3.12-brightgreen.svg)](https://python.org/)
-[![Node v18](https://img.shields.io/badge/Node-v18-teal.svg)](https://nodejs.org/en/blog/release/v18.0.0)
+[![Node v20](https://img.shields.io/badge/Node-v20-teal.svg)](https://nodejs.org/en/blog/release/v20.0.0)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![code style: prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg)](https://prettier.io/)
 
@@ -61,7 +61,7 @@ Here, we assume that you have `git` on your machine, and that you have created a
 
 Now, upon cloning this repository (or forking + cloning your fork), navigate to the cloned project directory.
 
-Skip the next step (involving `.env`) if you have just created a new project using the  [`cookiecutter-wagtail-vix`](https://github.com/engineervix/cookiecutter-wagtail-vix) project template.
+Skip the next step (involving `.env`) if you have just created a new project using the [`cookiecutter-wagtail-vix`](https://github.com/engineervix/cookiecutter-wagtail-vix) project template.
 
 Then create the required `.env` file:
 
@@ -134,7 +134,7 @@ For the first release, you can also supply the `--major` argument and this will 
 
 - Run `invoke -l` to see all available [Invoke](https://www.pyinvoke.org/) tasks. These are defined in the [tasks.py](tasks.py) file.
 - You'll want to setup [pre-commit](https://pre-commit.com/) by running `pre-commit install` followed by `pre-commit install --hook-type commit-msg`. Optionally run `pre-commit run --all-files` to make sure your pre-commit setup is okay.
-- You'll probably also want to install Node.js 18 on your machine, together with the dependencies. We recommend using [fnm](https://github.com/Schniz/fnm) or [volta](https://volta.sh/) to simplify managing Node.js versions on your machine.
+- You'll probably also want to install Node.js 20 on your machine, together with the dependencies. We recommend using [fnm](https://github.com/Schniz/fnm) or [volta](https://volta.sh/) to simplify managing Node.js versions on your machine.
 
 ## Project Technical Documentation
 
@@ -147,7 +147,6 @@ mkdocs serve
 ```
 
 The documentation will be available at: <http://127.0.0.1:8001/>
-
 
 ## Credits
 

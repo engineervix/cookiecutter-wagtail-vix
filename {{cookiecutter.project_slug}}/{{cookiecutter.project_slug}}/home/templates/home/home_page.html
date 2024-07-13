@@ -1,48 +1,46 @@
-{% raw %}
-{% extends "base.html" %}
+{% raw %}{% extends "base.html" %}
 {% load static %}
 {% load wagtailcore_tags wagtailimages_tags %}
 {% block extrameta %}{% endraw %}
-  <meta name="description" content="{{ cookiecutter.description }}">
-  <meta name="author" content="{{ cookiecutter.author_name }}">{% raw %}
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:type" content="website" />{% endraw %}
-  <meta property="og:description" content="{{ cookiecutter.description }}">
-  <meta property="og:site_name" content="{{ cookiecutter.project_name }}">{% raw %}
-  <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-  <meta property="og:image" content="https://picsum.photos/480/270" />
-  <meta property="og:locale" content="en_ZM" />
-  <meta property="og:locale:alternate" content="en_ZA" />
-  <meta property="og:locale:alternate" content="en_GB" />
-  <meta property="og:locale:alternate" content="en_US" />
+    <meta name="description" content="{{ cookiecutter.description }}">
+    <meta name="author" content="{{ cookiecutter.author_name }}">{% raw %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:type" content="website" />{% endraw %}
+    <meta property="og:description" content="{{ cookiecutter.description }}">
+    <meta property="og:site_name" content="{{ cookiecutter.project_name }}">{% raw %}
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="https://picsum.photos/480/270" />
+    <meta property="og:locale" content="en_ZM" />
+    <meta property="og:locale:alternate" content="en_ZA" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
 {% endblock extrameta %}
 {% block extra_css %}
 {% endblock extra_css %}
 {% block body_class %}
-  template--home
+    template--home
 {% endblock body_class %}
 {% block header_class %}
-  hero--home bg-dark text-light
+    hero--home bg-dark text-light
 {% endblock header_class %}
 {% block promo_block %}
-  <div class="container h-75">
-    <div class="d-flex h-75 text-center align-items-center">
-      <div class="w-100">{% endraw %}
-        <h1 class="display-3">Welcome to {{ cookiecutter.project_name }} Homepage</h1>{% raw %}
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
+    <div class="container h-75">
+        <div class="d-flex h-75 text-center align-items-center">
+            <div class="w-100">{% endraw %}
+                <h1 class="display-3">Welcome to {{ cookiecutter.project_name }} Homepage</h1>{% raw %}
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
     </div>
-  </div>
 {% endblock promo_block %}
 {% block content %}
-  <main>
-    <div class="container py-4">
-      <div class="d-flex card text-center align-items-center">
-        <div class="card-body">
-          <p class="lead">Let's get to work ⚒️</p>
+    <main>
+        <div class="container py-4">
+            <div class="d-flex card text-center align-items-center">
+                <div class="card-body">
+                    <p class="lead">Let's get to work ⚒️</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </main>
-{% endblock content %}
-{% endraw %}
+    </main>
+{% endblock content %}{% endraw %}

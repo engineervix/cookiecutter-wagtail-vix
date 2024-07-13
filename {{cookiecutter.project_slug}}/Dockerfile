@@ -1,8 +1,8 @@
 #################################################################################
-# use node:18.19-bookworm as the base image for building the frontend
+# use node:20-bookworm as the base image for building the frontend
 #################################################################################
 
-FROM node:18.19-bookworm as frontend-builder
+FROM node:20-bookworm AS frontend-builder
 
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
@@ -16,7 +16,7 @@ RUN npm run build:prod
 # use python:3.12-slim-bookworm as the base image for production and development
 #################################################################################
 
-FROM python:3.12-slim-bookworm as production
+FROM python:3.12-slim-bookworm AS production
 
 # Add user that will be used in the container
 RUN groupadd wagtail && \
@@ -42,7 +42,7 @@ ENV PYTHONUNBUFFERED=1 \
     ## ref: https://docs.gunicorn.org/en/stable/settings.html
     ## The suggested number of workers is (2*CPU)+1
     WEB_CONCURRENCY=3 \
-    NODE_MAJOR=18
+    NODE_MAJOR=20
 
 # Install system dependencies required by Wagtail, Django and the project
 RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-recommends \
@@ -68,7 +68,7 @@ USER wagtail
 
 # set up virtual environment & install python dependencies
 ARG DEVELOPMENT
-ARG POETRY_VERSION=1.6.1
+ARG POETRY_VERSION=1.8.3
 ENV VIRTUAL_ENV=/home/wagtail/venv \
     DEVELOPMENT=${DEVELOPMENT}
 RUN python -m venv $VIRTUAL_ENV
@@ -105,7 +105,7 @@ CMD gunicorn {{cookiecutter.project_slug}}.wsgi:application
 # The next steps won't be run in production
 #################################################################################
 
-FROM production as dev
+FROM production AS dev
 
 # Swap user, so the following tasks can be run as root
 USER root

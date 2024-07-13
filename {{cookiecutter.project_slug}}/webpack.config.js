@@ -335,10 +335,12 @@ const webpackConfig = (environment, argv) => {
         // Write compiled files to disk. This makes live-reload work on both port 3000 and 8000.
         writeToDisk: true,
       },
-      proxy: {
-        context: () => true,
-        target: "http://web:8000",
-      },
+      proxy: [
+        {
+          context: () => true,
+          target: "http://web:8000",
+        },
+      ],
     };
   }
 

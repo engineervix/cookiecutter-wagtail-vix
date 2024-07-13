@@ -4,6 +4,7 @@ name: Continuous Integration
 env:
   DOCKER_BUILDKIT: 1
   COMPOSE_DOCKER_CLI_BUILD: 1
+  POETRY_VERSION: 1.8.3 # Make sure this matches the Dockerfile
 
 on:
   pull_request:
@@ -17,39 +18,74 @@ on:
       - "v*"
 
 jobs:
-  # Runs the ruff & black linting steps inside the specified containers rather than on the VM host.
-  # Because of this the network configuration changes from host based network to a container network.
   ruff:
     runs-on: ubuntu-22.04
-    container: python:3.12-slim-bookworm
 
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - id: poetry-cache
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
+
+      - if: steps.poetry-cache.outputs.cache-hit != 'true'
+        name: Install Poetry and Dependencies
+        shell: bash
         run: |
-          pip install -q ruff==0.1.15
+          pip install --upgrade pip
+          pip install poetry==$POETRY_VERSION
+          python -m venv .venv
+          source .venv/bin/activate
+          poetry install --with dev,test,docs
+
       - name: ruff
+        shell: bash
         run: |
+          source .venv/bin/activate
           ruff check . --output-format=github
 
   black:
     runs-on: ubuntu-22.04
-    container: python:3.12-slim-bookworm
 
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - id: poetry-cache
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
+
+      - if: steps.poetry-cache.outputs.cache-hit != 'true'
+        name: Install Poetry and Dependencies
+        shell: bash
         run: |
-          pip install -q black==24.1.1
+          pip install --upgrade pip
+          pip install poetry==$POETRY_VERSION
+          python -m venv .venv
+          source .venv/bin/activate
+          poetry install --with dev,test,docs
+
       - name: black
+        shell: bash
         run: |
+          source .venv/bin/activate
           black . --check
 
-  # Runs the frontend linting steps on the VM
   djlint:
     runs-on: ubuntu-22.04
 
@@ -61,15 +97,27 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: "pip" # caching pip dependencies
 
-      - name: Install dependencies
+      - id: poetry-cache
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
+
+      - if: steps.poetry-cache.outputs.cache-hit != 'true'
+        name: Install Poetry and Dependencies
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install djlint==1.34.1
+          pip install --upgrade pip
+          pip install poetry==$POETRY_VERSION
+          python -m venv .venv
+          source .venv/bin/activate
+          poetry install --with dev,test,docs
 
       - name: djlint
+        shell: bash
         run: |
+          source .venv/bin/activate
           find {{cookiecutter.project_slug}}/ -name '*.html' -o -name '*.mjml' | xargs djlint --check
 
   stylelint:
@@ -79,14 +127,19 @@ jobs:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "npm"
+          node-version: 20
 
-      - name: Install Dependencies
+      - id: node-cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
+
+      - if: steps.node-cache.outputs.cache-hit != 'true'
         run: |
-          npm ci
+          npm ci --no-optional --no-audit --progress=false
 
       - name: Stylelint
         run: |
@@ -99,14 +152,19 @@ jobs:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "npm"
+          node-version: 20
 
-      - name: Install Dependencies
+      - id: node-cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
+
+      - if: steps.node-cache.outputs.cache-hit != 'true'
         run: |
-          npm ci
+          npm ci --no-optional --no-audit --progress=false
 
       - name: ESLint
         run: |
@@ -119,26 +177,27 @@ jobs:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "npm"
+          node-version: 20
 
-      - name: Install Dependencies
+      - id: node-cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
+
+      - if: steps.node-cache.outputs.cache-hit != 'true'
         run: |
-          npm ci
+          npm ci --no-optional --no-audit --progress=false
 
       - name: Prettier
         run: |
           npm run lint:format
 
-  # Runs the python test suite inside a specified container rather than on the VM host.
-  python_tests:
+  test:
     runs-on: ubuntu-22.04
     needs: [ruff, black, stylelint, eslint, prettier, djlint]
-
-    container:
-      image: python:3.12-slim-bookworm
 
     services:
       postgres:
@@ -148,40 +207,82 @@ jobs:
           POSTGRES_PASSWORD: custom_pass
           POSTGRES_DB: test_postgres_db
         # needed because the postgres container does not provide a healthcheck
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          # Maps tcp port 5432 on service container to the host
+          - 5432:5432
 
     env:
       # postgres://user:password@host:port/database
-      DATABASE_URL: "postgres://test_postgres_user:custom_pass@postgres/test_postgres_db"
+      DATABASE_URL: "postgres://test_postgres_user:custom_pass@localhost:5432/test_postgres_db"
+      DJANGO_SECRET_KEY: "secret"
+      DEBUG: False
+      ALLOWED_HOSTS: ""
+      WAGTAILADMIN_BASE_URL: "www.example.com"
 
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - id: poetry-cache
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
+
+      - id: node-cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
+
+      - name: System Dependencies
         shell: bash
         run: |
-          apt update -y && apt upgrade -y
+          sudo apt-get update --yes --quiet
           export DEBIAN_FRONTEND=noninteractive
-          ln -fs /usr/share/zoneinfo/{{ cookiecutter.timezone }} /etc/localtime
-          dpkg-reconfigure --frontend noninteractive tzdata
-          apt install -y build-essential curl gdal-bin libgdal-dev binutils libproj-dev git gnupg libjpeg62-turbo-dev libmagic1 libpq-dev libwebp-dev zlib1g-dev
-          python -m venv ~/venv
-          source ~/venv/bin/activate
-          export LC_ALL=C.UTF-8
-          export LANG=C.UTF-8
+          export TZ={{ cookiecutter.timezone }}
+          sudo apt-get install --yes --quiet --no-install-recommends gdal-bin libgdal-dev libproj-dev libwebp-dev
+          sudo sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen
+          sudo locale-gen
+          sudo ln -fs /usr/share/zoneinfo/{{ cookiecutter.timezone }} /etc/localtime
+          sudo dpkg-reconfigure tzdata
+          export LANG=en_US.UTF-8
+          export LANGUAGE=en_US:en
+          export LC_ALL=en_US.UTF-8
+
+      - if: steps.poetry-cache.outputs.cache-hit != 'true'
+        name: Install Poetry and Dependencies
+        shell: bash
+        run: |
           pip install --upgrade pip
-          python -m pip install poetry==1.6.1
+          pip install poetry==$POETRY_VERSION
+          python -m venv .venv
+          source .venv/bin/activate
           poetry install --with dev,test,docs
-          curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-          apt-get install -y nodejs
-          npm ci --cache .npm --prefer-offline
+
+      - if: steps.node-cache.outputs.cache-hit != 'true'
+        run: |
+          npm ci --no-optional --no-audit --progress=false
+
+      - name: Static
+        shell: bash
+        run: |
           npm run build:prod
-          touch .env
-          echo "DJANGO_SECRET_KEY=secret" >> .env
-          echo "DEBUG=False" >> .env
-          echo "ALLOWED_HOSTS=" >> .env
-          echo "WAGTAILADMIN_BASE_URL=www.example.com" >> .env
+          source .venv/bin/activate
           python manage.py collectstatic --noinput --clear
 
       - name: Test with pytest
@@ -189,7 +290,7 @@ jobs:
         run: |
           # Note that you have to activate the virtualenv in every step
           # because GitHub actions doesn't preserve the environment
-          source ~/venv/bin/activate
+          source .venv/bin/activate
 
           # Run system checks
           python manage.py check
@@ -203,25 +304,42 @@ jobs:
           # Run backend tests
           pytest
 
-  # Runs the next steps on the VM
   # Creates a GitHub Release when the lint & python_tests jobs succeeds, and only on pushes to tags.
   release:
-    needs: [ruff, black, stylelint, eslint, prettier, djlint, python_tests]
+    needs: [ruff, black, stylelint, eslint, prettier, djlint, test]
 
     permissions:
       contents: write
 
-    if: needs.python_tests.result == 'success' && startsWith( github.ref, 'refs/tags/v' )
+    if: needs.test.result == 'success' && startsWith( github.ref, 'refs/tags/v' )
 
     runs-on: ubuntu-22.04
 
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
-      - name: Install Dependencies
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - id: poetry-cache
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
+
+      - if: steps.poetry-cache.outputs.cache-hit != 'true'
+        name: Install Poetry and Dependencies
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install invoke colorama tomli
+          pip install --upgrade pip
+          pip install poetry==$POETRY_VERSION
+          python -m venv .venv
+          source .venv/bin/activate
+          poetry install --with dev,test,docs
+
       - name: Get the version
         id: get_version
         run: |{% raw %}
@@ -237,6 +355,7 @@ jobs:
         # This creates a file LATEST_RELEASE_NOTES.md in the parent directory (../)
         shell: bash
         run: |
+          source .venv/bin/activate
           invoke get-release-notes
       - name: GitHub Release
         uses: softprops/action-gh-release@v1
