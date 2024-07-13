@@ -171,7 +171,7 @@ jobs:
           export LC_ALL=C.UTF-8
           export LANG=C.UTF-8
           pip install --upgrade pip
-          python -m pip install poetry==1.6.1
+          python -m pip install poetry==1.8.3
           poetry install --with dev,test,docs
           curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
           apt-get install -y nodejs
