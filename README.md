@@ -3,7 +3,7 @@
 > a minimal, batteries-included, reusable project skeleton to serve as a starting point for a Wagtail project.
 
 [![Continuous Integration](https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml/badge.svg)](https://github.com/engineervix/cookiecutter-wagtail-vix/actions/workflows/main.yml)
-[![Coverage Status](https://coveralls.io/repos/github/engineervix/cookiecutter-wagtail-vix/badge.svg?branch=main)](https://coveralls.io/github/engineervix/cookiecutter-wagtail-vix?branch=main)
+[![Coverage Status](https://codecov.io/gh/engineervix/cookiecutter-wagtail-vix/branch/main/graph/badge.svg)](https://codecov.io/gh/engineervix/cookiecutter-wagtail-vix)
 [![Updates](https://pyup.io/repos/github/engineervix/cookiecutter-wagtail-vix/shield.svg)](https://pyup.io/repos/github/engineervix/cookiecutter-wagtail-vix/)
 [![python 3.12](https://img.shields.io/badge/python-3.12-brightgreen.svg)](https://python.org)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -18,7 +18,8 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+**Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [Introduction](#introduction)
 - [Features ✨](#features-)
@@ -40,7 +41,7 @@
 
 Embarking on any project "from scratch" is a formidable undertaking, entailing intricate configurations and setup that can quickly become overwhelming. Whether it's the time-consuming task of handling dependencies, structuring the project, or setting up a cohesive development environment – the challenges are universal.
 
-Enter `cookiecutter-wagtail-vix` – a template crafted to simplify the kick-off of [Wagtail](https://wagtail.org/) projects. This template is designed to streamline the setup process, sparing you from the headaches that often accompany the early stages of a project. By starting your new [Wagtail](https://wagtail.org/) project using  `cookiecutter-wagtail-vix`, you leapfrog the tedious setup tasks, allowing you to focus on what truly matters – crafting your project's unique functionality with ease.
+Enter `cookiecutter-wagtail-vix` – a template crafted to simplify the kick-off of [Wagtail](https://wagtail.org/) projects. This template is designed to streamline the setup process, sparing you from the headaches that often accompany the early stages of a project. By starting your new [Wagtail](https://wagtail.org/) project using `cookiecutter-wagtail-vix`, you leapfrog the tedious setup tasks, allowing you to focus on what truly matters – crafting your project's unique functionality with ease.
 
 ## Features ✨
 
@@ -93,29 +94,29 @@ If you would like to run background tasks via [`django-rq`](https://github.com/r
 
 1. in `settings/base.py`
 
-    - uncomment the entry in the `THIRD_PARTY_APPS` list
-    - uncomment `RQ_QUEUES`
+   - uncomment the entry in the `THIRD_PARTY_APPS` list
+   - uncomment `RQ_QUEUES`
 
 2. in `settings/production.py`
 
-    - uncomment `RQ_QUEUES`
-    - uncomment the commented out items in the `LOGGING` dict
+   - uncomment `RQ_QUEUES`
+   - uncomment the commented out items in the `LOGGING` dict
 
 3. in `Procfile`
 
-    - uncomment the `worker` entry
+   - uncomment the `worker` entry
 
 4. in `.env`
 
-    - uncomment the line `RQ_QUEUE=redis://redis:6379/0`
+   - uncomment the line `RQ_QUEUE=redis://redis:6379/0`
 
 5. in `urls.py`
 
-    - uncomment the line with `path("dj-rq/", include("django_rq.urls")),`
+   - uncomment the line with `path("dj-rq/", include("django_rq.urls")),`
 
 6. in `docker-compose.yml`
-    - uncomment the `redis` service entry
-    - uncomment the `worker` service entry
+   - uncomment the `redis` service entry
+   - uncomment the `worker` service entry
 
 ## Contributing 🤝
 
@@ -146,7 +147,6 @@ See `pre-commit-config.yaml` for more details. In addition, please note the foll
 - your commit messages should follow the conventions described [here](https://www.conventionalcommits.org/). Write your commit message in the imperative: "Fix bug" and not "Fixed bug" or "Fixes bug".
 
 Once you are done, please create a [pull request](https://github.com/engineervix/cookiecutter-wagtail-vix/pulls).
-
 
 ## Show your support 🙌
 
