@@ -1,4 +1,3 @@
-version: "3.8" # NB synchronise with docker-compose.yml
 services:
   web:
     ports:
