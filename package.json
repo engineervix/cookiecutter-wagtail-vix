@@ -1,10 +1,10 @@
 {
   "name": "cookiecutter-wagtail-vix",
-  "version": "2024.02.10",
+  "version": "2024.07.14",
   "description": "a minimal, batteries-included, reusable project skeleton to serve as a starting point for a Wagtail project",
   "scripts": {
     "test": "pytest",
-    "release": "standard-version"
+    "release": "commit-and-tag-version"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/engineervix/cookiecutter-wagtail-vix#readme",
   "devDependencies": {
-    "standard-version": "^9.5.0"
+    "commit-and-tag-version": "^12.4.1"
   },
-  "standard-version": {
+  "commit-and-tag-version": {
     "header": "# Changelog\n\nAll notable changes to this project will be documented here.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project uses ~~[Semantic Versioning](https://semver.org/spec/v2.0.0.html)~~ [Calendar Versioning](https://calver.org/).\n",
     "types": [
       {
