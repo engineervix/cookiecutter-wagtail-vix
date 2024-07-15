@@ -3412,22 +3412,22 @@ testing = ["Jinja2 (>=3.0,<3.2)", "azure-mgmt-cdn (>=12.0,<13.0)", "azure-mgmt-f
 
 [[package]]
 name = "wagtail-factories"
-version = "4.1.0"
+version = "4.2.1"
 description = "Factory boy classes for wagtail"
 optional = false
 python-versions = "*"
 files = [
-    {file = "wagtail_factories-4.1.0-py2.py3-none-any.whl", hash = "sha256:6abd435518fdf0cdd3d9920acb2abbd9005936d6fecfdf6fdde3e404834d4b0c"},
-    {file = "wagtail_factories-4.1.0.tar.gz", hash = "sha256:067e3e1a30721a90eaa1514c8214aae7a171490bbedf026eeaa904a2ed9abcd0"},
+    {file = "wagtail_factories-4.2.1-py2.py3-none-any.whl", hash = "sha256:7a180fc1b074af7a78648c634740ee89d4dbb45899917744b66431d38155b6ae"},
+    {file = "wagtail_factories-4.2.1.tar.gz", hash = "sha256:bfe158092982a2b30a3e603c482242905df0b163fc69573fa6f159df482175c5"},
 ]
 
 [package.dependencies]
 factory-boy = ">=3.2"
-wagtail = ">=4.1"
+wagtail = ">=5.2"
 
 [package.extras]
-docs = ["sphinx (>=1.4.0)"]
-test = ["coverage (==6.0)", "flake8 (==4.0.0)", "flake8-blind-except (==0.1.1)", "flake8-debugger (==4.1.2)", "isort (==5.10.0)", "psycopg2 (>=2.3.1)", "pytest (==6.2.5)", "pytest-cov (==3.0.0)", "pytest-django (==4.5.0)", "pytest-pythonpath (==0.7.3)"]
+docs = ["sphinx (>=7.3.7)"]
+test = ["coverage (==7.5.1)", "pytest (==8.2.1)", "pytest-cov (==5.0.0)", "pytest-django (==4.8.0)", "ruff (==0.4.4)"]
 
 [[package]]
 name = "wagtail-font-awesome-svg"
