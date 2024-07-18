@@ -49,6 +49,10 @@
       "updateTypes": ["minor"],
       "automerge": false,
       "semanticCommitType": "build"
+    },
+    {
+      "matchPackageNames": ["sass"],
+      "enabled": false
     }
   ],
   "timezone": "Africa/Lusaka",
