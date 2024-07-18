@@ -1,8 +1,8 @@
 #################################################################################
-# use node:20-bookworm as the base image for building the frontend
+# use node:22-bookworm as the base image for building the frontend
 #################################################################################
 
-FROM node:20-bookworm AS frontend-builder
+FROM node:22-bookworm AS frontend-builder
 
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
@@ -42,7 +42,7 @@ ENV PYTHONUNBUFFERED=1 \
     ## ref: https://docs.gunicorn.org/en/stable/settings.html
     ## The suggested number of workers is (2*CPU)+1
     WEB_CONCURRENCY=3 \
-    NODE_MAJOR=20
+    NODE_MAJOR=22
 
 # Install system dependencies required by Wagtail, Django and the project
 RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-recommends \
