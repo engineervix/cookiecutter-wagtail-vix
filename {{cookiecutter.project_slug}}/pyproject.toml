@@ -18,7 +18,7 @@ wagtail = ">=6.1,<6.2"
 psycopg2 = "^2.9.9"
 
 # Django Extensions
-crispy-bootstrap5 = "^2023.10"
+crispy-bootstrap5 = "^2024.2"
 django-crispy-forms = "^2.1"
 django-environ = "0.11.2"
 django-extensions = "3.2.3"

@@ -666,13 +666,13 @@ toml = ["tomli"]
 
 [[package]]
 name = "crispy-bootstrap5"
-version = "2023.10"
+version = "2024.2"
 description = "Bootstrap5 template pack for django-crispy-forms"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "crispy-bootstrap5-2023.10.tar.gz", hash = "sha256:f16c44f1997310e5a89c0cf230402e7111cc1f942f64fb7e44603958b89b06a1"},
-    {file = "crispy_bootstrap5-2023.10-py3-none-any.whl", hash = "sha256:9b5a6c9880f37cd32aa678c0d7576ae60b3e502c444c8712e582f8bd91659afb"},
+    {file = "crispy-bootstrap5-2024.2.tar.gz", hash = "sha256:7d1fa40c6faf472e30e85c72551a3d2c9eedbf0abfff920683315e4e6f670f2b"},
+    {file = "crispy_bootstrap5-2024.2-py3-none-any.whl", hash = "sha256:3867e320920a6ef156e94f9e0f06a80344c453e1b3bd96cd9dc0522ae9e9afb8"},
 ]
 
 [package.dependencies]
@@ -3624,4 +3624,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "~=3.12"
-content-hash = "4e8753498698e0aaa8f2939d3bf15ad7aaa798df44e39b947efd9a9cc68fe360"
+content-hash = "10591b5a99ffdda2acc1030ecbd05b49db5c2933e1eedae2f864406aa11b4a8c"
