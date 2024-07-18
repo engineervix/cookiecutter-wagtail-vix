@@ -42,6 +42,13 @@
       "updateTypes": ["patch", "pin", "digest"],
       "automerge": true,
       "semanticCommitType": "ci"
+    },
+    {
+      "matchPackageNames": ["wagtail"],
+      "matchLanguages": ["python"],
+      "updateTypes": ["minor"],
+      "automerge": false,
+      "semanticCommitType": "build"
     }
   ],
   "timezone": "Africa/Lusaka",
