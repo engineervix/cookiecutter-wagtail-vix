@@ -2,7 +2,7 @@
 
 ## What's required
 
-To install Node.js on the host machine you could use tools like [fnm](https://github.com/Schniz/fnm), [`volta`](https://volta.sh/) and so on. Once you have Node.js 20 installed simply run `npm install` in the project root to install the dependencies.
+To install Node.js on the host machine you could use tools like [fnm](https://github.com/Schniz/fnm), [`volta`](https://volta.sh/) and so on. Once you have Node.js 22 installed simply run `npm install` in the project root to install the dependencies.
 
 ## Starting afresh
 

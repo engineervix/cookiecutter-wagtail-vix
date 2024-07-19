@@ -330,5 +330,7 @@ Central routing configuration for _{{ cookiecutter.project_name }}_. It is used 
 The entry points for running _{{ cookiecutter.project_name }}_ using the WSGI[^3] protocol.
 
 [^1]: See [Stop naming your python modules “utils”](https://breadcrumbscollector.tech/stop-naming-your-python-modules-utils/) for more details. Ironically, there may probably still be some modules named `utils.py` in the project. You've gotta admit that [naming things is hard](https://martinfowler.com/bliki/TwoHardThings.html)!
+
 [^2]: Websites generally need to serve additional files such as images, JavaScript, or CSS. In Django, we refer to these files as “static files”.
+
 [^3]: Web Server Gateway Interface. WSGI is a standard interface between web servers and web applications, allowing them to communicate and work together.

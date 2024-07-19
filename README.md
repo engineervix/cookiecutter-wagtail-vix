@@ -49,10 +49,10 @@ Here are some key highlights:
 
 - Tech stack
   - Docker
-  - Python 3.12, with Poetry for dependency management, and [Black](https://black.readthedocs.io/) + [ruff](https://github.com/astral-sh/ruff) for linting.
+  - Python 3.12, with Poetry for dependency management, and [Black](https://black.readthedocs.io/) + [ruff](https://github.com/astral-sh/ruff) for formatting and linting.
   - Django 5.0
-  - Wagtail 6.0
-  - Node.js 20, with [Webpack](https://webpack.js.org/) 5 to bundle frontend assets
+  - Wagtail 6.1
+  - Node.js 22, with [Webpack](https://webpack.js.org/) 5 to bundle frontend assets
 - A good starting point for any Wagtail project, with essential batteries included and very minimal assumptions on what you are building.
 - Production-ready setup, so you don't waste time going from development to production.
 - Includes 3 Django apps to start with:
