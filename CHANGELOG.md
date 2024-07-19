@@ -4,6 +4,68 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project uses ~~[Semantic Versioning](https://semver.org/spec/v2.0.0.html)~~ [Calendar Versioning](https://calver.org/).
 
+## [v2024.07.19](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v2024.07.14...v2024.07.19) (2024-07-19)
+
+
+### 🚀 Features
+
+* upgrade wagtail to version 6.1 ([#531](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/531)) ([a84005c](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a84005caeb622167f76aff3efdc661151d2ab4e2))
+* bump @babel/* packages to 7.24.x ([0503453](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/05034531e4fca6e5923f66b6f3c5d76b930890fb))
+* bump autoprefixer from 10.4.17 to 10.4.19 ([5d9b1a8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5d9b1a8533481b87927669548a65db516bb43065))
+* bump bootstrap (^5.3.2 → ^5.3.3) ([62bbddc](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/62bbddcb5c6e05364dd1aef5fe319826ca1068ee))
+* bump css-loader (^6.10.0 → ^7.1.2) ([9d4d94a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/9d4d94a7915a4609c058d9660fcccd6ffd91e5e2))
+* bump cssnano (^6.0.3 → ^7.0.4) ([2293979](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/2293979e18f03e6282f292c5eb51add8ef13bb4f))
+* bump eslint-plugin-prettier (^5.1.3 → ^5.2.1) & eslint-webpack-plugin (^4.0.1 → ^4.2.0) ([8f0b12d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/8f0b12de9a0fccba201eedce3a843cb92aae1cd4))
+* bump mini-css-extract-plugin (^2.8.0 → ^2.9.0) & sass-loader (^14.0.0 → ^14.2.1) ([80e0e81](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/80e0e8139b8bb61c6191e9eaa19e775640cba645))
+* bump Node.js from 20 to 22 ([ab3f9e2](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/ab3f9e24b1b9f9e90cceb083c0a11ae4bb60831a))
+* bump prettier and stylelint (& friends) to latest versions ([c477b4e](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/c477b4ef9d71d07ff56801300c0c8ceb5384c4d4))
+* bump webpack-dev-server (^4.15.1 → ^5.0.4) ([7d8da94](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/7d8da94b05e21d2d461d356831f7447e28e7b446))
+* bump whitenoise (6.6.0 -> 6.7.0) ([7cb917a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/7cb917ad7ba61a959776d0e0a8e3b537c607aa4e))
+* update copy-webpack-plugin, postcss-custom-properties, postcss-loader & webpack to latest versions ([9d67de2](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/9d67de25cb3b822495da9650205f73915a78b864))
+* update crispy-bootstrap5 (2023.10 -> 2024.2) ([a8672e8](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a8672e83ca645d861ac32e20669e3561e5405d2e))
+* update Node Engine spec and use .nvmrc to specify Node version ([f9bf437](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/f9bf4372a2135963e1c5ec39bf6c8e266c10fb75))
+* update several outdated python dependencies ([8f7d782](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/8f7d782d027102b2e94d2c413ee5031ffac8b13a))
+
+
+### 🐛 Bug Fixes
+
+* address https://avd.aquasec.com/nvd/cve-2024-6345 by updating setuptools ([5ea3fc9](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5ea3fc9c94098b570c51a7ba1455faf0600ff8a2))
+* ensure sass is not updated, for now ([6b65631](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/6b656316d46053606a321afcacd845c44776c23f)), closes [#499](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/499)
+* pin Node 22 to 22.4, because 22.5 has issues ([2ee825f](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/2ee825fdb4f931959b3c972e345a1030f0faf706))
+
+
+### 💄 Styling
+
+* fix formatting with prettier ([bb9fd5f](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bb9fd5f44745d5573621531023e48970261819c0))
+
+
+### ♻️ Code Refactoring
+
+* update .editorconfig by ensuring that html indentation is 4 spaces ([a78b732](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/a78b732104bff43af048d3eeb6cc180a0ec1dc44))
+
+
+### ⚙️ Build System
+
+* **deps:** update dependency boto3 to v1.34.145 ([#485](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/485)) ([5ec18df](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/5ec18df60e8d953d778ad85005e34df825215901))
+* **deps:** update dependency commitizen to v3.27.0 ([#517](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/517)) ([43b792d](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/43b792d23814d7dda21e9f666f607b188c712c14))
+* **deps:** update dependency django-anymail to v10.3 ([fb67e80](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/fb67e8065634a86a9c73e781eae1274195e0a381))
+* **deps:** update dependency django-crispy-forms to v2.2 ([#521](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/521)) ([4e1b11a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/4e1b11aa5b3bb8e447453f301109d8fb1a2603f9))
+* **deps:** update dependency mkdocs-glightbox to ^0.4.0 ([#522](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/522)) ([13fb29a](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/13fb29aa41d18e44b98cd644aedd4b65c8dd1705))
+* **deps:** update dependency mkdocs-material to v9.5.29 ([#529](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/529)) ([e0b4158](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/e0b41588bfc285ed546997a8de00f135c9d20ad0))
+* **deps:** update dependency pydantic to v2.8.2 ([#523](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/523)) ([bc809a5](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/bc809a58d92792f0e50392e861bce7ad763cb676))
+* **deps:** update dependency pytest-django to v4.8.0 ([#502](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/502)) ([35ff3e2](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/35ff3e289202f301f93e1eea20fbcfc7455086ec))
+* **deps:** update dependency pytest-factoryboy to v2.7.0 ([#524](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/524)) ([f309b59](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/f309b59c89577e00f427db5c519fb95996801801))
+* **deps:** update dependency pytest-mock to v3.14.0 ([#525](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/525)) ([dc65704](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/dc6570459ee84f1c16354e06b9e7c63be2142e6d))
+* **deps:** update dependency pytest-xdist to v3.6.1 ([#526](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/526)) ([fc98fc4](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/fc98fc46583559db9f1b1eb77534112a62eaddc1))
+* **deps:** update dependency ruff to v0.5.2 ([#530](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/530)) ([575c3de](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/575c3def92995bcc83aa7748c981ad49b547ebcc))
+* **deps:** update dependency sentry-sdk to v1.45.0 ([#528](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/528)) ([7814070](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/7814070873b92a47aff05c11066b3c1a1513f393))
+* **deps:** update dependency wagtail-factories to v4.2.1 ([#532](https://github.com/engineervix/cookiecutter-wagtail-vix/issues/532)) ([1953428](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/1953428e5e003cb5aa2eb76a48028e1fbb0a4b19))
+
+### 👷 CI/CD
+
+* ensure that [@renovate-bot](https://github.com/renovate-bot) doesn't automerge wagtail _minor_ releases ([619b746](https://github.com/engineervix/cookiecutter-wagtail-vix/commit/619b746ebbde2d4602acb5668b5d881d8fd36798))
+
+
 ## [v2024.07.14](https://github.com/engineervix/cookiecutter-wagtail-vix/compare/v2023.12.28...v2024.07.14) (2024-07-14)
 
 
