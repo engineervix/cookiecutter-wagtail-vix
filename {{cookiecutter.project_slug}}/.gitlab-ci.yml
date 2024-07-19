@@ -14,7 +14,7 @@ variables:
 
 # Test if static assets can be built successfully.
 static:
-  image: node:22-bookworm-slim
+  image: node:22.4-bookworm-slim
   stage: build
   script:
     - npm ci --no-optional --no-audit --progress=false
@@ -82,7 +82,7 @@ djlint:
 
 stylelint:
   stage: lint
-  image: node:22-bookworm-slim
+  image: node:22.4-bookworm-slim
   dependencies:
     - static
   script:
@@ -90,7 +90,7 @@ stylelint:
 
 eslint:
   stage: lint
-  image: node:22-bookworm-slim
+  image: node:22.4-bookworm-slim
   dependencies:
     - static
   script:
@@ -98,7 +98,7 @@ eslint:
 
 prettier:
   stage: lint
-  image: node:22-bookworm-slim
+  image: node:22.4-bookworm-slim
   dependencies:
     - static
   script:
