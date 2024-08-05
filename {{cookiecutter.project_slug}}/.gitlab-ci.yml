@@ -108,7 +108,7 @@ test:
   stage: test
   image: python:3.12-slim-bookworm
   services:
-    - postgis/postgis:15-3.4
+    - postgis/postgis:16-3.4
   variables:
     POSTGRES_DB: test_postgis_db
     POSTGRES_USER: test_postgis_user
