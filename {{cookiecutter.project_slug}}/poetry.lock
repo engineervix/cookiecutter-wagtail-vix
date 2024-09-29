@@ -567,17 +567,17 @@ files = [
 
 [[package]]
 name = "commitizen"
-version = "3.28.0"
+version = "3.29.1"
 description = "Python commitizen client tool"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "commitizen-3.28.0-py3-none-any.whl", hash = "sha256:372dba10bb082be0e571cfa9ac0946f4333c3f4b2e242fbe32ae2f2afea143e4"},
-    {file = "commitizen-3.28.0.tar.gz", hash = "sha256:de3a90b3246233260649e423963cd702d56a3b499ea02886a6412ebfb76f9462"},
+    {file = "commitizen-3.29.1-py3-none-any.whl", hash = "sha256:83f6563fae6a6262238e4424c55db5743eaa9827d2044dc23719466e4e78a0ca"},
+    {file = "commitizen-3.29.1.tar.gz", hash = "sha256:b9a56190f4f3b20c73600e5ba448c7b81e0e6f87be3092aec1db4de75bf0fa91"},
 ]
 
 [package.dependencies]
-argcomplete = ">=1.12.1,<3.5"
+argcomplete = ">=1.12.1,<3.6"
 charset-normalizer = ">=2.1.0,<4"
 colorama = ">=0.4.1,<0.5.0"
 decli = ">=0.6.0,<0.7.0"
