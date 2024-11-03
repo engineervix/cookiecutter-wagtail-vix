@@ -1054,19 +1054,19 @@ hiredis = ["redis[hiredis] (>=3,!=4.0.0,!=4.0.1)"]
 
 [[package]]
 name = "django-rq"
-version = "2.10.2"
+version = "2.10.3"
 description = "An app that provides django integration for RQ (Redis Queue)"
 optional = false
 python-versions = "*"
 files = [
-    {file = "django-rq-2.10.2.tar.gz", hash = "sha256:d1690b6a409934a0ea23c208ccb00d69477899f8edc61106ce5395c19dcdfb1e"},
-    {file = "django_rq-2.10.2-py2.py3-none-any.whl", hash = "sha256:5fe340e071c141a23ea0859df73c48b0a3df33a851835b2a8f8c4fca7a8b1849"},
+    {file = "django-rq-2.10.3.tar.gz", hash = "sha256:572f2e142a4e4a2f68b3601eef6ddfb041c470dfc7028c975981f7bb942e184c"},
+    {file = "django_rq-2.10.3-py2.py3-none-any.whl", hash = "sha256:f73da09708caf4abc4b16800acf762a00e59885eb8f7a94a83bf06ee2a40b26b"},
 ]
 
 [package.dependencies]
 django = ">=3.2"
 redis = ">=3"
-rq = ">=1.14"
+rq = ">=1.14,<2.0"
 
 [package.extras]
 sentry = ["raven (>=6.1.0)"]
