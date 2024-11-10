@@ -1321,16 +1321,6 @@ files = [
 ]
 
 [[package]]
-name = "future"
-version = "0.18.3"
-description = "Clean single-source support for Python 3 and 2"
-optional = false
-python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-files = [
-    {file = "future-0.18.3.tar.gz", hash = "sha256:34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307"},
-]
-
-[[package]]
 name = "ghp-import"
 version = "2.1.0"
 description = "Copy your docs directly to the gh-pages branch."
@@ -2600,17 +2590,16 @@ typing_extensions = "*"
 
 [[package]]
 name = "pytest-logger"
-version = "0.5.1"
+version = "1.1.1"
 description = "Plugin configuring handlers for loggers from Python logging module."
 optional = false
 python-versions = "*"
 files = [
-    {file = "pytest-logger-0.5.1.tar.gz", hash = "sha256:45324dc1c946d6600dbaa259c2dc97b59d4ebd1d61394ef6c44ebdded1cb165b"},
-    {file = "pytest_logger-0.5.1-py2.py3-none-any.whl", hash = "sha256:0d174a40e1731817fb5c51b9844b7b4da366b33ee4c39d6e30e4165b74b99ac7"},
+    {file = "pytest-logger-1.1.1.tar.gz", hash = "sha256:82cb36b505a72e15a2f0e12c6451d8c21ecbe0379d322b2bed4f05cb7842c9d9"},
+    {file = "pytest_logger-1.1.1-py2.py3-none-any.whl", hash = "sha256:d9f7b88c04828de649a033779d30f359fce026fde37c1e91d83336a66d27a9fb"},
 ]
 
 [package.dependencies]
-future = "*"
 pytest = ">=3.2"
 
 [[package]]
@@ -3563,4 +3552,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "~=3.12"
-content-hash = "556a8ba640f7eabef24e0ae15afbe4be26e93dc25750bbe9a4bc3d43709b8997"
+content-hash = "e994343b167ebc8bb9a7adc680cd2ad3e5f557ec32a49b24806724b5fe5de54a"
