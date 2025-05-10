@@ -1096,6 +1096,21 @@ s3 = ["boto3 (>=1.4.4)"]
 sftp = ["paramiko (>=1.15)"]
 
 [[package]]
+name = "django-stubs-ext"
+version = "5.2.0"
+description = "Monkey-patching and extensions for django-stubs"
+optional = false
+python-versions = ">=3.10"
+files = [
+    {file = "django_stubs_ext-5.2.0-py3-none-any.whl", hash = "sha256:b27ae0aab970af4894ba4e9b3fcd3e03421dc8731516669659ee56122d148b23"},
+    {file = "django_stubs_ext-5.2.0.tar.gz", hash = "sha256:00c4ae307b538f5643af761a914c3f8e4e3f25f4e7c6d7098f1906c0d8f2aac9"},
+]
+
+[package.dependencies]
+django = "*"
+typing-extensions = "*"
+
+[[package]]
 name = "django-taggit"
 version = "5.0.1"
 description = "django-taggit is a reusable Django application for simple tagging."
@@ -1108,6 +1123,27 @@ files = [
 
 [package.dependencies]
 Django = ">=4.1"
+
+[[package]]
+name = "django-tasks"
+version = "0.6.1"
+description = "An implementation and backport of background workers and tasks in Django"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django_tasks-0.6.1-py3-none-any.whl", hash = "sha256:b3648e28bdcda809cb7831f3aff98aa46c327025447c462b8943cce9dfbb0281"},
+    {file = "django_tasks-0.6.1.tar.gz", hash = "sha256:4086e7eb9e965f79c4ac76f5c3690ec3bf41c461585237b71b4bde729ced9826"},
+]
+
+[package.dependencies]
+Django = ">=4.2"
+django-stubs-ext = "*"
+typing_extensions = "*"
+
+[package.extras]
+dev = ["coverage", "dj-database-url", "django-stubs[compatible-mypy]", "ruff"]
+mysql = ["mysqlclient"]
+postgres = ["psycopg[binary]"]
 
 [[package]]
 name = "django-treebeard"
@@ -1774,21 +1810,6 @@ files = [
 ]
 
 [[package]]
-name = "l18n"
-version = "2021.3"
-description = "Internationalization for pytz timezones and territories"
-optional = false
-python-versions = "*"
-files = [
-    {file = "l18n-2021.3-py3-none-any.whl", hash = "sha256:78495d1df95b6f7dcc694d1ba8994df709c463a1cbac1bf016e1b9a5ce7280b9"},
-    {file = "l18n-2021.3.tar.gz", hash = "sha256:1956e890d673d17135cc20913253c154f6bc1c00266c22b7d503cc1a5a42d848"},
-]
-
-[package.dependencies]
-pytz = ">=2020.1"
-six = "*"
-
-[[package]]
 name = "laces"
 version = "0.1.1"
 description = "Django components that know how to render themselves."
@@ -2327,6 +2348,7 @@ files = [
     {file = "psycopg2-2.9.10-cp311-cp311-win_amd64.whl", hash = "sha256:0435034157049f6846e95103bd8f5a668788dd913a7c30162ca9503fdf542cb4"},
     {file = "psycopg2-2.9.10-cp312-cp312-win32.whl", hash = "sha256:65a63d7ab0e067e2cdb3cf266de39663203d38d6a8ed97f5ca0cb315c73fe067"},
     {file = "psycopg2-2.9.10-cp312-cp312-win_amd64.whl", hash = "sha256:4a579d6243da40a7b3182e0430493dbd55950c493d8c68f4eec0b302f6bbf20e"},
+    {file = "psycopg2-2.9.10-cp313-cp313-win_amd64.whl", hash = "sha256:91fd603a2155da8d0cfcdbf8ab24a2d54bca72795b90d2a3ed2b6da8d979dee2"},
     {file = "psycopg2-2.9.10-cp39-cp39-win32.whl", hash = "sha256:9d5b3b94b79a844a986d029eee38998232451119ad653aea42bb9220a8c5066b"},
     {file = "psycopg2-2.9.10-cp39-cp39-win_amd64.whl", hash = "sha256:88138c8dedcbfa96408023ea2b0c369eda40fe5d75002c0964c78f46f11fa442"},
     {file = "psycopg2-2.9.10.tar.gz", hash = "sha256:12ec0b40b0273f95296233e8750441339298e6a572f7039da5b260e3c8b60e11"},
@@ -3333,37 +3355,37 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 
 [[package]]
 name = "wagtail"
-version = "6.1.3"
+version = "6.4.1"
 description = "A Django content management system."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "wagtail-6.1.3-py3-none-any.whl", hash = "sha256:b6c4d5705adf51a5e49ea416032dd0a6534588fc31c5c9a95f698e6ddec0a203"},
-    {file = "wagtail-6.1.3.tar.gz", hash = "sha256:8f4908ab1b6b963a8aa7adf8f0ec738cd1dc79b9816c6d5f59018f600a404378"},
+    {file = "wagtail-6.4.1-py3-none-any.whl", hash = "sha256:85206f86b04876d5596190e042d30de0430fdb5cdd71b6005748c8a0d45066ec"},
+    {file = "wagtail-6.4.1.tar.gz", hash = "sha256:cec3e6d4920a6d178fa1eb6f4af80b370fdd5570ed924b979104e157f10ca097"},
 ]
 
 [package.dependencies]
 anyascii = ">=0.1.5"
-beautifulsoup4 = ">=4.8,<4.13"
+beautifulsoup4 = ">=4.8,<5"
 Django = ">=4.2,<6.0"
-django-filter = ">=23.3,<25"
+django-filter = ">=23.3"
 django-modelcluster = ">=6.2.1,<7.0"
 django-permissionedforms = ">=0.1,<1.0"
-django-taggit = ">=4.0,<5.1"
+django-taggit = ">=5.0,<7"
+django-tasks = ">=0.6.1,<0.7"
 django-treebeard = ">=4.5.1,<5.0"
 djangorestframework = ">=3.15.1,<4.0"
 draftjs-exporter = ">=2.1.5,<6.0"
-l18n = ">=2018.5"
 laces = ">=0.1,<0.2"
 openpyxl = ">=3.0.10,<4.0"
-Pillow = ">=9.1.0,<11.0.0"
+Pillow = ">=9.1.0,<12.0.0"
 requests = ">=2.11.1,<3.0"
 telepath = ">=0.3.1,<1"
 Willow = {version = ">=1.8.0,<2", extras = ["heif"]}
 
 [package.extras]
-docs = ["Sphinx (>=1.5.2)", "myst-parser (==2.0.0)", "pyenchant (>=3.1.1,<4)", "sphinx-autobuild (>=0.6.0)", "sphinx-copybutton (>=0.5,<1.0)", "sphinx-wagtail-theme (==6.3.0)", "sphinxcontrib-spelling (>=7,<8)"]
-testing = ["Jinja2 (>=3.0,<3.2)", "azure-mgmt-cdn (>=12.0,<13.0)", "azure-mgmt-frontdoor (>=1.0,<1.1)", "boto3 (>=1.28,<2)", "coverage (>=3.7.0)", "curlylint (==0.13.1)", "django-pattern-library (>=0.7)", "djhtml (==3.0.6)", "doc8 (==0.8.1)", "factory-boy (>=3.2)", "freezegun (>=0.3.8)", "polib (>=1.1,<2.0)", "python-dateutil (>=2.7)", "pytz (>=2014.7)", "ruff (==0.1.5)", "semgrep (==1.40.0)", "tblib (>=2.0,<3.0)"]
+docs = ["Sphinx (>=7.3)", "myst-parser (==2.0.0)", "pyenchant (>=3.1.1,<4)", "sphinx-autobuild (>=0.6.0)", "sphinx-wagtail-theme (==6.5.0)", "sphinxcontrib-spelling (>=7,<8)"]
+testing = ["Jinja2 (>=3.0,<3.2)", "azure-mgmt-cdn (>=12.0,<13.0)", "azure-mgmt-frontdoor (>=1.0,<1.1)", "boto3 (>=1.28,<2)", "coverage (>=3.7.0)", "curlylint (==0.13.1)", "django-pattern-library (>=0.7)", "djhtml (==3.0.6)", "doc8 (==0.8.1)", "factory-boy (>=3.2)", "freezegun (>=0.3.8)", "polib (>=1.1,<2.0)", "python-dateutil (>=2.7)", "ruff (==0.1.5)", "semgrep (==1.40.0)", "tblib (>=2.0,<3.0)"]
 
 [[package]]
 name = "wagtail-factories"
@@ -3564,4 +3586,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "~=3.12"
-content-hash = "c4293d4e38cb4158aad8d9fda3bef0cf75d84a64f6b7ff69118bcbe7526da5a2"
+content-hash = "90691f129178c84e645421157fb99330f4b36c45cc95eabea60d0f4bc2833213"
