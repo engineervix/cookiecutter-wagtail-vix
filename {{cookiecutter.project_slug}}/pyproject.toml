@@ -20,7 +20,7 @@ psycopg2 = "^2.9.9"
 # Django Extensions
 crispy-bootstrap5 = "^2024.2"
 django-crispy-forms = "^2.1"
-django-environ = "0.11.2"
+django-environ = "0.12.0"
 django-extensions = "3.2.3"
 django-mjml = "1.3"
 django-redis = "5.4.0"
