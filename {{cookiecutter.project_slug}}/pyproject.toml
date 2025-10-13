@@ -13,7 +13,7 @@ version = "0.0.0"
 [tool.poetry.dependencies]
 # Core
 python = "~=3.12"
-django = { version = ">=5.1,<5.2", extras = ["argon2", "bcrypt"] }
+django = { version = ">=5.2,<5.3", extras = ["argon2", "bcrypt"] }
 wagtail = ">=6.1,<6.2"
 psycopg2 = "^2.9.9"
 
