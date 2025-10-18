@@ -31,7 +31,7 @@ static:
 poetry:
   # If you update the python image version here, make sure you update all jobs that depend on this
   # and the version in the Dockerfile and provision scripts as well
-  image: python:3.12-slim-bullseye
+  image: python:3.13-slim-bullseye
   stage: build
   script:
     - apt-get update --yes --quiet
@@ -52,7 +52,7 @@ poetry:
 
 ruff:
   stage: lint
-  image: python:3.12-slim-bookworm
+  image: python:3.14-slim-bookworm
   dependencies:
     - poetry
   before_script:
@@ -62,7 +62,7 @@ ruff:
 
 black:
   stage: lint
-  image: python:3.12-slim-bookworm
+  image: python:3.14-slim-bookworm
   dependencies:
     - poetry
   before_script:
@@ -71,7 +71,7 @@ black:
     - black . --check
 
 djlint:
-  image: python:3.12-slim-bookworm
+  image: python:3.14-slim-bookworm
   stage: lint
   dependencies:
     - poetry
@@ -106,7 +106,7 @@ prettier:
 
 test:
   stage: test
-  image: python:3.12-slim-bookworm
+  image: python:3.14-slim-bookworm
   services:
     - postgis/postgis:15-3.4
   variables:
@@ -159,7 +159,7 @@ test:
 
 prepare:
   stage: prepare # This stage must run before the release stage
-  image: python:3.12-slim-bookworm
+  image: python:3.14-slim-bookworm
   rules:
     - if: $CI_COMMIT_TAG
   dependencies:
@@ -193,7 +193,7 @@ release:
 
 # https://docs.gitlab.com/ee/user/project/pages/pages_access_control.html
 pages:
-  image: python:3.12-slim-bookworm
+  image: python:3.14-slim-bookworm
   stage: pages
   variables:
     GIT_DEPTH: 0
