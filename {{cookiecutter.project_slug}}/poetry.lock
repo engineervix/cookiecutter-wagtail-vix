@@ -1996,17 +1996,17 @@ pytz = ">=2025.1"
 
 [[package]]
 name = "mkdocs-glightbox"
-version = "0.5.1"
+version = "0.5.2"
 description = "MkDocs plugin supports image lightbox with GLightbox."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mkdocs_glightbox-0.5.1-py3-none-any.whl", hash = "sha256:f47af0daff164edf8d36e553338425be3aab6e34b987d9cbbc2ae7819a98cb01"},
-    {file = "mkdocs_glightbox-0.5.1.tar.gz", hash = "sha256:7d78a5b045f2479f61b0bbb17742ba701755c56b013e70ac189c9d87a91e80bf"},
+    {file = "mkdocs_glightbox-0.5.2-py3-none-any.whl", hash = "sha256:23a431ea802b60b1030c73323db2eed6ba859df1a0822ce575afa43e0ea3f47e"},
+    {file = "mkdocs_glightbox-0.5.2.tar.gz", hash = "sha256:c7622799347c32310878e01ccf14f70648445561010911c80590cec0353370ac"},
 ]
 
 [package.dependencies]
-selectolax = "0.3.29"
+selectolax = ">=0.3.29"
 
 [[package]]
 name = "mkdocs-material"
