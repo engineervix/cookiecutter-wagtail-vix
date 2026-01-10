@@ -25,7 +25,7 @@ django-extensions = "3.2.3"
 django-mjml = "1.4"
 django-redis = "5.4.0"
 django-rq = "^2.10.1"
-django-widget-tweaks = "1.5.0"
+django-widget-tweaks = "1.5.1"
 
 # Wagtail Extensions
 wagtail-font-awesome-svg = "^1.0.1"
