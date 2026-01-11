@@ -989,17 +989,17 @@ Django = ">=4.2"
 
 [[package]]
 name = "django-mjml"
-version = "1.4"
+version = "1.5"
 description = "Use MJML in Django templates"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.9"
 files = [
-    {file = "django_mjml-1.4-py3-none-any.whl", hash = "sha256:09dc440fcec64f3656b17646439336e6c15c5987103dfb6fe23eb1f1bf734d11"},
-    {file = "django_mjml-1.4.tar.gz", hash = "sha256:a805b3721de92a4972bb6bd4a3bffa91579420e48297a55f3ffef6d8e926b0b4"},
+    {file = "django_mjml-1.5-py3-none-any.whl", hash = "sha256:216faa121e6fdf6eee55061e63a6958a6ab04c6094323ebb8db42385c583ff2d"},
+    {file = "django_mjml-1.5.tar.gz", hash = "sha256:3a6048859f2f9023ffdef95a63595ad66a572d9c8f4be06d3b2f6d84d412be8b"},
 ]
 
 [package.dependencies]
-django = ">=2.2,<5.3"
+django = ">=2.2,<6.1"
 
 [package.extras]
 requests = ["requests (>=2.24)"]
@@ -3720,4 +3720,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "~=3.12"
-content-hash = "65d785b7ede61807154cd28b8150b949d4b6490376c1d3bffebcf00358ce6c00"
+content-hash = "10b420a865b33a61ab1871d8c105594c1eed6e1345b174bfc645c95f1d2c6be3"
