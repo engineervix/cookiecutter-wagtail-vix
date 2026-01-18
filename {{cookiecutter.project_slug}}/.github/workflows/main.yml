@@ -31,7 +31,7 @@ jobs:
           python-version: "3.12"
 
       - id: poetry-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .venv
           key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
@@ -65,7 +65,7 @@ jobs:
           python-version: "3.12"
 
       - id: poetry-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .venv
           key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
@@ -99,7 +99,7 @@ jobs:
           python-version: "3.12"
 
       - id: poetry-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .venv
           key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
@@ -132,7 +132,7 @@ jobs:
           node-version-file: .nvmrc
 
       - id: node-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: node_modules
           key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
@@ -157,7 +157,7 @@ jobs:
           node-version-file: .nvmrc
 
       - id: node-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: node_modules
           key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
@@ -182,7 +182,7 @@ jobs:
           node-version-file: .nvmrc
 
       - id: node-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: node_modules
           key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
@@ -238,13 +238,13 @@ jobs:
           node-version-file: .nvmrc
 
       - id: poetry-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .venv
           key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
 
       - id: node-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: node_modules
           key: {% raw %}${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}{% endraw %}
@@ -325,7 +325,7 @@ jobs:
           python-version: "3.12"
 
       - id: poetry-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .venv
           key: {% raw %}${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
