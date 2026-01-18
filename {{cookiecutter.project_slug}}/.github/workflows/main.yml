@@ -358,7 +358,7 @@ jobs:
           source .venv/bin/activate
           invoke get-release-notes
       - name: GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           name: {% raw %}${{ env.RELEASE_NAME }}{% endraw %}
           body_path: ../LATEST_RELEASE_NOTES.md
