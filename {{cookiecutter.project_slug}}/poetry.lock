@@ -1101,6 +1101,21 @@ s3 = ["boto3 (>=1.4.4)"]
 sftp = ["paramiko (>=1.15)"]
 
 [[package]]
+name = "django-stubs-ext"
+version = "5.2.9"
+description = "Monkey-patching and extensions for django-stubs"
+optional = false
+python-versions = ">=3.10"
+files = [
+    {file = "django_stubs_ext-5.2.9-py3-none-any.whl", hash = "sha256:230c51575551b0165be40177f0f6805f1e3ebf799b835c85f5d64c371ca6cf71"},
+    {file = "django_stubs_ext-5.2.9.tar.gz", hash = "sha256:6db4054d1580657b979b7d391474719f1a978773e66c7070a5e246cd445a25a9"},
+]
+
+[package.dependencies]
+django = "*"
+typing-extensions = "*"
+
+[[package]]
 name = "django-taggit"
 version = "5.0.1"
 description = "django-taggit is a reusable Django application for simple tagging."
@@ -1113,6 +1128,27 @@ files = [
 
 [package.dependencies]
 Django = ">=4.1"
+
+[[package]]
+name = "django-tasks"
+version = "0.6.1"
+description = "An implementation and backport of background workers and tasks in Django"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django_tasks-0.6.1-py3-none-any.whl", hash = "sha256:b3648e28bdcda809cb7831f3aff98aa46c327025447c462b8943cce9dfbb0281"},
+    {file = "django_tasks-0.6.1.tar.gz", hash = "sha256:4086e7eb9e965f79c4ac76f5c3690ec3bf41c461585237b71b4bde729ced9826"},
+]
+
+[package.dependencies]
+Django = ">=4.2"
+django-stubs-ext = "*"
+typing_extensions = "*"
+
+[package.extras]
+dev = ["coverage", "dj-database-url", "django-stubs[compatible-mypy]", "ruff"]
+mysql = ["mysqlclient"]
+postgres = ["psycopg[binary]"]
 
 [[package]]
 name = "django-treebeard"
@@ -1771,21 +1807,6 @@ files = [
     {file = "json5-0.9.25-py3-none-any.whl", hash = "sha256:34ed7d834b1341a86987ed52f3f76cd8ee184394906b6e22a1e0deb9ab294e8f"},
     {file = "json5-0.9.25.tar.gz", hash = "sha256:548e41b9be043f9426776f05df8635a00fe06104ea51ed24b67f908856e151ae"},
 ]
-
-[[package]]
-name = "l18n"
-version = "2021.3"
-description = "Internationalization for pytz timezones and territories"
-optional = false
-python-versions = "*"
-files = [
-    {file = "l18n-2021.3-py3-none-any.whl", hash = "sha256:78495d1df95b6f7dcc694d1ba8994df709c463a1cbac1bf016e1b9a5ce7280b9"},
-    {file = "l18n-2021.3.tar.gz", hash = "sha256:1956e890d673d17135cc20913253c154f6bc1c00266c22b7d503cc1a5a42d848"},
-]
-
-[package.dependencies]
-pytz = ">=2020.1"
-six = "*"
 
 [[package]]
 name = "laces"
@@ -3486,37 +3507,37 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 
 [[package]]
 name = "wagtail"
-version = "6.1.3"
+version = "6.4.2"
 description = "A Django content management system."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "wagtail-6.1.3-py3-none-any.whl", hash = "sha256:b6c4d5705adf51a5e49ea416032dd0a6534588fc31c5c9a95f698e6ddec0a203"},
-    {file = "wagtail-6.1.3.tar.gz", hash = "sha256:8f4908ab1b6b963a8aa7adf8f0ec738cd1dc79b9816c6d5f59018f600a404378"},
+    {file = "wagtail-6.4.2-py3-none-any.whl", hash = "sha256:1ceff33a6edae02668d8cd08ea77fc7c1d9835986cb1b75a8fa1b353535ddd90"},
+    {file = "wagtail-6.4.2.tar.gz", hash = "sha256:fcf39430e5fb856674c0cfa3cda67591b44214cc5a99c9308019140eb26ddb42"},
 ]
 
 [package.dependencies]
 anyascii = ">=0.1.5"
-beautifulsoup4 = ">=4.8,<4.13"
+beautifulsoup4 = ">=4.8,<5"
 Django = ">=4.2,<6.0"
-django-filter = ">=23.3,<25"
+django-filter = ">=23.3"
 django-modelcluster = ">=6.2.1,<7.0"
 django-permissionedforms = ">=0.1,<1.0"
-django-taggit = ">=4.0,<5.1"
+django-taggit = ">=5.0,<7"
+django-tasks = ">=0.6.1,<0.7"
 django-treebeard = ">=4.5.1,<5.0"
 djangorestframework = ">=3.15.1,<4.0"
-draftjs-exporter = ">=2.1.5,<6.0"
-l18n = ">=2018.5"
+draftjs_exporter = ">=2.1.5,<6.0"
 laces = ">=0.1,<0.2"
 openpyxl = ">=3.0.10,<4.0"
-Pillow = ">=9.1.0,<11.0.0"
+Pillow = ">=9.1.0,<12.0.0"
 requests = ">=2.11.1,<3.0"
 telepath = ">=0.3.1,<1"
-Willow = {version = ">=1.8.0,<2", extras = ["heif"]}
+Willow = {version = ">=1.10.0,<2", extras = ["heif"]}
 
 [package.extras]
-docs = ["Sphinx (>=1.5.2)", "myst-parser (==2.0.0)", "pyenchant (>=3.1.1,<4)", "sphinx-autobuild (>=0.6.0)", "sphinx-copybutton (>=0.5,<1.0)", "sphinx-wagtail-theme (==6.3.0)", "sphinxcontrib-spelling (>=7,<8)"]
-testing = ["Jinja2 (>=3.0,<3.2)", "azure-mgmt-cdn (>=12.0,<13.0)", "azure-mgmt-frontdoor (>=1.0,<1.1)", "boto3 (>=1.28,<2)", "coverage (>=3.7.0)", "curlylint (==0.13.1)", "django-pattern-library (>=0.7)", "djhtml (==3.0.6)", "doc8 (==0.8.1)", "factory-boy (>=3.2)", "freezegun (>=0.3.8)", "polib (>=1.1,<2.0)", "python-dateutil (>=2.7)", "pytz (>=2014.7)", "ruff (==0.1.5)", "semgrep (==1.40.0)", "tblib (>=2.0,<3.0)"]
+docs = ["Sphinx (>=7.3)", "myst_parser (==2.0.0)", "pyenchant (>=3.1.1,<4)", "sphinx-autobuild (>=0.6.0)", "sphinx-wagtail-theme (==6.5.0)", "sphinxcontrib-spelling (>=7,<8)"]
+testing = ["Jinja2 (>=3.0,<3.2)", "azure-mgmt-cdn (>=12.0,<13.0)", "azure-mgmt-frontdoor (>=1.0,<1.1)", "boto3 (>=1.28,<2)", "coverage (>=3.7.0)", "curlylint (==0.13.1)", "django-pattern-library (>=0.7)", "djhtml (==3.0.6)", "doc8 (==0.8.1)", "factory-boy (>=3.2)", "freezegun (>=0.3.8)", "polib (>=1.1,<2.0)", "python-dateutil (>=2.7)", "ruff (==0.1.5)", "semgrep (==1.40.0)", "tblib (>=2.0,<3.0)"]
 
 [[package]]
 name = "wagtail-factories"
@@ -3617,24 +3638,24 @@ brotli = ["brotli"]
 
 [[package]]
 name = "willow"
-version = "1.8.0"
+version = "1.11.0"
 description = "A Python image library that sits on top of Pillow, Wand and OpenCV"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "willow-1.8.0-py3-none-any.whl", hash = "sha256:48ccf5ce48ccd29c37a32497cd7af50983f8570543c4de2988b15d583efc66be"},
-    {file = "willow-1.8.0.tar.gz", hash = "sha256:ef3df6cde80d4914e719188147bef1d71c240edb118340e0c5957ecc8fe08315"},
+    {file = "willow-1.11.0-py3-none-any.whl", hash = "sha256:0a4388dbf18726eef8f27449659047689c39b7023045ca5a8a75410d3864ee6f"},
+    {file = "willow-1.11.0.tar.gz", hash = "sha256:70292b2d0cd2d5bb4076f0b3d61308aeaa0b225f3970d00752f08a8fd386c3d1"},
 ]
 
 [package.dependencies]
 defusedxml = ">=0.7,<1.0"
 filetype = ">=1.0.10,<1.1.0 || >1.1.0"
-pillow-heif = {version = ">=0.13.0,<1.0.0", optional = true, markers = "extra == \"heif\" and python_version >= \"3.12\""}
+pillow-heif = {version = ">=0.13.0", optional = true, markers = "extra == \"heif\" and python_version >= \"3.12\""}
 
 [package.extras]
 docs = ["Sphinx (>=7.0)", "sphinx-wagtail-theme (>=6.1.1,<7.0)", "sphinx_copybutton (>=0.5)", "sphinxcontrib-spelling (>=8.0,<9.0)"]
-heif = ["pillow-heif (>=0.10.0,<1.0.0)", "pillow-heif (>=0.13.0,<1.0.0)"]
-pillow = ["Pillow (>=9.1.0,<11.0.0)"]
+heif = ["pillow-heif (>=0.10.0)", "pillow-heif (>=0.13.0)"]
+pillow = ["Pillow (>=11.3.0,<12.0.0)"]
 testing = ["coverage[toml] (>=7.2.7,<8.0)", "pre-commit (>=3.4.0)", "willow[heif,pillow,wand]"]
 wand = ["Wand (>=0.6,<1.0)"]
 
@@ -3720,4 +3741,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "~=3.12"
-content-hash = "10b420a865b33a61ab1871d8c105594c1eed6e1345b174bfc645c95f1d2c6be3"
+content-hash = "99202168afd130e990e701e5021cdb13ed30fdf93cfb3d0355d07afcb363833e"
