@@ -14,7 +14,7 @@ version = "0.0.0"
 # Core
 python = "~=3.12"
 django = { version = ">=5.2,<5.3", extras = ["argon2", "bcrypt"] }
-wagtail = ">=6.1,<6.2"
+wagtail = ">=6.4,<6.5"
 psycopg2 = "^2.9.9"
 
 # Django Extensions
