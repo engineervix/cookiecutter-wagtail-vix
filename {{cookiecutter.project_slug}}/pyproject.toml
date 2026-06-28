@@ -32,7 +32,7 @@ wagtail-font-awesome-svg = "^1.0.1"
 
 # Other third-party libraries
 bpython = "^0.24"
-hiredis = "^2.3.2"
+hiredis = "^3.0.0"
 pydantic = "^2.5.3"
 whitenoise = "^6.6.0"
 
