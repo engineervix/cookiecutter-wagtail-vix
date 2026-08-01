@@ -44,7 +44,7 @@
     "prettier": "^3.3.3",
     "sass": "~1.32.11",
     "sass-loader": "^16.0.0",
-    "standard-version": "^9.5.0",
+    "commit-and-tag-version": "^9.5.0",
     "stylelint": "^16.7.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-webpack-plugin": "^5.0.1",
